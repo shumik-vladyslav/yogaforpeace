@@ -1,0 +1,551 @@
+.wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-image: -webkit-linear-gradient(top, rgba(241,239,250,1), rgba(241,239,250,1));
+    position: relative;
+}
+.container {
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo__container {
+
+    width: 300px;
+    margin: 0 auto;
+    padding: 30px 0;
+    //background: url('../../../assets/Logo/yogis-for-peace-logo.svg') no-repeat;
+}
+.pb-24{
+    padding-bottom: 24px;
+}
+.pt-45{
+    padding-top: 105px;
+    padding-bottom: 45px;
+}
+.img__cover {
+    width: 100%;
+}
+.content-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.content__img {
+    flex: 1 0 30%;
+}
+.content__text__container {
+    margin: 30px 20px;
+}
+.content__text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+.text__header {
+    flex: 1 0 28%;
+    margin-right: 20px;
+    font-size: 30px;
+    display: flex;
+    position: relative;
+    h2 {
+        text-align: left !important;
+    }
+}
+p {
+    line-height: 24px;
+    font-size: 21px;
+    font-weight: 500;
+}
+.title-text{
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    color: #ba7d18;
+    font-size: 42px;
+    line-height: 1.23;
+    text-align: center;
+    width: 100%;
+
+}
+.text-left{
+    text-align: left;
+}
+.alredy-exist{
+    padding: 150px 0;
+    display: flex;
+    flex-direction: column;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+}
+.pb-30{
+    padding-bottom: 30px;
+}
+.flex-column-little-text{
+    font-size: 16px;
+   // padding: 40px 0;
+}
+.width-760{
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.55;
+
+}
+.center{
+    justify-content: center;
+}
+.text-center{
+    text-align: center;
+}
+.alredy-exist-items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.alredy-exist-item{
+    flex: 1 1 50%;
+}
+.space {
+    height: 1px;
+    background-color: #e9bb7e;
+    margin-bottom: 55px;
+}
+.pb-100{
+    padding-bottom: 100px;
+}
+.text__ru {
+    color: #ce9430;
+    .text-items {
+        .text-item {
+            border: 1px solid #ce9430;
+        }
+    }
+}
+.video{
+    max-width: 760px;
+    margin: 0 auto;
+}
+.element-1-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .flex-element-1-2{
+        flex: 1 1 50%;
+        display: flex;
+        justify-content: center;
+        margin-right: 15px;
+    }
+}
+.little-space{
+    background-color: #ba7d18;
+    max-width: 50px;
+    height: 3px;
+}
+.flex-element-1-2-text{
+    height: 320px;
+}
+.flex-1-3{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.flex-1-3_item{
+    flex: 0 1 30%;
+    margin: 0px 15px;
+}
+.color{
+    //border: 1px solid blue;
+    //height: 300px;
+}
+.content__img {
+}
+.img-pranam {
+    background: url("../../../assets/Images/Crop/3.png") 0 0 / auto 100% no-repeat;
+}
+.сontent__text__column {
+    flex-direction: column;
+}
+.text-items {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    h2 {
+        font-size: 30px;
+    }
+    .text-item {
+        padding: 6px 5px 10px;
+        border-radius: 50%;
+        text-align: center;
+    }
+    .little-elips {
+        height: 85px;
+        width: 195px;
+    }
+}
+.block-icon-img{
+    height: 100px;
+    margin-bottom: 25px;
+}
+.block-alredy-exist-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.block-text{
+    font-size: 30px;
+    line-height: 1.17;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 500;
+    color: #ba7d18;
+    text-align: center;
+}
+.icon {
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    width: 45px;
+    height: 60px;
+
+    background: url("../../../assets/Icons/yogis-for-peace-icon-1.svg") 0 0 / contain no-repeat;
+}
+.img-palms {
+    background: url("../../../assets/Images/Crop/4.png") 0 0 / 100% 100% no-repeat;
+}
+.pranam-gold {
+    background: url("../../../assets/Icons/yogis-for-peace-icon-2.svg") 0 0 / contain no-repeat;
+}
+.icon__before {
+    margin-left: 54px;
+}
+.content-container__column {
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.chetki-black {
+    background: url("../../../assets/Icons/yogis-for-peace-icon-3.svg") 0 0 / contain no-repeat;
+    transform: rotateZ(75deg);
+    left: -12px;
+}
+.chetki-gold {
+    background: url("../../../assets/Icons/yogis-for-peace-icon-4.svg") 0 0 / contain no-repeat;
+    transform: rotateZ(75deg);
+    left: -12px;
+}
+.text__header__center {
+    max-width: 800px;
+    h2 {
+        margin-left: 145px;
+    }
+}
+.big-ellips {
+    height: 124px;
+    width: 284px;
+    padding-top: 10px !important;
+}
+.space__less-padding {
+    margin-bottom: 0;
+}
+.img-palms__unity {
+    background: url("../../../assets/Images/Crop/5.png") 0 0 / 100% 100% no-repeat;
+}
+.text__paragraph {
+
+    position: relative;
+    color: #000;
+    font-size: 28px;
+    line-height: 1.55;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 300;
+    margin-top: 30px;
+    h2 {
+        font-size: 30px;
+        margin-top: 22px;
+    }
+}
+.h-460{
+    height: 595px;
+}
+.mt30px{
+    margin-top: 30px;
+}
+.icon__peace__black {
+    background: url("../../../assets/Icons/yogis-for-peace-icon-8.svg") 0 0 / contain no-repeat;
+    top: 45px;
+}
+.icon__peace__gold {
+    background: url("../../../assets/Icons/yogis-for-peace-icon-7.svg") 0 0 / contain no-repeat;
+}
+.footer {
+    margin-top: 96px;
+    height: 300px;
+}
+.img-pranam__footer {
+    margin-top: 60px;
+    background: url("../../../assets/Images/Crop/6.png") 0 0 / 100% auto no-repeat;
+    flex: 0 0 30%;
+    height: 355px;
+}
+.footer__text {
+    margin-top: 24px;
+    text-align: center;
+}
+.footer__h {
+    color: #ce9430;
+}
+.header-img-logo{
+    color: #ba7d18;
+    font-size: 54px;
+    padding: 24px 0 38px 0;
+    line-height: 1;
+}
+.img-container-item{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.underline{
+    border-bottom: 1px solid rgb(186, 125, 24);
+    margin-top: 35px;
+}
+.link-button{
+    color: #ba7d18;
+    border: 1px solid #ba7d18;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: inherit;
+    transition: 0.5s;
+}
+.link-button:hover{
+    transition: 0.5s;
+    color: rgba(241,239,250,1);
+    background-color: #ba7d18;
+}
+.button-block{
+    margin-top: 55px;
+}
+.flex-1-4{
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+}
+.flex-1-4_element{
+    flex: 0 1 22%;
+    margin: 0 18px;
+}
+.pb-50{
+    padding-bottom: 50px;
+}
+.input-element{
+    color: #000000;
+    border: 1px solid #ba7d18;
+    border-radius: 30px;
+    margin: 0;
+    font-size: 100%;
+    height: 60px;
+    padding: 0 20px;
+    line-height: 1.33;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+textarea.input-element{
+    height: 200px;
+    resize: none;
+    padding-top: 14px;
+}
+.input-container{
+    width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: 25px;
+}
+.column{
+    flex-direction: column;
+}
+.input-title{
+    width: 76px;
+    margin-bottom: 12px;
+}
+.submit-button{
+    height: 60px;
+    width: 206px;
+    color: #ffffff;
+    background-color: #ba7d18;
+    font-size: 16px;
+    transition: .5s;
+}
+.submit-button:hover{
+    color: #ba7d18;
+    background-color: #fff;
+    transition: .5s;
+}
+.text-underline-little{
+    font-weight: 500;
+    color: #ba7d18;
+    font-size: 20px;
+    line-height: 1.35;
+    border-bottom: 1px solid #ba7d18;
+}
+.h-260{
+    height: 154px;
+    margin-top: 70px;
+}
+.error-text{
+    color: #ff0000;
+}
+.disabled{
+    opacity: 0.3;
+}
+.pointer{
+    cursor: pointer;
+}
+.item-iframe{
+    width: 760px;
+    height: 430px;
+}
+.center-margin{
+    // width: 514px;
+    margin: 50px auto 0;
+}
+@media (max-width: 1120px) {
+    .img-pranam__footer {
+        flex: 0 0 40%;
+    }
+    .img-palms__unity {
+        background: url("../../../assets/Images/Crop/5.png") 0 0 / 100% auto no-repeat;
+    }
+    .content__img {
+        flex: 0 0 30%;
+    }
+    .img-palms {
+        background: url("../../../assets/Images/Crop/4.png") 0 0 / auto 100% no-repeat;
+    }
+    .content__text {
+        margin-bottom: 40px;
+    }
+    .img-pranam {
+        background: url("../../../assets/Images/Crop/3.png") 0 0 / 100% auto no-repeat;
+    }
+    .element-1-2{
+        flex-direction: column;
+    }
+    .text-left{
+        text-align: center;
+        margin-top: 15px;
+    }
+    .little-space{
+        width: 50px;
+    }
+    .content__text{
+        align-items: center;
+        margin: 0 20px;
+    }
+    .h-260{
+        height: auto;
+    }
+}
+@media (max-width: 896px) {
+    // .container-footer{
+    //     flex-direction: column;
+    //     height: 800px;
+    // }
+    // .img-pranam__footer{
+    //     flex: 1 1 100%;
+    //     height: 300px;
+    //     width: 400px;
+    //     margin: 0 auto;
+    //     background: url("../../../assets/Images/Original/abdalla-m-SX0m731jrAs-unsplash.jpg") 0 0 / 100% auto no-repeat;
+    // }
+    .content__img {
+        display: none;
+    }
+    .footer {
+        margin: 0 auto;
+    }
+    .text__header__center {
+        h2 {
+            margin-left: 0px;
+            margin-top: 65px;
+        }
+    }
+    .text__header {
+        margin-right: 0px;
+    }
+    .content__text {
+        flex-direction: column;
+    }
+    .content__text__container {
+        margin: 10px 5px;
+    }
+    .icon.chetki-black {
+        left: 40%;
+    }
+    .icon.chetki-gold {
+        left: 40%;
+    }
+    .input-element{
+        width: 90vw;
+    }
+    .item-iframe{
+        width: 81vw;
+        height: 42vw;
+    }
+    .input-container{
+        width: auto;
+    }
+}
+@media (max-width: 470px) {
+    .container {
+        height: fit-content;
+        .logo__container {
+            height: fit-content;
+        }
+    }
+    .header-img-logo{
+        font-size: 36px;
+    }
+    .content__text{
+        margin: 0 8px;
+
+    }
+    .flex-1-4_element{
+        flex: 0 1 90%;
+    }
+    .h-260{
+        height: auto;
+    }
+    .flex-element-1-2{
+        margin-right: 0!important;
+    }
+    .title-text{
+        font-size: 36px;
+    }
+    .img__cover {
+        width: 274px;
+        height: 286px;
+    }
+}

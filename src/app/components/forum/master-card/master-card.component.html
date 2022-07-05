@@ -1,0 +1,20 @@
+<div class="card-wrapper flex">
+  <div class="card-master-image">
+    <img src="../../../../assets/Icons/mandhala.png" alt="" class="img-canva" />
+    <div class="master-image">
+      <img
+        [src]="'../../../../assets/Images/'+imgUrl"
+        alt=""
+        class="img-master"
+      />
+    </div>
+  </div>
+  <div class="card-text">
+    <div class="card-text-title">
+      {{title}}
+    </div>
+    <div class="card-text-name no-line">{{name}}</div>
+    <div class="card-text-name">{{tradition}}</div>
+    <div class="card-text-time flex items-center"> <img src="../../../../assets/Icons/clock.png" alt="" class="card-clock">{{time}}</div>
+  </div>
+</div>

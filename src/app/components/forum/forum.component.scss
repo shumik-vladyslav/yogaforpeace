@@ -1,0 +1,622 @@
+* {
+  font-family: "Roboto Slab", serif;
+}
+h2 {
+  font-family: "Roboto Slab", serif !important;
+  font-weight: 400;
+}
+.wrapper {
+  width: 100%;
+  height: auto;
+  font-family: "Roboto Slab", serif !important;
+  position: relative;
+  border-bottom: 1px solid #ba7d18;
+}
+.main-wrapper {
+  height: auto;
+  min-height: 100%;
+  background: url(../../../assets/Images/back.jpg) 0 0/100% auto no-repeat;
+}
+.container {
+  max-width: 1200px;
+  z-index: 5;
+  margin: 0 auto;
+}
+.logo__container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 30px 0;
+  //background: url('../../../assets/Logo/yogis-for-peace-logo.svg') no-repeat;
+}
+.pb-24 {
+  padding-bottom: 24px;
+}
+.pt-45 {
+  padding-top: 105px;
+  padding-bottom: 45px;
+}
+.img__cover {
+  width: 100%;
+}
+.content-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.video {
+  margin: auto;
+}
+.go_back {
+  padding: 14px;
+  cursor: pointer;
+}
+.block-text {
+  font-size: 30px;
+  line-height: 1.17;
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  color: #ba7d18;
+}
+.logo__container-little {
+  height: 90px;
+  width: 90px;
+}
+.header {
+  padding-top: 0;
+  font-size: 22px;
+  color: rgb(186, 125, 24);
+  height: 110px;
+  justify-content: center;
+  display: flex;
+}
+.registration-button {
+  height: 70px;
+  padding: 0 50px;
+  border-radius: 999px;
+  background-color: rgb(178, 18, 67);
+  color: #fff;
+}
+.header-inner {
+  align-items: center;
+  z-index: 6;
+}
+.content-title {
+  color: rgb(189, 21, 78);
+}
+.sub-title {
+  text-align: left;
+  font-size: 30px;
+}
+.content-title-el {
+  color: rgb(189, 21, 78);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+  font-weight: 700;
+  font-size: 34px;
+}
+.content-list {
+  font-size: 22px;
+  line-height: 1.4;
+
+  li {
+    position: relative;
+    padding-left: 16px;
+  }
+  li::before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    background-color: #ba7d18;
+    border-radius: 999px;
+    left: 0;
+    top: 12px;
+  }
+}
+.content-dates {
+  width: 505px;
+  font-size: 22px;
+  color: #ba7d18;
+  margin-top: 40px;
+}
+
+.registration-button-gold {
+  margin-top: 40px;
+  background: rgb(213, 173, 88);
+  background: linear-gradient(
+    90deg,
+    rgba(213, 173, 88, 1) 0%,
+    rgba(213, 173, 88, 1) 19%,
+    rgba(183, 132, 44, 1) 100%
+  );
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+.img-star {
+  width: 15px;
+  height: 15px;
+  margin-right: 88px;
+}
+.margin-r {
+  margin-right: 440px;
+}
+.stars {
+  top: 70px;
+  left: -73px;
+  position: absolute;
+  // width: 100%;
+  // position: absolute;
+  // width: 800px;
+  // left: 37px;
+  // top: 470px;
+}
+.icons-wrapper {
+  background-color: #f1effa;
+  padding: 30px 0;
+  z-index: 5;
+}
+.img-card-icon {
+  height: 80px;
+  width: 80px;
+}
+.card-icon {
+  font-size: 20px;
+  color: #ba7d18;
+  text-align: center;
+  width: 45%;
+}
+.card-icon-title {
+  margin-top: 10px;
+}
+// .card-icon-subtitle {
+//   margin-top: 10px;
+// }
+.main-title {
+  font-size: 44px;
+  color: rgb(186, 125, 24);
+  line-height: 1.191;
+}
+.about-forum {
+  width: 347px;
+  margin: 60px auto 0 auto;
+  align-items: center;
+  margin-bottom: -140px;
+  .img-star {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+  }
+}
+.program-forum-flex {
+  width: 515px;
+  margin: 0 auto;
+  align-items: center;
+  .img-star {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+  }
+}
+.item-image {
+  height: 1000px;
+}
+app-master-card {
+  margin-bottom: 35px;
+}
+.text-about-forum {
+  font-size: 22px;
+  font-family: "Roboto";
+  color: rgb(26, 23, 27);
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 50px;
+}
+.item-text {
+  margin-top: 200px;
+  max-width: 770px;
+  margin-left: 120px;
+  margin-right: 160px;
+}
+.program-forum {
+  margin-top: -260px;
+}
+.registration-form-button {
+  justify-content: center;
+}
+.registration-form {
+  margin: 100px 0;
+  border-radius: 20px;
+  background-color: #fafafa;
+  box-shadow: 0px 4px 27px 2px rgba(0, 0, 0, 0.53);
+  padding: 10px 15px 0 15px;
+}
+.registration-form-title {
+  .program-forum-flex {
+    width: 700px;
+    margin: 0 auto;
+    align-items: center;
+    width: 540px;
+    .main-title {
+      font-size: 30px;
+
+      color: rgb(186, 125, 24);
+      line-height: 1.191;
+      border-bottom: 1px solid #ba7d18;
+    }
+  }
+}
+.input-form-gold {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ba7d18;
+  border-radius: 9999px;
+  margin: 0 25px;
+  padding-left: 20px;
+  font-size: 22px;
+}
+.form-registration-form {
+  margin: 60px 0;
+}
+.registration-form-button {
+  margin-bottom: 60px;
+  font-size: 22px;
+}
+.hands-img-container {
+  background: url(../../../assets/Images/hands.png) 0 0/100% auto no-repeat;
+  height: 512px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hands-title {
+  padding-top: 66px;
+}
+.footer {
+  height: 200px;
+  background: rgb(149, 10, 39);
+  background: linear-gradient(
+    0deg,
+    rgba(149, 10, 39, 1) 0%,
+    rgba(198, 23, 88, 1) 100%
+  );
+}
+.content-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  // margin-right: -65px;
+  // margin-top: -108px;
+  // margin-left: 139px;
+  // margin-bottom: -95px;
+  z-index: 1;
+}
+.m-wrap {
+  z-index: 2;
+}
+.head_in {
+  max-width: 1260px;
+  padding: 10px 10px 10px 30px;
+  margin: 0 auto;
+}
+.w_wrap {
+  display: flex;
+}
+.menu_wrap {
+  display: flex;
+  align-items: center;
+  div:not(.w_wrap) {
+    padding: 0 15px;
+    cursor: pointer;
+    box-sizing: border-box;
+    &:hover {
+      text-shadow: 2px 1px 2px rgb(196, 203, 132);
+    }
+  }
+}
+.links {
+  cursor: pointer;
+  &:hover {
+    text-shadow: 2px 1px 2px rgb(196, 203, 132);
+  }
+}
+.head_wrap {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background: transparent;
+  margin: 0 auto;
+  &.bg_for_header {
+    background-color: #fff;
+    box-shadow: 0px 1px 7px black;
+  }
+}
+.img-bird {
+  height: 664px;
+}
+.logo-item-img {
+  height: 160px;
+}
+.logo-item {
+  flex: 0 0 50%;
+}
+.social-img {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  margin: 2px 10px;
+}
+.social-items {
+  font-family: "Roboto";
+  color: #fff;
+}
+.disabled {
+  opacity: 0.4;
+}
+.ro_wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 48%;
+}
+.m_show {
+  display: none;
+  flex-direction: column;
+}
+@media (max-width: 1295px) {
+  .image-and-text {
+    flex-direction: column;
+    .item-image {
+      display: none;
+    }
+  }
+  // .form-registration-form {
+  //   .input-form-gold {
+  //     margin: auto;
+  //   }
+  // }
+  .item-text {
+    margin: 0 auto;
+  }
+  .program-forum {
+    margin: 0;
+  }
+  .about-forum {
+    margin-bottom: 0px;
+  }
+  .container {
+    margin: 0 0px;
+    padding: 0 20px;
+  }
+  .text-about-forum {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .item.flex.image-and-text {
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 1100px) {
+  .ro_wrap {
+    width: 47%;
+  }
+}
+@media (max-width: 1000px) {
+  .card-master-image {
+    margin: 0;
+  }
+  .img-bird {
+    height: 352px;
+  }
+  .content-img {
+    top: 137px;
+  }
+  .card-text {
+    margin-left: 30px;
+    padding-top: 15px;
+  }
+  .card-text-title {
+    margin-bottom: 15px;
+  }
+  .card-text-time {
+    margin-top: 25px;
+  }
+  .menu_wrap {
+    flex-direction: column;
+    align-items: end;
+    .registration-button {
+      height: 50px;
+      padding: 0px 30px;
+    }
+  }
+  .header {
+    height: 140px;
+  }
+  .w_wrap {
+    margin-bottom: 15px;
+  }
+  .hands-img-container {
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media (max-width: 820px) {
+  .footer {
+    height: auto;
+    .container.flex.g {
+      display: flex;
+      flex-direction: column;
+    }
+    .logo-item {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .justify-between.parent-flex.it {
+    align-items: unset;
+  }
+}
+@media (max-width: 786px) {
+  .social-items {
+    font-size: 17px;
+  }
+  .form-registration-form {
+    flex-direction: column;
+    .input-form-gold {
+      margin: 5px auto;
+    }
+  }
+  .stars {
+    display: none;
+  }
+  .img-canva {
+    margin: 0;
+  }
+
+  .header-inner {
+    align-items: center;
+    z-index: 6;
+    flex-wrap: wrap;
+  }
+  .parent-flex {
+    flex-direction: column;
+  }
+  .flex.justify-between.flex-wrap {
+    flex-direction: column;
+  }
+  .ro_wrap {
+    width: auto;
+    margin-bottom: 20px;
+  }
+  .registration-form-title {
+    .program-forum-flex {
+      width: auto;
+    }
+    width: auto;
+  }
+  .main-title {
+    font-size: 34px;
+  }
+  .img-bird {
+    display: none;
+  }
+  .program-forum-flex {
+    width: auto;
+  }
+  .content-dates {
+    width: auto;
+  }
+  .footer {
+    height: auto;
+    padding: 20px 0;
+  }
+  .hands-img-container {
+    height: auto;
+  }
+  .m-wrap {
+    margin: 0 auto;
+  }
+  .flex.justify-between.col {
+    flex-direction: column;
+  }
+  .registration-button {
+    width: 100%;
+  }
+  .main-wrapper {
+    background-size: auto;
+  }
+  .form-registration-form {
+    margin: 30px 0;
+  }
+}
+@media (max-width: 550px) {
+  .logo__container-little {
+    height: 80px;
+    width: 140px;
+  }
+  .w_wrap {
+    margin-bottom: 5px;
+  }
+  .mob_h-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .m_hide {
+    display: none;
+  }
+  .m_show {
+    display: flex;
+    justify-content: space-around;
+    text-align: end;
+  }
+  .menu_wrap {
+    div:not(.w_wrap) {
+      padding: 0;
+    }
+  }
+  .header-inner {
+    align-items: flex-end;
+  }
+  .head_in {
+    height: 150px;
+  }
+  .header {
+    height: 150px;
+  }
+  .header-inner.flex.justify-between {
+    flex-direction: column;
+  }
+  .menu_wrap {
+    align-items: center;
+  }
+  .ro_wrap {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+    div.f {
+      margin-bottom: 20px;
+    }
+  }
+  .card-icon {
+    width: 80%;
+  }
+  .hands-img-container {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+  }
+  .hands-title {
+    padding-top: 0;
+  }
+}
+@media (max-width: 480px) {
+  .logo__container-little {
+    width: 75px;
+  }
+  .head_in {
+    padding: 10px;
+  }
+  .header-inner.header-inner-text {
+    margin-bottom: 10px;
+  }
+  .registration-button {
+    padding: 0 20px;
+  }
+  .registration-form-title .program-forum-flex .main-title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 370px) {
+  .registration-form-title .program-forum-flex .main-title {
+    font-size: 21px;
+  }
+  .about-forum {
+    width: 320px;
+  }
+  .logo__container-little {
+    width: 65px;
+  }
+}

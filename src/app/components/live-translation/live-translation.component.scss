@@ -1,0 +1,58 @@
+
+.wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-image: -webkit-linear-gradient(top, rgba(241,239,250,1), rgba(241,239,250,1));
+    position: relative;
+}
+.container {
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo__container {
+
+    width: 300px;
+    margin: 0 auto;
+    padding: 30px 0;
+    //background: url('../../../assets/Logo/yogis-for-peace-logo.svg') no-repeat;
+}
+.pb-24{
+    padding-bottom: 24px;
+}
+.pt-45{
+    padding-top: 105px;
+    padding-bottom: 45px;
+}
+.img__cover {
+    width: 100%;
+}
+.content-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.video{
+    margin: auto;
+}
+.go_back{
+    padding: 14px;
+    cursor: pointer;
+}
+.block-text{
+    font-size: 30px;
+    line-height: 1.17;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 500;
+    color: #ba7d18;
+
+}
+.img__logo-little {
+    width: 270px;
+}

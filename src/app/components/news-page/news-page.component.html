@@ -1,0 +1,32 @@
+<div class="priview" *ngIf="!this.dialogData?.dialog">
+  <div class="img-preview">
+    <img
+      [src]="data?.imgUrl"
+      alt="i" height="180"
+     class="img-fixed-width"/>
+  </div>
+  <div class="description-preview">
+    <h1 class="description-title">
+      {{data?.title}}
+    </h1>
+    <p class="description-text">
+      {{data?.subTitle}}
+    </p>
+    <p class="description-time">
+      {{data?.date}}
+    </p>
+  </div>
+</div>
+<div class="flex-container" *ngIf="this.dialogData?.dialog">
+  <img [src]="this.dialogData.new.imgUrl" alt="" class="image">
+  <h1 class="description-title">
+    {{dialogData.new?.title}}
+  </h1>
+  <p class="description-text">
+    {{dialogData.new?.subTitle}}
+    {{dialogData.new?.text}}
+  </p>
+  <p class="description-time">
+    {{dialogData.new?.date}}
+  </p>
+</div>

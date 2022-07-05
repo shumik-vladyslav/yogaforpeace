@@ -1,0 +1,619 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="container-inner">
+      <div class="logo__container">
+        <img
+          src="../../../assets/Logo/yogis-for-peace-big-.svg"
+          alt="logo"
+          class="img img__logo"
+        />
+      </div>
+      <div class="title-container">
+        <h2 class="header-img-logo">{{'main.meditation-for-peace' | translate}}</h2>
+      </div>
+    </div>
+  </div>
+  <div class="content-container">
+    <!-- <div class="video">
+      <video controls id="videoPlayer">
+        <source
+          src="https://www.youtube.com/watch?v=Em-y_bkTQYk"
+          type="video/mp4"
+        />
+        Browser not supported
+      </video>
+    </div> -->
+    <div class="video">
+      <iframe
+        width="760"
+        height="430"
+        [src]="shantiSrc | safe"
+        frameborder="0"
+        allowfullscreen
+        class="item-iframe"
+      ></iframe>
+    </div>
+  </div>
+  <div class="content-container alredy-exist">
+    <h3 class="title-text pb-100">{{'main.already-exist' | translate}}</h3>
+    <div class="alredy-exist-items">
+      <div class="alredy-exist-item">
+        <div class="block-alredy-exist-item">
+          <img
+            class="block-icon-img"
+            src="../../../assets/Icons/yogis-for-peace-icon-2.svg"
+            alt=""
+          />
+          <div class="block-text">{{'main.meditations' | translate}}</div>
+        </div>
+      </div>
+      <div class="alredy-exist-item">
+        <div class="block-alredy-exist-item">
+          <img
+            class="block-icon-img"
+            src="../../../assets/Icons/yogis-for-peace-icon-8.svg"
+            alt=""
+          />
+          <div class="block-text">{{'main.non-violence' | translate}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <div class="video">
+      <iframe
+        width="760"
+        height="430"
+        [src]="ahimsaSrc | safe"
+        frameborder="0"
+        allowfullscreen
+        class="item-iframe"
+      ></iframe>
+    </div>
+  </div>
+  <div class="content-container pt-45">
+    <div class="element-1-2">
+      <div class="flex-element-1-2">
+        <img
+          src="../../../assets/Images/Crop/meditation.png"
+          alt="i"
+          class="img__cover"
+        />
+      </div>
+      <div class="flex-element-1-2 flex-element-1-2-text">
+        <div class="content__text text__ru">
+          <div class="text__header">
+            <h3 class="title-text text-left">{{'main.movement-yogis-for-peace' | translate}}</h3>
+          </div>
+          <hr class="little-space" />
+          <div class="text__paragraph">
+            <p>
+              {{'main.movement-description' | translate}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-container pt-45 center">
+    <div class="flex-column">
+      <div class="flex-column">
+        <img
+          src="../../../assets/Images/Crop/SWG.png"
+          alt=""
+          width="200"
+          class="pb-30"
+        />
+        <div class="block-text text-center">
+          {{'main.guru' | translate}}
+        </div>
+        <p class="flex-column-little-text">
+          {{'main.mastermind' | translate}}
+        </p>
+      </div>
+      <div class="flex-column">
+        <p class="width-760">
+          {{'main.mastermind-description' | translate}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <div class="video">
+      <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/GbTQwXi5xOA"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      class="item-iframe"
+    ></iframe>
+    </div>
+  </div>
+  <div class="content-container pt-45 center flex-1-3" *ngIf="news">
+    <h3 class="title-text pb-100">{{'main.news' | translate}}</h3>
+    <div
+      class="flex-1-3_item color pointer"
+      *ngFor="let new of news"
+      (click)="openDialog(new)"
+    >
+      <app-news-page [data]="new"></app-news-page>
+    </div>
+  </div>
+  <div class="content-container pt-45 center flex-1-3">
+    <h3 class="title-text pb-100">
+      {{'main.we-popularize' | translate}}
+    </h3>
+    <div class="flex-1-3_item color center">
+      <div class="img-container-item">
+        <img
+          src="../../../assets/Icons/yogis-for-peace-icon-8.svg"
+          alt=""
+          width="100"
+        />
+        <div class="block-text underline">{{'main.shanti' | translate}}</div>
+        <p class="flex-column-little-text">{{'main.peace&harmony' | translate}}</p>
+      </div>
+    </div>
+    <div class="flex-1-3_item color center">
+      <div class="img-container-item">
+        <img
+          src="../../../assets/Icons/yogis-for-peace-icon-2.svg"
+          alt=""
+          width="100"
+        />
+        <div class="block-text underline">{{'main.ahimsa' | translate}}</div>
+        <p class="flex-column-little-text">{{'main.non-violence-principe' | translate}}</p>
+      </div>
+    </div>
+    <div class="flex-1-3_item color center">
+      <div class="img-container-item">
+        <img
+          src="../../../assets/Icons/yogis-for-peace-icon-8.svg"
+          alt=""
+          width="100"
+        />
+        <div class="block-text underline">{{'main.asteya' | translate}}</div>
+        <p class="flex-column-little-text">{{'main.non-appropriation' | translate}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="content-container alredy-exist">
+    <h3 class="title-text pb-50">
+      {{'main.shanti-karma' | translate}}
+    </h3>
+    <h4 class="pb-50">{{'main.included' | translate}}</h4>
+    <div class="alredy-exist-items">
+      <div class="alredy-exist-item">
+        <div class="block-alredy-exist-item">
+          <img
+            class="block-icon-img"
+            src="../../../assets/Icons/yogis-for-peace-icon-4.svg"
+            alt=""
+          />
+          <div class="block-text">
+            {{'main.reading-mantras' | translate}}
+          </div>
+        </div>
+      </div>
+      <div class="alredy-exist-item">
+        <div class="block-alredy-exist-item">
+          <img
+            class="block-icon-img"
+            src="../../../assets/Icons/yogis-for-peace-icon-9.svg"
+            alt=""
+          />
+          <div class="block-text">
+            {{'main.meditation-love' | translate}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block-text underline pointer center-margin" (click)="navigateVideo()">{{'main.transfer-to-practice' | translate}}</div>
+    <div class="block-text underline pointer center-margin" [routerLink]="'/live'">{{'main.join-live-stream' | translate}}</div>
+  </div>
+  <div class="content-container pt-45">
+    <div class="element-1-2">
+      <div class="flex-element-1-2">
+        <img
+          src="../../../assets/Images/Crop/pranam.png"
+          alt="i"
+          class="img__cover"
+        />
+      </div>
+      <div class="flex-element-1-2 flex-element-1-2-text h-460">
+        <div class="content__text text__ru">
+          <div class="text__header">
+            <h3 class="title-text text-left">
+              {{'main.one-million' | translate}}
+            </h3>
+          </div>
+          <hr class="little-space" />
+          <div class="text__paragraph">
+            <p>
+              {{'main.one-million-shanti' | translate}}
+            </p>
+            <p class="mt30px">
+              {{'main.download' | translate}}
+            </p>
+          </div>
+          <div class="button-block">
+            <button class="link-button" (click)="navigateDownload()">
+              {{'main.download-materials' | translate}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="content-container flex-1-4 pt-45">
+    <h3 class="title-text pb-100">{{'main.how-to-join' | translate}}</h3>
+    <div class="flex-1-4_element">
+      <div class="block-alredy-exist-item">
+        <img
+          class="block-icon-img"
+          src="../../../assets/Icons/yogis-for-peace-icon-4.svg"
+          alt=""
+        />
+        <div class="block-text">
+          {{'main.conduct-shanti' | translate}}
+        </div>
+        <p class="flex-column-little-text text-center">
+          {{'main.conduct-join-shanti' | translate}}
+        </p>
+      </div>
+    </div>
+    <div class="flex-1-4_element">
+      <div class="block-alredy-exist-item">
+        <img
+          class="block-icon-img"
+          src="../../../assets/Icons/yogis-for-peace-icon-9.svg"
+          alt=""
+        />
+        <div class="block-text">
+          {{'main.practice-in-your-tradition' | translate}}
+        </div>
+        <p class="flex-column-little-text text-center">
+          {{'main.do-love-meditations' | translate}}
+        </p>
+      </div>
+    </div>
+    <div class="flex-1-4_element">
+      <div class="block-alredy-exist-item">
+        <img
+          class="block-icon-img"
+          src="../../../assets/Icons/yogis-for-peace-icon-9.svg"
+          alt=""
+        />
+        <div class="block-text">
+          {{'main.learn-practice' | translate}}
+        </div>
+        <p class="flex-column-little-text text-center">
+          {{'main.practice-yourself' | translate}}
+        </p>
+      </div>
+    </div>
+    <div class="flex-1-4_element">
+      <div class="block-alredy-exist-item">
+        <img
+          class="block-icon-img"
+          src="../../../assets/Icons/yogis-for-peace-icon-9.svg"
+          alt=""
+        />
+        <div class="block-text">
+          {{'main.take-vow-ahimsa' | translate}}
+        </div>
+        <p class="flex-column-little-text text-center">
+          {{'main.take-vow-ahimsa-period' | translate}}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="content-container flex-1-4 pt-45 center column"
+    [formGroup]="form"
+  >
+    <h3 class="title-text pb-50">
+      {{'main.registration-to-ahimsa' | translate}}
+    </h3>
+    <h4>{{'main.send-info' | translate}}</h4>
+    <div class="input-container">
+      <div>
+        <p class="input-title">Email</p>
+        <input
+          type="text"
+          class="input-element"
+          placeholder="Your Email"
+          formControlName="email"
+          [ngClass]="{
+            invalid: form.get('email').invalid && form.get('email').touched
+          }"
+        />
+      </div>
+      <p
+        class="error-text"
+        *ngIf="form.get('email').invalid && form.get('email').touched"
+      >
+      {{'main.required-field' | translate}}
+      </p>
+    </div>
+    <div class="input-container">
+      <div>
+        <p class="input-title">{{'main.name' | translate}}</p>
+        <input
+          type="text"
+          class="input-element"
+          placeholder="Your Full Name"
+          formControlName="name"
+        />
+      </div>
+    </div>
+    <div class="input-container">
+      <div>
+        <p class="input-title">{{'main.phone' | translate}}</p>
+        <input
+          type="text"
+          class="input-element"
+          placeholder="Your Phone"
+          formControlName="phone"
+        />
+      </div>
+    </div>
+    <div class="input-container">
+      <div>
+        <p class="input-title">{{'main.details' | translate}}</p>
+        <textarea
+          type="text"
+          class="input-element"
+          formControlName="description"
+        ></textarea>
+      </div>
+    </div>
+    <div class="input-container">
+      <button
+        class="submit-button"
+        (click)="sendMail()"
+        [disabled]="form.invalid"
+        [ngClass]="{ disabled: form.invalid }"
+      >
+      {{'main.send' | translate}}
+      </button>
+    </div>
+  </div>
+  <div class="content-container flex-1-4 center column" [formGroup]="form">
+    <h3 class="title-text pb-50">{{'main.contacts' | translate}}</h3>
+    <h4>{{'main.send-info' | translate}}</h4>
+    <div class="flex-1-4 h-260">
+      <div class="flex-1-4_element">
+        <p>
+          <a
+            href="https://www.instagram.com/yogisforpeace/"
+            target="_blank"
+            class="text-underline-little"
+            >Instagram</a
+          >
+        </p>
+        <p class="flex-column-little-text">
+          {{'main.follow-life' | translate}}
+        </p>
+      </div>
+      <div class="flex-1-4_element">
+        <p>
+          <a
+            href="https://t.me/yogisforpeace_life"
+            target="_blank"
+            class="text-underline-little"
+            >{{'main.tg-channel' | translate}}</a
+          >
+        </p>
+        <p class="flex-column-little-text">
+          {{'main.read-hews' | translate}}
+        </p>
+      </div>
+      <div class="flex-1-4_element">
+        <p>
+          <a
+            href="https://t.me/yogisforpeace"
+            target="_blank"
+            class="text-underline-little"
+            >{{'main.tg-chat' | translate}}</a
+          >
+        </p>
+        <p class="flex-column-little-text">
+          {{'main.write-number' | translate}}
+        </p>
+      </div>
+      <div class="flex-1-4_element">
+        <p>
+          <a
+            href="mailto:yogisforpeace1008@gmail.com"
+            target="_blank"
+            class="text-underline-little"
+            >{{'main.email-address' | translate}}</a
+          >
+        </p>
+        <p class="flex-column-little-text">
+          {{'main.for-cooperation' | translate}}
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="content-container img-right">
+    <div class="content__img img-pranam"></div>
+    <div class="content__text__container">
+      <div class="content__text text__en">
+        <div class="text__header">
+          <h2>Movement World’s Yogis for Peace</h2>
+        </div>
+        <div class="text__paragraph">
+          <p>
+            The World’s Yogis for Peace movement is a non-political, non-profit,
+            networked international social movement with the aim of uniting all
+            those who practise yoga and Sanatana Dharma in one form or another,
+            for the sake of the shanti principle of peace, harmony, and love all
+            over the world.
+          </p>
+        </div>
+      </div>
+      <hr class="space" />  -->
+
+  <!-- <div class="content__text text__ru">
+        <div class="text__header">
+          <h2>Движение «Йоги за мир на планете»</h2>
+        </div>
+        <div class="text__paragraph">
+          <p>
+            Движение «Йоги за мир» – это неполитическое, некоммерческое, сетевое
+            международное общественное движение, ставящее перед собой цель
+            объединить всех, кто практикует йогу и Санатана Дхарму в той или
+            иной форме, ради утверждения принципа Шанти – мира, покоя, любви и
+            гармонии на всей Земле.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-container">
+    <div class="content__text__container">
+      <div class="content__text сontent__text__column text__en">
+        <div class="text__header">
+          <span class="icon"></span>
+          <h2 class="icon__before">
+            We promote the traditional ideals and principles of yoga such as:
+          </h2>
+        </div>
+        <div class="text-items">
+          <div class="text-item little-elips text-item-1">
+            <h2>Shanti</h2>
+            <p>peace & harmony</p>
+          </div>
+          <div class="text-item little-elips text-item-2">
+            <h2>Ahimsa</h2>
+            <p>non-violence</p>
+          </div>
+          <div class="text-item little-elips text-item-3">
+            <h2>Asteya</h2>
+            <p>non-stealing</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="space" />
+
+      <div class="content__text сontent__text__column text__ru">
+        <div class="text__header">
+          <span class="icon pranam-gold"></span>
+          <h2 class="icon__before">
+            Мы популязируем традиционные идеалы и принципы йоги, такие как:
+          </h2>
+        </div>
+        <div class="text-items">
+          <div class="text-item little-elips text-item-1">
+            <h2>Шанти</h2>
+            <p>мир и гармония</p>
+          </div>
+          <div class="text-item little-elips text-item-2">
+            <h2>Ахимса</h2>
+            <p>ненасилие</p>
+          </div>
+          <div class="text-item little-elips text-item-3">
+            <h2>Астея</h2>
+            <p>неприсвоение чужого</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content__img img-palms"></div>
+  </div>
+  <div class="content-container content-container__column">
+    <div class="content__text__container text__en">
+      <div class="text__header text__header__center">
+        <span class="icon chetki-black"></span>
+        <h2 class="icon__before">
+          We carry out the pacifying practice of shanti karma everywhere. It
+          includes:
+        </h2>
+      </div>
+      <div class="text-items">
+        <div class="text-item big-ellips">
+          <h2>
+            recitation of <br />
+            shanti mantras
+          </h2>
+          <p>harmonizing prayers</p>
+        </div>
+        <div class="text-item big-ellips">
+          <h2>
+            meditation <br />
+            of unconditional love
+          </h2>
+        </div>
+      </div>
+    </div>
+    <hr class="space space__less-padding" />
+
+    <div class="content__text__container text__ru">
+      <div class="text__header text__header__center">
+        <span class="icon chetki-gold"></span>
+        <h2 class="icon__before">
+          Мы повсеместно проводим умиротворяющую практику Шанти-кармы. Она
+          включает:
+        </h2>
+      </div>
+      <div class="text-items">
+        <div class="text-item big-ellips">
+          <h2>рецитацию Шанти-мантр</h2>
+          <p>гармонизирующих молитв</p>
+        </div>
+        <div class="text-item big-ellips">
+          <h2>медитацию безусловной любви</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-container">
+    <div class="content__img img-palms__unity"></div>
+    <div class="content__text__container">
+      <div class="content__text text__en">
+        <div class="text__paragraph">
+          <span class="icon icon__peace__gold"></span>
+          <p style="margin-left: 70px">
+            We invite all yoga communities, Sanatana Dharma communities, and all
+            people to join in the meditation of Love and Peace, to spread the
+            shanti principle all over the Earth.
+          </p>
+          <h2>Our strength is in unity!</h2>
+        </div>
+      </div>
+
+      <hr class="space" />
+
+      <div class="content__text text__ru">
+        <div class="text__paragraph">
+          <span class="icon icon__peace__black"></span>
+          <p style="margin-top: 40px; margin-left: 70px">
+            Приглашаем все йогические сообщества, сообщества Санатана Дхармы, а
+            также всех людей присоединяться к медитации Любви и Мира,
+            распространять принцип Шанти на всей Земле.
+          </p>
+          <h2>Наша сила в единстве!</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-container container-footer">
+    <div class="content__img img-pranam__footer"></div>
+    <div class="content__text__container footer">
+      <div class="text__paragraph">
+        <h2 class="footer__h">Thank you for your attention</h2>
+        <p class="footer__text">Спасибо за внимание</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+</div>
