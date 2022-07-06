@@ -99,7 +99,7 @@ export class ForumComponent implements OnInit {
       .subscribe((res: any) => {
         console.log(res);
 
-        let collection = res.result;
+        let collection = res.total;
         this.http
           .post(
             'https://b24-ay5iam.bitrix24.eu/rest/4/cf2ndvv1z7r8ttgp/crm.contact.add',
@@ -122,7 +122,7 @@ export class ForumComponent implements OnInit {
                 'https://b24-ay5iam.bitrix24.eu/rest/4/cf2ndvv1z7r8ttgp/crm.lead.add',
                 {
                   fields: {
-                    TITLE: `Заявка номер ${collection?.length + 1}`,
+                    TITLE: `Заявка номер ${collection + 1}`,
                     CONTACT_ID: contact.result,
                     STATUS: 'NEW',
                     OPENED: 'Y',
