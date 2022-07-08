@@ -1,12 +1,16 @@
+
+* {
+  font-family: "Roboto Slab", serif;
+}
+h2 {
+  font-family: "Roboto Slab", serif !important;
+  font-weight: 400;
+}
 .wrapper {
   width: 100%;
   height: auto;
   min-height: 100%;
-  background-image: -webkit-linear-gradient(
-    top,
-    rgba(241, 239, 250, 1),
-    rgba(241, 239, 250, 1)
-  );
+  background: url(../../../assets/Images/back.jpg)0 0/100% auto repeat;
   position: relative;
 }
 .container {
