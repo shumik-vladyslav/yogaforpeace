@@ -1,105 +1,141 @@
 .wrapper {
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-    background-image: -webkit-linear-gradient(top, rgba(241, 239, 250, 1), rgba(241, 239, 250, 1));
-    position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-image: -webkit-linear-gradient(
+    top,
+    rgba(241, 239, 250, 1),
+    rgba(241, 239, 250, 1)
+  );
+  position: relative;
 }
 .container {
-    max-width: 1200px;
+  max-width: 1200px;
 
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .logo__container {
-    width: 300px;
-    margin: 0 auto;
-    padding: 30px 0;
-    //background: url('../../../assets/Logo/yogis-for-peace-logo.svg') no-repeat;
+  width: 300px;
+  margin: 0 auto;
+  padding: 30px 0;
+  //background: url('../../../assets/Logo/yogis-for-peace-logo.svg') no-repeat;
 }
 .pb-24 {
-    padding-bottom: 24px;
+  padding-bottom: 24px;
 }
 .pt-45 {
-    padding-top: 105px;
-    padding-bottom: 45px;
+  padding-top: 105px;
+  padding-bottom: 45px;
 }
 .img__cover {
-    width: 100%;
+  width: 100%;
 }
 .content-container {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    // justify-content: start;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  // justify-content: start;
+  margin-bottom: 20px;
+  &.justify-start {
+    justify-content: space-between;
     margin-bottom: 20px;
+    padding: 0 30px;
+  }
 }
 .video {
-    margin: auto;
+  margin: auto;
 }
 .go_back {
-    padding: 14px;
-    cursor: pointer;
+  padding: 14px;
+  cursor: pointer;
 }
 .block-text {
-    font-size: 30px;
-    line-height: 1.17;
-    font-family: "Arimo", sans-serif;
-    font-weight: 500;
-    color: #ba7d18;
+  font-size: 30px;
+  line-height: 1.17;
+  font-family: "Arimo", sans-serif;
+  font-weight: 500;
+  color: #ba7d18;
 }
 .img__logo-little {
-    width: 120px;
+  width: 120px;
 }
 .text {
-    font-size: 22px;
-    font-family: "Roboto";
-    color: rgb(186, 125, 24);
+  font-size: 22px;
+  font-family: "Roboto";
+  color: rgb(186, 125, 24);
 }
 .text-margin {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 .img-tg {
-    width: 50px;
+  width: 50px;
 }
 .mt-40 {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 .program-forum-flex {
-    width: 515px;
-    margin: 0 auto;
-    align-items: center;
-    .img-star {
-        margin: 0;
-        width: 20px;
-        height: 20px;
-    }
+  width: 515px;
+  margin: 0 auto;
+  align-items: center;
+  .img-star {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+  }
 }
 .main-title {
-    font-size: 44px;
-    color: rgb(186, 125, 24);
-    line-height: 1.191;
+  font-size: 44px;
+  color: rgb(186, 125, 24);
+  line-height: 1.191;
+}
+.support {
+  margin-top: 100px;
+}
+app-master-card {
+  margin-bottom: 35px;
+  width: 100%;
+}
+.content-container.ustify-start.mt-40 {
+  justify-content: center;
+  padding: 0 25px;
+}
+.text.flex.items-center.text-margin.log {
+  text-align: end;
+  line-height: 1.3;
+}
+@media (max-width: 1295px) {
+  .container {
+    margin: 0 0px;
+    padding: 0 20px;
+  }
 }
 @media (max-width: 786px) {
-    .stars {
-        display: none;
-    }
-    .main-title {
-        font-size: 34px;
-    }
-    .img-bird {
-        display: none;
-    }
-    .program-forum-flex {
-        width: auto;
-    }
-    .item-iframe{
-        width: 81vw;
-        height: 42vw;
-    }
-    .href-to-tg {
-        flex-wrap: wrap;
-    }
+  .stars {
+    display: none;
+  }
+  .main-title {
+    font-size: 34px;
+  }
+  .img-bird {
+    display: none;
+  }
+  .program-forum-flex {
+    padding: 0 20px;
+    width: auto;
+  }
+  .item-iframe {
+    width: 81vw;
+    height: 42vw;
+  }
+  .href-to-tg {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 600px) {
+  .content-container.justify-start {
+    padding: 0 15px;
+  }
 }
