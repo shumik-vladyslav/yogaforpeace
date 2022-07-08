@@ -1,30 +1,28 @@
-
 .wrapper {
     width: 100%;
     height: auto;
     min-height: 100%;
-    background-image: -webkit-linear-gradient(top, rgba(241,239,250,1), rgba(241,239,250,1));
+    background-image: -webkit-linear-gradient(top, rgba(241, 239, 250, 1), rgba(241, 239, 250, 1));
     position: relative;
 }
 .container {
     max-width: 1200px;
-    height: 100vh;
+
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .logo__container {
-
     width: 300px;
     margin: 0 auto;
     padding: 30px 0;
     //background: url('../../../assets/Logo/yogis-for-peace-logo.svg') no-repeat;
 }
-.pb-24{
+.pb-24 {
     padding-bottom: 24px;
 }
-.pt-45{
+.pt-45 {
     padding-top: 105px;
     padding-bottom: 45px;
 }
@@ -35,24 +33,73 @@
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
-    justify-content: center;
+    // justify-content: start;
     margin-bottom: 20px;
 }
-.video{
+.video {
     margin: auto;
 }
-.go_back{
+.go_back {
     padding: 14px;
     cursor: pointer;
 }
-.block-text{
+.block-text {
     font-size: 30px;
     line-height: 1.17;
-    font-family: 'Arimo', sans-serif;
+    font-family: "Arimo", sans-serif;
     font-weight: 500;
     color: #ba7d18;
-
 }
 .img__logo-little {
-    width: 270px;
+    width: 120px;
+}
+.text {
+    font-size: 22px;
+    font-family: "Roboto";
+    color: rgb(186, 125, 24);
+}
+.text-margin {
+    margin-left: 20px;
+}
+.img-tg {
+    width: 50px;
+}
+.mt-40 {
+    margin-top: 40px;
+}
+.program-forum-flex {
+    width: 515px;
+    margin: 0 auto;
+    align-items: center;
+    .img-star {
+        margin: 0;
+        width: 20px;
+        height: 20px;
+    }
+}
+.main-title {
+    font-size: 44px;
+    color: rgb(186, 125, 24);
+    line-height: 1.191;
+}
+@media (max-width: 786px) {
+    .stars {
+        display: none;
+    }
+    .main-title {
+        font-size: 34px;
+    }
+    .img-bird {
+        display: none;
+    }
+    .program-forum-flex {
+        width: auto;
+    }
+    .item-iframe{
+        width: 81vw;
+        height: 42vw;
+    }
+    .href-to-tg {
+        flex-wrap: wrap;
+    }
 }

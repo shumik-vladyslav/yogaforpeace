@@ -1,27 +1,64 @@
 <div class="wrapper">
 
   <!-- <div class="go_back block-text" (click)="goBack()">{{'main.back' | translate}}</div> -->
-  <div class="content-container">
+  <div class="content-container justify-start">
     <div class="container-inner">
       <div class="logo__container-little mt-2">
-        <img
-          src="../../../assets/Logo/logo_MAG.png"
-          alt="logo"
-          class="img img__logo-little"
-        />
+        <img src="../../../assets/Logo/logo_MAG.png" alt="logo" class="img img__logo-little" />
       </div>
+    </div>
+    <div class="text flex items-center text-margin">
+      Присоединяйтесь к нам на трансляциях!
     </div>
   </div>
   <div class="content-container">
     <div class="video">
-      <iframe
-        width="760"
-        height="430"
-        src="https://www.youtube.com/embed/x1wj597Ts6g"
-        frameborder="0"
-        allowfullscreen
-        class="item-iframe"
-      ></iframe>
+      <iframe width="760" height="430" src="https://www.youtube.com/embed/x1wj597Ts6g" frameborder="0" allowfullscreen
+        class="item-iframe"></iframe>
+    </div>
+  </div>
+  <div class="content-container ustify-start mt-40">
+    <div class="img-tg"> <img src="assets/Icons/png-transparent-telegram.png" alt="tg"></div>
+    <div class="text flex items-center text-margin href-to-tg">
+      Задать вопросы участникам Форума вы можете в этом чате : <a href="https://t.me/FORUM_AHIMSA" target="_blank">
+        https://t.me/FORUM_AHIMSA</a>
+    </div>
+  </div>
+  <div class="program-forum">
+    <div class="program-forum-flex flex justify-between" id="forum-program">
+      <img src="../../../assets/Images/Star 2.png" alt="" class="img-star" />
+      <h2 class="main-title">Программа форума</h2>
+      <img src="../../../assets/Images/Star 2.png" alt="" class="img-star" />
+    </div>
+
+    <div class="container flex flex-col">
+      <app-master-card [imgUrl]="'swami-vishnudevananda.jpg'" [title]="vishnudevanandaTitle"
+        [name]="'Шри Гуру Свами Вишнудевананда Гири,'" [tradition]="'Пратьякша Адвайта Сиддхов'"
+        [time]="'12.00 по Праге (13.00 Киев, Мск)'"></app-master-card>
+      <app-master-card [imgUrl]="'pilot-baba.jpg'" [title]="pilotBabaTitle"
+        [name]="'Махайоги Пайлот Бабаджи, Гималайская йога Сиддхов'" [tradition]="''"
+        [time]="'12.30 по Праге (13.30 Киев, Мск)'"></app-master-card>
+      <app-master-card [imgUrl]="'avadhut_maharaj.png'" [title]="avanhutMaharajTitle" [name]="'Авадхут Махарадж,'"
+        [tradition]="'Гауди Сампрадая'" [time]="'13.00 по Праге (14.00 Киев, Мск)'"></app-master-card>
+      <app-master-card [imgUrl]="'adyanath.jpg'" [title]="adyanathTitle" [name]="'Йоги Адьянатх,'"
+        [tradition]="'Натха Сампрадая'" [time]="'14.00 по Праге (15.00 Киев, Мск)'"></app-master-card>
+      <app-master-card [imgUrl]="'satimata.jpg'" [title]="satiMataTitle" [name]="'Сати Мата Джи,'"
+        [tradition]="'Гималайская йога Сиддхов'" [time]="'15.00 по Праге (16.00 Киев, Мск)'"></app-master-card>
+      <app-master-card [imgUrl]="'bharati.jpg'" [title]="bhartiTitle" [name]="'Бхарати Махардж,'"
+        [tradition]="'Гауди Сампрадая'" [time]="'16.00 по Праге (17.00 Киев, Мск)'"></app-master-card>
+      <app-master-card [imgUrl]="'mihailconstantinov.jpg'" [title]="mihailconstantinovTitle"
+        [name]="'Михаил Константинов,'" [tradition]="'Вира-шайва сампрадая'"
+        [time]="'17.00 по Праге (18.00 Киев, Мск)'"></app-master-card>
+      <app-master-card [imgUrl]="'vishvashaarananda.jpg'" [title]="visvaranaandaTitle"
+        [name]="'Свами Вишвашарадаананда,'" [tradition]="'Бхакти Марга'" [time]="'18.00 по Праге (19.00 Киев, Мск)'">
+      </app-master-card>
+      <app-master-card [imgUrl]="'devi.jpg'" [title]="deviTitle" [name]="'Йогмата Четана Гири и Йогмата Шраддха Гири,'"
+        [tradition]="'Гималайская йога Сиддхов'" [time]="'19.00 по Праге (20.00 Киев, Мск)'"></app-master-card>
+      <app-master-card [imgUrl]="'shankara.jpg'" [title]="shankaraTitle" [name]="'Шанкара (Павел Калягин),'"
+        [tradition]="'Традиция Шивананды'" [time]="'19.30 по Праге (20.30 Киев, Мск)'"></app-master-card>
+
+      <app-master-card [imgUrl]="'earth.jpg'" [title]="lovetitle" [name]="'Всемирная медитация Безусловной Любви'"
+        [time]="'20.00 по Праге (21.00 Киев, Мск)'"></app-master-card>
     </div>
   </div>
 </div>
