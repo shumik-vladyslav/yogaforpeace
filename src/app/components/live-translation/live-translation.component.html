@@ -18,11 +18,18 @@
     </div>
   </div>
   <div class="content-container ustify-start mt-40">
-    <div class="img-tg"> <img src="assets/Icons/png-transparent-telegram.png" alt="tg"></div>
+    <!-- <div class="img-tg"> <img src="assets/Icons/png-transparent-telegram.png" alt="tg"></div>
     <div class="text flex items-center text-margin href-to-tg">
       Задать вопросы участникам Форума вы можете в этом чате : <a href="https://t.me/FORUM_AHIMSA" target="_blank">
         https://t.me/FORUM_AHIMSA</a>
+    </div> -->
+    <div (click)="goToURl('https://t.me/FORUM_AHIMSA')" class="btn_t_wrap">
+      <button class="btn_custom telegram">
+        <img src="assets/Images/tel.png" alt="telegram">
+        Подписаться</button>
     </div>
+    <button (click)="goToURl('https://www.instagram.com/yogisforpeace/')" class="btn_custom instagram">
+      <img src="assets/Images/inst.png" alt="instagram">Присоединиться</button>
   </div>
   <div class="program-forum">
     <div class="program-forum-flex flex justify-between" id="forum-program">
@@ -40,10 +47,10 @@
         [time]="'12.30 по Праге (13.30 Киев, Мск)'"></app-master-card>
       <app-master-card [imgUrl]="'avadhut_maharaj.png'" [title]="avanhutMaharajTitle" [name]="'Авадхут Махарадж,'"
         [tradition]="'Гауди Сампрадая'" [time]="'13.00 по Праге (14.00 Киев, Мск)'"></app-master-card>
-      <app-master-card [imgUrl]="'adyanath.jpg'" [title]="adyanathTitle" [name]="'Йоги Адьянатх,'"
-        [tradition]="'Натха Сампрадая'" [time]="'14.00 по Праге (15.00 Киев, Мск)'"></app-master-card>
       <app-master-card [imgUrl]="'satimata.jpg'" [title]="satiMataTitle" [name]="'Сати Мата Джи,'"
-        [tradition]="'Гималайская йога Сиддхов'" [time]="'15.00 по Праге (16.00 Киев, Мск)'"></app-master-card>
+        [tradition]="'Гималайская йога Сиддхов'" [time]="'14.00 по Праге (15.00 Киев, Мск)'"></app-master-card>
+      <app-master-card [imgUrl]="'adyanath.jpg'" [title]="adyanathTitle" [name]="'Йоги Адьянатх,'"
+        [tradition]="'Натха Сампрадая'" [time]="'15.00 по Праге (16.00 Киев, Мск)'"></app-master-card>
       <app-master-card [imgUrl]="'bharati.jpg'" [title]="bhartiTitle" [name]="'Бхарати Махардж,'"
         [tradition]="'Гауди Сампрадая'" [time]="'16.00 по Праге (17.00 Киев, Мск)'"></app-master-card>
       <app-master-card [imgUrl]="'mihailconstantinov.jpg'" [title]="mihailconstantinovTitle"
@@ -58,7 +65,7 @@
         [tradition]="'Традиция Шивананды'" [time]="'19.30 по Праге (20.30 Киев, Мск)'"></app-master-card>
 
       <app-master-card [imgUrl]="'earth.jpg'" [title]="lovetitle" [name]="'Всемирная медитация Безусловной Любви'"
-        [time]="'20.00 по Праге (21.00 Киев, Мск)'"></app-master-card>
+        [sname]="'В присутствии Учителей'" [time]="'20.00 по Праге (21.00 Киев, Мск)'"></app-master-card>
     </div>
   </div>
   <div class="support">

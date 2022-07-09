@@ -49,6 +49,10 @@ export class LiveTranslationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goToURl(url) {
+    window.open(url);
+  }
+
   goBack(){
     this._location.back();
   }

@@ -220,6 +220,57 @@ body {
 .b-im_wrap {
   margin-right: 21px !important;
 }
+.btn_t_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  border-radius: 9px;
+  background-image: linear-gradient(
+    260deg,
+    #ebd385 0%,
+    #ebd385 11%,
+    #b7832b 43%,
+    #edcd7b 73%,
+    #b7832b 100%
+  );
+  cursor: pointer;
+}
+.btn_custom {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  border-radius: 9px;
+  font-size: 27px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Roboto Slab";
+  padding: 0 30px 0 16px;
+  img {
+    height: 32px;
+    margin-right: 17px;
+  }
+  &.telegram {
+    background-image: linear-gradient(
+      0deg,
+      #950927 18%,
+      #950927 31%,
+      #d51b65 100%
+    );
+    height: 42px;
+    width: calc(100% - 6px);
+  }
+  &.instagram {
+    background-image: linear-gradient(
+      260deg,
+      #ebd385 0%,
+      #ebd385 11%,
+      #b7832b 43%,
+      #edcd7b 73%,
+      #b7832b 100%
+    );
+  }
+}
 @media (max-width: 1620px) {
   .bk_wrap {
     flex-direction: column;

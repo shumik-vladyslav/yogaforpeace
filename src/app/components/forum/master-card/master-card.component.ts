@@ -9,6 +9,7 @@ export class MasterCardComponent implements OnInit {
   @Input() imgUrl;
   @Input() title;
   @Input() name;
+  @Input() sname;
   @Input() tradition;
   @Input() time;
   constructor() { }
