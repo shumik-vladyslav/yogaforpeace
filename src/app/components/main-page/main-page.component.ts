@@ -32,7 +32,7 @@ export class MainPageComponent implements OnInit {
     generalService.currentLanguage.subscribe(res => {
       this.language = res;
       if(this.language == 'en'){
-        this.shantiSrc = 'https://www.youtube.com/watch?v=Em-y_bkTQYk&list=PLH8BAGc6LDX1Ywwo--T4Tt8163CIHBQfL&index=5';
+        this.shantiSrc = 'https://www.youtube.com/embed/1sgG98jCq_g';
         this.ahimsaSrc = 'https://www.youtube.com/embed/3diYSam4ZcU';
       }
     })
