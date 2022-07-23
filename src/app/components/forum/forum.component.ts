@@ -157,7 +157,7 @@ export class ForumComponent implements OnInit {
     .post(
       this.url + 'crm.deal.list',
       {
-        filter: { "CONTACT_ID": contactId, "SOURCE_DESCRIPTION": 'Форум "Ахимса и Гармония"' },
+        filter: { "CONTACT_ID": contactId, "SOURCE_DESCRIPTION": "Форум Ахимса и Гармония" },
         select: [ "ID", "TITLE", "SOURCE" ]
     },
     )
@@ -182,8 +182,8 @@ export class ForumComponent implements OnInit {
             STATUS_ID: 'NEW',
             STATUS_DESCRIPTION: 'Новый',
             SOURCE_ID: 'CALL',
-            SOURCE_DESCRIPTION: 'Форум Ахимса и Гармония',
-            SOURCE: 'Форум "Ахимса и Гармония"',
+            SOURCE_DESCRIPTION: "Форум Ахимса и Гармония",
+            SOURCE: "Форум Ахимса и Гармония",
             UTM_CAMPAIGN: this.routeParams?.utm_campaign,
             UTM_MEDIUM: this.routeParams?.utm_medium,
             UTM_SOURCE: this.routeParams?.utm_source,
