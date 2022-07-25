@@ -106,7 +106,7 @@ export class ForumComponent implements OnInit {
         .post(
           this.url + 'crm.contact.list',
           {
-            filter: { "PHONE": form.phone },
+            filter: { "EMAIL": form.email },
             select: [ "ID", "NAME", "LAST_NAME" ]
         },
         )
