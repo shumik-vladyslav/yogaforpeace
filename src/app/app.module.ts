@@ -15,6 +15,7 @@ import { SafePipe } from './safe.pipe';
 import { ForumComponent } from './components/forum/forum.component';
 import { MasterCardComponent } from './components/forum/master-card/master-card.component';
 import { ThankyouPageComponent } from './components/forum/thankyou-page/thankyou-page.component';
+import { AhimsaComponent } from './components/ahimsa/ahimsa.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -28,6 +29,7 @@ export function createTranslateLoader(http: HttpClient) {
     ForumComponent,
     MasterCardComponent,
     ThankyouPageComponent,
+    AhimsaComponent,
   ],
   imports: [
     BrowserModule,

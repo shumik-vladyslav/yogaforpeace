@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AhimsaComponent } from './components/ahimsa/ahimsa.component';
 import { ForumComponent } from './components/forum/forum.component';
 import { ThankyouPageComponent } from './components/forum/thankyou-page/thankyou-page.component';
 import { LiveTranslationComponent } from './components/live-translation/live-translation.component';
@@ -10,10 +11,9 @@ const routes: Routes = [
   { path: '', component: MainPageComponent },
   { path: 'forum', component: ForumComponent },
   { path: 'live', component: LiveTranslationComponent },
+  { path: 'ahimsa', component: AhimsaComponent },
   { path: 'thanks', component: ThankyouPageComponent },
-  { path: ':type', component: MainPageComponent },
-  
-
+  { path: ':type', component: MainPageComponent }
 ];
 
 @NgModule({
