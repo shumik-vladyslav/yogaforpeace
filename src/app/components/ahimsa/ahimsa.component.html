@@ -271,3 +271,166 @@
     </div>
   </div>
 </div>
+<div class="additional_wrap ahs step">
+  <div class="main-a_wrap ddls">
+    <div class="l_container ans">
+      <p class="m_sg">КАК ПРОИСХОДИТ <br>РИТУАЛ АХИМСА</p>
+      <div class="changes_main_wrap">
+        <div class="col_wrap">
+          <div class="l_feed_back adq">
+            <div class="step_line_wrap">
+              <div class="change_plg">
+                <img src="assets/Images/ams/11.png" alt="1">
+              </div>
+              <div class="chg_t_wr">
+                <p class="chg_titul">
+                  <span>Вы регистрируетесь<br>
+                    на ритуал</span>
+                </p>
+              </div>
+            </div>
+            <p class="arr_step">
+              <img src="assets/Images/ams/arr_a.png" alt="arrow">
+            </p>
+            <div class="step_line_wrap">
+              <div class="change_plg">
+                <img src="assets/Images/ams/22.png" alt="2">
+              </div>
+              <div class="chg_t_wr">
+                <p class="chg_titul"><span>Ознакамливаетесь с<br> <span>принципами</span> ритуала</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col_wrap">
+          <div class="l_feed_back adq">
+            <div class="step_line_wrap">
+              <div class="change_plg">
+                <img src="assets/Images/ams/33.png" alt="3">
+              </div>
+              <div class="chg_t_wr">
+                <p class="chg_titul">
+                  <span>Вносите свободное<br> пожертвование по<br> сердцу</span>
+                </p>
+              </div>
+            </div>
+            <p class="arr_step">
+              <img src="assets/Images/ams/arr_a.png" alt="arrow">
+            </p>
+            <div class="step_line_wrap">
+              <div class="change_plg">
+                <img src="assets/Images/ams/44.png" alt="4">
+              </div>
+              <div class="chg_t_wr">
+                <p class="chg_titul"><span>Присоединяйтесь в<br> группу ритуала в<br> Телеграм</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col_wrap">
+          <div class="l_feed_back adq">
+            <div class="step_line_wrap">
+              <div class="change_plg">
+                <img src="assets/Images/ams/55.png" alt="5">
+              </div>
+              <div class="chg_t_wr">
+                <p class="chg_titul">
+                  <span>Принимаете обет<br> Ахимсы с монахами</span>
+                </p>
+              </div>
+            </div>
+            <p class="arr_step">
+              <img src="assets/Images/ams/arr_a.png" alt="arrow">
+            </p>
+            <div class="step_line_wrap">
+              <div class="change_plg">
+                <img src="assets/Images/ams/66.png" alt="6">
+              </div>
+              <div class="chg_t_wr">
+                <p class="chg_titul"><span>Ваша жизнь обретает<br> новые качества и<br> смыслы</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="l_container reg">
+  <div class="container">
+    <div class="registration-form flex flex-col">
+      <div class="registration-form-title">
+        <div class="program-forum-flex flex justify-between">
+          <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+          <h2 class="main-title h">Зарегистрироваться на ритуал</h2>
+          <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+        </div>
+      </div>
+      <div class="form-registration-form flex justify-between" [formGroup]="form" id="registration-form">
+        <input type="text" class="input-form-gold" placeholder="имя" formControlName="name" />
+        <input type="email" class="input-form-gold" placeholder="email" formControlName="email" />
+        <input type="text" class="input-form-gold" placeholder="телефон" formControlName="phone" />
+      </div>
+      <div class="registration-form-button flex justify-center items-center">
+        <button class="registration-button" (click)="sendRegistrationData()" [disabled]="!form.valid"
+          [ngClass]="!form.valid ? 'disabled' : 'enabled'">Зарегистрироваться</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="additional_wrap mdlf bottm">
+  <div class="main-a_wrap">
+    <div class="l_container bottm">
+      <p class="m_sg g">ПРИМИТЕ ОБЕТ<br> АХИМСЫ</p>
+      <p class="l_titul">сроком от недели, месяца, года или на всю жизнь</p>
+      <div class="a_butt-wrap">
+        <button class="bn_gr">ПРИНЯТЬ УЧАСТИЕ</button>
+      </div>
+      <div class="social-items flex flex-col">
+        <div class="flex links marg" (click)="goToURl('https://www.instagram.com/yogisforpeace/')">
+          <img src="assets/Icons/inst.png" alt="" class="social-img" />
+          @yogisforpeace
+        </div>
+        <div class="flex marg">
+          <img src="assets/Icons/tgpng.png" alt="" class="social-img" />
+          <div>
+            <div class="links" (click)="goToURl('https://t.me/yogisforpeace_life')">yogisforpeace_life (информационный
+              канал)</div>
+            <div class="links" (click)="goToURl('https://t.me/yogisforpeace')">yogisforpeace (чат подсчета
+              умиротворяющих практик)
+            </div>
+          </div>
+        </div>
+        <div class="flex marg">
+          <img src="assets/Icons/v.png" alt="" class="social-img" />
+          <div>
+            <div class="links">yogisforpeace</div>
+          </div>
+        </div>
+        <div class="flex justify-between parent-flex it marg">
+          <div class="flex flex-col">
+            <div class="flex">
+              <img src="assets/Icons/face.png" alt="" class="social-img" />
+              <div>
+                <div class="links">worldyogisforpeace</div>
+              </div>
+            </div>
+            <div class="flex" (click)="goToURl('https://www.youtube.com/c/Yogisforpeace')">
+              <img src="assets/Icons/youtube.png" alt="" class="social-img" />
+              <div>
+                <div class="links">Yogisforpeace</div>
+              </div>
+            </div>
+          </div>
+          <div class="flex marg">
+            <img class="social-img" src="assets/Icons/world.png" alt="">
+            <div class="">
+              <div class="links">yogisforpeace.life</div>
+              <div class="links">yogisforpeace.life/en</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

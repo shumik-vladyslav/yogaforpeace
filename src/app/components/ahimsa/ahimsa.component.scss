@@ -1,3 +1,4 @@
+@import "../forum/forum.component.scss";
 .l_container {
   max-width: 1650px;
   padding: 0 150px;
@@ -16,6 +17,25 @@
     background: url(../../../assets/Images/ams/back.png) no-repeat;
     background-size: cover;
     padding-bottom: 80px;
+  }
+}
+.step {
+  .l_container {
+    background: none;
+  }
+}
+.l_container.reg {
+  height: auto;
+  padding: 0 150px 30px 150px;
+  .registration-form {
+    margin: 75px 0;
+  }
+  .registration-form-title .program-forum-flex {
+    width: auto;
+    justify-content: center;
+  }
+  .registration-form-title .program-forum-flex .main-title {
+    margin: 0 20px;
   }
 }
 .l_titul {
@@ -123,6 +143,30 @@
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
+}
+.l_container.bottm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .l_titul {
+    font-weight: 500;
+  }
+  .a_butt-wrap {
+    margin: 7% 0 0 0;
+  }
+}
+.additional_wrap.mdlf.bottm {
+  background: #f5f4f8;
+}
+.social-items {
+  color: #1a171b;
+  font-size: 31px;
+  align-self: self-start;
+  line-height: 1;
+  margin: 50px 0 0 0;
+  div.marg {
+    margin-bottom: 15px;
+  }
 }
 .main-a_wrap.mid {
   background-image: url(../../../assets/Images/earth.png);
@@ -262,9 +306,17 @@ p.in_wr {
   flex-direction: column;
   width: 32.5%;
 }
+.step_line_wrap {
+  display: flex;
+}
 .ahs {
   height: auto;
   background: linear-gradient(90deg, #843b7f 0%, #782373 90%, #6a2a69 100%);
+  &.step {
+    background: url(../../../assets/Images/ams/s_back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .a_butt-wrap {
     width: 479px;
     height: 94px;
@@ -295,6 +347,35 @@ p.in_wr {
   display: flex;
   justify-content: space-between;
 }
+.step {
+  .chg_titul {
+    font-size: 33px;
+    text-align: left;
+  }
+  .change_plg {
+    width: 100px;
+    margin-right: 35px;
+  }
+  .changes_main_wrap {
+    width: 90%;
+    margin: 0 auto;
+    .col_wrap {
+      margin-bottom: 100px;
+    }
+  }
+  .l_feed_back {
+    align-items: center;
+  }
+  .l_container.ans {
+    padding-bottom: 0;
+  }
+  .step_line_wrap {
+    width: 40%;
+  }
+  .chg_t_wr {
+    margin-top: 0;
+  }
+}
 .chg_titul {
   font-size: 40px;
   color: #ffffff;
@@ -304,6 +385,10 @@ p.in_wr {
   line-height: 1.2;
   font-size: 3.8vh;
   span {
+    span {
+      font-weight: 400;
+      text-decoration: underline;
+    }
     font-weight: 400;
   }
 }
@@ -394,6 +479,20 @@ p.in_wr {
   background-size: 115% !important;
 }
 @media (max-width: 1600px) {
+  .step {
+    .changes_main_wrap {
+      width: 100%;
+      .col_wrap {
+        margin-bottom: 75px;
+      }
+    }
+    .change_plg {
+      width: 90px;
+    }
+    .chg_titul {
+      font-size: 30px;
+    }
+  }
   .tex_item {
     font-size: 1.7vw;
   }
@@ -435,6 +534,13 @@ p.in_wr {
       height: 68px;
     }
   }
+  .container {
+    padding: 0;
+  }
+  .l_container.reg {
+    height: auto;
+    padding: 0 50px 30px 50px;
+  }
   .a_butt-wrap {
     width: 350px;
     height: 64px;
@@ -455,6 +561,25 @@ p.in_wr {
   }
 }
 @media (max-width: 1250px) {
+  .social-items {
+    font-size: 25px;
+  }
+  .step {
+    .changes_main_wrap {
+      .col_wrap {
+        margin-bottom: 50px;
+      }
+    }
+    .change_plg {
+      width: 75px;
+    }
+    .chg_titul {
+      font-size: 27px;
+    }
+  }
+  .arr_step {
+    width: 25px;
+  }
   .m_sg {
     font-size: 5vh;
     padding-top: 40px;
@@ -482,6 +607,19 @@ p.in_wr {
   }
 }
 @media (max-width: 1100px) {
+  .step {
+    .changes_main_wrap {
+      .col_wrap {
+        margin-bottom: 40px;
+      }
+    }
+    .change_plg {
+      width: 60px;
+    }
+    .chg_titul {
+      font-size: 24px;
+    }
+  }
   .v_w {
     height: 160px;
     img {
@@ -550,6 +688,24 @@ p.in_wr {
     width: 100%;
     height: 100%;
     min-height: 400px;
+  }
+}
+@media (max-width: 950px) {
+  .social-items {
+    font-size: 21px;
+  }
+  .step {
+    .changes_main_wrap {
+      .col_wrap {
+        margin-bottom: 30px;
+      }
+    }
+    .change_plg {
+      width: 50px;
+    }
+    .chg_titul {
+      font-size: 21px;
+    }
   }
 }
 @media (max-width: 900px) {
@@ -623,6 +779,12 @@ p.in_wr {
       }
     }
   }
+  .step {
+    .l_feed_back.adq {
+      width: 100%;
+      flex-direction: row;
+    }
+  }
   .col_wrap {
     display: flex;
     justify-content: space-between;
@@ -648,6 +810,36 @@ p.in_wr {
   }
   .p_text_wrap {
     height: auto;
+  }
+}
+@media (max-width: 850px) {
+  .l_container.reg .registration-form {
+    margin: 25px 0;
+  }
+  .step {
+    .l_feed_back.adq {
+      flex-direction: column;
+      position: relative;
+    }
+    .step_line_wrap {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .changes_main_wrap {
+      .col_wrap {
+        margin-bottom: 0px;
+      }
+    }
+    .arr_step {
+      position: absolute;
+      right: 20%;
+    }
+    .change_plg {
+      width: 75px;
+    }
+    .chg_titul {
+      font-size: 30px;
+    }
   }
 }
 @media (max-width: 780px) {
@@ -738,6 +930,14 @@ p.in_wr {
   }
   .leaders_wrap {
     padding: 45px 0 0 0;
+  }
+}
+@media (max-width: 660px) {
+  .step {
+    .arr_step {
+      position: absolute;
+      right: 10%;
+    }
   }
 }
 @media (max-width: 600px) {
@@ -837,10 +1037,26 @@ p.in_wr {
   .i_t_name {
     font-size: 23px;
   }
+  .step {
+    .arr_step {
+      position: absolute;
+      right: 26px;
+    }
+    .change_plg {
+      width: 45px;
+      height: 75px;
+    }
+    .chg_titul {
+      font-size: 21px;
+    }
+  }
 }
 @media (max-width: 500px) {
   .p_text_wrap {
     height: 510px;
+  }
+  .l_container.reg {
+    padding: 0 25px 30px 25px;
   }
   .main-a_wrap.top {
     background-position: -224px;
@@ -876,6 +1092,9 @@ p.in_wr {
   }
 }
 @media (max-width: 450px) {
+  .registration-form-title .program-forum-flex .main-title {
+    font-size: 19px;
+  }
   .m_slog {
     font-size: 30px;
   }
@@ -943,8 +1162,25 @@ p.in_wr {
   }
 }
 @media (max-width: 391px) {
+  .step {
+    .arr_step {
+      right: -10px;
+      width: 15px;
+      top: 55px;
+    }
+  }
   .main-a_wrap.top {
     background-position: -224px 200px;
+  }
+  .registration-button {
+    height: 55px;
+  }
+  .registration-form-button {
+    margin-bottom: 31px;
+    font-size: 16px;
+  }
+  .l_container.reg {
+    padding: 0 10px 30px 10px;
   }
 }
 @media (max-width: 350px) {
