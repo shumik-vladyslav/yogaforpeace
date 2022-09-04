@@ -74,12 +74,13 @@
             <img src="assets/Images/advayta.png" alt="photo">
           </div>
           <div class="ld_t_wr">
-            <p class="l_titul">Монахиня</p>
+            <p class="l_titul">Махант</p>
             <p class="i_t_name">Адвайтавадини Гири</p>
             <p class="l_titul">традиция Пратьякша Адвайты</p>
           </div>
           <div class="a_butt-wrap flt">
-            <button class="bn_gr">ПОДРОБНЕЕ</button>
+            <button (click)="goToURl('https://www.advayta.org/vsemirnaya-obshchina/advaytavadini-giri/')"
+              class="bn_gr">ПОДРОБНЕЕ</button>
           </div>
         </div>
         <div class="leader_wrap">
@@ -92,7 +93,8 @@
             <p class="l_titul">традиция Пратьякша Адвайты</p>
           </div>
           <div class="a_butt-wrap flt">
-            <button class="bn_gr">ПОДРОБНЕЕ</button>
+            <button (click)="goToURl('https://www.advayta.org/vsemirnaya-obshchina/makheshvari/')"
+              class="bn_gr">ПОДРОБНЕЕ</button>
           </div>
         </div>
       </div>
@@ -214,38 +216,48 @@
     <div class="l_container">
       <p class="m_sg g">ОТЗЫВЫ ТЕХ, КТО УЖЕ ПРИНЯЛ <br>РИТУАЛ АХИМСЫ</p>
       <div class="carousel_line_main_wrap bac">
-        <div class="cl_item_wrap">
-          <div class="vio_w">
-            <p class="v_w">
-              <img class="pl_pl" src="assets/Images/cr/pl.png" alt="play">
-              <img src="assets/Images/cr/1.png" alt="video">
+        <div class="tour_slide-wrap">
+          <div [ngClass]="{'visible': visible}" class="loading">
+            <p class="inmg">
+              <img class="round-loading_image" src="assets/Images/loader-bubble-icon.svg" alt="">
             </p>
           </div>
-          <p class="v_name_c">Николай</p>
-          <p class="v_tex_v">Текстовое описание - самые важные слова из видео, самые важные смыслы, акценты, выжимка из
-            видео.</p>
-        </div>
-        <div class="cl_item_wrap">
-          <div class="vio_w">
-            <p class="v_w">
-              <img class="pl_pl" src="assets/Images/cr/pl.png" alt="play">
-              <img src="assets/Images/cr/2.png" alt="video">
-            </p>
+          <p (click)="previous()" class="arrow_w l">
+            <img src="assets/Images/left.png" alt="arrow">
+          </p>
+          <div class="cl_item_wrap">
+            <div class="vio_w">
+              <p class="v_w">
+                <img *ngIf="!play1" class="pl_pl" src="assets/Images/cr/pl.png" alt="play">
+                <video width="100%" height="250" [src]=slides[first].path controls></video>
+              </p>
+            </div>
+            <p class="v_name_c">{{slides[first].name}}</p>
+            <p class="v_tex_v">{{slides[first].description}}</p>
           </div>
-          <p class="v_name_c">Ирина</p>
-          <p class="v_tex_v">Текстовое описание - самые важные слова из видео, самые важные смыслы, акценты, выжимка из
-            видео.</p>
-        </div>
-        <div class="cl_item_wrap">
-          <div class="vio_w">
-            <p class="v_w">
-              <img class="pl_pl" src="assets/Images/cr/pl.png" alt="play">
-              <img src="assets/Images/cr/3.png" alt="video">
-            </p>
+          <div class="cl_item_wrap hide_mid">
+            <div class="vio_w">
+              <p class="v_w">
+                <img *ngIf="!play2" class="pl_pl" src="assets/Images/cr/pl.png" alt="play">
+                <video width="100%" height="250" [src]=slides[middle].path controls></video>
+              </p>
+            </div>
+            <p class="v_name_c">{{slides[middle].name}}</p>
+            <p class="v_tex_v">{{slides[middle].description}}</p>
           </div>
-          <p class="v_name_c">Владислав</p>
-          <p class="v_tex_v">Текстовое описание - самые важные слова из видео, самые важные смыслы, акценты, выжимка из
-            видео.</p>
+          <div class="cl_item_wrap hide_mob">
+            <div class="vio_w">
+              <p class="v_w">
+                <img *ngIf="!play3" class="pl_pl" src="assets/Images/cr/pl.png" alt="play">
+                <video width="100%" height="250" [src]=slides[last].path controls></video>
+              </p>
+            </div>
+            <p class="v_name_c">{{slides[last].name}}</p>
+            <p class="v_tex_v">{{slides[last].description}}</p>
+          </div>
+          <p (click)="next()" class="arrow_w r">
+            <img src="assets/Images/right.png" alt="arrow">
+          </p>
         </div>
       </div>
       <div class="carousel_line_main_wrap">

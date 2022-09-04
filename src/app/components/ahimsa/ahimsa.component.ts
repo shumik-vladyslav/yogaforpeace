@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { emailValidator, phoneValidator } from 'src/app/services/validation.service';
@@ -9,10 +9,43 @@ import { emailValidator, phoneValidator } from 'src/app/services/validation.serv
   templateUrl: './ahimsa.component.html',
   styleUrls: ['./ahimsa.component.scss']
 })
-export class AhimsaComponent implements OnInit {
+export class AhimsaComponent implements OnInit, AfterViewInit {
   form: FormGroup;
   url = "https://b24-ay5iam.bitrix24.eu/rest/4/95igs0uaxwczeh83/";
   routeParams;
+  first: number = 0;
+  middle: number = 1;
+  last: number = 2;
+  visible: boolean = false;
+  play1: boolean = false;
+  play2: boolean = false;
+  play3: boolean = false;
+  slides: any = [
+    {
+      index: 0,
+      name: 'Юлиана',
+      description: 'Так как я являюсь мамой, то передаю знание ахимсы (ненасилия) своему сыну, и это зарождает у ребенка Дхармичное видение мира, которое, конечно же, будет вести его по жизни правильным, благоприятным путем…',
+      path: 'assets/videos/1.mp4',
+    },
+    {
+      index: 1,
+      name: 'Алекс',
+      description: 'Врата, это то, на что можно опереться, например мы как в болоте и не можем выбраться, потом появляется тонкий лед, он крепнет и мы уже можем спокойно ходить не проваливаясь... Ахимса – это такой лед, на который мы можем опереться и больше не проваливаться.',
+      path: 'assets/videos/2.MOV',
+    },
+    {
+      index: 2,
+      name: 'Александр',
+      description: '«Что касается физиологических показателей – улучшилось давление, лучше переношу физические нагрузки, общие самочувствие стало легче... что касаемо эмоционального состояния – внутренняя агрессия, особенно беспричинная практически вообще ушла»',
+      path: 'assets/videos/3.mp4',
+    },
+    {
+      index: 3,
+      name: 'Анандамайи',
+      description: 'В каком мире мы хотим жить?! В мире где есть внутренне понимание единства, уважение, достоинства и священности жизни или в мире невежества, борьбы, нападения и защиты…',
+      path: 'assets/videos/4.mp4',
+    }
+  ]
 
   constructor(
     private http: HttpClient,
@@ -26,6 +59,31 @@ export class AhimsaComponent implements OnInit {
     });
   }
 
+  ngAfterViewInit(): void {
+    let video1 = document.getElementsByTagName('video')[0];
+    const self = this;
+    video1.addEventListener('play', function () {
+      self.play1 = true;
+    }, false);
+    video1.addEventListener('pause', function () {
+      self.play1 = false;
+    }, false);
+    let video2 = document.getElementsByTagName('video')[1];
+    video2.addEventListener('play', function () {
+      self.play2 = true;
+    }, false);
+    video2.addEventListener('pause', function () {
+      self.play2 = false;
+    }, false);
+    let video3 = document.getElementsByTagName('video')[2];
+    video3.addEventListener('play', function () {
+      self.play3 = true;
+    }, false);
+    video3.addEventListener('pause', function () {
+      self.play3 = false;
+    }, false);
+  }
+
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe((params) => {
       console.log(params);
@@ -37,6 +95,42 @@ export class AhimsaComponent implements OnInit {
 
   goToURl(url) {
     window.open(url);
+  }
+
+  next() {
+    this.visible = true;
+    setTimeout(() => {
+      if (this.last < this.slides.length - 1) {
+        this.first = this.first + 1;
+        this.middle = this.middle + 1;
+        this.last = this.last + 1;
+      } else {
+        this.first = 0;
+        this.middle = 1;
+        this.last = 2;
+      }
+    }, 200);
+    setTimeout(() => {
+      this.visible = false;
+    }, 500);
+  }
+
+  previous() {
+    this.visible = true;
+    setTimeout(() => {
+      if (this.first > 0) {
+        this.first = this.first - 1;
+        this.middle = this.middle - 1;
+        this.last = this.last - 1;
+      } else {
+        this.first = this.slides.length - 3;
+        this.middle = this.slides.length - 2;
+        this.last = this.slides.length - 1;
+      }
+    }, 200);
+    setTimeout(() => {
+      this.visible = false;
+    }, 500);
   }
 
   sendRegistrationData() {
