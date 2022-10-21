@@ -18,13 +18,13 @@
                   <img src="assets/Images/log-shimsa.png" alt="logo" class="img img__logo-little" />
                 </div>
               </div>
-              <div (click)="scrollTo('ahimsa')" class="header-inner header-inner-text">Об Ахимсе</div>
-              <div (click)="scrollTo('speakers')" class="header-inner header-inner-text">Кто проводит</div>
-              <div (click)="scrollTo('changes')" class="header-inner header-inner-text">Перемены</div>
-              <div (click)="scrollTo('feed')" class="header-inner header-inner-text">Отзывы</div>
+              <div (click)="scrollTo('ahimsa')" class="header-inner header-inner-text">{{'main.about' | translate}}</div>
+              <div (click)="scrollTo('speakers')" class="header-inner header-inner-text">{{'main.lead' | translate}}</div>
+              <div (click)="scrollTo('changes')" class="header-inner header-inner-text">{{'main.changes' | translate}}</div>
+              <div (click)="scrollTo('feed')" class="header-inner header-inner-text">{{'main.feedback' | translate}}</div>
             </div>
             <div class="header-inner header-inner-button">
-              <button class="registration-button" (click)="scrollTo('registration')">Зарегистрироваться</button>
+              <button class="registration-button" (click)="scrollTo('registration')">{{'main.registration' | translate}}</button>
             </div>
           </div>
           <p *ngIf="!menu" (click)="showMenu()" class="burg">
