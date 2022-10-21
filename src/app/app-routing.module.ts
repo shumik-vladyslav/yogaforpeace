@@ -6,6 +6,8 @@ import { ThankyouPageComponent } from './components/forum/thankyou-page/thankyou
 import { LiveTranslationComponent } from './components/live-translation/live-translation.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { NewsPageComponent } from './components/news-page/news-page.component';
+import { ResolutionComponent } from './components/resolution/resolution.component';
+import { UsersListComponent } from './components/users-list/users-list.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -13,7 +15,10 @@ const routes: Routes = [
   { path: 'live', component: LiveTranslationComponent },
   { path: 'ahimsa', component: AhimsaComponent },
   { path: 'thanks', component: ThankyouPageComponent },
-  { path: ':type', component: MainPageComponent }
+  { path: 'message-from-users', component: UsersListComponent },
+  { path: 'resolution', component: ResolutionComponent },
+  { path: ':type', component: MainPageComponent },
+
 ];
 
 @NgModule({

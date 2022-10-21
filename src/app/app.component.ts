@@ -48,10 +48,14 @@ export class AppComponent implements OnInit {
       case Languages.Russian:
         this.translate.setDefaultLang(Languages.Russian);
         break;
+      case Languages.Ukrainian:
+        this.translate.setDefaultLang(Languages.Ukrainian);
+        break;
     }
   }
 }
 export enum Languages {
   Russian = 'ru',
   English = 'en',
+  Ukrainian = 'ua'
 }

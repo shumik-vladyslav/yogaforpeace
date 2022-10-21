@@ -1,6 +1,6 @@
 import { AUTO_STYLE } from '@angular/animations';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Params, Router } from '@angular/router';
@@ -8,6 +8,7 @@ import { NewsPageComponent } from '../news-page/news-page.component';
 import { switchMap } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
 import { GeneralServiceService } from 'src/app/services/general-service.service';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-main-page',
@@ -15,13 +16,20 @@ import { GeneralServiceService } from 'src/app/services/general-service.service'
   styleUrls: ['./main-page.component.scss'],
 })
 export class MainPageComponent implements OnInit {
+  @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
+    let header = document.querySelector('.head_wrap')
+    if (window.pageYOffset > 0) {
+      header.classList.add('bg_for_header')
+    } else header.classList.remove('bg_for_header')
+  }
   constructor(
     private router: Router,
     public dialog: MatDialog,
     private http: HttpClient,
     private route: ActivatedRoute,
     private translateService: TranslateService,
-    private generalService: GeneralServiceService
+    private generalService: GeneralServiceService,
+    private angularFirestore: AngularFirestore,
   ) {
     this.form = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -31,7 +39,7 @@ export class MainPageComponent implements OnInit {
     });
     generalService.currentLanguage.subscribe(res => {
       this.language = res;
-      if(this.language == 'en'){
+      if (this.language == 'en') {
         this.shantiSrc = 'https://www.youtube.com/embed/1sgG98jCq_g';
         this.ahimsaSrc = 'https://www.youtube.com/embed/3diYSam4ZcU';
       }
@@ -85,7 +93,7 @@ export class MainPageComponent implements OnInit {
       Ом Шанти
 
       #йогизамир #yogisforpeace #йоги #yogis #yogisforlife #мирумир #замир #шанти #омшанти #йогибхаджан #yogilife #обетахимсы #йога #йогавезде #йогапрактика #йогаонлайн #йогаобучение #йогадлявсех #духовность #духовныепрактики #духовнаяжизнь #духовныйпуть #духовныймир #духовныйучитель #духовныйнаставник #духовныйпоиск #духовныйпрактик #добро #мир #нетвойне #любовь #монашество #дхарма`,
-      imgUrl: '../../../assets/Images/Original/maxresdefault_2.jpg',
+      imgUrl: 'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/images%2Fmaxresdefault_2.jpg?alt=media&token=1ab961a8-7248-492e-8342-80e4c1570293',
     },
     {
       title:
@@ -119,7 +127,7 @@ export class MainPageComponent implements OnInit {
       Все ближе к Богу!
 
       Татьяна Жеребцова ©`,
-      imgUrl: '../../../assets/Images/Original/maxresdefault_1.jpg',
+      imgUrl: 'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/images%2Fmaxresdefault_1.jpg?alt=media&token=2e74307b-1129-4c6e-b337-189f31c6e388',
     },
     {
       title: 'Конференция "Йоги за мир" с Шанкарой (Павел Калягин)',
@@ -127,7 +135,7 @@ export class MainPageComponent implements OnInit {
         'Конференция "Йоги за мир" с Шанкарой (Павел Калягин), традиция Шивананды, Прага –Ньйю-йорк',
       date: '06.04.2022',
       text: ``,
-      imgUrl: '../../../assets/Images/Original/maxresdefault.jpg',
+      imgUrl: 'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/images%2Fmaxresdefault.jpg?alt=media&token=6a0796dd-3d3c-43a8-be4f-504e58fdd1ba',
     },
     {
       title: 'Встреча с обществом Рерихов',
@@ -147,7 +155,7 @@ export class MainPageComponent implements OnInit {
       text: `Мы послушали воодушевляющие песни, поделились выдержками о мире из священных текстов, и, конечно, завершили коллективной Умиротворяющей практикой Шанти-кармы.
       Вместе мы пришли в очередной раз к выводу, что идеи мира, добра и любви одинаковы для всех верований.
       Надеемся, что такие конференции будут проводиться чаще и больше, чтобы объединить как можно людей во благо Мира на Земле.`,
-      imgUrl: '../../../assets/Images/Original/mq2.jpg',
+      imgUrl: 'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/images%2Fmq2.jpg?alt=media&token=8676379f-865d-4997-b37d-d000d6061713',
     },
     {
       title: 'День счастья',
@@ -166,13 +174,13 @@ export class MainPageComponent implements OnInit {
       Также для отражения благосостояния людей и состояния окружающей среды в разных странах мира в июле 2006 года был введен Международный индекс счастья (Happy Planet Index).
 
       *Информация из открытых источников`,
-      imgUrl: '../../../assets/Images/Original/1886362-vse-o-mantre.jpg',
+      imgUrl: 'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/images%2F1886362-vse-o-mantre.jpg?alt=media&token=d1ffa158-12c7-4463-9d94-a8b24503a8f7',
     },
   ];
   ngOnInit(): void {
     this.news = null;
     // console.log(this.route.snapshot.params['type']);
-
+    window.scroll(0, 0);
   }
 
   navigateDownload() {
@@ -181,20 +189,33 @@ export class MainPageComponent implements OnInit {
       '_blank'
     );
   }
+
+  scrollTo(id): void {
+    const element = document.getElementById(id);
+    const y = element.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
   sendMail() {
     const contactForm = this.form.value;
     const email = contactForm.email;
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const message: FormMessage = {
+      name: contactForm.name,
+      replyTo: 'yogisforpeace1008@gmail.com',
+      message: contactForm.description,
+      phone: contactForm.phone,
+      emailAddress: email,
+      from: 'YogisForPeace',
+      date: +new Date(),
+      isChecked: false
+    };
+    this.angularFirestore.collection('users').add(message).then(
+      res => console.log("this.angularFirestore.collection('users').add(message)  ",res)
+    )
     this.http
       .post(
-        'https://formspree.io/f/xnqwrqzj',
-        {
-          name: contactForm.name,
-          replyto: 'yogisforpeace1008@gmail.com',
-          message: contactForm.description,
-          phone: contactForm.phone,
-          emailAddress: email
-        },
+        'https://formspree.io/f/mnqrjklr',
+        message,
         { headers: headers }
       )
       .subscribe((response) => {
@@ -215,7 +236,6 @@ export class MainPageComponent implements OnInit {
 
     // dialogRef.afterClosed().subscribe(result => {
     //   console.log('The dialog was closed');
-    //   this.animal = result;
     // });
   }
   navigateVideo() {
@@ -229,4 +249,13 @@ export interface News {
   text: string;
   imgUrl: string;
 }
-
+export interface FormMessage {
+  name: string;
+  replyTo: string;
+  message: string;
+  phone: string;
+  emailAddress: string;
+  from: string;
+  date: number,
+  isChecked: boolean
+}

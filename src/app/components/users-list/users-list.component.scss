@@ -1,0 +1,29 @@
+tr {
+    height: 35px;
+    border: 1px solid #cecece;
+    border-radius: 10px;
+}
+td {
+    padding: 5px;
+    text-align: center;
+}
+table {
+    font-size: 18px;
+    min-width: 595px;
+    border-radius: 10px;
+}
+.table {
+    display: flex;
+    justify-content: center;
+}
+.wrapper {
+    padding-top: 40px;
+    min-height: 100%;
+}
+@media (max-width: 600px) {
+    table {
+        font-size: 14px;
+        min-width: 100%;
+        border-radius: 10px;
+    }
+}

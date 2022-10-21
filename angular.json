@@ -45,12 +45,12 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "10mb"
                 },
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "18kb",
-                  "maximumError": "30kb"
+                  "maximumError": "300kb"
                 }
               ],
               "fileReplacements": [
@@ -107,6 +107,16 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "yogis-for-peace:build:production",
+            "firebaseProject": "yogisforpeace-84027",
+            "firebaseHostingSite": "yogisforpeace-84027"
           }
         }
       }

@@ -5,6 +5,8 @@ import BX24 from 'bx24-api';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { emailValidator, phoneValidator } from 'src/app/services/validation.service';
+import { FormMessage } from '../main-page/main-page.component';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 @Component({
   selector: 'app-forum',
   templateUrl: './forum.component.html',
@@ -26,6 +28,7 @@ export class ForumComponent implements OnInit {
     private http: HttpClient,
     private activatedRoute: ActivatedRoute,
     private router: Router,
+    private angularFirestore: AngularFirestore
   ) {
     this.form = new FormGroup({
       name: new FormControl('', Validators.required),
@@ -92,6 +95,19 @@ export class ForumComponent implements OnInit {
   sendRegistrationData() {
     const form = this.form.value;
     console.log('sendRegistrationData');
+    const message: FormMessage = {
+      name: form.name,
+      replyTo: 'yogisforpeace1008@gmail.com',
+      message: form.description ?? null,
+      phone: form.phone,
+      emailAddress: form.email,
+      from: 'Forum',
+      date: +new Date(),
+      isChecked: false
+    };
+    this.angularFirestore.collection('users').add(message).then(
+      res => console.log("this.angularFirestore.collection('users').add(message)  ",res)
+    )
     this.http
       .post(
         this.url + 'crm.deal.list',

@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "yogisforpeace-84027"
+  },
+  "targets": {
+    "yogisforpeace-84027": {
+      "hosting": {
+        "yogis-for-peace": [
+          "yogisforpeace-84027"
+        ]
+      }
+    }
   }
 }

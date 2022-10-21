@@ -52,6 +52,69 @@ button,
 textarea {
   font-family: inherit;
 }
+ngx-intl-tel-input {
+  margin: 0 25px !important;
+  width: 100%;
+  // max-width: 440px;
+}
+.iti {
+  display: flex;
+}
+ngx-intl-tel-input input {
+  height: 50px;
+  margin-bottom: 0;
+  padding: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ba7d18;
+  width: 100%;
+  // max-width: 440px;
+  border-radius: 30px;
+  font-size: 23px !important;
+}
+
+ngx-intl-tel-input.ng-invalid.ng-touched input {
+  border: 1px solid #c0392b;
+}
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+  background-color: transparent !important;
+}
+ngx-intl-tel-input input:hover {
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.24);
+}
+.iti__selected-flag {
+  transform: scale(1.5);
+  padding: 0 0 0 25px;
+}
+.iti.separate-dial-code input {
+  padding-left: 130px !important;
+}
+
+ngx-intl-tel-input input:focus {
+  outline: none !important;
+  border-color: #3498db;
+  box-shadow: 0 0 0 0 #000;
+}
+
+ngx-intl-tel-input input::-webkit-input-placeholder {
+  color: #bac2c7;
+}
+
+ngx-intl-tel-input input:-ms-input-placeholder {
+  color: #bac2c7;
+}
+
+ngx-intl-tel-input input::-ms-input-placeholder {
+  color: #bac2c7;
+}
+
+ngx-intl-tel-input input::placeholder {
+  color: #bac2c7;
+}
+
+ngx-intl-tel-input input[disabled] {
+  background-color: #e5eaf1;
+}
 input::-ms-clear {
   display: none;
 }
@@ -85,6 +148,17 @@ h6 {
   font-size: inherit;
   font-weight: 400;
   text-align: center;
+}
+.header.small {
+  height: 65px;
+  .registration-button {
+    height: 42px;
+    padding: 0 35px;
+  }
+  .logo__container-little {
+    height: 45px;
+    width: 45px;
+  }
 }
 .ng-valid[required],
 .ng-valid.required {
@@ -170,11 +244,7 @@ body {
   height: 240px;
   padding: 30px 0 50px 0;
   background: rgb(149, 10, 39);
-  background: linear-gradient(
-    0deg,
-    rgba(149, 10, 39, 1) 0%,
-    rgba(198, 23, 88, 1) 100%
-  );
+  background: linear-gradient(0deg, rgba(149, 10, 39, 1) 0%, rgba(198, 23, 88, 1) 100%);
 }
 .req_wrap {
   display: flex;
@@ -226,14 +296,7 @@ body {
   justify-content: center;
   height: 48px;
   border-radius: 9px;
-  background-image: linear-gradient(
-    260deg,
-    #ebd385 0%,
-    #ebd385 11%,
-    #b7832b 43%,
-    #edcd7b 73%,
-    #b7832b 100%
-  );
+  background-image: linear-gradient(260deg, #ebd385 0%, #ebd385 11%, #b7832b 43%, #edcd7b 73%, #b7832b 100%);
   cursor: pointer;
 }
 .btn_custom {
@@ -251,25 +314,13 @@ body {
     margin-right: 17px;
   }
   &.telegram {
-    background-image: linear-gradient(
-      0deg,
-      #950927 18%,
-      #950927 31%,
-      #d51b65 100%
-    );
+    background-image: linear-gradient(0deg, #950927 18%, #950927 31%, #d51b65 100%);
     height: 42px;
     width: calc(100% - 6px);
     z-index: 1;
   }
   &.instagram {
-    background-image: linear-gradient(
-      260deg,
-      #ebd385 0%,
-      #ebd385 11%,
-      #b7832b 43%,
-      #edcd7b 73%,
-      #b7832b 100%
-    );
+    background-image: linear-gradient(260deg, #ebd385 0%, #ebd385 11%, #b7832b 43%, #edcd7b 73%, #b7832b 100%);
   }
 }
 .btn_t_wrap.for {
@@ -318,7 +369,37 @@ body {
     }
   }
 }
+@media (max-width: 1510px) {
+  ngx-intl-tel-input input {
+    font-size: 25px !important;
+  }
+}
+@media (max-width: 1260px) {
+  ngx-intl-tel-input input {
+    font-size: 21px !important;
+  }
+}
+@media (max-width: 1000px) {
+  .header.small {
+    .menu_wrap {
+      flex-direction: row;
+      align-items: baseline;
+    }
+  }
+  // ngx-intl-tel-input {
+  //   margin: 5px auto !important;
+  // }
+  ngx-intl-tel-input input {
+    font-size: 25px !important;
+  }
+}
 @media (max-width: 950px) {
+  ngx-intl-tel-input {
+    margin: 0 10px !important;
+  }
+  .input-form-gold {
+    margin: 0 10px;
+  }
   .req_wrap {
     flex-direction: column;
   }
@@ -349,9 +430,23 @@ body {
     margin-top: 48px;
   }
 }
+@media (max-width: 786px) {
+  ngx-intl-tel-input {
+    margin: 6px 0 !important;
+  }
+}
 @media (max-width: 774px) {
   .btn_t_wrap.for {
     width: 100%;
+  }
+}
+@media (max-width: 660px) {
+  .header.small {
+    height: 97px;
+    .menu_wrap {
+      flex-direction: column;
+      align-items: flex-end;
+    }
   }
 }
 @media (max-width: 620px) {
@@ -389,5 +484,66 @@ body {
   }
   p.b-im_wrap {
     margin-bottom: 0 !important;
+  }
+}
+@media (max-width: 550px) {
+  ngx-intl-tel-input input {
+    height: 50px;
+    border-radius: 25px;
+  }
+  .header.small {
+    .m_show {
+      display: none;
+    }
+    .m_hide {
+      display: flex;
+    }
+    .mob_h-wrap {
+      width: unset;
+    }
+    .header-inner.flex.justify-between {
+      flex-direction: row;
+      align-items: center;
+    }
+    .menu_wrap div:not(.w_wrap) {
+      padding: 0 15px 5px 15px !important;
+    }
+    .head_in {
+      height: unset;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .header.small {
+    .header-inner.header-inner-text {
+      margin-bottom: 0;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .header.small {
+    .mob_h-wrap {
+      display: none;
+    }
+    .menu_wrap {
+      flex-direction: column;
+      align-items: center;
+    }
+    .header-inner.flex.justify-between {
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 350px) {
+  .header.small {
+    height: 85px;
+    .registration-button {
+      height: 35px;
+      padding: 0 15px;
+      font-size: 18px;
+    }
+    .head_in {
+      padding: 5px 0;
+    }
   }
 }

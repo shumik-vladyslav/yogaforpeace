@@ -16,6 +16,16 @@ import { ForumComponent } from './components/forum/forum.component';
 import { MasterCardComponent } from './components/forum/master-card/master-card.component';
 import { ThankyouPageComponent } from './components/forum/thankyou-page/thankyou-page.component';
 import { AhimsaComponent } from './components/ahimsa/ahimsa.component';
+import { UsersListComponent } from './components/users-list/users-list.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore/'; 
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { AngularFireModule } from '@angular/fire/compat';
+import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
+import { ResolutionComponent } from './components/resolution/resolution.component';
+import { AdiitionalInfoComponent } from './components/adiitional-info/adiitional-info.component';
+import { DownloadAhimsaComponent } from './components/download-ahimsa/download-ahimsa.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -30,6 +40,10 @@ export function createTranslateLoader(http: HttpClient) {
     MasterCardComponent,
     ThankyouPageComponent,
     AhimsaComponent,
+    UsersListComponent,
+    DownloadAhimsaComponent,
+    AdiitionalInfoComponent,
+    ResolutionComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +53,9 @@ export function createTranslateLoader(http: HttpClient) {
     BrowserAnimationsModule,
     MatDialogModule,
     HttpClientModule,
+    AngularFirestoreModule,
+    AngularFireModule,
+    NgxIntlTelInputModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -47,8 +64,10 @@ export function createTranslateLoader(http: HttpClient) {
       },
       defaultLanguage: 'ru',
     }),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    // provideFirestore(() => getFirestore()),
   ],
-  providers: [],
+  providers: [ { provide: FIREBASE_OPTIONS, useValue: environment.firebase }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

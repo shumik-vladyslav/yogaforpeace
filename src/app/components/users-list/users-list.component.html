@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <div class="container">
+    <h1>
+      Список пользователей оставивших заявки на сайте
+    </h1>
+
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th>Имя</th>
+            <th>Email</th>
+            <th>Телефон</th>
+            <th>Откуда</th>
+            <th>reply To</th>
+            <th>Дата добавления</th>
+            <th>Рассмотрено</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let userMessage of usersMessages; let i = index;">
+            <tr>
+              <td>{{userMessage.name}}</td>
+              <td>{{userMessage.emailAddress}}</td>
+              <td>{{userMessage.phone}}</td>
+              <td>{{userMessage.from}}</td>
+              <td>{{userMessage.replyTo}}</td>
+              <td>{{userMessage.date | date:'d.MM.yyyy, HH:mm '}}</td>
+              <td> <input type="checkbox"  [(ngModel)]="userMessage.isChecked" (change)="checkUser(userMessage, i)"> </td>
+            </tr>
+          </ng-container>
+
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

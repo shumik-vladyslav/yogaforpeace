@@ -1,3 +1,4 @@
+@import "../forum/forum.component.scss";
 .wrapper {
     width: 100%;
     height: auto;
@@ -83,7 +84,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
     align-items: center;
 }
 .pb-30{
@@ -347,7 +348,7 @@ p {
 .flex-1-4{
     display: flex;
     flex-wrap: wrap;
-    
+
     justify-content: center;
 }
 .flex-1-4_element{

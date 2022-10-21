@@ -1,4 +1,28 @@
 <div class="wrapper">
+  <div class="header small">
+    <div class="head_wrap">
+      <div class="head_in">
+        <div class="header-inner flex justify-between items-center">
+          <div class="mob_h-wrap">
+            <div class="header-inner header-inner-icon">
+              <div class="logo__container-little">
+                <img src="assets/Icons/logo-little.png" alt="logo" class="img img__logo-little" />
+              </div>
+            </div>
+          </div>
+          <div class="menu_wrap">
+            <div class="w_wrap m_hide">
+              <div [routerLink]="'/ahimsa'" class="header-inner header-inner-text">Ахимса</div>
+              <div [routerLink]="'/forum'" class="header-inner header-inner-text">Форум</div>
+            </div>
+            <div class="header-inner header-inner-button">
+              <button class="registration-button" (click)="scrollTo('registration')">Зарегистрироваться</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container">
     <div class="container-inner">
       <div class="logo__container">
@@ -249,7 +273,7 @@
         </div>
       </div>
     </div>
-    
+
   </div>
   <div class="content-container flex-1-4 pt-45">
     <h3 class="title-text pb-100">{{'main.how-to-join' | translate}}</h3>
@@ -314,7 +338,7 @@
       </div>
     </div>
   </div>
-  <div
+  <div id="registration"
     class="content-container flex-1-4 pt-45 center column"
     [formGroup]="form"
   >

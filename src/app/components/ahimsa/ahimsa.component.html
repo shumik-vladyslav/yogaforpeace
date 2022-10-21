@@ -1,11 +1,46 @@
 <div class="additional_wrap">
+  <div class="header small">
+    <div [ngClass]="{'show': menu}" class="head_wrap">
+      <div class="head_in">
+        <div class="header-inner flex justify-between items-center">
+          <p (click)="menu = false" *ngIf="menu" class="x">x</p>
+          <div class="mob_h-wrap">
+            <div *ngIf="!menu" class="header-inner header-inner-icon">
+              <div class="logo__container-little">
+                <img src="assets/Images/log-shimsa.png" alt="logo" class="img img__logo-little" />
+              </div>
+            </div>
+          </div>
+          <div [ngClass]="{'show': menu}" class="menu_wrap">
+            <div class="w_wrap m_hide">
+              <div class="header-inner header-inner-icon add">
+                <div class="logo__container-little">
+                  <img src="assets/Images/log-shimsa.png" alt="logo" class="img img__logo-little" />
+                </div>
+              </div>
+              <div (click)="scrollTo('ahimsa')" class="header-inner header-inner-text">Об Ахимсе</div>
+              <div (click)="scrollTo('speakers')" class="header-inner header-inner-text">Кто проводит</div>
+              <div (click)="scrollTo('changes')" class="header-inner header-inner-text">Перемены</div>
+              <div (click)="scrollTo('feed')" class="header-inner header-inner-text">Отзывы</div>
+            </div>
+            <div class="header-inner header-inner-button">
+              <button class="registration-button" (click)="scrollTo('registration')">Зарегистрироваться</button>
+            </div>
+          </div>
+          <p *ngIf="!menu" (click)="showMenu()" class="burg">
+            <img src="assets/Images/burg.svg" alt="burger">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="main-a_wrap top">
     <div class="l_container">
-      <div class="a_header">
+      <!-- <div class="a_header">
         <p class="pce_wrap">
           <img src="assets/Images/log-shimsa.png" alt="logo">
         </p>
-      </div>
+      </div> -->
       <div class="p_text_wrap">
         <div class="t__top">
           <p class="m_slog">АХИМСА ВРАТА</p>
@@ -18,20 +53,31 @@
           <p class="sub_a">каждого месяца – онлайн ритуал</p>
         </div>
       </div>
-      <div class="a_butt-wrap nn">
+      <div (click)="scrollTo('registration')" class="a_butt-wrap nn">
         <button class="bn_gr">ПРИНЯТЬ УЧАСТИЕ</button>
       </div>
     </div>
   </div>
 </div>
 <div class="additional_wrap_mid">
-  <div class="main-a_wrap mid">
+  <div id="ahimsa" class="main-a_wrap mid">
     <div class="l_container mid">
       <p class="m_sg">ЧТО ТАКОЕ ОБЕТ АХИМСЫ</p>
       <div class="nd_block_wrap">
-        <div class="block_item">
-          <div class="video"></div>
+        <!-- <div class="block_item"> -->
+        <div class="video">
+          <!-- <iframe width="760" height="430" src="https://www.youtube.com/embed/watch?v=nOubh8giCgM&list=PLH8BAGc6LDX1Ywwo--T4Tt8163CIHBQfL&index=6" frameborder="0" allowfullscreen
+              class="item-iframe"></iframe> -->
+
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/nOubh8giCgM" title="Движение Ахимсы"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen class="item-iframe"></iframe>
+          <!-- <iframe width="760" height="430" src="https://www.youtube.com/embed/NKXKecHauuo" frameborder="0" allowfullscreen
+              class="item-iframe"></iframe> -->
         </div>
+        <!-- <div class="video"></div> -->
+        <!-- </div> -->
         <div class="block_item">
           <p class="l_dcr"><b>Обет ахимсы</b> (обет ненасилия) предполагает наше искреннее намерение и желание сделать
             что-то
@@ -65,7 +111,7 @@
   </div>
 </div>
 <div class="additional_wrap mdl">
-  <div class="main-a_wrap ddls">
+  <div id="speakers" class="main-a_wrap ddls">
     <div class="l_container b cdf">
       <p class="m_sg g">КТО ПРОВОДИТ РИТУАЛ АХИМСЫ</p>
       <div class="leaders_wrap">
@@ -79,8 +125,8 @@
             <p class="l_titul">традиция Пратьякша Адвайты</p>
           </div>
           <div class="a_butt-wrap flt">
-            <button (click)="goToURl('https://www.advayta.org/vsemirnaya-obshchina/advaytavadini-giri/')"
-              class="bn_gr">ПОДРОБНЕЕ</button>
+            <!-- (click)="goToURl('https://www.advayta.org/vsemirnaya-obshchina/advaytavadini-giri/')" -->
+            <button class="bn_gr" (click)="showFullInfo('a')">ПОДРОБНЕЕ</button>
           </div>
         </div>
         <div class="leader_wrap">
@@ -93,8 +139,8 @@
             <p class="l_titul">традиция Пратьякша Адвайты</p>
           </div>
           <div class="a_butt-wrap flt">
-            <button (click)="goToURl('https://www.advayta.org/vsemirnaya-obshchina/makheshvari/')"
-              class="bn_gr">ПОДРОБНЕЕ</button>
+            <!-- (click)="goToURl('https://www.advayta.org/vsemirnaya-obshchina/makheshvari/')" -->
+            <button class="bn_gr" (click)="showFullInfo('b')">ПОДРОБНЕЕ</button>
           </div>
         </div>
       </div>
@@ -102,7 +148,7 @@
   </div>
 </div>
 <div class="additional_wrap ahs">
-  <div class="main-a_wrap ddls">
+  <div id="changes" class="main-a_wrap ddls">
     <div class="l_container ans">
       <p class="m_sg">КАКИЕ МАГИЧЕСКИЕ ПЕРЕМЕНЫ <br>ВАС ОЖИДАЮТ?</p>
       <div class="changes_main_wrap">
@@ -113,8 +159,7 @@
                 <img src="assets/Images/ams/1.png" alt="photo">
               </div>
               <div class="chg_t_wr">
-                <p class="chg_titul">Улучшаются судьба
-                  <span>и</span> здоровье
+                <p class="chg_titul">Улучшаются судьба и здоровье
                 </p>
               </div>
             </div>
@@ -172,7 +217,7 @@
               <img src="assets/Images/ams/7.png" alt="photo">
             </div>
             <div class="chg_t_wr">
-              <p class="chg_titul"><span>Возрастают ваша</span> внутренняя воля, сила <span>и</span> мудрость</p>
+              <p class="chg_titul"><span>Возрастают ваша</span> внутренняя воля, сила и мудрость</p>
             </div>
           </div>
           <div class="change_line_wrap">
@@ -180,8 +225,8 @@
               <img src="assets/Images/ams/8.png" alt="photo">
             </div>
             <div class="chg_t_wr">
-              <p class="chg_titul"><span>Вы получаете возможность в следующей жизни иметь</span> счастливую судьбу
-                <span>и</span> никогда не страдать
+              <p class="chg_titul"><span>Вы получаете возможность в следующей жизни иметь</span> счастливую судьбу и
+                никогда не страдать
               </p>
             </div>
           </div>
@@ -190,7 +235,7 @@
               <img src="assets/Images/ams/9.png" alt="photo">
             </div>
             <div class="chg_t_wr">
-              <p class="chg_titul">Увеличение <span>энергии</span> Ахимсы <span>на планете</span></p>
+              <p class="chg_titul">Увеличение энергии Ахимсы <span>на планете</span></p>
             </div>
           </div>
         </div>
@@ -205,14 +250,14 @@
           </div>
         </div>
       </div>
-      <div class="a_butt-wrap">
+      <div (click)="scrollTo('registration')" class="a_butt-wrap">
         <button class="bn_gr">ПРИНЯТЬ УЧАСТИЕ</button>
       </div>
     </div>
   </div>
 </div>
 <div class="additional_wrap mdlf">
-  <div class="main-a_wrap">
+  <div id="feed" class="main-a_wrap">
     <div class="l_container">
       <p class="m_sg g">ОТЗЫВЫ ТЕХ, КТО УЖЕ ПРИНЯЛ <br>РИТУАЛ АХИМСЫ</p>
       <div class="carousel_line_main_wrap bac">
@@ -232,7 +277,7 @@
                 <video width="100%" height="250" [src]=slides[first].path controls></video>
               </p>
             </div>
-            <p class="v_name_c">{{slides[first].name}}</p>
+            <!-- <p class="v_name_c">{{slides[first].name}}</p> -->
             <p class="v_tex_v">{{slides[first].description}}</p>
           </div>
           <div class="cl_item_wrap hide_mid">
@@ -242,7 +287,7 @@
                 <video width="100%" height="250" [src]=slides[middle].path controls></video>
               </p>
             </div>
-            <p class="v_name_c">{{slides[middle].name}}</p>
+            <!-- <p class="v_name_c">{{slides[middle].name}}</p> -->
             <p class="v_tex_v">{{slides[middle].description}}</p>
           </div>
           <div class="cl_item_wrap hide_mob">
@@ -252,7 +297,7 @@
                 <video width="100%" height="250" [src]=slides[last].path controls></video>
               </p>
             </div>
-            <p class="v_name_c">{{slides[last].name}}</p>
+            <!-- <p class="v_name_c">{{slides[last].name}}</p> -->
             <p class="v_tex_v">{{slides[last].description}}</p>
           </div>
           <p (click)="next()" class="arrow_w r">
@@ -260,24 +305,41 @@
           </p>
         </div>
       </div>
-      <div class="carousel_line_main_wrap">
-        <div class="inst_wrp">
-          <p class="in_wr">
-            <img src="assets/Images/cr/i1.png" alt="photo">
-          </p>
+      <div class="carousel_line_main_wrap in">
+        <p (click)="previousIm()" class="arrow_w l">
+          <img src="assets/Images/left.png" alt="arrow">
+        </p>
+        <div class="car_line">
+          <div class="inst_wrp">
+            <div class="in_wr">
+              <img [src]=slidesIm[firstIm].path alt="photo">
+              <p (click)="goToURl(slidesIm[firstIm].link)" class="abs_link">
+                <img src="assets/Images/inst.png" alt="instagram">
+              </p>
+            </div>
+          </div>
+          <div class="inst_wrp hide_mid">
+            <div class="in_wr">
+              <img [src]=slidesIm[middleIm].path alt="photo">
+              <p (click)="goToURl(slidesIm[middleIm].link)" class="abs_link">
+                <img src="assets/Images/inst.png" alt="instagram">
+              </p>
+            </div>
+          </div>
+          <div class="inst_wrp hide_mob">
+            <div class="in_wr">
+              <img [src]=slidesIm[lastIm].path alt="photo">
+              <p (click)="goToURl(slidesIm[lastIm].link)" class="abs_link">
+                <img src="assets/Images/inst.png" alt="instagram">
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="inst_wrp">
-          <p class="in_wr">
-            <img src="assets/Images/cr/i2.png" alt="photo">
-          </p>
-        </div>
-        <div class="inst_wrp">
-          <p class="in_wr">
-            <img src="assets/Images/cr/i1.png" alt="photo">
-          </p>
-        </div>
+        <p (click)="nextIm()" class="arrow_w r">
+          <img src="assets/Images/right.png" alt="arrow">
+        </p>
       </div>
-      <div class="a_butt-wrap ot">
+      <div (click)="scrollTo('registration')" class="a_butt-wrap ot">
         <button class="bn_gr">ПРИНЯТЬ УЧАСТИЕ</button>
       </div>
     </div>
@@ -321,9 +383,7 @@
                 <img src="assets/Images/ams/33.png" alt="3">
               </div>
               <div class="chg_t_wr">
-                <p class="chg_titul">
-                  <span>Вносите свободное<br> пожертвование по<br> сердцу</span>
-                </p>
+                <p class="chg_titul"><span>Присоединяйтесь в<br> группу ритуала в<br> Телеграм</span></p>
               </div>
             </div>
             <p class="arr_step">
@@ -334,7 +394,9 @@
                 <img src="assets/Images/ams/44.png" alt="4">
               </div>
               <div class="chg_t_wr">
-                <p class="chg_titul"><span>Присоединяйтесь в<br> группу ритуала в<br> Телеграм</span></p>
+                <p class="chg_titul">
+                  <span>Вносите свободное<br> пожертвование по<br> сердцу</span>
+                </p>
               </div>
             </div>
           </div>
@@ -368,20 +430,35 @@
     </div>
   </div>
 </div>
-<div class="l_container reg">
+<div id="registration" class="l_container reg">
   <div class="container">
     <div class="registration-form flex flex-col">
       <div class="registration-form-title">
         <div class="program-forum-flex flex justify-between">
-          <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+          <div>
+            <p class="m_sg g">ПРИМИТЕ ОБЕТ АХИМСЫ</p>
+            <p class="l_titul">сроком от недели, месяца, года или на всю жизнь</p>
+            <p style="margin-top: 10px" class="l_titul">Укажите пожалуйста телефон к которому прикреплены</p>
+            <p class="l_titul fl"><img src="assets/Images/tel.png" alt="telegram"> или <img
+                src="assets/Images/WhatsApp.png" alt="whatsupp"></p>
+          </div>
+          <!-- <img src="assets/Images/Star 2.png" alt="" class="img-star" />
           <h2 class="main-title h">Зарегистрироваться на ритуал</h2>
-          <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+          <img src="assets/Images/Star 2.png" alt="" class="img-star" /> -->
         </div>
       </div>
       <div class="form-registration-form flex justify-between" [formGroup]="form" id="registration-form">
         <input type="text" class="input-form-gold" placeholder="имя" formControlName="name" />
-        <input type="email" class="input-form-gold" placeholder="email" formControlName="email" />
-        <input type="text" class="input-form-gold" placeholder="телефон" formControlName="phone" />
+        <input type="email" class="input-form-gold" placeholder="e-mail" formControlName="email" />
+        <ngx-intl-tel-input [cssClass]="'custom'" [preferredCountries]="preferredCountries"
+          [enableAutoCountrySelect]="true" [enablePlaceholder]="true" [searchCountryFlag]="true" [searchCountryField]="[
+            SearchCountryField.Iso2,
+            SearchCountryField.Name
+          ]" [selectFirstCountry]="false" [selectedCountryISO]="selectedCountry" [maxLength]="15"
+          [phoneValidation]="true" [separateDialCode]="true" [numberFormat]="PhoneNumberFormat.National" name="phone"
+          formControlName="phone">
+        </ngx-intl-tel-input>
+        <!-- <input type="text" class="input-form-gold" placeholder="телефон(whatsapp, telegram)" formControlName="phone" /> -->
       </div>
       <div class="registration-form-button flex justify-center items-center">
         <button class="registration-button" (click)="sendRegistrationData()" [disabled]="!form.valid"
@@ -393,12 +470,24 @@
 <div class="additional_wrap mdlf bottm">
   <div class="main-a_wrap">
     <div class="l_container bottm">
-      <p class="m_sg g">ПРИМИТЕ ОБЕТ<br> АХИМСЫ</p>
-      <p class="l_titul">сроком от недели, месяца, года или на всю жизнь</p>
-      <div class="a_butt-wrap">
+      <!-- <p class="m_sg g">ПРИМИТЕ ОБЕТ<br> АХИМСЫ</p>
+      <p class="l_titul">сроком от недели, месяца, года или на всю жизнь</p> -->
+      <div (click)="scrollTo('registration')" class="a_butt-wrap no-m">
         <button class="bn_gr">ПРИНЯТЬ УЧАСТИЕ</button>
       </div>
       <div class="social-items flex flex-col">
+        <div class="flex marg">
+          <img class="social-img" src="assets/Icons/world.png" alt="">
+          <div class="">
+            <div class="links">yogisforpeace.life</div>
+          </div>
+        </div>
+        <div class="flex marg">
+          <img class="social-img" src="assets/Icons/world.png" alt="">
+          <div class="">
+            <div class="links">yogisforpeace.life/en</div>
+          </div>
+        </div>
         <div class="flex links marg" (click)="goToURl('https://www.instagram.com/yogisforpeace/')">
           <img src="assets/Icons/inst.png" alt="" class="social-img" />
           @yogisforpeace
@@ -406,11 +495,18 @@
         <div class="flex marg">
           <img src="assets/Icons/tgpng.png" alt="" class="social-img" />
           <div>
-            <div class="links" (click)="goToURl('https://t.me/yogisforpeace_life')">yogisforpeace_life (информационный
-              канал)</div>
-            <div class="links" (click)="goToURl('https://t.me/yogisforpeace')">yogisforpeace (чат подсчета
-              умиротворяющих практик)
+            <div class="links" (click)="goToURl('https://t.me/yogisforpeace_life')">yogisforpeace_life</div>
+            <!-- (информационный
+            канал) -->
+          </div>
+        </div>
+        <div class="flex marg">
+          <img src="assets/Icons/tgpng.png" alt="" class="social-img" />
+          <div>
+            <div class="links" (click)="goToURl('https://t.me/yogisforpeace')">yogisforpeace
             </div>
+            <!-- (чат подсчета
+              умиротворяющих практик) -->
           </div>
         </div>
         <div class="flex marg">
@@ -419,14 +515,8 @@
             <div class="links">yogisforpeace</div>
           </div>
         </div>
-        <div class="flex justify-between parent-flex it marg">
+        <div class="flex marg">
           <div class="flex flex-col">
-            <div class="flex">
-              <img src="assets/Icons/face.png" alt="" class="social-img" />
-              <div>
-                <div class="links">worldyogisforpeace</div>
-              </div>
-            </div>
             <div class="flex" (click)="goToURl('https://www.youtube.com/c/Yogisforpeace')">
               <img src="assets/Icons/youtube.png" alt="" class="social-img" />
               <div>
@@ -434,11 +524,14 @@
               </div>
             </div>
           </div>
-          <div class="flex marg">
-            <img class="social-img" src="assets/Icons/world.png" alt="">
-            <div class="">
-              <div class="links">yogisforpeace.life</div>
-              <div class="links">yogisforpeace.life/en</div>
+        </div>
+        <div class="flex marg">
+          <div class="flex flex-col">
+            <div class="flex">
+              <img src="assets/Icons/face.png" alt="" class="social-img" />
+              <div>
+                <div class="links">worldyogisforpeace</div>
+              </div>
             </div>
           </div>
         </div>
