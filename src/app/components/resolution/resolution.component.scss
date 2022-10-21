@@ -3,11 +3,13 @@
     font-size: 21px;
     font-weight: 500;
     white-space: pre-wrap;
-    text-align: center;
+    text-align: left;
 }
+
 .container {
     height: auto;
 }
+
 .registration-button {
     max-width: 300px;
     min-height: 40px;
@@ -15,4 +17,12 @@
     border-radius: 999px;
     background-color: rgb(178, 18, 67);
     color: #fff;
+}
+.container {
+    max-width: 1200px;
+  
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
