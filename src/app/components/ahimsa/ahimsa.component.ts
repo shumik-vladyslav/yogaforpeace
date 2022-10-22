@@ -138,7 +138,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit {
     this.form = new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
-      phone: new FormControl('', [Validators.required, phoneValidator()]),
+      phone: new FormControl('', [Validators.required]),
     });
   }
 

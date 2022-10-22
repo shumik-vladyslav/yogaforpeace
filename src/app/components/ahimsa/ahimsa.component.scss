@@ -12,7 +12,7 @@
   &.cdf {
     background: url(../../../assets/Images/3b.png) no-repeat;
     background-size: contain;
-    background-position: -35px 58px;
+    background-position: -10px 0px;
   }
   &.ans {
     background: url(../../../assets/Images/ams/back.png) no-repeat;
@@ -1169,6 +1169,9 @@ div.in_wr {
   }
 }
 @media (max-width: 780px) {
+  .l_plg img {
+    height: 350px;
+  }
   .v_w {
     height: 190px;
     width: 50%;
@@ -1217,6 +1220,7 @@ div.in_wr {
     padding: 40px 0 10px 0;
   }
   .tex_item {
+    text-align: center;
     font-size: 2.4vw;
   }
   .leaders_wrap {
@@ -1277,6 +1281,13 @@ div.in_wr {
   }
 }
 @media (max-width: 600px) {
+  .cub_wrap.rev {
+    flex-direction: column-reverse;
+  }
+  .cub_item.flat {
+    padding: 20px;
+    height: auto;
+  }
   .mno {
     background-position: 0px -74px !important;
   }
@@ -1437,9 +1448,9 @@ div.in_wr {
     padding: 10px 0 0px 0;
   }
   .l_plg {
-    height: 180px;
+    height: 230px;
     img {
-      height: 180px;
+      height: 280px;
     }
   }
   .inst_wrp {
