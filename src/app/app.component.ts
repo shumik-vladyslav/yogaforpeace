@@ -35,6 +35,9 @@ export class AppComponent implements OnInit {
 
           this.setLanguage(this.language);
           this.generalService.currentLanguage.next(this.language)
+        } else {
+          console.log('hasNT language');
+          this.generalService.currentLanguage.next('ru')
         }
       });
     });

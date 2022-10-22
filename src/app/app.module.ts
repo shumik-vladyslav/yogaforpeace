@@ -26,6 +26,7 @@ import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { ResolutionComponent } from './components/resolution/resolution.component';
 import { AdiitionalInfoComponent } from './components/adiitional-info/adiitional-info.component';
 import { DownloadAhimsaComponent } from './components/download-ahimsa/download-ahimsa.component';
+import { MovementResolutionComponent } from './components/movement-resolution/movement-resolution.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -44,6 +45,7 @@ export function createTranslateLoader(http: HttpClient) {
     DownloadAhimsaComponent,
     AdiitionalInfoComponent,
     ResolutionComponent,
+    MovementResolutionComponent,
   ],
   imports: [
     BrowserModule,
