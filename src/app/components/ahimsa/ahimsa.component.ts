@@ -4,11 +4,12 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
-import { emailValidator, phoneValidator } from 'src/app/services/validation.service';
+import { Languages } from 'src/app/app.component';
 import { AdiitionalInfoComponent } from '../adiitional-info/adiitional-info.component';
 import { DownloadAhimsaComponent } from '../download-ahimsa/download-ahimsa.component';
 import { FormMessage } from '../main-page/main-page.component';
 import { CountryISO, PhoneNumberFormat, SearchCountryField } from 'ngx-intl-tel-input';
+import { GeneralServiceService } from 'src/app/services/general-service.service';
 
 @Component({
   selector: 'app-ahimsa',
@@ -43,38 +44,12 @@ export class AhimsaComponent implements OnInit, AfterViewInit {
   play3: boolean = false;
   isSendRegistrationMessage: boolean = false;
   menu: boolean = false;
-  slides: any = [
-    {
-      index: 0,
-      name: 'Юлиана',
-      description: 'Так как я являюсь мамой, то передаю знание ахимсы (ненасилия) своему сыну, и это зарождает у ребенка Дхармичное видение мира, которое, конечно же, будет вести его по жизни правильным, благоприятным путем…',
-      path: 'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F1.mp4?alt=media&token=a95144ff-f544-4453-91a0-be391e649458',
-    },
-    {
-      index: 1,
-      name: 'Алекс',
-      description: 'Врата, это то, на что можно опереться, например мы как в болоте и не можем выбраться, потом появляется тонкий лед, он крепнет и мы уже можем спокойно ходить не проваливаясь... Ахимса – это такой лед, на который мы можем опереться и больше не проваливаться.',
-      path: 'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F2.mp4?alt=media&token=9040c773-fac3-475a-b6f3-c61a200eed83',
-    },
-    {
-      index: 2,
-      name: 'Александр',
-      description: '«Что касается физиологических показателей – улучшилось давление, лучше переношу физические нагрузки, общие самочувствие стало легче... что касаемо эмоционального состояния – внутренняя агрессия, особенно беспричинная практически вообще ушла»',
-      path: 'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F3.mp4?alt=media&token=b0723716-3eb0-41c1-934f-9d0927fdcbd3',
-    },
-    {
-      index: 3,
-      name: 'Анандамайи',
-      description: 'В каком мире мы хотим жить?! В мире где есть внутренне понимание единства, уважение, достоинства и священности жизни или в мире невежества, борьбы, нападения и защиты…',
-      path: 'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F4.mp4?alt=media&token=06539234-9197-4207-b697-f569a8f3e0e8',
-    },
-    {
-      index: 4,
-      name: 'Кристиана',
-      description: 'Я приняла обет ахимсы на всю жизнь, потому что поняла, что делаю неосознанные действия в мыслях, словах и делаю больно как другим людям, так и самой себе. Поэтому обет ахимсы стал для меня ключом к осознанности и контролю своих чувств…',
-      path: 'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F5.mp4?alt=media&token=d093987b-d1a1-40b7-b1eb-ed48cdd17296',
-    }
-  ]
+  description;
+  description1;
+  description2;
+  description3;
+  description4;
+  slides: any = [];
 
   slidesIm: any = [
     {
@@ -133,8 +108,66 @@ export class AhimsaComponent implements OnInit, AfterViewInit {
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private angularFirestore: AngularFirestore,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    public generalService: GeneralServiceService
   ) {
+    this.generalService.currentLanguage.subscribe((lan) => {
+      switch (lan) {
+        case Languages.English:
+          this.description = "Since I am a mother, I pass on the knowledge of ahimsa (non-violence) to my son, and this gives the child a Dharmic vision of the world, which, of course, will lead him through life in the right, favorable way ...";
+          this.description1 = "The Vrata is something that you can rely on, for example, we are like in a swamp and cannot get out, then thin ice appears, it gets stronger and we can already walk calmly without falling through ... Ahimsa is such ice that we can lean on and fail no more.";
+          this.description2 = "As for physiological indicators, my blood pressure has improved, I can tolerate physical activity better, my general state of health has become easier ... with regards to the emotional state, internal aggression, especially unreasonable, has practically completely disappeared";
+          this.description3 = "What world do we want to live in?! In a world where there is an internal understanding of unity, respect, dignity and sacredness of life, or in a world of ignorance, struggle, attack and defense ...";
+          this.description4 = "I took a vow of ahimsa for life, because I realized that I do unconscious actions in thoughts, words and hurt both other people and myself. Therefore, the vow of ahimsa became for me the key to awareness and control of my feelings ...";
+          break;
+        case Languages.Russian:
+          this.description = "Так как я являюсь мамой, то передаю знание ахимсы (ненасилия) своему сыну, и это зарождает у ребенка Дхармичное видение мира, которое, конечно же, будет вести его по жизни правильным, благоприятным путем…";
+          this.description1 = "Врата, это то, на что можно опереться, например мы как в болоте и не можем выбраться, потом появляется тонкий лед, он крепнет и мы уже можем спокойно ходить не проваливаясь... Ахимса – это такой лед, на который мы можем опереться и больше не проваливаться.";
+          this.description2 = "Что касается физиологических показателей – улучшилось давление, лучше переношу физические нагрузки, общие самочувствие стало легче... что касаемо эмоционального состояния – внутренняя агрессия, особенно беспричинная практически вообще ушла.";
+          this.description3 = "В каком мире мы хотим жить?! В мире где есть внутренне понимание единства, уважение, достоинства и священности жизни или в мире невежества, борьбы, нападения и защиты…";
+          this.description4 = "Я приняла обет ахимсы на всю жизнь, потому что поняла, что делаю неосознанные действия в мыслях, словах и делаю больно как другим людям, так и самой себе. Поэтому обет ахимсы стал для меня ключом к осознанности и контролю своих чувств…";
+          break;
+        case Languages.Ukrainian:
+          this.description = "Так як я є мамою, то передаю знання ахімси (ненасильства) своєму синові, і це зароджує у дитини Дхармічне бачення світу, яке, звичайно ж, вестиме його по життю правильним, сприятливим шляхом…";
+          this.description1 = "Врата, це те, на що можна опиратись, наприклад ми як у болоті і не можемо вибратися, потім з'являється тонкий лід, він міцніє і ми вже можемо спокійно ходити не провалюючись... Ахімса – це такий лід, на який ми можемо опиратись і більше не провалюватися.";
+          this.description2 = "Що стосується фізіологічних показників - покращився тиск, краще переношу фізичні навантаження, загальнe самопочуття стало краще... що стосується емоційного стану - внутрішня агресія, особливо безпричинна практично взагалі зникла";
+          this.description3 = "У якому світі ми хочемо жити? У світі де є внутрішнє розуміння єдності, пошана, гідність та священність життя або у світі невігластва, боротьби, нападу та захисту…";
+          this.description4 = "Я прийняла обітницю ахімси на все життя, тому що зрозуміла, що роблю несвідомі дії в думках, словах і роблю боляче як іншим людям, так і самій собі. Тому обітниця ахімси стала для мене ключем до усвідомленості та контролю своїх чуттів.";
+          break;
+      }
+    });
+    this.slides = [
+      {
+        index: 0,
+        name: 'Юлиана',
+        description: this.description,
+        path: 'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F1.mp4?alt=media&token=a95144ff-f544-4453-91a0-be391e649458',
+      },
+      {
+        index: 1,
+        name: 'Алекс',
+        description: this.description1,
+        path: 'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F2.mp4?alt=media&token=9040c773-fac3-475a-b6f3-c61a200eed83',
+      },
+      {
+        index: 2,
+        name: 'Александр',
+        description: this.description2,
+        path: 'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F3.mp4?alt=media&token=b0723716-3eb0-41c1-934f-9d0927fdcbd3',
+      },
+      {
+        index: 3,
+        name: 'Анандамайи',
+        description: this.description3,
+        path: 'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F4.mp4?alt=media&token=06539234-9197-4207-b697-f569a8f3e0e8',
+      },
+      {
+        index: 4,
+        name: 'Кристиана',
+        description: this.description4,
+        path: 'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F5.mp4?alt=media&token=d093987b-d1a1-40b7-b1eb-ed48cdd17296',
+      }
+    ]
     this.form = new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
