@@ -11,5 +11,10 @@ export class MovementResolutionComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  openUrl(url: string) {
+    window.open(
+      'https://'+ url,
+      '_blank'
+    );
+  }
 }
