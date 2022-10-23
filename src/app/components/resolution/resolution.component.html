@@ -8,8 +8,13 @@
             </div>
         </div>
     </div>
+    <div class="content-container ">
+        <div class="img-container mt-4">
+            <img src="../../../assets/Images/ПЕТИЦИЯ.jpg" alt="p">
+        </div>
+    </div>
     <div class="content-container flex flex-col items-center">
-        <div class="reso-text mb-8">{{resolutionText}}</div>
-        <button class="registration-button mb-8" >Подписать</button>
+        <div class="reso-text mb-8">{{textToShow}}</div>
+        <button class="registration-button mb-8" (click)="signPetition()">{{'resolution.sign' | translate}}</button>
     </div>
 </div>

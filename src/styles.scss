@@ -339,6 +339,18 @@ body {
   justify-content: center;
   margin-bottom: 20px;
 }
+.logo__container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 30px 0;
+  //background: url('../../../assets/Logo/yogis-for-peace-logo.svg') no-repeat;
+}
+.header-img-logo{
+  color: #ba7d18;
+  font-size: 54px;
+  padding: 24px 0 38px 0;
+  line-height: 1;
+}
 @media (max-width: 1620px) {
   .bk_wrap {
     flex-direction: column;
