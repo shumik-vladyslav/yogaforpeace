@@ -31,6 +31,28 @@
               <button class="registration-button" (click)="scrollTo('registration')">{{'main.registration' |
                 translate}}</button>
             </div>
+            <div class="nav-wrapper">
+              <div class="sl-nav">
+                <ul>
+                  <li style="display: flex;
+                  align-items: center;"><b>{{lan}}</b>
+                    <img style="margin: 0 5px -5px 5px;" src="assets/Icons/angle-arrow-down.png" alt="down">
+                    <div class="triangle"></div>
+                    <ul>
+                      <li (click)="setLanguage('ua')" class="lil"><i class="sl-flag flag-ua">
+                          <div id="ua"></div>
+                        </i> <span>ua</span></li>
+                      <li (click)="setLanguage('ru')" class="lil"><i class="sl-flag flag-ru">
+                          <div id="ru"></div>
+                        </i> <span >ru</span></li>
+                      <li (click)="setLanguage('en')" class="lil"><i class="sl-flag flag-usa">
+                          <div id="usa"></div>
+                        </i> <span>en</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <p *ngIf="!menu" (click)="showMenu()" class="burg">
             <img src="assets/Images/burg.svg" alt="burger">
@@ -204,7 +226,8 @@
               </div>
               <div class="chg_t_wr">
                 <p class="chg_titul"><span>{{'main.reality' | translate}}</span> {{'main.reality1' | translate}}
-                  <span>{{'main.reality2' | translate}}</span></p>
+                  <span>{{'main.reality2' | translate}}</span>
+                </p>
               </div>
             </div>
           </div>

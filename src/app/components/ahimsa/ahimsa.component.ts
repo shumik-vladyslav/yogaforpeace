@@ -10,6 +10,7 @@ import { DownloadAhimsaComponent } from '../download-ahimsa/download-ahimsa.comp
 import { FormMessage } from '../main-page/main-page.component';
 import { CountryISO, PhoneNumberFormat, SearchCountryField } from 'ngx-intl-tel-input';
 import { GeneralServiceService } from 'src/app/services/general-service.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-ahimsa',
@@ -26,6 +27,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit {
   form: FormGroup;
   url = "https://b24-ay5iam.bitrix24.eu/rest/4/95igs0uaxwczeh83/";
   routeParams;
+  lan = 'ru';
   first: number = 0;
   middle: number = 1;
   last: number = 2;
@@ -109,7 +111,8 @@ export class AhimsaComponent implements OnInit, AfterViewInit {
     private router: Router,
     private angularFirestore: AngularFirestore,
     private dialog: MatDialog,
-    public generalService: GeneralServiceService
+    public generalService: GeneralServiceService,
+    private translate: TranslateService,
   ) {
     this.generalService.currentLanguage.subscribe((lan) => {
       switch (lan) {
@@ -173,6 +176,21 @@ export class AhimsaComponent implements OnInit, AfterViewInit {
       email: new FormControl('', [Validators.required, Validators.email]),
       phone: new FormControl('', [Validators.required]),
     });
+  }
+
+  setLanguage(language) {
+    this.lan = language;
+    switch (language) {
+      case Languages.English:
+        this.translate.setDefaultLang(Languages.English);
+        break;
+      case Languages.Russian:
+        this.translate.setDefaultLang(Languages.Russian);
+        break;
+      case Languages.Ukrainian:
+        this.translate.setDefaultLang(Languages.Ukrainian);
+        break;
+    }
   }
 
   ngAfterViewInit(): void {
