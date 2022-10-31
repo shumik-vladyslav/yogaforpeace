@@ -190,7 +190,7 @@ li.lil:hover {
   font-weight: bold;
   line-height: 1;
   font-family: "Montserrat", sans-serif;
-  text-align: center;
+  text-align: center; 
 }
 .pce_wrap {
   width: 120px;
@@ -387,7 +387,6 @@ li.lil:hover {
   // font-style: italic;
 }
 .mdl {
-  min-height: 90vh;
   background: #f7f6f6;
 }
 .mdlf {
@@ -458,6 +457,11 @@ div.in_wr {
   .pl_pl {
     height: unset;
     // z-index: 1000;
+  }
+}
+.nav-wrapper {
+  &.mobile {
+    display: none;
   }
 }
 .car_line {
@@ -1056,6 +1060,20 @@ div.in_wr {
   }
 }
 @media (max-width: 900px) {
+  .sl-nav li:hover ul {
+    right: -60px;
+  }
+  .nav-wrapper {
+    &.mobile {
+      display: flex;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+    }
+    &.desktop {
+      display: none;
+    }
+  }
   .header {
     font-size: 22px;
   }
