@@ -310,11 +310,14 @@ li.lil:hover {
   background: #f5f4f8;
 }
 .social-items {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
   color: #1a171b;
   font-size: 31px;
   align-self: self-start;
   line-height: 1;
-  margin: 50px 0 0 0;
+  margin: 0;
   div.marg {
     margin-bottom: 15px;
   }
@@ -645,6 +648,7 @@ div.in_wr {
     line-height: 1.2;
     margin-top: 10px;
     display: block;
+    color: #fff59b;
   }
 }
 .vio_w {
@@ -1400,6 +1404,9 @@ div.in_wr {
   }
   .inst_wrp {
     width: 65%;
+  }
+  .social-items {
+    flex-direction: column;
   }
 }
 @media (max-width: 600px) {

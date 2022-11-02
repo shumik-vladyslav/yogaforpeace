@@ -17,7 +17,7 @@
                       </i> <span>ua</span></li>
                     <li (click)="setLanguage('ru')" class="lil"><i class="sl-flag flag-ru">
                         <div id="ru"></div>
-                      </i> <span >ru</span></li>
+                      </i> <span>ru</span></li>
                     <li (click)="setLanguage('en')" class="lil"><i class="sl-flag flag-usa">
                         <div id="usa"></div>
                       </i> <span>en</span></li>
@@ -66,7 +66,7 @@
                         </i> <span>ua</span></li>
                       <li (click)="setLanguage('ru')" class="lil"><i class="sl-flag flag-ru">
                           <div id="ru"></div>
-                        </i> <span >ru</span></li>
+                        </i> <span>ru</span></li>
                       <li (click)="setLanguage('en')" class="lil"><i class="sl-flag flag-usa">
                           <div id="usa"></div>
                         </i> <span>en</span></li>
@@ -519,65 +519,69 @@
     <div class="l_container bottm">
       <!-- <p class="m_sg g">ПРИМИТЕ ОБЕТ<br> АХИМСЫ</p>
       <p class="l_titul">сроком от недели, месяца, года или на всю жизнь</p> -->
-      <div (click)="scrollTo('registration')" class="a_butt-wrap no-m">
+      <!-- <div (click)="scrollTo('registration')" class="a_butt-wrap no-m">
         <button class="bn_gr">{{'main.participate' | translate}}</button>
-      </div>
-      <div class="social-items flex flex-col">
-        <div class="flex marg">
-          <img class="social-img" src="assets/Icons/world.png" alt="">
-          <div class="">
-            <div class="links">yogisforpeace.life</div>
-          </div>
-        </div>
-        <div class="flex marg">
-          <img class="social-img" src="assets/Icons/world.png" alt="">
-          <div class="">
-            <div class="links">yogisforpeace.life/en</div>
-          </div>
-        </div>
-        <div class="flex links marg" (click)="goToURl('https://www.instagram.com/yogisforpeace/')">
-          <img src="assets/Icons/inst.png" alt="" class="social-img" />
-          @yogisforpeace
-        </div>
-        <div class="flex marg">
-          <img src="assets/Icons/tgpng.png" alt="" class="social-img" />
-          <div>
-            <div class="links" (click)="goToURl('https://t.me/yogisforpeace_life')">yogisforpeace_life</div>
-            <!-- (информационный
-            канал) -->
-          </div>
-        </div>
-        <div class="flex marg">
-          <img src="assets/Icons/tgpng.png" alt="" class="social-img" />
-          <div>
-            <div class="links" (click)="goToURl('https://t.me/yogisforpeace')">yogisforpeace
+      </div> -->
+      <div class="social-items flex d_c">
+        <div class="sep_f">
+          <div class="flex marg">
+            <img class="social-img" src="assets/Icons/world.png" alt="">
+            <div class="">
+              <div class="links">yogisforpeace.life</div>
             </div>
-            <!-- (чат подсчета
-              умиротворяющих практик) -->
+          </div>
+          <div class="flex marg">
+            <img class="social-img" src="assets/Icons/world.png" alt="">
+            <div class="">
+              <div class="links">yogisforpeace.life/en</div>
+            </div>
+          </div>
+          <div class="flex links marg" (click)="goToURl('https://www.instagram.com/yogisforpeace/')">
+            <img src="assets/Icons/inst.png" alt="" class="social-img" />
+            @yogisforpeace
+          </div>
+          <div class="flex marg">
+            <img src="assets/Icons/tgpng.png" alt="" class="social-img" />
+            <div>
+              <div class="links" (click)="goToURl('https://t.me/yogisforpeace_life')">yogisforpeace_life</div>
+              <!-- (информационный
+              канал) -->
+            </div>
           </div>
         </div>
-        <div class="flex marg">
-          <img src="assets/Icons/v.png" alt="" class="social-img" />
-          <div>
-            <div class="links">yogisforpeace</div>
+        <div class="sep_f">
+          <div class="flex marg">
+            <img src="assets/Icons/tgpng.png" alt="" class="social-img" />
+            <div>
+              <div class="links" (click)="goToURl('https://t.me/yogisforpeace')">yogisforpeace
+              </div>
+              <!-- (чат подсчета
+                умиротворяющих практик) -->
+            </div>
           </div>
-        </div>
-        <div class="flex marg">
-          <div class="flex flex-col">
-            <div class="flex" (click)="goToURl('https://www.youtube.com/c/Yogisforpeace')">
-              <img src="assets/Icons/youtube.png" alt="" class="social-img" />
-              <div>
-                <div class="links">Yogisforpeace</div>
+          <div class="flex marg">
+            <img src="assets/Icons/v.png" alt="" class="social-img" />
+            <div>
+              <div class="links">yogisforpeace</div>
+            </div>
+          </div>
+          <div class="flex marg">
+            <div class="flex flex-col">
+              <div class="flex" (click)="goToURl('https://www.youtube.com/c/Yogisforpeace')">
+                <img src="assets/Icons/youtube.png" alt="" class="social-img" />
+                <div>
+                  <div class="links">Yogisforpeace</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="flex marg">
-          <div class="flex flex-col">
-            <div class="flex">
-              <img src="assets/Icons/face.png" alt="" class="social-img" />
-              <div>
-                <div class="links">worldyogisforpeace</div>
+          <div class="flex marg">
+            <div class="flex flex-col">
+              <div class="flex">
+                <img src="assets/Icons/face.png" alt="" class="social-img" />
+                <div>
+                  <div class="links">worldyogisforpeace</div>
+                </div>
               </div>
             </div>
           </div>
