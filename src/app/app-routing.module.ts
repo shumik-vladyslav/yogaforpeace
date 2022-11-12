@@ -8,11 +8,13 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { MovementResolutionComponent } from './components/movement-resolution/movement-resolution.component';
 import { NewsPageComponent } from './components/news-page/news-page.component';
 import { ResolutionComponent } from './components/resolution/resolution.component';
+import { SecondForumComponent } from './components/second-forum/second-forum.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
   { path: 'forum', component: ForumComponent },
+  { path: 'second-forum', component: SecondForumComponent },
   { path: 'live', component: LiveTranslationComponent },
   { path: 'ahimsa', component: AhimsaComponent },
   { path: 'thanks', component: ThankyouPageComponent },

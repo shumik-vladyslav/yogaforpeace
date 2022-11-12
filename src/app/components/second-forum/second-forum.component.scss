@@ -1,0 +1,107 @@
+@import "../forum/forum.component.scss";
+
+.header-inner.header-inner-button.boreder {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    border-radius: 999px;
+    background-color: #b21243;
+    padding: 0 3px !important;
+    margin: 0 15px;
+    &.grad {
+        margin: 0 15px 0 0;
+    }
+    &.grad {
+        background-image: linear-gradient(260deg, #ebd385 0%, #ebd385 11%, #b7832b 43%, #edcd7b 73%, #b7832b 100%);
+        width: 300px;
+        button {
+            font-size: 22px;
+            background: transparent;
+            width: 100%;
+        }
+    }
+    button {
+        padding: 0 30px;
+        height: 64px;
+        border: 1px solid #fff;
+    }
+}
+.wrapper {
+    border-bottom: none;
+    .icons-wrapper.top {
+        border-top: 2px solid #ba7d18;
+    }
+}
+
+.ro_wrap {
+    width: 40%;
+    justify-content: space-around;
+    &.ee {
+        width: 20%;
+        .card-icon {
+            width: 100%;
+        }
+    }
+}
+.card-icon.flex.flex-col {
+    line-height: 1.3;
+}
+.content-title-el {
+    font-family: "Roboto Slab";
+    color: #bd154e;
+    line-height: 1;
+    font-weight: 500;
+}
+.content-list li {
+    font-weight: 400;
+    font-family: "Roboto";
+    line-height: 1.2;
+}
+.content-footer-button.relative {
+    margin: 10px 0 32px 0;
+}
+@media (max-width: 1100px) {
+    .flex.flex-wrap {
+        flex-direction: column;
+    }
+    .ro_wrap {
+        width: auto;
+        justify-content: center;
+        &.ee {
+            width: auto;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .program-forum-flex {
+        width: 500px;
+    }
+}
+@media (max-width: 550px) {
+    .header-inner.header-inner-button.boreder {
+        height: 56px;
+        button {
+            height: 52px;
+        }
+    }
+    .head_in {
+        height: 160px;
+    }
+    .header-inner.header-inner-button.boreder.grad {
+        margin: 0;
+        width: auto;
+    }
+    .program-forum-flex {
+        width: 300px;
+    }
+}
+@media (max-width: 350px) {
+    .header-inner.header-inner-button.boreder {
+        button {
+            padding: 0 10px;
+        }
+    }
+    .m_show {
+        justify-content: unset;
+    }
+}
