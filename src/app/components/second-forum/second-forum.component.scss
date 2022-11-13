@@ -156,7 +156,13 @@
 .content-footer-button.relative {
     margin: 10px 0 32px 0;
 }
+@media  (max-width: 1295px) {
+    .program-forum {
+        margin-top: 0px;
+    }    
+}
 @media (max-width: 1100px) {
+
     .flex.flex-wrap {
         flex-direction: column;
     }
@@ -166,6 +172,22 @@
         &.ee {
             width: auto;
         }
+    }
+    .bl_wraps {
+        flex-direction: column;
+    }
+    .divid{
+        display: none;
+    }
+    .row_items{
+        margin-top: 0px; 
+        flex-direction: column;
+    }
+    .its {
+        margin-top: 19px;
+    }
+    .collect_pray {
+        margin-top: 0px;
     }
 }
 @media (max-width: 768px) {
@@ -189,6 +211,9 @@
     }
     .program-forum-flex {
         width: 300px;
+    }
+    .bl_wraps .text-about-forum {
+        width: auto;
     }
 }
 @media (max-width: 350px) {
