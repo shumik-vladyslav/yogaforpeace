@@ -43,6 +43,102 @@
         }
     }
 }
+.bl_wrappr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.row_items {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: -90px;
+    &.st {
+        width: 90%;
+    }
+}
+.bl_wraps {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 50px 0;
+    .text-about-forum {
+        width: 490px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
+.gal_img {
+    border-radius: 15px;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    height: 220px;
+    width: 24.3%;
+    img {
+        object-fit: cover;
+        height: 220px;
+        width: 100%;
+    }
+}
+.pray {
+    scale: 0.6;
+    margin-right: -30px;
+}
+.collect_pray {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -60px;
+    .tt {
+        font-style: italic;
+    }
+}
+.text-about-forum.bott {
+    width: 65%;
+    margin: 30px auto 20px auto;
+    text-align: center;
+}
+.galr {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto;
+}
+.lnn {
+    width: 100%;
+    height: 3px;
+    background-image: linear-gradient(-90deg, #ebd385 0%, #ebd385 11%, #b7832b 43%, #edcd7b 73%, #b7832b 100%);
+}
+.divid {
+    height: 335px;
+    align-self: flex-end;
+    width: 3px;
+    background-image: linear-gradient(-90deg, #ebd385 0%, #ebd385 11%, #b7832b 43%, #edcd7b 73%, #b7832b 100%);
+}
+.program-forum {
+    margin-top: -310px;
+}
+.its {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
+    // img {
+    //     scale: 0.7;
+    // }
+}
+.d_wrap {
+    img {
+        height: 70%;
+    }
+}
+.tt {
+    font-size: 27px;
+    line-height: 1.2;
+    color: #ba7d18;
+    font-weight: 400;
+    font-family: "Roboto";
+    margin-left: 30px;
+}
 .card-icon.flex.flex-col {
     line-height: 1.3;
 }
@@ -103,5 +199,8 @@
     }
     .m_show {
         justify-content: unset;
+    }
+    .registration-button {
+        padding: 0;
     }
 }
