@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper icons-wrapper top"> 
+        <div class="wrapper icons-wrapper top">
             <div class="container">
                 <div class="flex flex-wrap">
                     <div class="ro_wrap">
@@ -108,7 +108,8 @@
                             <div class="card-icon-img">
                                 <img src="assets/Icons/33.png" alt="" class="img-card-icon" />
                             </div>
-                            <div class="card-icon-title mt-1"><b>11 духовных</b><br> <b>учителей</b> <br><span style="white-space: nowrap;">высочайшего уровня</span></div>
+                            <div class="card-icon-title mt-1"><b>11 духовных</b><br> <b>учителей</b> <br><span
+                                    style="white-space: nowrap;">высочайшего уровня</span></div>
                             <!-- <div class="card-icon-subtitle mt-1">высочайшего уровня</div> -->
                         </div>
                         <div class="card-icon flex flex-col items-center">
@@ -137,7 +138,6 @@
                 <h2 class="main-title">О форуме</h2>
                 <img src="assets/Images/Star 2.png" alt="" class="img-star" />
             </div>
-
             <div class="item flex image-and-text">
                 <img src="assets/Images/photo.png" alt="" height="1080" class="item-image" />
                 <div class="item-text">
@@ -161,6 +161,166 @@
                     <img src="assets/Images/Star 2.png" alt="" class="img-star" />
                     <h2 class="main-title">Программа форума</h2>
                     <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+                </div>
+                <div class="container">
+                    <div class="registration-form flex flex-col">
+                        <div class="registration-form-title">
+                            <div class="program-forum-flex flex justify-between">
+                                <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+                                <h2 class="main-title h">Зарегистрироваться на форум</h2>
+                                <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+                            </div>
+                        </div>
+                        <div class="form-registration-form flex justify-between" [formGroup]="form"
+                            id="registration-form">
+                            <input type="text" class="input-form-gold" placeholder="имя" formControlName="name" />
+                            <input type="email" class="input-form-gold" placeholder="email" formControlName="email" />
+                            <input type="text" class="input-form-gold" placeholder="телефон" formControlName="phone" />
+                        </div>
+                        <div class="registration-form-button flex justify-center items-center">
+                            <button class="registration-button" (click)="sendRegistrationData()"
+                                [disabled]="!form.valid"
+                                [ngClass]="!form.valid ? 'disabled' : 'enabled'">Зарегистрироваться</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hands-img-container">
+                <div class="hands-title">
+                    <h2 class="main-title">
+                        Лока Самаста Сукхино Бхаванту <br />
+                        Ом Шанти Шанти Шанти
+                    </h2>
+                </div>
+            </div>
+            <div class="footer flex items-center">
+                <div class="container flex g">
+                    <div class="logo-item">
+                        <img src="assets/Icons/logo_gold.png" alt="" class="logo-item-img" />
+                    </div>
+                    <div class="social-items flex flex-col">
+                        <div class="flex links" (click)="goToURl('https://www.instagram.com/yogisforpeace/')">
+                            <img src="assets/Icons/inst.png" alt="" class="social-img" />
+                            @yogisforpeace
+                        </div>
+                        <div class="flex items-center">
+                            <img src="assets/Icons/tgpng.png" alt="" class="social-img" />
+                            <div>
+                                <div class="links" (click)="goToURl('https://t.me/yogisforpeace_life')">
+                                    yogisforpeace_life (информационный
+                                    канал)</div>
+                                <div class="links" (click)="goToURl('https://t.me/yogisforpeace')">yogisforpeace (чат
+                                    подсчета
+                                    умиротворяющих практик)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="assets/Icons/v.png" alt="" class="social-img" />
+                            <div>
+                                <div class="links">yogisforpeace</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between parent-flex it">
+                            <div class="flex flex-col">
+                                <div class="flex">
+                                    <img src="assets/Icons/face.png" alt="" class="social-img" />
+                                    <div>
+                                        <div class="links">worldyogisforpeace</div>
+                                    </div>
+                                </div>
+                                <div class="flex" (click)="goToURl('https://www.youtube.com/c/Yogisforpeace')">
+                                    <img src="assets/Icons/youtube.png" alt="" class="social-img" />
+                                    <div>
+                                        <div class="links">Yogisforpeace</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <img class="social-img" src="assets/Icons/world.png" alt="">
+                                <div class="">
+                                    <div class="links">yogisforpeace.life</div>
+                                    <div class="links">yogisforpeace.life/en</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="support">
+                <div class="head-section_wrap">
+                    <p class="lotus_w"><img src="assets/Images/lotuss.png" alt="lotus"></p>
+                    <img class="divder" src="assets/Images/divider2.png" alt="line">
+                    <div class="sup_line-wrap">
+                        <div class="ln_wr">
+                            <p class="sup_text">ПОДДЕРЖАТЬ ПРОЕКТ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="req_wrap">
+                    <div class="tw_wrap fst">
+                        <div class="bk_wrap f">
+                            <p class="b-im_wrap">
+                                <img src="assets/Images/csob.png" alt="csob">
+                            </p>
+                            <p class="b-txt_wrap">
+                                ČSOB банк Чехии<br>
+                                5168 3421 1130 2082 VLADYSLAV MORHUNENKO<br>
+                                Счёт: 305066270/0300<br>
+                                IBAN: CZ9603000000000305066270<br>
+                                BIC (SWIFT) CEKOCZPP
+                            </p>
+                            <img class="divider_sc" src="assets/Images/divider.png" alt="line">
+                        </div>
+                        <div class="bk_wrap s">
+                            <p class="b-im_wrap">
+                                <img src="assets/Images/reifeisen.png" alt="raiffeisen">
+                            </p>
+                            <p class="b-txt_wrap">
+                                Raiffeisen Bank<br>
+                                5168 7207 9303 0214<br>
+                                VALERII M.<br>
+                                Счет - 7114761002/5500
+                            </p>
+                            <img class="divider_sc sc" src="assets/Images/divider.png" alt="line">
+                        </div>
+                    </div>
+                    <div class="tw_wrap scd">
+                        <div class="bk_wrap">
+                            <p class="b-im_wrap">
+                                <img src="assets/Images/tinkoff.png" alt="tinkoff">
+                            </p>
+                            <p class="b-txt_wrap">
+                                Тинькофф<br>
+                                рубли, доллары, евро<br>
+                                4377 7237 7959 1126<br>
+                                SVETLANA RAMAEVA
+                            </p>
+                            <img class="divider_sc" src="assets/Images/divider.png" alt="line">
+                        </div>
+                        <div class="bk_wrap">
+                            <p class="b-im_wrap">
+                                <img src="assets/Images/privat.png" alt="privat">
+                            </p>
+                            <p class="b-txt_wrap">
+                                ПриватБанк (Visa)<br>
+                                4149 6090 1133 2550<br>
+                                MOLOFIEIEVA ALONA
+                            </p>
+                            <img class="divider_sc sc" src="assets/Images/divider.png" alt="line">
+                        </div>
+                    </div>
+                    <div class="tw_wrap last">
+                        <div class="bk_wrap">
+                            <p class="b-im_wrap">
+                                <img src="assets/Images/paypal.png" alt="paypal">
+                            </p>
+                            <p class="b-txt_wrap">
+                                guru.swamivishnudevanandagiri@gmail.com
+                            </p>
+                            <img class="divider_sc" src="assets/Images/divider.png" alt="line">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
