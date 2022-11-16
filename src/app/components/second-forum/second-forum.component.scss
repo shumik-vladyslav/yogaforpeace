@@ -1,5 +1,13 @@
 @import "../forum/forum.component.scss";
 
+// .header-inner {
+//     display: flex;
+//     justify-content: space-between;
+// }
+// .content-title-el {
+//     text-transform: unset;
+// }
+
 .header-inner.header-inner-button.boreder {
     display: flex;
     align-items: center;
@@ -156,13 +164,12 @@
 .content-footer-button.relative {
     margin: 10px 0 32px 0;
 }
-@media  (max-width: 1295px) {
+@media (max-width: 1295px) {
     .program-forum {
         margin-top: 0px;
-    }    
+    }
 }
 @media (max-width: 1100px) {
-
     .flex.flex-wrap {
         flex-direction: column;
     }
@@ -176,11 +183,11 @@
     .bl_wraps {
         flex-direction: column;
     }
-    .divid{
+    .divid {
         display: none;
     }
-    .row_items{
-        margin-top: 0px; 
+    .row_items {
+        margin-top: 0px;
         flex-direction: column;
     }
     .its {
