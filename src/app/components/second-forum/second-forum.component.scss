@@ -168,6 +168,9 @@
     .program-forum {
         margin-top: 0px;
     }
+    .container {
+        margin: 0 auto;
+    }
 }
 @media (max-width: 1100px) {
     .flex.flex-wrap {
@@ -201,8 +204,19 @@
     .program-forum-flex {
         width: 500px;
     }
+    .gal_img {
+        margin: 0 auto 15px auto;
+        height: auto;
+        width: 70%;
+    }
+    .galr {
+        flex-direction: column;
+    }
 }
 @media (max-width: 550px) {
+    .gal_img {
+        width: 85%;
+    }
     .header-inner.header-inner-button.boreder {
         height: 56px;
         button {
@@ -210,7 +224,7 @@
         }
     }
     .head_in {
-        height: 160px;
+        height: 100px;
     }
     .header-inner.header-inner-button.boreder.grad {
         margin: 0;
@@ -222,6 +236,22 @@
     .bl_wraps .text-about-forum {
         width: auto;
     }
+    .logo__container-little {
+        img {
+            max-height: 100%;
+        }
+    }
+    .header {
+        height: 108px;
+    }
+}
+@media (max-width: 380px) {
+    .m_show {
+        justify-content: space-between;
+    }
+    .gal_img {
+        width: 100%;
+    }
 }
 @media (max-width: 350px) {
     .header-inner.header-inner-button.boreder {
@@ -229,10 +259,43 @@
             padding: 0 10px;
         }
     }
-    .m_show {
-        justify-content: unset;
+    .logo__container-little {
+        width: 40px;
     }
     .registration-button {
         padding: 0;
+    }
+    .registration-form-title .program-forum-flex .main-title {
+        font-size: 15px;
+    }
+    .registration-form-button {
+        margin-bottom: 35px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 320px) {
+    .header-inner.header-inner-button.boreder.grad {
+        max-width: 220px;
+        button {
+            font-size: 16px;
+        }
+    }
+    .sub-title {
+        font-size: 25px;
+    }
+    .content-title-el {
+        font-size: 25px;
+    }
+    .program-forum-flex .img-star {
+        display: none; 
+    }
+    .logo__container-little {
+        display: none;
+    }
+    .header-inner.header-inner-text {
+        margin-bottom: 25px;
+    }
+    .about-forum {
+        width: 265px;
     }
 }
