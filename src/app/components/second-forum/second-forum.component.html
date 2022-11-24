@@ -157,6 +157,9 @@
                         учителей, просветленных Мастеров, обладающих непосредственной
                         мудростью и знанием Истины.
                     </p>
+                    <p class="text-about-forum">
+                        В июле прошел 1-й международный Форум "Мир и гармония". <a href="https://yogisforpeace.life/forum" class="underline" target="_blank">Подробнее</a>  
+                    </p>
                 </div>
             </div>
             <div class="program-forum">
@@ -178,7 +181,7 @@
                                 <div class="its">
                                     <img src="assets/Images/16.png" alt="hands">
                                 </div>
-                                <p class="tt">различных<br>духовных<br>традиций</p>
+                                <!-- <p class="tt">различных<br>духовных<br>традиций</p> -->
                             </div>
                             <div class="t_wr">
                                 <p class="text-about-forum">поделятся истинным Знанием о том, что происходит сегодня и
@@ -225,8 +228,8 @@
                     </div>
                     <div class="lnn"></div>
                 </div>
-                <div class="container">
-                    <p class="text-about-forum bott">
+                <!-- <div class="container">
+                     <p class="text-about-forum bott">
                         Каждый день мы будем завершать общей медитацией мира и любви
                         совместно с духовными учителями.
                     </p>
@@ -236,7 +239,7 @@
                         </p>
                         <p class="tt">Наша совместная молитва может творить чудеса!</p>
                     </div>
-                </div>
+                </div> -->
                 <div class="container">
                     <div class="content-title">
                         <h2 class="sub-title">В программе Форума</h2>
@@ -251,7 +254,7 @@
                     </p>
                     <p style="margin-bottom: 25px;" class="text-about-forum">
                         <b>Каждый день</b> мы будем завершать общей медитацией мира и любви совместно с духовными
-                        учителями – наша совместная молитва может творить чудеса!
+                        учителями – наша молитва может творить чудеса!
                     </p>
                 </div>
                 <div class="container">
@@ -307,7 +310,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex items-center">
+                        <div class="flex items-center" (click)="goToURl('https://vk.com/yogisforpeace')">
                             <img src="assets/Icons/v.png" alt="" class="social-img" />
                             <div>
                                 <div class="links">yogisforpeace</div>
@@ -315,7 +318,7 @@
                         </div>
                         <div class="flex items-center justify-between parent-flex it">
                             <div class="flex flex-col">
-                                <div class="flex">
+                                <div class="flex " (click)="goToURl('https://www.facebook.com/worldyogisforpeace/')">
                                     <img src="assets/Icons/face.png" alt="" class="social-img" />
                                     <div>
                                         <div class="links">worldyogisforpeace</div>
@@ -331,8 +334,9 @@
                             <div class="flex items-center">
                                 <img class="social-img" src="assets/Icons/world.png" alt="">
                                 <div class="">
-                                    <div class="links">yogisforpeace.life</div>
-                                    <div class="links">yogisforpeace.life/en</div>
+                                    <div class="links" (click)="goToURl('https://yogisforpeace.life')">
+                                        yogisforpeace.life</div>
+                                    <div class="links" (click)="goToURl('https://yogisforpeace.life/en')">yogisforpeace.life/en</div>
                                 </div>
                             </div>
                         </div>

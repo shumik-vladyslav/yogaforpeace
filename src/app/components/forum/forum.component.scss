@@ -448,7 +448,12 @@ app-master-card {
   .justify-between.parent-flex.it {
     align-items: unset;
   }
+  .item-iframe {
+    width: 81vw;
+    height: 42vw;
+  }
 }
+
 @media (max-width: 786px) {
   .social-items {
     font-size: 17px;

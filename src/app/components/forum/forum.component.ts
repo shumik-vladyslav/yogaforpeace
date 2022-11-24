@@ -23,6 +23,7 @@ export class ForumComponent implements OnInit {
 
   form: FormGroup;
   routeParams;
+  forumVideo = 'https://www.youtube.com/embed/pFkIJ2fM1Y0'
   constructor(
     private _location: Location,
     private http: HttpClient,

@@ -139,7 +139,19 @@
         </p>
       </div>
     </div>
-    <div class="program-forum">
+    <div class="content-container program-forum">
+      <div class="video">
+        <iframe
+          width="760"
+          height="430"
+          [src]="forumVideo | safe"
+          frameborder="0"
+          allowfullscreen
+          class="item-iframe"
+        ></iframe>
+      </div>
+    </div>
+    <div class="">
       <div class="program-forum-flex flex justify-between" id="forum-program">
         <img src="assets/Images/Star 2.png" alt="" class="img-star" />
         <h2 class="main-title">Программа форума</h2>
