@@ -23,7 +23,9 @@ const routes: Routes = [
   { path: 'movement-resolution', component: MovementResolutionComponent },
   { path: ':type', component: MainPageComponent },
   { path: 'resolution/:type', component: ResolutionComponent },
-
+  { path: 'second-forum/:type', component: SecondForumComponent },
+  { path: 'ahimsa/:type', component: AhimsaComponent },
+  { path: 'thanks/:type', component: ThankyouPageComponent },
 ];
 
 @NgModule({

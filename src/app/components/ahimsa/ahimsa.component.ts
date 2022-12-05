@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
@@ -11,13 +11,15 @@ import { FormMessage } from '../main-page/main-page.component';
 import { CountryISO, PhoneNumberFormat, SearchCountryField } from 'ngx-intl-tel-input';
 import { GeneralServiceService } from 'src/app/services/general-service.service';
 import { TranslateService } from '@ngx-translate/core';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-ahimsa',
   templateUrl: './ahimsa.component.html',
   styleUrls: ['./ahimsa.component.scss']
 })
-export class AhimsaComponent implements OnInit, AfterViewInit {
+export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
   @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
     let header = document.querySelector('.head_wrap')
     if (window.pageYOffset > 0) {
@@ -52,6 +54,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit {
   description3;
   description4;
   slides: any = [];
+  unsubscribeAll$: Subject<null> = new Subject();
   slidesIm: any = [
     {
       index: 0,
@@ -114,18 +117,27 @@ export class AhimsaComponent implements OnInit, AfterViewInit {
     private translate: TranslateService,
   ) {
     let language = window.localStorage.getItem("language");
-    if (language) {
-      this.setLanguage(language);
-      this.checkLang(language);
-    } else {
-      this.checkLang('ru');
-    }
-    this.setSlides();
+    // if (language) {
+    //   this.setLanguage(language);
+    //   this.checkLang(language);
+    // } else {
+    //   this.checkLang('ru');
+    // }
+    // this.setSlides();
+    this.generalService.currentLanguage.pipe(takeUntil(this.unsubscribeAll$)).subscribe((res) => {
+      this.lan = res;
+      this.checkLang(res);
+      this.setSlides();
+    })
     this.form = new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
       phone: new FormControl('', [Validators.required]),
     });
+  }
+  ngOnDestroy(): void {
+   this.unsubscribeAll$.next();
+   this.unsubscribeAll$.complete();
   }
 
   setSlides() {

@@ -7,6 +7,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { emailValidator, phoneValidator } from 'src/app/services/validation.service';
 import { FormMessage } from '../main-page/main-page.component';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Languages } from 'src/app/app.component';
+import { TranslateService } from '@ngx-translate/core';
+import { GeneralServiceService } from 'src/app/services/general-service.service';
 @Component({
   selector: 'app-second-forum',
   templateUrl: './second-forum.component.html',
@@ -24,19 +27,33 @@ export class SecondForumComponent implements OnInit {
 
   form: FormGroup;
   routeParams;
-
+  menu: boolean = true;
+  firstDateImgSrc: string;
+  secondDateImgSrc: string;
+  hoursImg: string;
+  mastersImg: string;
+  ahimsaImg: string;
   constructor(
     private _location: Location,
     private http: HttpClient,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private angularFirestore: AngularFirestore
+    private angularFirestore: AngularFirestore,
+    private translateService: TranslateService,
+    private generalService: GeneralServiceService
   ) {
     this.form = new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [emailValidator()]),
       phone: new FormControl('', [Validators.required, phoneValidator()]),
     });
+    // let language = window.localStorage.getItem("language");
+    // if (language) {
+    //   this.setLanguage(language);
+    // }
+    this.generalService.currentLanguage.subscribe(lan => {
+      this.setLanguage(lan)
+    })
   }
 
   ngOnInit(): void {
@@ -44,6 +61,7 @@ export class SecondForumComponent implements OnInit {
       console.log(params);
       this.routeParams = params;
     });
+
   }
 
   goBack() {
@@ -181,5 +199,37 @@ export class SecondForumComponent implements OnInit {
     const element = document.getElementById(id);
     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
     window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+  lan
+  setLanguage(language) {
+    window.localStorage.setItem("language", language);
+
+    this.lan = language;
+    switch (language) {
+      case Languages.English:
+        this.firstDateImgSrc = 'assets/Images/7en.png';
+        this.secondDateImgSrc = 'assets/Images/8en.png';
+        this.mastersImg = 'assets/Images/masters.png';
+        this.hoursImg = 'assets/Images/hours.png';
+        this.ahimsaImg = 'assets/Images/logo_en.png'
+        // this.translateService.setDefaultLang(Languages.English);
+        break;
+      case Languages.Russian:
+        this.firstDateImgSrc = 'assets/Images/7.png';
+        this.secondDateImgSrc = 'assets/Images/8.png';
+        this.mastersImg = 'assets/Images/16.png';
+        this.hoursImg = 'assets/Images/12.png';
+        this.ahimsaImg = 'assets/Icons/logo_gold.png'
+        // this.translateService.setDefaultLang(Languages.Russian);
+        break;
+      case Languages.Ukrainian:
+        this.firstDateImgSrc = 'assets/Images/7.png';
+        this.secondDateImgSrc = 'assets/Images/8.png';
+        this.mastersImg = 'assets/Images/16.png';
+        this.hoursImg = 'assets/Images/12.png';
+        this.ahimsaImg = 'assets/Icons/logo_gold.png'
+        // this.translateService.setDefaultLang(Languages.Ukrainian);
+        break;
+    }
   }
 }
