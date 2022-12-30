@@ -27,7 +27,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
     } else header.classList.remove('bg_for_header')
   }
   form: FormGroup;
-  url = "https://b24-ay5iam.bitrix24.eu/rest/4/95igs0uaxwczeh83/";
+  url = "https://vosd.bitrix24.eu/rest/4/idujiuxkvouf7pb9/";
   routeParams;
   lan = 'ru';
   first: number = 0;
@@ -184,6 +184,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
           this.description2 = "As for physiological indicators, my blood pressure has improved, I can tolerate physical activity better, my general state of health has become easier ... with regards to the emotional state, internal aggression, especially unreasonable, has practically completely disappeared";
           this.description3 = "What world do we want to live in?! In a world where there is an internal understanding of unity, respect, dignity and sacredness of life, or in a world of ignorance, struggle, attack and defense ...";
           this.description4 = "I took a vow of ahimsa for life, because I realized that I do unconscious actions in thoughts, words and hurt both other people and myself. Therefore, the vow of ahimsa became for me the key to awareness and control of my feelings ...";
+          this.setRevieverEn()
           break;
         case Languages.Russian:
           this.description = "Так как я являюсь мамой, то передаю знание ахимсы (ненасилия) своему сыну, и это зарождает у ребенка Дхармичное видение мира, которое, конечно же, будет вести его по жизни правильным, благоприятным путем…";
@@ -191,6 +192,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
           this.description2 = "Что касается физиологических показателей – улучшилось давление, лучше переношу физические нагрузки, общие самочувствие стало легче... что касаемо эмоционального состояния – внутренняя агрессия, особенно беспричинная практически вообще ушла.";
           this.description3 = "В каком мире мы хотим жить?! В мире где есть внутренне понимание единства, уважение, достоинства и священности жизни или в мире невежества, борьбы, нападения и защиты…";
           this.description4 = "Я приняла обет ахимсы на всю жизнь, потому что поняла, что делаю неосознанные действия в мыслях, словах и делаю больно как другим людям, так и самой себе. Поэтому обет ахимсы стал для меня ключом к осознанности и контролю своих чувств…";
+          this.setRevieverRu();
           break;
         case Languages.Ukrainian:
           this.description = "Так як я є мамою, то передаю знання ахімси (ненасильства) своєму синові, і це зароджує у дитини Дхармічне бачення світу, яке, звичайно ж, вестиме його по життю правильним, сприятливим шляхом…";
@@ -198,6 +200,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
           this.description2 = "Що стосується фізіологічних показників - покращився тиск, краще переношу фізичні навантаження, загальнe самопочуття стало краще... що стосується емоційного стану - внутрішня агресія, особливо безпричинна практично взагалі зникла";
           this.description3 = "У якому світі ми хочемо жити? У світі де є внутрішнє розуміння єдності, пошана, гідність та священність життя або у світі невігластва, боротьби, нападу та захисту…";
           this.description4 = "Я прийняла обітницю ахімси на все життя, тому що зрозуміла, що роблю несвідомі дії в думках, словах і роблю боляче як іншим людям, так і самій собі. Тому обітниця ахімси стала для мене ключем до усвідомленості та контролю своїх чуттів.";
+          this.setRevieverRu();
           break;
       }
       this.setSlides();
@@ -451,6 +454,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
         {
           fields: {
             "NAME": form.name,
+            "FROM": this.lan == 'ru' ? "forum_ru" : "forum_en",
             PHONE: [{ VALUE: form.phone, VALUE_TYPE: "WORK" }],
             EMAIL: [{ VALUE: form.email, VALUE_TYPE: "HOME" }],
             UTM_CAMPAIGN: this.routeParams?.utm_campaign,
@@ -511,5 +515,111 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
             });
         }
       });
+  }
+  setRevieverRu() {
+    this.slidesIm = [
+      {
+        index: 0,
+        // name: 'Юлиана',
+        // description: 'Так как я являюсь мамой, то передаю знание ахимсы (ненасилия) своему сыну, и это зарождает у ребенка Дхармичное видение мира, которое, конечно же, будет вести его по жизни правильным, благоприятным путем…',
+        link: 'http://instagram.com/yushi4721/',
+        path: 'assets/Images/re/re1.png',
+      },
+      {
+        index: 1,
+        // name: 'Алекс',
+        // description: 'Врата, это то, на что можно опереться, например мы как в болоте и не можем выбраться, потом появляется тонкий лед, он крепнет и мы уже можем спокойно ходить не проваливаясь... Ахимса – это такой лед, на который мы можем опереться и больше не проваливаться.',
+        link: 'http://instagram.com/m.natalia73/',
+        path: 'assets/Images/re/re2.png',
+      },
+      {
+        index: 2,
+        // name: 'Александр',
+        // description: '«Что касается физиологических показателей – улучшилось давление, лучше переношу физические нагрузки, общие самочувствие стало легче... что касаемо эмоционального состояния – внутренняя агрессия, особенно беспричинная практически вообще ушла»',
+        link: 'http://instagram.com/marina.osadchuk.shostenko/',
+        path: 'assets/Images/re/re3.png',
+      },
+      {
+        index: 3,
+        // name: 'Анандамайи',
+        // description: 'В каком мире мы хотим жить?! В мире где есть внутренне понимание единства, уважение, достоинства и священности жизни или в мире невежества, борьбы, нападения и защиты…',
+        link: 'http://instagram.com/',
+        path: 'assets/Images/re/re4.png',
+      },
+      {
+        index: 4,
+        // name: 'Анандамайи',
+        // description: 'В каком мире мы хотим жить?! В мире где есть внутренне понимание единства, уважение, достоинства и священности жизни или в мире невежества, борьбы, нападения и защиты…',
+        link: 'http://instagram.com/alina.dial/',
+        path: 'assets/Images/re/re5.png',
+      },
+      {
+        index: 5,
+        // name: 'Анандамайи',
+        // description: 'В каком мире мы хотим жить?! В мире где есть внутренне понимание единства, уважение, достоинства и священности жизни или в мире невежества, борьбы, нападения и защиты…',
+        link: 'http://instagram.com/krasnokutskasvetlana/',
+        path: 'assets/Images/re/re6.png',
+      },
+      {
+        index: 6,
+        // name: 'Анандамайи',
+        // description: 'В каком мире мы хотим жить?! В мире где есть внутренне понимание единства, уважение, достоинства и священности жизни или в мире невежества, борьбы, нападения и защиты…',
+        link: 'http://instagram.com/sadanandabramhachari/',
+        path: 'assets/Images/re/re7.png',
+      }
+    ]
+  }
+  setRevieverEn() {
+    this.slidesIm = [
+      {
+        index: 0,
+        // name: 'Юлиана',
+        // description: 'Так как я являюсь мамой, то передаю знание ахимсы (ненасилия) своему сыну, и это зарождает у ребенка Дхармичное видение мира, которое, конечно же, будет вести его по жизни правильным, благоприятным путем…',
+        link: 'http://instagram.com/yushi4721/',
+        path: 'assets/Images/re/re1en.png',
+      },
+      {
+        index: 1,
+        // name: 'Алекс',
+        // description: 'Врата, это то, на что можно опереться, например мы как в болоте и не можем выбраться, потом появляется тонкий лед, он крепнет и мы уже можем спокойно ходить не проваливаясь... Ахимса – это такой лед, на который мы можем опереться и больше не проваливаться.',
+        link: 'http://instagram.com/m.natalia73/',
+        path: 'assets/Images/re/re2en.png',
+      },
+      {
+        index: 2,
+        // name: 'Александр',
+        // description: '«Что касается физиологических показателей – улучшилось давление, лучше переношу физические нагрузки, общие самочувствие стало легче... что касаемо эмоционального состояния – внутренняя агрессия, особенно беспричинная практически вообще ушла»',
+        link: 'http://instagram.com/marina.osadchuk.shostenko/',
+        path: 'assets/Images/re/re3en.png',
+      },
+      {
+        index: 3,
+        // name: 'Анандамайи',
+        // description: 'В каком мире мы хотим жить?! В мире где есть внутренне понимание единства, уважение, достоинства и священности жизни или в мире невежества, борьбы, нападения и защиты…',
+        link: 'http://instagram.com/',
+        path: 'assets/Images/re/re4en.png',
+      },
+      {
+        index: 4,
+        // name: 'Анандамайи',
+        // description: 'В каком мире мы хотим жить?! В мире где есть внутренне понимание единства, уважение, достоинства и священности жизни или в мире невежества, борьбы, нападения и защиты…',
+        link: 'http://instagram.com/alina.dial/',
+        path: 'assets/Images/re/re5en.png',
+      },
+      {
+        index: 5,
+        // name: 'Анандамайи',
+        // description: 'В каком мире мы хотим жить?! В мире где есть внутренне понимание единства, уважение, достоинства и священности жизни или в мире невежества, борьбы, нападения и защиты…',
+        link: 'http://instagram.com/krasnokutskasvetlana/',
+        path: 'assets/Images/re/re6en.png',
+      },
+      {
+        index: 6,
+        // name: 'Анандамайи',
+        // description: 'В каком мире мы хотим жить?! В мире где есть внутренне понимание единства, уважение, достоинства и священности жизни или в мире невежества, борьбы, нападения и защиты…',
+        link: 'http://instagram.com/sadanandabramhachari/',
+        path: 'assets/Images/re/re7en.png',
+      }
+    ]
   }
 }

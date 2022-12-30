@@ -42,7 +42,12 @@ export class MainPageComponent implements OnInit {
       if (this.language == 'en') {
         this.shantiSrc = 'https://www.youtube.com/embed/1sgG98jCq_g';
         this.ahimsaSrc = 'https://www.youtube.com/embed/3diYSam4ZcU';
+        this.materialsUrl = 'https://drive.google.com/drive/folders/1Wt4YivmJzVC6Y4n048GMZ900p1FdczPa?usp=share_link';
+
+      } else if(this.language == 'ru' || this.language == 'ua') {
+        this.materialsUrl = 'https://drive.google.com/drive/folders/10XCW0lPJgox8d5khUZIBnyAocQ-RQI4H?usp=sharing';
       }
+
     })
     // console.log("browserLang",browserLang);
 
@@ -51,6 +56,7 @@ export class MainPageComponent implements OnInit {
   language;
   shantiSrc = '//youtube.com/embed/Em-y_bkTQYk?rel=0&fmt=18&html5=1&showinfo=0';
   ahimsaSrc = 'https://www.youtube.com/embed/nOubh8giCgM';
+  materialsUrl = 'https://drive.google.com/drive/folders/10XCW0lPJgox8d5khUZIBnyAocQ-RQI4H?usp=sharing';
   news: News[] = [
     {
       title: 'Конференция "Йоги За Мир"',
@@ -185,7 +191,7 @@ export class MainPageComponent implements OnInit {
 
   navigateDownload() {
     window.open(
-      'https://drive.google.com/drive/folders/1TakOt6LnWfh73evy4aKOh7DrUsjJMflD',
+      this.materialsUrl,
       '_blank'
     );
   }
@@ -240,6 +246,9 @@ export class MainPageComponent implements OnInit {
   }
   navigateVideo() {
     window.open('https://youtu.be/-AzXLZUNfiQ', '_blank');
+  }
+  goToURl(url) {
+    window.open(url);
   }
 }
 export interface News {

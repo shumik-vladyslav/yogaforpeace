@@ -21,6 +21,8 @@ export class UsersListComponent implements OnInit {
         return { id, ...data };
       });
     })).subscribe(res => {
+      console.log(res);
+      
       this.usersMessages = res;
     })
   }

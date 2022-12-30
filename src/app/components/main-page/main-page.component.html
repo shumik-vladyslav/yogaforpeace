@@ -15,9 +15,9 @@
               <div [routerLink]="'/ahimsa'" class="header-inner header-inner-text">Ахимса</div>
               <div [routerLink]="'/forum'" class="header-inner header-inner-text">Форум</div>
             </div>
-            <div class="header-inner header-inner-button">
+            <!-- <div class="header-inner header-inner-button">
               <button class="registration-button" (click)="scrollTo('registration')">Зарегистрироваться</button>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@
     </div>
   </div>
 
-  <div class="content-container">
+  <!-- <div class="content-container">
     <div class="video">
       <iframe
         width="760"
@@ -95,12 +95,12 @@
         class="item-iframe"
       ></iframe>
     </div>
-  </div>
+  </div> -->
   <div class="content-container pt-45">
     <div class="element-1-2">
       <div class="flex-element-1-2">
         <img
-          src="../../../assets/Images/Crop/meditation.png"
+          src="../../../assets/Images/Crop/photo-meditation.png"
           alt="i"
           class="img__cover"
         />
@@ -238,15 +238,15 @@
       </div>
     </div>
     <div class="block-text underline pointer center-margin" (click)="navigateVideo()">{{'main.transfer-to-practice' | translate}}</div>
-    <div class="block-text underline pointer center-margin" [routerLink]="'/live'">{{'main.join-live-stream' | translate}}</div>
+    <div class="block-text underline pointer center-margin" (click)="goToURl('https://www.instagram.com/yogisforpeace/')">{{'main.join-live-stream' | translate}}</div>
   </div>
   <div class="content-container pt-45">
     <div class="element-1-2">
       <div class="flex-element-1-2">
         <img
-          src="../../../assets/Images/Crop/pranam.png"
+          src="../../../assets/Images/Crop/back-sanga.jpg"
           alt="i"
-          class="img__cover"
+          class="img__cover rounded-full"
         />
       </div>
       <div class="flex-element-1-2 flex-element-1-2-text h-460">
@@ -281,7 +281,7 @@
       <div class="block-alredy-exist-item">
         <img
           class="block-icon-img"
-          src="../../../assets/Icons/yogis-for-peace-icon-4.svg"
+          src="../../../assets/Icons/yogis-for-peace-icon-9.svg"
           alt=""
         />
         <div class="block-text">
@@ -338,7 +338,7 @@
       </div>
     </div>
   </div>
-  <div id="registration"
+  <!-- <div id="registration"
     class="content-container flex-1-4 pt-45 center column"
     [formGroup]="form"
   >
@@ -408,7 +408,7 @@
       {{'main.send' | translate}}
       </button>
     </div>
-  </div>
+  </div> -->
   <div class="content-container flex-1-4 center column" [formGroup]="form">
     <h3 class="title-text pb-50">{{'main.contacts' | translate}}</h3>
     <h4>{{'main.send-info' | translate}}</h4>

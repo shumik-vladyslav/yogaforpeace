@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import BX24 from 'bx24-api';
@@ -7,13 +7,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { emailValidator, phoneValidator } from 'src/app/services/validation.service';
 import { FormMessage } from '../main-page/main-page.component';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { GeneralServiceService } from 'src/app/services/general-service.service';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 @Component({
   selector: 'app-forum',
   templateUrl: './forum.component.html',
   styleUrls: ['./forum.component.scss'],
 })
-export class ForumComponent implements OnInit {
-  url = "https://b24-ay5iam.bitrix24.eu/rest/4/95igs0uaxwczeh83/";
+export class ForumComponent implements OnInit, OnDestroy {
+  url = "https://vosd.bitrix24.eu/rest/4/idujiuxkvouf7pb9/";
   @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
     let header = document.querySelector('.head_wrap')
     if (window.pageYOffset > 0) {
@@ -23,19 +26,29 @@ export class ForumComponent implements OnInit {
 
   form: FormGroup;
   routeParams;
-  forumVideo = 'https://www.youtube.com/embed/pFkIJ2fM1Y0'
+  forumVideo = 'https://www.youtube.com/embed/pFkIJ2fM1Y0';
+  lan;
+  unsubscribeAll$: Subject<null> = new Subject();
   constructor(
     private _location: Location,
     private http: HttpClient,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private angularFirestore: AngularFirestore
+    private angularFirestore: AngularFirestore,
+    private generalService: GeneralServiceService
   ) {
     this.form = new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [emailValidator()]),
       phone: new FormControl('', [Validators.required, phoneValidator()]),
     });
+    this.generalService.currentLanguage.pipe(takeUntil(this.unsubscribeAll$)).subscribe((res) => {
+      this.lan = res;
+    })
+  }
+  ngOnDestroy(): void {
+    this.unsubscribeAll$.next();
+    this.unsubscribeAll$.complete();
   }
 
   vishnudevanandaTitle = `
@@ -154,6 +167,7 @@ export class ForumComponent implements OnInit {
       {
         fields: {
           "NAME": form.name,
+          "FROM": this.lan == 'ru' ? "forum_ru" : "forum_en",
           PHONE: [{ VALUE: form.phone, VALUE_TYPE: "WORK" }],
           EMAIL: [{ VALUE: form.email, VALUE_TYPE: "HOME" }],
           UTM_CAMPAIGN: this.routeParams?.utm_campaign,

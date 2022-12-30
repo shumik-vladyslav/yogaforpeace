@@ -93,14 +93,14 @@
                                 <img src="assets/Icons/11.png" alt="" class="img-card-icon" />
                             </div>
                             <div class="card-icon-title"><b>{{'second-forum.1st-day' | translate}}</b></div>
-                            <div class="card-icon-subtitle">{{'second-forum.lections' | translate}}</div>
+                            <div class="card-icon-subtitle"></div>
                         </div>
                         <div class="card-icon flex flex-col items-center">
                             <div class="card-icon-img">
                                 <img src="assets/Icons/22.png" alt="" class="img-card-icon" />
                             </div>
-                            <div class="card-icon-title"><b>{{'second-forum.2nd-day' | translate}}</b></div>
-                            <!-- <div class="card-icon-subtitle">{{'second-forum.practice' | translate}}</div> -->
+                            <div class="card-icon-title"><b> {{'second-forum.lections' | translate}} </b></div>
+                            <div class="card-icon-subtitle"></div>
                         </div>
                     </div>
                     <div class="ro_wrap">
@@ -108,8 +108,8 @@
                             <div class="card-icon-img">
                                 <img src="assets/Icons/33.png" alt="" class="img-card-icon" />
                             </div>
-                            <div class="card-icon-title mt-1"><b>{{'second-forum.spirit-teacher' | translate}}</b><br> <b>{{'second-forum.teach' | translate}}</b> <br><span
-                                    style="white-space: nowrap;">{{'second-forum.digital' | translate}}</span></div>
+                            <div class="card-icon-title mt-1"><b>{{'second-forum.practice' | translate}}</b><br>
+                            </div>
                             <!-- <div class="card-icon-subtitle mt-1">высочайшего уровня</div> -->
                         </div>
                         <div class="card-icon flex flex-col items-center">
@@ -151,16 +151,16 @@
                         {{'second-forum.text-now' | translate}}
                     </p>
                     <p class="text-about-forum">
-                        {{'second-forum.1st-forum-in-july' | translate}} <a href="https://yogisforpeace.life/forum" class="underline" target="_blank">{{'second-forum.about' | translate}}</a>  
+                        {{'second-forum.1st-forum-in-july' | translate}} 
                     </p>
                 </div>
             </div>
             <div class="program-forum">
-                <div class="program-forum-flex flex justify-between" id="forum-program">
+                <!-- <div class="program-forum-flex flex justify-between" id="forum-program">
                     <img src="assets/Images/Star 2.png" alt="" class="img-star" />
                     <h2 class="main-title">{{'second-forum.program' | translate}}</h2>
                     <img src="assets/Images/Star 2.png" alt="" class="img-star" />
-                </div>
+                </div> -->
                 <div class="container">
                     <div class="bl_wraps">
                         <div class="bl_wrappr">
@@ -263,7 +263,8 @@
                         <div class="registration-form-button flex justify-center items-center">
                             <button class="registration-button" (click)="sendRegistrationData()"
                                 [disabled]="!form.valid"
-                                [ngClass]="!form.valid ? 'disabled' : 'enabled'">{{'second-forum.register' | translate}}</button>
+                                [ngClass]="!form.valid ? 'disabled' : 'enabled'">Хочу жить в мире! <br>
+                                Регистрируюсь!</button>
                         </div>
                     </div>
                 </div>

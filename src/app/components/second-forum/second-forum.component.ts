@@ -17,7 +17,7 @@ import { GeneralServiceService } from 'src/app/services/general-service.service'
 })
 
 export class SecondForumComponent implements OnInit {
-  url = "https://b24-ay5iam.bitrix24.eu/rest/4/95igs0uaxwczeh83/";
+  url = "https://vosd.bitrix24.eu/rest/4/idujiuxkvouf7pb9/";
   @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
     let header = document.querySelector('.head_wrap')
     if (window.pageYOffset > 0) {
@@ -122,6 +122,7 @@ export class SecondForumComponent implements OnInit {
       {
         fields: {
           "NAME": form.name,
+          "FROM": this.lan == 'ru' ? "forum_ru" : "forum_en",
           PHONE: [{ VALUE: form.phone, VALUE_TYPE: "WORK" }],
           EMAIL: [{ VALUE: form.email, VALUE_TYPE: "HOME" }],
           UTM_CAMPAIGN: this.routeParams?.utm_campaign,
