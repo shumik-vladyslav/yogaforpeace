@@ -1,225 +1,229 @@
 <div class="main-wrapper">
-    <div class="wrapper">
-        <div class="header">
-            <div class="head_wrap">
-                <div class="head_in">
-                    <div class="header-inner flex justify-between items-center">
-                        <div class="mob_h-wrap">
-                            <div class="header-inner header-inner-icon">
-                                <div class="logo__container-little">
-                                    <img src="assets/Icons/logo-little.png" alt="logo" class="img img__logo-little" />
-                                </div>
-                            </div>
-                            <div class="w_wrap m_show">
-                                <div class="header-inner header-inner-text" (click)="scrollTo('div-about-forum')">{{'second-forum.about-forum' | translate}}</div>
-                                <div class="header-inner header-inner-text" (click)="scrollTo('forum-program')">
-                                    {{'second-forum.program' | translate}}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu_wrap">
-                            <div class="w_wrap m_hide">
-                                <div class="header-inner header-inner-text" (click)="scrollTo('div-about-forum')">{{'second-forum.about-forum' | translate}}</div>
-                                <div class="header-inner header-inner-text" (click)="scrollTo('forum-program')">
-                                    {{'second-forum.program' | translate}}
-                                </div>
-                            </div>
-                            <!-- <div class="header-inner header-inner-button boreder">
+  <div class="wrapper">
+    <div class="header">
+      <div class="head_wrap">
+        <div class="head_in">
+          <div class="header-inner flex justify-between items-center">
+            <div class="mob_h-wrap">
+              <div class="header-inner header-inner-icon">
+                <div class="logo__container-little">
+                  <img src="assets/Icons/logo-little.png" alt="logo" class="img img__logo-little" />
+                </div>
+              </div>
+              <div class="w_wrap m_show">
+                <div class="header-inner header-inner-text" (click)="scrollTo('div-about-forum')">
+                  {{'second-forum.about-forum' | translate}}</div>
+                <div class="header-inner header-inner-text" (click)="scrollTo('forum-program')">
+                  {{'second-forum.program' | translate}}
+                </div>
+              </div>
+            </div>
+            <div class="menu_wrap">
+              <div class="w_wrap m_hide">
+                <div class="header-inner header-inner-text" (click)="scrollTo('div-about-forum')">
+                  {{'second-forum.about-forum' | translate}}</div>
+                <div class="header-inner header-inner-text" (click)="scrollTo('forum-program')">
+                  {{'second-forum.program' | translate}}
+                </div>
+              </div>
+              <!-- <div class="header-inner header-inner-button boreder">
                                 <button class="registration-button"
                                     (click)="scrollTo('registration-form')">Зарегистрироваться</button>
                             </div> -->
-                        </div>
-                    </div>
-                </div>
             </div>
+          </div>
         </div>
-        <div class="container">
-            <div class="content flex">
-                <div class="m-wrap">
-                    <div class="content-title">
-                        <h2 class="sub-title">{{'second-forum.second-forum-title' | translate}}</h2>
-                        <h1 class="content-title-el">{{'second-forum.ahimsa-title' | translate}}</h1>
-                    </div>
-                    <div class="content-list">
-                        <ul>
-                            <li>{{'second-forum.when-end-war' | translate}}</li>
-                            <li>{{'second-forum.how-to' | translate}}</li>
-                            <li>{{'second-forum.how-to-keep-balance' | translate}}</li>
-                            <li>{{'second-forum.in-future' | translate}}</li>
-                            <li>{{'second-forum.new-world' | translate}}</li>
-                        </ul>
-                    </div>
-                    <div class="content-dates">
-                        <div class="flex justify-between col">
-                            <p>{{'second-forum.second-forum-date' | translate}}</p>
-                            <p>{{'second-forum.online' | translate}}</p>
-                            <p>{{'second-forum.free' | translate}}</p>
-                        </div>
-                    </div>
-                    <div class="content-footer-button relative">
-                        <div (click)="goToURl('https://t.me/FORUM_AHIMSA')">
-                            <!-- <button class="btn_custom telegram">
+      </div>
+    </div>
+    <div class="container">
+      <div class="content flex">
+        <div class="m-wrap">
+          <div class="content-title">
+            <h2 class="sub-title">{{'second-forum.second-forum-title' | translate}}</h2>
+            <h1 class="content-title-el">{{'second-forum.ahimsa-title' | translate}}</h1>
+          </div>
+          <div class="content-list">
+            <ul>
+              <li>{{'second-forum.when-end-war' | translate}}</li>
+              <li>{{'second-forum.how-to' | translate}}</li>
+              <li>{{'second-forum.how-to-keep-balance' | translate}}</li>
+              <li>{{'second-forum.in-future' | translate}}</li>
+              <li>{{'second-forum.new-world' | translate}}</li>
+            </ul>
+          </div>
+          <div class="content-dates">
+            <div class="flex justify-between col">
+              <p>{{'second-forum.second-forum-date' | translate}}</p>
+              <p>{{'second-forum.online' | translate}}</p>
+              <p>{{'second-forum.free' | translate}}</p>
+            </div>
+          </div>
+          <div class="content-footer-button relative">
+            <div (click)="goToURl('https://t.me/FORUM_AHIMSA')">
+              <!-- <button class="btn_custom telegram">
                                 <img src="assets/Images/tel.png" alt="telegram">
                                 Присоединиться к чату форума</button> -->
-                            <div class="header-inner header-inner-button boreder grad">
-                                <button class="registration-button"
-                                    (click)="scrollTo('forum-program')">{{'second-forum.register' | translate}}</button>
-                            </div>
-                            <p style="margin-top: 12px;">{{'second-forum.register-from-tg' | translate}}</p>
-                            <!-- </div>
+              <div class="header-inner header-inner-button boreder grad">
+                <button class="registration-button" (click)="scrollTo('forum-program')">{{'second-forum.register' |
+                  translate}}</button>
+              </div>
+              <p style="margin-top: 12px;">{{'second-forum.register-from-tg' | translate}}</p>
+              <!-- </div>
               <button class="registration-button registration-button-gold">
               </button> -->
-                            <div class="flex justify-between stars">
-                                <img src="assets/Images/Star 2.png" alt="" class="img-star margin-r" />
-                                <img src="assets/Images/Star 2.png" alt="" class="img-star" />
-                                <img src="assets/Images/Star 2.png" alt="" class="img-star" />
-                                <img src="assets/Images/Star 2.png" alt="" class="img-star" />
-                                <img src="assets/Images/Star 2.png" alt="" class="img-star" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-img">
-                        <img src="assets/Images/bird.png" alt="" class="img-bird" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper icons-wrapper top">
-            <div class="container">
-                <div class="flex flex-wrap">
-                    <div class="ro_wrap">
-                        <div class="card-icon flex flex-col items-center f">
-                            <div class="card-icon-img">
-                                <img src="assets/Icons/11.png" alt="" class="img-card-icon" />
-                            </div>
-                            <div class="card-icon-title"><b>{{'second-forum.1st-day' | translate}}</b></div>
-                            <div class="card-icon-subtitle"></div>
-                        </div>
-                        <div class="card-icon flex flex-col items-center">
-                            <div class="card-icon-img">
-                                <img src="assets/Icons/22.png" alt="" class="img-card-icon" />
-                            </div>
-                            <div class="card-icon-title"><b> {{'second-forum.lections' | translate}} </b></div>
-                            <div class="card-icon-subtitle"></div>
-                        </div>
-                    </div>
-                    <div class="ro_wrap">
-                        <div class="card-icon flex flex-col items-center f">
-                            <div class="card-icon-img">
-                                <img src="assets/Icons/33.png" alt="" class="img-card-icon" />
-                            </div>
-                            <div class="card-icon-title mt-1"><b>{{'second-forum.practice' | translate}}</b><br>
-                            </div>
-                            <!-- <div class="card-icon-subtitle mt-1">высочайшего уровня</div> -->
-                        </div>
-                        <div class="card-icon flex flex-col items-center">
-                            <div class="card-icon-img">
-                                <img src="assets/Icons/44.png" alt="" class="img-card-icon" />
-                            </div>
-                            <div class="card-icon-title"><b>{{'second-forum.overworld' | translate}}</b></div>
-                            <div class="card-icon-subtitle"><b>{{'second-forum.meditation' | translate}} <br>{{'second-forum.love' | translate}}</b></div>
-                        </div>
-                    </div>
-                    <div class="ro_wrap ee">
-                        <div class="card-icon flex flex-col items-center f">
-                            <div class="card-icon-img">
-                                <img src="assets/Icons/55.png" alt="" class="img-card-icon" />
-                            </div>
-                            <div class="card-icon-title mt-1"><b>{{'second-forum.meditation-for-peace' | translate}}</b><br>{{'second-forum.each-traditions' | translate}}</div>
-                            <!-- <div class="card-icon-subtitle mt-1">высочайшего уровня</div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper">
-            <div class="about-forum flex justify-between" id="div-about-forum">
+              <div class="flex justify-between stars">
+                <img src="assets/Images/Star 2.png" alt="" class="img-star margin-r" />
                 <img src="assets/Images/Star 2.png" alt="" class="img-star" />
-                <h2 class="main-title">{{'second-forum.about-forum' | translate}}</h2>
                 <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+                <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+                <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+              </div>
             </div>
-            <div class="item flex image-and-text">
-                <img src="assets/Images/photo.png" alt="" height="1080" class="item-image" />
-                <div class="item-text">
-                    <p class="text-about-forum">
-                        {{'second-forum.non-violence' | translate}} {{'second-forum.main-theme' | translate}}
-                    </p>
-                    <p class="text-about-forum">
-                        {{'second-forum.text-over-time' | translate}}
-                    </p>
-                    <p class="text-about-forum">
-                        {{'second-forum.text-now' | translate}}
-                    </p>
-                    <p class="text-about-forum">
-                        {{'second-forum.1st-forum-in-july' | translate}} 
-                    </p>
-                </div>
+          </div>
+          <div class="content-img">
+            <img src="assets/Images/bird.png" alt="" class="img-bird" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper icons-wrapper top">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="ro_wrap">
+            <div class="card-icon flex flex-col items-center f">
+              <div class="card-icon-img">
+                <img src="assets/Icons/11.png" alt="" class="img-card-icon" />
+              </div>
+              <div class="card-icon-title"><b>{{'second-forum.1st-day' | translate}}</b></div>
+              <div class="card-icon-subtitle"></div>
             </div>
-            <div class="program-forum">
-                <!-- <div class="program-forum-flex flex justify-between" id="forum-program">
+            <div class="card-icon flex flex-col items-center">
+              <div class="card-icon-img">
+                <img src="assets/Icons/22.png" alt="" class="img-card-icon" />
+              </div>
+              <div class="card-icon-title"><b> {{'second-forum.lections' | translate}} </b></div>
+              <div class="card-icon-subtitle"></div>
+            </div>
+          </div>
+          <div class="ro_wrap">
+            <div class="card-icon flex flex-col items-center f">
+              <div class="card-icon-img">
+                <img src="assets/Icons/33.png" alt="" class="img-card-icon" />
+              </div>
+              <div class="card-icon-title mt-1"><b>{{'second-forum.practice' | translate}}</b><br>
+              </div>
+              <!-- <div class="card-icon-subtitle mt-1">высочайшего уровня</div> -->
+            </div>
+            <div class="card-icon flex flex-col items-center">
+              <div class="card-icon-img">
+                <img src="assets/Icons/44.png" alt="" class="img-card-icon" />
+              </div>
+              <div class="card-icon-title"><b>{{'second-forum.overworld' | translate}}</b></div>
+              <div class="card-icon-subtitle"><b>{{'second-forum.meditation' | translate}}
+                  <br>{{'second-forum.love' | translate}}</b></div>
+            </div>
+          </div>
+          <div class="ro_wrap ee">
+            <div class="card-icon flex flex-col items-center f">
+              <div class="card-icon-img">
+                <img src="assets/Icons/55.png" alt="" class="img-card-icon" />
+              </div>
+              <div class="card-icon-title mt-1"><b>{{'second-forum.meditation-for-peace' |
+                  translate}}</b><br>{{'second-forum.each-traditions' | translate}}</div>
+              <!-- <div class="card-icon-subtitle mt-1">высочайшего уровня</div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="about-forum flex justify-between" id="div-about-forum">
+        <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+        <h2 class="main-title">{{'second-forum.about-forum' | translate}}</h2>
+        <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+      </div>
+      <div class="item flex image-and-text">
+        <img src="assets/Images/photo.png" alt="" height="1080" class="item-image" />
+        <div class="item-text">
+          <p class="text-about-forum">
+            {{'second-forum.non-violence' | translate}} {{'second-forum.main-theme' | translate}}
+          </p>
+          <p class="text-about-forum">
+            {{'second-forum.text-over-time' | translate}}
+          </p>
+          <p class="text-about-forum">
+            {{'second-forum.text-now' | translate}}
+          </p>
+          <p class="text-about-forum">
+            {{'second-forum.1st-forum-in-july' | translate}}
+          </p>
+        </div>
+      </div>
+      <div class="program-forum">
+        <!-- <div class="program-forum-flex flex justify-between" id="forum-program">
                     <img src="assets/Images/Star 2.png" alt="" class="img-star" />
                     <h2 class="main-title">{{'second-forum.program' | translate}}</h2>
                     <img src="assets/Images/Star 2.png" alt="" class="img-star" />
                 </div> -->
-                <div class="container">
-                    <div class="bl_wraps">
-                        <div class="bl_wrappr">
-                            <div class="d_wrap  mb-4">
-                                <img [src]="firstDateImgSrc" alt="date">
-                            </div>
-                            <div class="row_items st">
-                                <div class="its">
-                                    <img src="assets/Images/hhs.png" alt="hands">
-                                </div>
-                                <div class="its">
-                                    <img [src]="mastersImg" alt="hands">
-                                </div>
-                                <!-- <p class="tt">различных<br>духовных<br>традиций</p> -->
-                            </div>
-                            <div class="t_wr">
-                                <p class="text-about-forum">{{'second-forum.share-knowldge' | translate}}</p>
-                            </div>
-                        </div>
-                        <div class="divid"></div>
-                        <div class="bl_wrappr">
-                            <div class="d_wrap mb-4">
-                                <img [src]="secondDateImgSrc" alt="date">
-                            </div>
-                            <div class="row_items">
-                                <div class="its">
-                                    <img src="assets/Images/cl.png" alt="hands">
-                                </div>
-                                <div class="its">
-                                    <img [src]="hoursImg" alt="hands">
-                                </div>
-                            </div>
-                            <div class="t_wr">
-                                <p class="text-about-forum">{{'second-forum.spirit-practic' | translate}}</p>
-                            </div>
-                        </div>
-                    </div>
+        <div class="container">
+          <div class="bl_wraps">
+            <div class="bl_wrappr">
+              <div class="d_wrap  mb-4">
+                <img [src]="firstDateImgSrc" alt="date">
+              </div>
+              <div class="row_items st">
+                <div class="its">
+                  <img src="assets/Images/hhs.png" alt="hands">
                 </div>
-                <div class="out_wrapper">
-                    <div class="lnn"></div>
-                    <div class="container ">
-                        <div class="galr">
-                            <p class="gal_img">
-                                <img src="assets/Images/p1.png" alt="photo">
-                            </p>
-                            <p class="gal_img">
-                                <img src="assets/Images/p2.png" alt="photo">
-                            </p>
-                            <p class="gal_img">
-                                <img src="assets/Images/p3.png" alt="photo">
-                            </p>
-                            <p class="gal_img">
-                                <img src="assets/Images/p4.png" alt="photo">
-                            </p>
-                        </div>
-                    </div>
-                    <div class="lnn"></div>
+                <div class="its">
+                  <img [src]="mastersImg" alt="hands">
                 </div>
-                <!-- <div class="container">
+                <!-- <p class="tt">различных<br>духовных<br>традиций</p> -->
+              </div>
+              <div class="t_wr">
+                <p class="text-about-forum">{{'second-forum.share-knowldge' | translate}}</p>
+              </div>
+            </div>
+            <div class="divid"></div>
+            <div class="bl_wrappr">
+              <div class="d_wrap mb-4">
+                <img [src]="secondDateImgSrc" alt="date">
+              </div>
+              <div class="row_items">
+                <div class="its">
+                  <img src="assets/Images/cl.png" alt="hands">
+                </div>
+                <div class="its">
+                  <img [src]="hoursImg" alt="hands">
+                </div>
+              </div>
+              <div class="t_wr">
+                <p class="text-about-forum">{{'second-forum.spirit-practic' | translate}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="out_wrapper">
+          <div class="lnn"></div>
+          <div class="container ">
+            <div class="galr">
+              <p class="gal_img">
+                <img src="assets/Images/p1.png" alt="photo">
+              </p>
+              <p class="gal_img">
+                <img src="assets/Images/p2.png" alt="photo">
+              </p>
+              <p class="gal_img">
+                <img src="assets/Images/p3.png" alt="photo">
+              </p>
+              <p class="gal_img">
+                <img src="assets/Images/p4.png" alt="photo">
+              </p>
+            </div>
+          </div>
+          <div class="lnn"></div>
+        </div>
+        <!-- <div class="container">
                      <p class="text-about-forum bott">
                         Каждый день мы будем завершать общей медитацией мира и любви
                         совместно с духовными учителями.
@@ -231,179 +235,253 @@
                         <p class="tt">Наша совместная молитва может творить чудеса!</p>
                     </div>
                 </div> -->
-                <div class="container">
-                    <div class="content-title  mt-6">
-                        <h2 class="sub-title">{{'second-forum.in-program' | translate}}</h2>
-                    </div>
-                    <p style="margin-bottom: 25px;" class="text-about-forum">
-                        <b>{{'second-forum.1st-day-forum' | translate}}</b>{{'second-forum.1st-day-deskr' | translate}}
-                    </p>
-                    <p style="margin-bottom: 25px;" class="text-about-forum">
-                        <b>{{'second-forum.2nd-day-forum' | translate}}</b>{{'second-forum.2nd-day-deskr' | translate}}
-                    </p>
-                    <p style="margin-bottom: 25px;" class="text-about-forum">
-                        <b>{{'second-forum.everyday' | translate}}</b>{{'second-forum.everyday-text' | translate}}
-                    </p>
-                </div>
-                <div class="container">
-                    <div class="registration-form flex flex-col">
-                        <div class="registration-form-title">
-                            <div class="program-forum-flex flex justify-between">
-                                <img src="assets/Images/Star 2.png" alt="" class="img-star" />
-                                <h2 class="main-title h">{{'second-forum.register' | translate}}</h2>
-                                <img src="assets/Images/Star 2.png" alt="" class="img-star" />
-                            </div>
-                        </div>
-                        <div class="form-registration-form flex justify-between" [formGroup]="form"
-                            id="registration-form">
-                            <input type="text" class="input-form-gold" placeholder="{{'main.name' | translate}}" formControlName="name" />
-                            <input type="email" class="input-form-gold" placeholder="email" formControlName="email" />
-                            <input type="text" class="input-form-gold" placeholder="{{'main.phone' | translate}}" formControlName="phone" />
-                        </div>
-                        <div class="registration-form-button flex justify-center items-center">
-                            <button class="registration-button" (click)="sendRegistrationData()"
-                                [disabled]="!form.valid"
-                                [ngClass]="!form.valid ? 'disabled' : 'enabled'">Хочу жить в мире! <br>
-                                Регистрируюсь!</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hands-img-container">
-                <div class="hands-title">
-                    <h2 class="main-title">
-                        {{'second-forum.loka' | translate}}<br />
-                        {{'second-forum.shanti' | translate}}
-                    </h2>
-                </div>
-            </div>
-            <div class="footer flex items-center">
-                <div class="container flex g">
-                    <div class="logo-item">
-                        <img [src]="ahimsaImg" alt="ahimsa_logo" class="logo-item-img" />
-                    </div>
-                    <div class="social-items flex flex-col">
-                        <div class="flex links" (click)="goToURl('https://www.instagram.com/yogisforpeace/')">
-                            <img src="assets/Icons/inst.png" alt="" class="social-img" />
-                            @yogisforpeace
-                        </div>
-                        <div class="flex items-center">
-                            <img src="assets/Icons/tgpng.png" alt="" class="social-img" />
-                            <div>
-                                <div class="links" (click)="goToURl('https://t.me/yogisforpeace_life')">
-                                    yogisforpeace_life {{'second-forum.information-channel' | translate}}</div>
-                                <div class="links" (click)="goToURl('https://t.me/yogisforpeace')">yogisforpeace {{'second-forum.chat-to-countl' | translate}}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-center" (click)="goToURl('https://vk.com/yogisforpeace')">
-                            <img src="assets/Icons/v.png" alt="" class="social-img" />
-                            <div>
-                                <div class="links">yogisforpeace</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between parent-flex it">
-                            <div class="flex flex-col">
-                                <div class="flex " (click)="goToURl('https://www.facebook.com/worldyogisforpeace/')">
-                                    <img src="assets/Icons/face.png" alt="" class="social-img" />
-                                    <div>
-                                        <div class="links">worldyogisforpeace</div>
-                                    </div>
-                                </div>
-                                <div class="flex" (click)="goToURl('https://www.youtube.com/c/Yogisforpeace')">
-                                    <img src="assets/Icons/youtube.png" alt="" class="social-img" />
-                                    <div>
-                                        <div class="links">Yogisforpeace</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex items-center">
-                                <img class="social-img" src="assets/Icons/world.png" alt="">
-                                <div class="">
-                                    <div class="links" (click)="goToURl('https://yogisforpeace.life')">
-                                        yogisforpeace.life</div>
-                                    <div class="links" (click)="goToURl('https://yogisforpeace.life/en')">yogisforpeace.life/en</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="support">
-                <div class="head-section_wrap">
-                    <p class="lotus_w"><img src="assets/Images/lotuss.png" alt="lotus"></p>
-                    <img class="divder" src="assets/Images/divider2.png" alt="line">
-                    <div class="sup_line-wrap">
-                        <div class="ln_wr">
-                            <p class="sup_text">{{'second-forum.support' | translate}}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="req_wrap">
-                    <div class="tw_wrap fst">
-                        <div class="bk_wrap f">
-                            <p class="b-im_wrap">
-                                <img src="assets/Images/csob.png" alt="csob">
-                            </p>
-                            <p class="b-txt_wrap">
-                                ČSOB банк Чехии<br>
-                                5168 3421 1130 2082 VLADYSLAV MORHUNENKO<br>
-                                Счёт: 305066270/0300<br>
-                                IBAN: CZ9603000000000305066270<br>
-                                BIC (SWIFT) CEKOCZPP
-                            </p>
-                            <img class="divider_sc" src="assets/Images/divider.png" alt="line">
-                        </div>
-                        <div class="bk_wrap s">
-                            <p class="b-im_wrap">
-                                <img src="assets/Images/reifeisen.png" alt="raiffeisen">
-                            </p>
-                            <p class="b-txt_wrap">
-                                Raiffeisen Bank<br>
-                                5168 7207 9303 0214<br>
-                                VALERII M.<br>
-                                Счет - 7114761002/5500
-                            </p>
-                            <img class="divider_sc sc" src="assets/Images/divider.png" alt="line">
-                        </div>
-                    </div>
-                    <div class="tw_wrap scd">
-                        <div class="bk_wrap">
-                            <p class="b-im_wrap">
-                                <img src="assets/Images/tinkoff.png" alt="tinkoff">
-                            </p>
-                            <p class="b-txt_wrap">
-                                Тинькофф<br>
-                                рубли, доллары, евро<br>
-                                4377 7237 7959 1126<br>
-                                SVETLANA RAMAEVA
-                            </p>
-                            <img class="divider_sc" src="assets/Images/divider.png" alt="line">
-                        </div>
-                        <div class="bk_wrap">
-                            <p class="b-im_wrap">
-                                <img src="assets/Images/privat.png" alt="privat">
-                            </p>
-                            <p class="b-txt_wrap">
-                                ПриватБанк (Visa)<br>
-                                4149 6090 1133 2550<br>
-                                MOLOFIEIEVA ALONA
-                            </p>
-                            <img class="divider_sc sc" src="assets/Images/divider.png" alt="line">
-                        </div>
-                    </div>
-                    <div class="tw_wrap last">
-                        <div class="bk_wrap">
-                            <p class="b-im_wrap">
-                                <img src="assets/Images/paypal.png" alt="paypal">
-                            </p>
-                            <p class="b-txt_wrap">
-                                guru.swamivishnudevanandagiri@gmail.com
-                            </p>
-                            <img class="divider_sc" src="assets/Images/divider.png" alt="line">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="container">
+          <div class="content-title  mt-6">
+            <h2 class="sub-title">{{'second-forum.in-program' | translate}}</h2>
+          </div>
+          <p style="margin-bottom: 25px;" class="text-about-forum">
+            <b>{{'second-forum.1st-day-forum' | translate}}</b>{{'second-forum.1st-day-deskr' | translate}}
+          </p>
+          <p style="margin-bottom: 25px;" class="text-about-forum">
+            <b>{{'second-forum.2nd-day-forum' | translate}}</b>{{'second-forum.2nd-day-deskr' | translate}}
+          </p>
+          <p style="margin-bottom: 25px;" class="text-about-forum">
+            <b>{{'second-forum.everyday' | translate}}</b>{{'second-forum.everyday-text' | translate}}
+          </p>
         </div>
+        <div class="container">
+          <div class="program-forum-flex flex justify-between" id="forum-program">
+            <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+            <h2 class="main-title">Программа форума</h2>
+            <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+          </div>
+
+          <div class="container flex flex-col">
+            <app-master-card [imgUrl]="'swami-vishnudevananda.jpg'" [title]="'21-й век – как век ненасилия и сострадания. Что для этого нужно?'"
+              [name]="'Махамандалешвр Шри Гуру Свами Вишнудевананда Гири'" [tradition]="''" [time]="''">
+            </app-master-card>
+
+            <app-master-card [imgUrl]="'second-forum/madukhar.jpg'" [title]="'Практика умиротворения'"
+              [name]="'Мастер Адвайты Мадукар'" [tradition]="''" [time]="''"></app-master-card>
+
+            <app-master-card [imgUrl]="'second-forum/hakimov.jpg'"
+              [title]="'О масштабах насилия в мире. Важность применения духовных знаний в действиях в жизни. '"
+              [name]="'Чайтанья Чандра Чаран Дас,'" [tradition]="'традиция Вайшнавизма'" [time]="''">
+            </app-master-card>
+
+            <app-master-card [imgUrl]="'second-forum/lapshinovjpg.jpg'" [title]="'Духовное развитие в сложные времена. Как не потерять себя'"
+              [name]="'Дмитрий Лапшинов, основатель духовной системы Сварга '" [tradition]="''" [time]="''"></app-master-card>
+
+            <app-master-card [imgUrl]="'second-forum/shalesh.jpg'" [title]="'Принцип ненасилия как основополагающий принцип ведической традиции '"
+              [name]="'Махамандалешвар Шалешананд Гири Махардж '" [tradition]="''" [time]="''"></app-master-card>
+
+            <app-master-card [imgUrl]="'second-forum/alakh.png'" [title]="'Ненасилие и сострадание в 21-м веке. Послание будущего'" [name]="'Алакх Ниранджан, основатель ведической академии Шринаджи'" [tradition]="''"
+              [time]="''"></app-master-card>
+
+            <app-master-card [imgUrl]="'second-forum/kurovskij.jpg'"
+              [title]="'Медитация как духовный путь, который может объединить людей и повысить осознанность всего человечества.'"
+              [name]="'Первоволх Куровский Владимир, президент Международной ассоциации Жива-Ярга'" [tradition]="''" [time]="''">
+            </app-master-card>
+            <app-master-card [imgUrl]="'second-forum/shaitania.jpg'"
+              [title]="'О мире в современном мире и йоге как инструменте работы с негативом'"
+              [name]="'Йогачарья Веда Чайтанья, Мастер аюрведы и йоги'" [tradition]="''" [time]="''">
+            </app-master-card>
+            <app-master-card [imgUrl]="'second-forum/balachandra.jpg'"
+              [title]="'Добродетели сострадания и способы устранения насилия'"
+              [name]="'Тондар мамани Доктор Балачандран Аннамалай '" [tradition]="''" [time]="''">
+            </app-master-card>
+            <app-master-card [imgUrl]="'second-forum/nagpalama.jpg'"
+              [title]="'Причины конфликтов в мире в 21-м веке. Техногенное знание и духовное незнание.'"
+              [name]="'Нагпа Лама Лодрё Тхайе, традиция буддизма'" [tradition]="''" [time]="''"></app-master-card>
+
+            <app-master-card [imgUrl]="'second-forum/samdanlama.jpg'"
+              [title]="'Баланс Природы и Путь к Новому миру. 8 Путей Практики.'"
+              [name]="'Самдан Лама, традиция буддизма'" [tradition]="''" [time]="''"></app-master-card>
+
+            <app-master-card [imgUrl]="'second-forum/sammasati.jpg'"
+              [title]="'Ненасилие как естественная природа человека. Внутренняя и внешняя ахимса.'"
+              [name]="'Самарт Саммасати, эксперт в медитации и самопознании '" [time]="''"></app-master-card>
+
+            <app-master-card [imgUrl]="'second-forum/rusov.jpg'"
+              [title]="'Жизненный баланс – счастливая судьба'"
+              [name]="'Константин Русов, Мастер Крийя-йоги'" [time]="''"></app-master-card>
+
+              <app-master-card [imgUrl]="'second-forum/kapustin.jpg'"
+              [title]="'Добродетели сострадания и способы устранения насилия'"
+              [name]="'Раввин Миша Капустин'" [time]="''"></app-master-card>
+
+              <app-master-card [imgUrl]="'second-forum/starinin.jpg'"
+              [title]="'Что делать людям, подверженным беспокойствам и агрессии, чтобы выйти из этого состояния.'"
+              [name]="'Юрий Старинин, мотивационный коуч'" [time]="''"></app-master-card>
+          </div>
+        </div>
+        <div class="container">
+          <div class="registration-form flex flex-col">
+            <div class="registration-form-title">
+              <div class="program-forum-flex flex justify-between">
+                <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+                <h2 class="main-title h">{{'second-forum.register' | translate}}</h2>
+                <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+              </div>
+            </div>
+            <div>
+              <p style="margin-top: 10px" class="l_titul">{{'main.phone1' | translate}}</p>
+              <p class="l_titul fl"><img src="assets/Images/tel.png" alt="telegram"> {{'main.or' | translate}} <img
+                  src="assets/Images/WhatsApp.png" alt="whatsupp"></p>
+            </div>
+            <div class="form-registration-form flex justify-between" [formGroup]="form" id="registration-form">
+              <input type="text" class="input-form-gold" placeholder="{{'main.name' | translate}}"
+                formControlName="name" />
+              <input type="email" class="input-form-gold" placeholder="email" formControlName="email" />
+              <input type="text" class="input-form-gold" placeholder="{{'main.phone' | translate}}"
+                formControlName="phone" />
+            </div>
+            <div class="registration-form-button flex justify-center items-center">
+              <button class="registration-button" (click)="sendRegistrationData()" [disabled]="!form.valid"
+                [ngClass]="!form.valid ? 'disabled' : 'enabled'">Хочу жить в
+                мире! <br>
+                Регистрируюсь!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hands-img-container">
+        <div class="hands-title">
+          <h2 class="main-title">
+            {{'second-forum.loka' | translate}}<br />
+            {{'second-forum.shanti' | translate}}
+          </h2>
+        </div>
+      </div>
+      <div class="footer flex items-center">
+        <div class="container flex g">
+          <div class="logo-item">
+            <img [src]="ahimsaImg" alt="ahimsa_logo" class="logo-item-img" />
+          </div>
+          <div class="social-items flex flex-col">
+            <div class="flex links" (click)="goToURl('https://www.instagram.com/yogisforpeace/')">
+              <img src="assets/Icons/inst.png" alt="" class="social-img" />
+              @yogisforpeace
+            </div>
+            <div class="flex items-center">
+              <img src="assets/Icons/tgpng.png" alt="" class="social-img" />
+              <div>
+                <div class="links" (click)="goToURl('https://t.me/yogisforpeace_life')">
+                  yogisforpeace_life {{'second-forum.information-channel' | translate}}</div>
+                <div class="links" (click)="goToURl('https://t.me/yogisforpeace')">yogisforpeace
+                  {{'second-forum.chat-to-countl' | translate}}
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center" (click)="goToURl('https://vk.com/yogisforpeace')">
+              <img src="assets/Icons/v.png" alt="" class="social-img" />
+              <div>
+                <div class="links">yogisforpeace</div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between parent-flex it">
+              <div class="flex flex-col">
+                <div class="flex " (click)="goToURl('https://www.facebook.com/worldyogisforpeace/')">
+                  <img src="assets/Icons/face.png" alt="" class="social-img" />
+                  <div>
+                    <div class="links">worldyogisforpeace</div>
+                  </div>
+                </div>
+                <div class="flex" (click)="goToURl('https://www.youtube.com/c/Yogisforpeace')">
+                  <img src="assets/Icons/youtube.png" alt="" class="social-img" />
+                  <div>
+                    <div class="links">Yogisforpeace</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <img class="social-img" src="assets/Icons/world.png" alt="">
+                <div class="">
+                  <div class="links" (click)="goToURl('https://yogisforpeace.life')">
+                    yogisforpeace.life</div>
+                  <div class="links" (click)="goToURl('https://yogisforpeace.life/en')">
+                    yogisforpeace.life/en</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="support">
+        <div class="head-section_wrap">
+          <p class="lotus_w"><img src="assets/Images/lotuss.png" alt="lotus"></p>
+          <img class="divder" src="assets/Images/divider2.png" alt="line">
+          <div class="sup_line-wrap">
+            <div class="ln_wr">
+              <p class="sup_text">{{'second-forum.support' | translate}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="req_wrap">
+          <div class="tw_wrap fst">
+            <div class="bk_wrap f">
+              <p class="b-im_wrap">
+                <img src="assets/Images/csob.png" alt="csob">
+              </p>
+              <p class="b-txt_wrap">
+                ČSOB банк Чехии<br>
+                5168 3421 1130 2082 VLADYSLAV MORHUNENKO<br>
+                Счёт: 305066270/0300<br>
+                IBAN: CZ9603000000000305066270<br>
+                BIC (SWIFT) CEKOCZPP
+              </p>
+              <img class="divider_sc" src="assets/Images/divider.png" alt="line">
+            </div>
+            <div class="bk_wrap s">
+              <p class="b-im_wrap">
+                <img src="assets/Images/reifeisen.png" alt="raiffeisen">
+              </p>
+              <p class="b-txt_wrap">
+                Raiffeisen Bank<br>
+                5168 7207 9303 0214<br>
+                VALERII M.<br>
+                Счет - 7114761002/5500
+              </p>
+              <img class="divider_sc sc" src="assets/Images/divider.png" alt="line">
+            </div>
+          </div>
+          <div class="tw_wrap scd">
+            <div class="bk_wrap">
+              <p class="b-im_wrap">
+                <img src="assets/Images/tinkoff.png" alt="tinkoff">
+              </p>
+              <p class="b-txt_wrap">
+                Тинькофф<br>
+                рубли, доллары, евро<br>
+                4377 7237 7959 1126<br>
+                SVETLANA RAMAEVA
+              </p>
+              <img class="divider_sc" src="assets/Images/divider.png" alt="line">
+            </div>
+            <div class="bk_wrap">
+              <p class="b-im_wrap">
+                <img src="assets/Images/privat.png" alt="privat">
+              </p>
+              <p class="b-txt_wrap">
+                ПриватБанк (Visa)<br>
+                4149 6090 1133 2550<br>
+                MOLOFIEIEVA ALONA
+              </p>
+              <img class="divider_sc sc" src="assets/Images/divider.png" alt="line">
+            </div>
+          </div>
+          <div class="tw_wrap last">
+            <div class="bk_wrap">
+              <p class="b-im_wrap">
+                <img src="assets/Images/paypal.png" alt="paypal">
+              </p>
+              <p class="b-txt_wrap">
+                guru.swamivishnudevanandagiri@gmail.com
+              </p>
+              <img class="divider_sc" src="assets/Images/divider.png" alt="line">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
