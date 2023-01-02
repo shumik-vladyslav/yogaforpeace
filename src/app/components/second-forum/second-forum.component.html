@@ -129,7 +129,7 @@
                 <img src="assets/Icons/55.png" alt="" class="img-card-icon" />
               </div>
               <div class="card-icon-title mt-1"><b>{{'second-forum.meditation-for-peace' |
-                  translate}}</b><br>{{'second-forum.each-traditions' | translate}}</div>
+                  translate}}</b><br><b>{{'second-forum.each-traditions' | translate}}</b></div>
               <!-- <div class="card-icon-subtitle mt-1">высочайшего уровня</div> -->
             </div>
           </div>
@@ -154,9 +154,9 @@
           <p class="text-about-forum">
             {{'second-forum.text-now' | translate}}
           </p>
-          <p class="text-about-forum">
+          <!-- <p class="text-about-forum">
             {{'second-forum.1st-forum-in-july' | translate}}
-          </p>
+          </p> -->
         </div>
       </div>
       <div class="program-forum">
@@ -252,7 +252,7 @@
         <div class="container">
           <div class="program-forum-flex flex justify-between" id="forum-program">
             <img src="assets/Images/Star 2.png" alt="" class="img-star" />
-            <h2 class="main-title">Программа форума</h2>
+            <h2 class="main-title"> {{'second-forum.forum-program' | translate}}</h2>
             <img src="assets/Images/Star 2.png" alt="" class="img-star" />
           </div>
 
@@ -326,8 +326,14 @@
             </div>
             <div>
               <p style="margin-top: 10px" class="l_titul">{{'main.phone1' | translate}}</p>
-              <p class="l_titul fl"><img src="assets/Images/tel.png" alt="telegram"> {{'main.or' | translate}} <img
-                  src="assets/Images/WhatsApp.png" alt="whatsupp"></p>
+              <p class="l_titul fl" style="cursor: pointer;"><img src="assets/Images/tel.png" alt="telegram">
+                {{'main.or' | translate}} <img
+                  src="assets/Images/WhatsApp.png" alt="whatsupp">
+                </p>
+            </div>
+            <div class=" flex justify-center items-center" style="margin-top: 40px;">
+              <button class="registration-button"  (click)="goToLink('https://t.me/yogiesforpeas_bot?start=ZGw6MTI0Mzk1')" >
+                 {{'second-forum.register-in-telegram' | translate}}</button>
             </div>
             <div class="form-registration-form flex justify-between" [formGroup]="form" id="registration-form">
               <input type="text" class="input-form-gold" placeholder="{{'main.name' | translate}}"
@@ -338,9 +344,8 @@
             </div>
             <div class="registration-form-button flex justify-center items-center">
               <button class="registration-button" (click)="sendRegistrationData()" [disabled]="!form.valid"
-                [ngClass]="!form.valid ? 'disabled' : 'enabled'">Хочу жить в
-                мире! <br>
-                Регистрируюсь!</button>
+                [ngClass]="!form.valid ? 'disabled' : 'enabled'">{{'second-forum.registering' | translate}}! <br>
+                {{'second-forum.live-peace' | translate}}</button>
             </div>
           </div>
         </div>
@@ -485,3 +490,63 @@
       </div>
     </div>
   </div>
+
+
+<script src="https://customer.smartsender.eu/js/client/dl.js"></script>
+
+<script>
+    const links = document.querySelectorAll('a');
+
+    if( links ) {
+        for( const link of links ) {
+            if (
+                link.href.includes("tg://resolve") ||
+                link.href.includes("https://t.me/") ||
+                link.href.includes("https://direct.smartsender.com/redirect") ||
+                link.href.includes("viber://pa") ||
+                link.href.includes("https://vk.com/app") ||
+                link.href.includes("vk://vk.com/app") ||
+                link.href.includes("https://m.me") ||
+                link.href.includes("https://wa.me") ||
+                link.href.includes("whatsapp://send")
+            ) {
+                link.classList.add('ss-btn');
+            }
+        }
+    }
+</script>
+
+<script>
+    /**
+     * Returns string with URL param value.
+     *
+     * @param {String} param [The Param in URL].
+     * @return {String} paramValue [Value that we search in param].
+     */
+    const getUrlParam = function( param ) {
+      if ( ! param ) return;
+
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams( queryString );
+      const paramValue = urlParams.get(param);
+
+      // console.log(paramValue);
+      return paramValue;
+    };
+
+
+    // ssDeepLink params
+    const ssContext = {
+        variables: {
+            utm_source: getUrlParam('utm_source'), // получит параметр "utm_source" из ссылки
+            utm_medium: getUrlParam('utm_medium'), // получит параметр "utm_medium" из ссылки
+            utm_campaign: getUrlParam('utm_campaign'), // получит параметр "utm_campaign" из ссылки
+            utm_content: getUrlParam('utm_content'), // получит параметр "utm_content" из ссылки
+            W_chanel: getUrlParam('W_chanel'), // получит параметр "W_chanel" из ссылки
+        }
+    };
+    console.log(ssContext);
+    ssDeepLink('ss-btn', 'ваш домен', false, ssContext);
+
+</script>
+
