@@ -9,7 +9,7 @@ h2 {
   margin: auto;
   height: 100vh;
   padding-top: 20px;
-  max-width: 1200px;
+  max-width: 1300px;
   display: flex;
 
   font-size: 30px;
@@ -117,4 +117,12 @@ h2 {
   #JXRG3Zbp {
     width: 320px;
   }
+}
+
+.registration-button {
+  height: 70px;
+  padding: 0 50px;
+  border-radius: 999px;
+  background-color: rgb(178, 18, 67);
+  color: #fff;
 }

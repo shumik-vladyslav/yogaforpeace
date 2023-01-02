@@ -192,7 +192,7 @@ export class SecondForumComponent implements OnInit {
   scrollTo(id): void {
     console.log(id);
     let yOffset;
-    if (id == 'forum-program' || id == 'div-about-forum') {
+    if (id == 'forum-program' || id == 'div-about-forum' || id == 'registration-form-container') {
       yOffset = -150;
     } else {
       yOffset = -300;

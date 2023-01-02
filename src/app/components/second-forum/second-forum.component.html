@@ -58,16 +58,16 @@
               <p>{{'second-forum.free' | translate}}</p>
             </div>
           </div>
-          <div class="content-footer-button relative">
-            <div (click)="goToURl('https://t.me/FORUM_AHIMSA')">
+          <div class="content-footer-button relative ">
+            <div>
               <!-- <button class="btn_custom telegram">
                                 <img src="assets/Images/tel.png" alt="telegram">
                                 Присоединиться к чату форума</button> -->
               <div class="header-inner header-inner-button boreder grad">
-                <button class="registration-button" (click)="scrollTo('forum-program')">{{'second-forum.register' |
+                <button class="registration-button" (click)="scrollTo('registration-form-container')">{{'second-forum.register' |
                   translate}}</button>
               </div>
-              <p style="margin-top: 12px;">{{'second-forum.register-from-tg' | translate}}</p>
+              <p style="margin-top: 12px;" (click)="goToURl('https://t.me/FORUM_AHIMSA')">{{'second-forum.register-from-tg' | translate}}</p>
               <!-- </div>
               <button class="registration-button registration-button-gold">
               </button> -->
@@ -315,7 +315,7 @@
               [name]="'masters.starinin' | translate" [time]="''"></app-master-card>
           </div>
         </div>
-        <div class="container">
+        <div class="container registration-form-container" id="registration-form-container">
           <div class="registration-form flex flex-col">
             <div class="registration-form-title">
               <div class="program-forum-flex flex justify-between">
@@ -325,15 +325,25 @@
               </div>
             </div>
             <div>
-              <p style="margin-top: 10px" class="l_titul">{{'main.phone1' | translate}}</p>
+              <p style="margin-top: 10px" class="l_titul">{{'second-forum.can-register-through' | translate}}</p>
+            </div>
+            <div class=" flex justify-center items-center" style="margin-top: 40px;">
+              <button style="    position: relative;" class="registration-button"  (click)="goToLink('https://t.me/yogiesforpeas_bot?start=ZGw6MTI0Mzk1')" >
+                 <span>{{'second-forum.register-in-telegram' | translate}}</span>
+                 <!-- <img style="    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    position: absolute;
+    top: 29%;
+    left: 88%;" src="assets/Images/tel.png" alt="telegram"> -->
+    </button>
+            </div>
+            <div>
+              <p style="margin-top: 50px" class="l_titul">{{'main.phone1' | translate}}</p>
               <p class="l_titul fl" style="cursor: pointer;"><img src="assets/Images/tel.png" alt="telegram">
                 {{'main.or' | translate}} <img
                   src="assets/Images/WhatsApp.png" alt="whatsupp">
                 </p>
-            </div>
-            <div class=" flex justify-center items-center" style="margin-top: 40px;">
-              <button class="registration-button"  (click)="goToLink('https://t.me/yogiesforpeas_bot?start=ZGw6MTI0Mzk1')" >
-                 {{'second-forum.register-in-telegram' | translate}}</button>
             </div>
             <div class="form-registration-form flex justify-between" [formGroup]="form" id="registration-form">
               <input type="text" class="input-form-gold" placeholder="{{'main.name' | translate}}"
@@ -546,7 +556,7 @@
         }
     };
     console.log(ssContext);
-    ssDeepLink('ss-btn', 'ваш домен', false, ssContext);
+    ssDeepLink('ss-btn', 'yogiespeas', false, ssContext);
 
 </script>
 

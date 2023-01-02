@@ -194,7 +194,9 @@
     "forum-program":"Forum program",
     "register-in-telegram":"Register in Telegram",
     "registering":"Registering",
-    "live-peace":"I want to live in the peace!"
+    "live-peace":"I want to live in the peace!",
+    "can-register-through":"You can register through the Telegram bot or through the classic registration form."
+
 
   },
   "masters": {
@@ -232,6 +234,8 @@
   "thanks-page": {
     "namaste":"Namaste, thank you for registering!",
     "for-all-info":"In order for us to send you more interesting information and remind you about the start of the forum, we invite you to subscribe to our",
-    "yoga-bot":"Yoga bot "
+    "yoga-bot":"Yoga bot ",
+    "join-grup-button":"Join to group",
+    "join-grup":"Join the forum group in Telegram"
   }
 }
