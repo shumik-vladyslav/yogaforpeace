@@ -502,7 +502,6 @@
   </div>
 
 
-<script src="https://customer.smartsender.eu/js/client/dl.js"></script>
 
 <script>
     const links = document.querySelectorAll('a');
@@ -540,12 +539,10 @@
       const urlParams = new URLSearchParams( queryString );
       const paramValue = urlParams.get(param);
 
-      // console.log(paramValue);
       return paramValue;
     };
 
 
-    // ssDeepLink params
     const ssContext = {
         variables: {
             utm_source: getUrlParam('utm_source'), // получит параметр "utm_source" из ссылки

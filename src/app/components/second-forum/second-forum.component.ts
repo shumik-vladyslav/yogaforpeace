@@ -10,6 +10,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Languages } from 'src/app/app.component';
 import { TranslateService } from '@ngx-translate/core';
 import { GeneralServiceService } from 'src/app/services/general-service.service';
+declare var ssDeepLink;
 @Component({
   selector: 'app-second-forum',
   templateUrl: './second-forum.component.html',
@@ -61,6 +62,31 @@ export class SecondForumComponent implements OnInit {
       console.log(params);
       this.routeParams = params;
     });
+
+    setTimeout(() => {
+      const getUrlParam = function( param ) {
+        if ( ! param ) return null;
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams( queryString );
+        const paramValue = urlParams.get(param);
+
+        return paramValue;
+      };
+
+
+      const ssContext = {
+          variables: {
+              utm_source: getUrlParam('utm_source'), // получит параметр "utm_source" из ссылки
+              utm_medium: getUrlParam('utm_medium'), // получит параметр "utm_medium" из ссылки
+              utm_campaign: getUrlParam('utm_campaign'), // получит параметр "utm_campaign" из ссылки
+              utm_content: getUrlParam('utm_content'), // получит параметр "utm_content" из ссылки
+              W_chanel: getUrlParam('W_chanel'), // получит параметр "W_chanel" из ссылки
+          }
+      };
+      console.log(ssContext);
+      ssDeepLink('ss-btn', 'yogiespeas', false, ssContext);
+    }, 10000);
 
   }
 
