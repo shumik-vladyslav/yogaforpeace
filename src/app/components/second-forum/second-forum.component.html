@@ -256,7 +256,7 @@
             <img src="assets/Images/Star 2.png" alt="" class="img-star" />
           </div>
 
-          <div class="container flex flex-col">
+          <div class="container flex flex-col card">
             <app-master-card [imgUrl]="'swami-vishnudevananda.jpg'" [title]="'masters.guru-title' | translate"
               [name]="'masters.guru' | translate" [tradition]="''" [time]="''">
             </app-master-card>
@@ -349,8 +349,16 @@
               <input type="text" class="input-form-gold" placeholder="{{'main.name' | translate}}"
                 formControlName="name" />
               <input type="email" class="input-form-gold" placeholder="email" formControlName="email" />
-              <input type="text" class="input-form-gold" placeholder="{{'main.phone' | translate}}"
-                formControlName="phone" />
+              <ngx-intl-tel-input [cssClass]="'custom'" [preferredCountries]="preferredCountries"
+                [enableAutoCountrySelect]="true" [enablePlaceholder]="true" [searchCountryFlag]="true" [searchCountryField]="[
+                SearchCountryField.Iso2,
+                SearchCountryField.Name
+                ]" [selectFirstCountry]="false" [selectedCountryISO]="selectedCountry" [maxLength]="15"
+                [phoneValidation]="true" [separateDialCode]="true" [numberFormat]="PhoneNumberFormat.National" name="phone"
+                formControlName="phone">
+              </ngx-intl-tel-input>
+              <!-- <input type="text" class="input-form-gold" placeholder="{{'main.phone' | translate}}"
+                formControlName="phone" /> -->
             </div>
             <div class="registration-form-button flex justify-center items-center">
               <button class="registration-button" (click)="sendRegistrationData()" [disabled]="!form.valid"

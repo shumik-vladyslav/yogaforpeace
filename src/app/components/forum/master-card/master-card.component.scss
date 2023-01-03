@@ -22,11 +22,10 @@ h2 {
   margin-left: 40px;
 }
 .img-canva {
- 
   // margin-top: -35px;
 }
 .img-master {
-  width: 500px; 
+  width: 500px;
 }
 .master-image {
   position: absolute;
@@ -94,6 +93,18 @@ h2 {
     font-size: 30px;
   }
 }
+@media (max-width: 900px) {
+  .card-master-image {
+    flex: 0 0 270px;
+    height: 270px;
+  }
+  .master-image {
+    top: 57px;
+    width: 156px;
+    height: 156px;
+    left: 57px;
+  }
+}
 @media (max-width: 786px) {
   .img-canva {
     margin: 0;
@@ -131,9 +142,60 @@ h2 {
     justify-content: center;
   }
 }
+@media (max-width: 350px) {
+  .card-master-image {
+    height: 170px;
+    width: 230px;
+  }
+  .master-image {
+    top: 49px;
+    width: 132px;
+    height: 132px;
+    left: 49px;
+  }
+  .header-inner.header-inner-button.boreder {
+    button {
+      padding: 0 10px;
+    }
+  }
+  .logo__container-little {
+    width: 40px;
+  }
+  .registration-button {
+    padding: 0;
+  }
+  .registration-form-title .program-forum-flex .main-title {
+    font-size: 15px;
+  }
+  .registration-form-button {
+    margin-bottom: 35px;
+    font-size: 16px;
+  }
+  .card-master-image {
+    height: 170px;
+    width: 230px;
+  }
+  .master-image {
+    top: 49px;
+    width: 132px;
+    height: 132px;
+    left: 49px;
+  }
+}
 @media (max-width: 480px) {
   .card-text-time {
     font-size: 22px;
     text-align: left;
+  }
+  .card-text-name {
+    font-size: 25px;
+  }
+}
+@media (max-width: 320px) {
+  .card-text-name {
+    font-size: 21px;
+  }
+  .card-text-title {
+    font-size: 20px;
   }
 }

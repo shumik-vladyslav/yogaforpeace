@@ -10,6 +10,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Languages } from 'src/app/app.component';
 import { TranslateService } from '@ngx-translate/core';
 import { GeneralServiceService } from 'src/app/services/general-service.service';
+import { CountryISO, PhoneNumberFormat, SearchCountryField } from 'ngx-intl-tel-input';
 declare var ssDeepLink;
 @Component({
   selector: 'app-second-forum',
@@ -34,6 +35,12 @@ export class SecondForumComponent implements OnInit {
   hoursImg: string;
   mastersImg: string;
   ahimsaImg: string;
+  CountryISO = CountryISO;
+  PhoneNumberFormat = PhoneNumberFormat;
+  separateDialCode = true;
+  SearchCountryField = SearchCountryField;
+  preferredCountries: CountryISO[] = [CountryISO.UnitedStates, CountryISO.UnitedKingdom];
+  selectedCountry = CountryISO["Ukraine"];
   constructor(
     private _location: Location,
     private http: HttpClient,
@@ -46,7 +53,7 @@ export class SecondForumComponent implements OnInit {
     this.form = new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [emailValidator()]),
-      phone: new FormControl('', [Validators.required, phoneValidator()]),
+      phone: new FormControl('', [Validators.required]),
     });
     // let language = window.localStorage.getItem("language");
     // if (language) {
