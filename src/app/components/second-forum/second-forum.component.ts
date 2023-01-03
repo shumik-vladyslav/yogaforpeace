@@ -148,7 +148,7 @@ export class SecondForumComponent implements OnInit {
       {
         fields: {
           "NAME": form.name,
-          "FROM": this.lan == 'ru' ? "forum_ru" : "forum_en",
+          "FROM": this.lan == 'ru' ? "Форум Ахимса Ру" : "Форум Ахимса Англ",
           PHONE: [{ VALUE: form.phone, VALUE_TYPE: "WORK" }],
           EMAIL: [{ VALUE: form.email, VALUE_TYPE: "HOME" }],
           UTM_CAMPAIGN: this.routeParams?.utm_campaign,
@@ -169,7 +169,7 @@ export class SecondForumComponent implements OnInit {
     .post(
       this.url + 'crm.deal.list',
       {
-        filter: { "CONTACT_ID": contactId, "SOURCE_DESCRIPTION": "Форум Ахимса и Гармония" },
+        filter: { "CONTACT_ID": contactId, "SOURCE_DESCRIPTION": this.lan == 'ru' ? "Форум Ахимса Ру" : "Форум Ахимса Англ", },
         select: [ "ID", "TITLE", "SOURCE" ]
     },
     )
@@ -192,8 +192,8 @@ export class SecondForumComponent implements OnInit {
             STATUS_ID: 'NEW',
             STATUS_DESCRIPTION: 'Новый',
             SOURCE_ID: 'CALL',
-            SOURCE_DESCRIPTION: "Форум Ахимса и Гармония",
-            SOURCE: "Форум Ахимса и Гармония",
+            SOURCE_DESCRIPTION: this.lan == 'ru' ? "Форум Ахимса Ру" : "Форум Ахимса Англ",
+            SOURCE: this.lan == 'ru' ? "Форум Ахимса Ру" : "Форум Ахимса Англ",
             UTM_CAMPAIGN: this.routeParams?.utm_campaign,
             UTM_MEDIUM: this.routeParams?.utm_medium,
             UTM_SOURCE: this.routeParams?.utm_source,
@@ -262,5 +262,14 @@ export class SecondForumComponent implements OnInit {
 
   goToLink(url: string){
     window.open(url, "_blank");
+  }
+
+  telegramClick() {
+    if(this.lan === 'ru') {
+      this.goToLink('tg://resolve?start=ZGw6MTI0Mzk1&domain=yogiesforpeas_bot')
+    } else {
+      this.goToLink('https://t.me/yogiesforpeas_bot?start=ZGw6MTI0NjMy')
+
+    }
   }
 }
