@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GeneralServiceService } from 'src/app/services/general-service.service';
 
 @Component({
   selector: 'app-thankyou-page',
@@ -7,15 +8,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThankyouPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private generalService: GeneralServiceService) {
+    this.generalService.currentLanguage.subscribe(lan => {
+      this.setLanguage(lan)
+    })
+  }
+  lan
+  setLanguage(language) {
+    window.localStorage.setItem("language", language);
 
+    this.lan = language;
+  }
   ngOnInit(): void {
     this.load()
   }
 
-
   goToLink(url: string){
     window.open(url, "_blank");
+  }
+
+  telegramClick() {
+    if(this.lan === 'ru') {
+      this.goToLink('https://t.me/FORUM_AHIMSA')
+    } else {
+      this.goToLink('https://t.me/SekondForum_En')
+
+    }
   }
 
 
