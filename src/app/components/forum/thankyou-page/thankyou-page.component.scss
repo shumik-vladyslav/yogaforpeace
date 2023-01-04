@@ -62,6 +62,7 @@ h2 {
 }
 @media (max-width: 1000px) {
   .thanks {
+    display: flex;
     background: unset;
     &::before {
       content: "";
@@ -73,6 +74,9 @@ h2 {
       opacity: 0.3;
       z-index: -1;
       background: url(../../../../assets/Logo/yogis-for-peace-big-.svg) center no-repeat;
+    }
+    .bot_wrap {
+      align-items: unset;
     }
   }
   .content {
