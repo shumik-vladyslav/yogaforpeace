@@ -103,12 +103,12 @@ export class SecondForumComponent implements OnInit {
 
   sendRegistrationData() {
     const form = this.form.value;
-    console.log('sendRegistrationData');
+    console.log('sendRegistrationData', form.phone);
     const message: FormMessage = {
       name: form.name,
       replyTo: 'yogisforpeace1008@gmail.com',
       message: form.description ?? null,
-      phone: form.phone,
+      phone: form.phone.e164Number,
       emailAddress: form.email,
       from: 'Forum',
       date: +new Date(),
@@ -156,7 +156,7 @@ export class SecondForumComponent implements OnInit {
         fields: {
           "NAME": form.name,
           "FROM": this.lan == 'ru' ? "Форум Ахимса Ру" : "Форум Ахимса Англ",
-          PHONE: [{ VALUE: form.phone, VALUE_TYPE: "WORK" }],
+          PHONE: [{ VALUE: form.phone.e164Number, VALUE_TYPE: "WORK" }],
           EMAIL: [{ VALUE: form.email, VALUE_TYPE: "HOME" }],
           UTM_CAMPAIGN: this.routeParams?.utm_campaign,
           UTM_MEDIUM: this.routeParams?.utm_medium,
