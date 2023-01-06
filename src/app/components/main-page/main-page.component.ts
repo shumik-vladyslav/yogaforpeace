@@ -187,6 +187,8 @@ export class MainPageComponent implements OnInit {
     this.news = null;
     // console.log(this.route.snapshot.params['type']);
     window.scroll(0, 0);
+    this.addScriptsToHead()
+
   }
 
   navigateDownload() {
@@ -250,6 +252,38 @@ export class MainPageComponent implements OnInit {
   goToURl(url) {
     window.open(url);
   }
+
+
+addScriptsToHead() {
+
+
+  const head1 = document.getElementsByTagName('head')[0];
+
+
+  const script1 = document.createElement('noscript');
+  script1.innerHTML = `<img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=626453055020322&ev=PageView&noscript=1"
+/>`;
+
+  head1.insertBefore(script1, head1.firstChild);
+
+  const head = document.getElementsByTagName('head')[0];
+
+
+  const script = document.createElement('script');
+  script.innerHTML = `  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '626453055020322');
+  fbq('track', 'PageView');`;
+
+  head.insertBefore(script, head.firstChild);
+}
 }
 export interface News {
   title: string;
