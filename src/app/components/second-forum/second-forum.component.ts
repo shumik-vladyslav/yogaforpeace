@@ -65,6 +65,7 @@ export class SecondForumComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     this.addScriptsToHead();
     this.activatedRoute.queryParams.subscribe((params) => {
       console.log(params);
@@ -184,7 +185,7 @@ export class SecondForumComponent implements OnInit {
     .subscribe((dealListResponse: any) => {
       console.log('dealListResponse ', dealListResponse);
       if(dealListResponse.result.length) {
-        alert("Вы уже зарегестрировались")
+        alert(this.lan == 'ru' ? "Вы уже зарегестрировались" : "You are already registered")
       } else {
       this.http
       .post(
