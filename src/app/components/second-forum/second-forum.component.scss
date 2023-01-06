@@ -67,6 +67,10 @@
     &.st {
         width: 90%;
     }
+    
+}
+.row_items-hours {
+    margin-top: -102px; 
 }
 .bl_wraps {
     display: flex;
@@ -320,6 +324,9 @@
     .row_items {
         margin-top: 0px;
         flex-direction: column;
+    }
+    .row_items-hours {
+        margin-top: 0px; 
     }
     .its {
         margin-top: 19px;
