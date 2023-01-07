@@ -484,7 +484,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
       .subscribe((dealListResponse: any) => {
         console.log('dealListResponse ', dealListResponse);
         if (dealListResponse.result.length) {
-          alert("Вы уже зарегестрировались")
+          alert( this.lan == 'ru' ? "Вы уже зарегестрировались" : "You are already registered")
         } else {
           this.http
             .post(

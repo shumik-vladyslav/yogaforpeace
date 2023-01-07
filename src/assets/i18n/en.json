@@ -178,7 +178,7 @@
     "1st-forum-in-july":"The 1st forum 'Peace and Harmony' was held in July",
     "about":"About",
     "share-knowldge":"Spiritual Masters will be sharing their wisdom with us and holding practices according to their traditions. Throughout the day, we will have an opportunity to receive guidance and blessings from enlightened Masters.",
-    "spirit-practic":"A worldwide prayer of peace and love. By joining efforts, together we will pray for peace for 12 hours non-stop. The more participants there are, the more power our prayer will be filled with.",
+    "spirit-practic":"A worldwide prayer of peace and love. By joining efforts, together we will pray for peace for 6 hours non-stop. The more participants there are, the more power our prayer will be filled with.",
     "in-program":"Programme of the Forum includes:",
     "1st-day-forum":"",
     "1st-day-deskr":"We invite to participate spiritual people from all over the world, from different faiths, in order to save the world from destruction together.",
@@ -191,11 +191,11 @@
     "information-channel":"(information channel)",
     "chat-to-count":"(chat of count of soothing practices)",
     "support":"SUPPORT THE PROJECT",
-    "forum-program":"Forum program",
-    "register-in-telegram":"Register in Telegram",
+    "forum-program":"Forum programme",
+    "register-in-telegram":"Sign up via Telegram",
     "registering":"I want to live in peace!",
     "live-peace":"I'm signing up!",
-    "can-register-through":"You can register through the Telegram bot or through the classic registration form.",
+    "can-register-through":"заменить на: You can sign up via the Telegram bot or via the classic form.",
     "prague":"in Prague"
 
 
@@ -203,10 +203,12 @@
   "masters": {
     "guru":"Mahamandaleshwar Shri guru swami Vishnudevananda Giri",
     "guru-title":"The 21st century as an age of non-violence and compassion. What is necessary to achieve this?",
-    "madukar":"Advaita Master Madukar",
+    "madukar":"Advaita Master Madukar, neoadvaita and jnana yoga teacher, Germany",
     "madukar-title":"Practice of peace",
+    "sadhvi":"Sadhvi Bhagawati Saraswati, renowned spiritual leader, India",
+    "sadhvi-title":"Practice of peace",
     "shaitania":"Chaitanya Chandra Charan Das, the tradition of Vaishnavism",
-    "shaitania-title":"About the level of violence in the world. The importance of applying spiritual knowledge in life",
+    "shaitania-title":"About the level of violence in the world. The importance of applying spiritual knowledge in life.",
     "lapshinov":"Dmitry Lapshinov, founder of the spiritual system Svarga ",
     "lapshinov-title": "Spiritual development in difficult times. How not to lose yourself.",
     "shaleshand":"Mahamandleshwar Swami Shaileshanand Ji Giri Maharaj",
@@ -238,7 +240,7 @@
     "yoga-bot":"Yoga bot ",
     "join-grup-button":"Join to group",
     "join-grup":"Join the forum group in Telegram"
-  }, 
+  },
   "footer-th": {
     "czechia":"ČSOB bank of Czechia",
     "count":"Bank account: 305066270/0300",
