@@ -65,10 +65,12 @@
                                 <img src="assets/Images/tel.png" alt="telegram">
                                 Присоединиться к чату форума</button> -->
               <div class="header-inner header-inner-button boreder grad">
-                <button class="registration-button" (click)="scrollTo('registration-form-container')">{{'second-forum.register' |
+                <button class="registration-button"
+                  (click)="scrollTo('registration-form-container')">{{'second-forum.register' |
                   translate}}</button>
               </div>
-              <p style="margin-top: 12px;" (click)="goToURl('https://t.me/FORUM_AHIMSA')">{{'second-forum.register-from-tg' | translate}}</p>
+              <p style="margin-top: 12px;" (click)="goToURl('https://t.me/FORUM_AHIMSA')">
+                {{'second-forum.register-from-tg' | translate}}</p>
               <!-- </div>
               <button class="registration-button registration-button-gold">
               </button> -->
@@ -263,64 +265,60 @@
             </app-master-card>
 
             <app-master-card [imgUrl]="'second-forum/Sadhvi.jpg'" [title]="'masters.sadhvi-title' | translate"
-            [name]="'masters.sadhvi' | translate" [tradition]="''" [time]="''"></app-master-card>
+              [name]="'masters.sadhvi' | translate" [tradition]="''" [time]="''"></app-master-card>
 
             <app-master-card [imgUrl]="'second-forum/madukhar.jpg'" [title]="'masters.madukar-title' | translate"
               [name]="'masters.madukar' | translate" [tradition]="''" [time]="''"></app-master-card>
 
-            <app-master-card [imgUrl]="'second-forum/hakimov.jpg'"
-              [title]="'masters.shaitania-title' | translate"
+            <app-master-card [imgUrl]="'second-forum/hakimov.jpg'" [title]="'masters.shaitania-title' | translate"
               [name]="'masters.shaitania' | translate" [tradition]="''" [time]="''">
             </app-master-card>
 
             <app-master-card [imgUrl]="'second-forum/shalesh.jpg'" [title]="'masters.shaleshand-title' | translate"
-            [name]="'masters.shaleshand' | translate" [tradition]="''" [time]="''"></app-master-card>
+              [name]="'masters.shaleshand' | translate" [tradition]="''" [time]="''"></app-master-card>
 
             <app-master-card [imgUrl]="'second-forum/lapshinovjpg.jpg'" [title]="'masters.lapshinov-title' | translate"
               [name]="'masters.lapshinov' | translate" [tradition]="''" [time]="''"></app-master-card>
 
+            <app-master-card [imgUrl]="'second-forum/alakh.png'" [title]="'masters.niragan-title' | translate"
+              [name]="'masters.niragan' | translate" [tradition]="''" [time]="''"></app-master-card>
 
-
-            <app-master-card [imgUrl]="'second-forum/alakh.png'" [title]="'masters.niragan-title' | translate" [name]="'masters.niragan' | translate" [tradition]="''"
-              [time]="''"></app-master-card>
-
-              <app-master-card [imgUrl]="'second-forum/photo_2.jpg'"
-              [title]="'masters.shaitaniayoga-title' | translate"
-              [name]="'masters.shaitaniayoga' | translate" [tradition]="''" [time]="''">
-            </app-master-card>
-
-            <app-master-card [imgUrl]="'second-forum/kurovskij.jpg'"
-              [title]="'masters.kurskii-title' | translate"
+            <app-master-card [imgUrl]="'second-forum/kurovskij.jpg'" [title]="'masters.kurskii-title' | translate"
               [name]="'masters.kurskii' | translate" [tradition]="''" [time]="''">
             </app-master-card>
 
-            <app-master-card [imgUrl]="'second-forum/balachandra.jpg'"
-              [title]="'masters.doctor-title' | translate"
+            <app-master-card [imgUrl]="'second-forum/photo_2.jpg'" [title]="'masters.shaitaniayoga-title' | translate"
+              [name]="'masters.shaitaniayoga' | translate" [tradition]="''" [time]="''">
+            </app-master-card>
+
+            <app-master-card [imgUrl]="'second-forum/balachandra.jpg'" [title]="'masters.doctor-title' | translate"
               [name]="'masters.doctor' | translate" [tradition]="''" [time]="''">
             </app-master-card>
-            <app-master-card [imgUrl]="'second-forum/nagpalama.jpg'"
-              [title]="'masters.nagpalama-title' | translate"
+
+            <app-master-card [imgUrl]="'second-forum/tulku.JPG'" [title]="'masters.tulku-title' | translate"
+              [name]="'masters.tulku' | translate" [tradition]="''" [time]="''">
+            </app-master-card>
+
+            <app-master-card [imgUrl]="'second-forum/nagpalama.jpg'" [title]="'masters.nagpalama-title' | translate"
               [name]="'masters.nagpalama' | translate" [tradition]="''" [time]="''"></app-master-card>
 
-            <app-master-card [imgUrl]="'second-forum/samdanlama.jpg'"
-              [title]="'masters.samdanlama-title' | translate"
+            <app-master-card [imgUrl]="'second-forum/samdanlama.jpg'" [title]="'masters.samdanlama-title' | translate"
               [name]="'masters.samdanlama' | translate" [tradition]="''" [time]="''"></app-master-card>
 
-            <app-master-card [imgUrl]="'second-forum/sammasati.jpg'"
-              [title]="'masters.samart-title' | translate"
+            <app-master-card [imgUrl]="'second-forum/sammasati.jpg'" [title]="'masters.samart-title' | translate"
               [name]="'masters.samart' | translate" [time]="''"></app-master-card>
 
-            <app-master-card [imgUrl]="'second-forum/rusov.jpg'"
-              [title]="'masters.rusov-title' | translate"
+            <app-master-card [imgUrl]="'second-forum/rusov.jpg'" [title]="'masters.rusov-title' | translate"
               [name]="'masters.rusov' | translate" [time]="''"></app-master-card>
 
-              <app-master-card [imgUrl]="'second-forum/kapustin.jpg'"
-              [title]="'masters.kapustin-title' | translate"
+            <app-master-card [imgUrl]="'second-forum/kapustin.jpg'" [title]="'masters.kapustin-title' | translate"
               [name]="'masters.kapustin' | translate" [time]="''"></app-master-card>
 
-              <app-master-card [imgUrl]="'second-forum/starinin.jpg'"
-              [title]="'masters.starinin-title' | translate"
+            <app-master-card [imgUrl]="'second-forum/starinin.jpg'" [title]="'masters.starinin-title' | translate"
               [name]="'masters.starinin' | translate" [time]="''"></app-master-card>
+
+            <app-master-card [imgUrl]="'second-forum/pullo.jpg'" [title]="'masters.pullo-title' | translate"
+              [name]="'masters.pullo' | translate" [time]="''"></app-master-card>
           </div>
         </div>
         <div class="container registration-form-container" id="registration-form-container">
@@ -336,34 +334,35 @@
               <p style="margin-top: 10px" class="l_titul">{{'second-forum.can-register-through' | translate}}</p>
             </div>
             <div class=" flex justify-center items-center" style="margin-top: 40px;">
-              <button id="telegramBtn" style="    position: relative;" class="registration-button"  (click)=" telegramClick()" >
-                 <span>{{'second-forum.register-in-telegram' | translate}}</span>
-                 <!-- <img style="    width: 30px;
+              <button id="telegramBtn" style="    position: relative;" class="registration-button"
+                (click)=" telegramClick()">
+                <span>{{'second-forum.register-in-telegram' | translate}}</span>
+                <!-- <img style="    width: 30px;
     height: 30px;
     border-radius: 5px;
     position: absolute;
     top: 29%;
     left: 88%;" src="assets/Images/tel.png" alt="telegram"> -->
-    </button>
+              </button>
             </div>
             <div>
               <p style="margin-top: 50px" class="l_titul">{{'main.phone1' | translate}}</p>
               <p class="l_titul fl" style="cursor: pointer;"><img src="assets/Images/tel.png" alt="telegram">
-                {{'main.or' | translate}} <img
-                  src="assets/Images/WhatsApp.png" alt="whatsupp">
-                </p>
+                {{'main.or' | translate}} <img src="assets/Images/WhatsApp.png" alt="whatsupp">
+              </p>
             </div>
             <div class="form-registration-form flex justify-between" [formGroup]="form" id="registration-form">
               <input type="text" class="input-form-gold" placeholder="{{'main.name' | translate}}"
                 formControlName="name" />
               <input type="email" class="input-form-gold" placeholder="email" formControlName="email" />
               <ngx-intl-tel-input [cssClass]="'custom'" [preferredCountries]="preferredCountries"
-                [enableAutoCountrySelect]="true" [enablePlaceholder]="true" [searchCountryFlag]="true" [searchCountryField]="[
+                [enableAutoCountrySelect]="true" [enablePlaceholder]="true" [searchCountryFlag]="true"
+                [searchCountryField]="[
                 SearchCountryField.Iso2,
                 SearchCountryField.Name
                 ]" [selectFirstCountry]="false" [selectedCountryISO]="selectedCountry" [maxLength]="15"
-                [phoneValidation]="true" [separateDialCode]="true" [numberFormat]="PhoneNumberFormat.National" name="phone"
-                formControlName="phone">
+                [phoneValidation]="true" [separateDialCode]="true" [numberFormat]="PhoneNumberFormat.National"
+                name="phone" formControlName="phone">
               </ngx-intl-tel-input>
               <!-- <input type="text" class="input-form-gold" placeholder="{{'main.phone' | translate}}"
                 formControlName="phone" /> -->
@@ -519,40 +518,40 @@
 
 
 
-<script>
+  <script>
     const links = document.querySelectorAll('a');
 
-    if( links ) {
-        for( const link of links ) {
-            if (
-                link.href.includes("tg://resolve") ||
-                link.href.includes("https://t.me/") ||
-                link.href.includes("https://direct.smartsender.com/redirect") ||
-                link.href.includes("viber://pa") ||
-                link.href.includes("https://vk.com/app") ||
-                link.href.includes("vk://vk.com/app") ||
-                link.href.includes("https://m.me") ||
-                link.href.includes("https://wa.me") ||
-                link.href.includes("whatsapp://send")
-            ) {
-                link.classList.add('ss-btn');
-            }
+    if (links) {
+      for (const link of links) {
+        if (
+          link.href.includes("tg://resolve") ||
+          link.href.includes("https://t.me/") ||
+          link.href.includes("https://direct.smartsender.com/redirect") ||
+          link.href.includes("viber://pa") ||
+          link.href.includes("https://vk.com/app") ||
+          link.href.includes("vk://vk.com/app") ||
+          link.href.includes("https://m.me") ||
+          link.href.includes("https://wa.me") ||
+          link.href.includes("whatsapp://send")
+        ) {
+          link.classList.add('ss-btn');
         }
+      }
     }
-</script>
+  </script>
 
-<script>
+  <script>
     /**
      * Returns string with URL param value.
      *
      * @param {String} param [The Param in URL].
      * @return {String} paramValue [Value that we search in param].
      */
-    const getUrlParam = function( param ) {
-      if ( ! param ) return;
+    const getUrlParam = function (param) {
+      if (!param) return;
 
       const queryString = window.location.search;
-      const urlParams = new URLSearchParams( queryString );
+      const urlParams = new URLSearchParams(queryString);
       const paramValue = urlParams.get(param);
 
       return paramValue;
@@ -560,16 +559,15 @@
 
 
     const ssContext = {
-        variables: {
-            utm_source: getUrlParam('utm_source'), // получит параметр "utm_source" из ссылки
-            utm_medium: getUrlParam('utm_medium'), // получит параметр "utm_medium" из ссылки
-            utm_campaign: getUrlParam('utm_campaign'), // получит параметр "utm_campaign" из ссылки
-            utm_content: getUrlParam('utm_content'), // получит параметр "utm_content" из ссылки
-            W_chanel: getUrlParam('W_chanel'), // получит параметр "W_chanel" из ссылки
-        }
+      variables: {
+        utm_source: getUrlParam('utm_source'), // получит параметр "utm_source" из ссылки
+        utm_medium: getUrlParam('utm_medium'), // получит параметр "utm_medium" из ссылки
+        utm_campaign: getUrlParam('utm_campaign'), // получит параметр "utm_campaign" из ссылки
+        utm_content: getUrlParam('utm_content'), // получит параметр "utm_content" из ссылки
+        W_chanel: getUrlParam('W_chanel'), // получит параметр "W_chanel" из ссылки
+      }
     };
     console.log(ssContext);
     ssDeepLink('ss-btn', 'yogiespeas', false, ssContext);
 
-</script>
-
+  </script>
