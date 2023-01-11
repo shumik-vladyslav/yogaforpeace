@@ -9,6 +9,7 @@ import { MovementResolutionComponent } from './components/movement-resolution/mo
 import { NewsPageComponent } from './components/news-page/news-page.component';
 import { ResolutionComponent } from './components/resolution/resolution.component';
 import { SecondForumComponent } from './components/second-forum/second-forum.component';
+import { ThanksAhimsaComponent } from './components/thanks-ahimsa/thanks-ahimsa.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'message-from-users', component: UsersListComponent },
   { path: 'resolution', component: ResolutionComponent },
   { path: 'movement-resolution', component: MovementResolutionComponent },
+  { path: 'thanks-ahimsa', component: ThanksAhimsaComponent},
   { path: ':type', component: MainPageComponent },
   { path: 'resolution/:type', component: ResolutionComponent },
   { path: 'second-forum/:type', component: SecondForumComponent },

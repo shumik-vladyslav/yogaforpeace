@@ -136,8 +136,8 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
   ngOnDestroy(): void {
-   this.unsubscribeAll$.next();
-   this.unsubscribeAll$.complete();
+    this.unsubscribeAll$.next();
+    this.unsubscribeAll$.complete();
   }
 
   setSlides() {
@@ -176,34 +176,34 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   checkLang(lan) {
-      console.log(lan);
-      switch (lan) {
-        case Languages.English:
-          this.description = "Since I am a mother, I pass on the knowledge of ahimsa (non-violence) to my son, and this gives the child a Dharmic vision of the world, which, of course, will lead him through life in the right, favorable way ...";
-          this.description1 = "The Vrata is something that you can rely on, for example, we are like in a swamp and cannot get out, then thin ice appears, it gets stronger and we can already walk calmly without falling through ... Ahimsa is such ice that we can lean on and fail no more.";
-          this.description2 = "As for physiological indicators, my blood pressure has improved, I can tolerate physical activity better, my general state of health has become easier ... with regards to the emotional state, internal aggression, especially unreasonable, has practically completely disappeared";
-          this.description3 = "What world do we want to live in?! In a world where there is an internal understanding of unity, respect, dignity and sacredness of life, or in a world of ignorance, struggle, attack and defense ...";
-          this.description4 = "I took a vow of ahimsa for life, because I realized that I do unconscious actions in thoughts, words and hurt both other people and myself. Therefore, the vow of ahimsa became for me the key to awareness and control of my feelings ...";
-          this.setRevieverEn()
-          break;
-        case Languages.Russian:
-          this.description = "Так как я являюсь мамой, то передаю знание ахимсы (ненасилия) своему сыну, и это зарождает у ребенка Дхармичное видение мира, которое, конечно же, будет вести его по жизни правильным, благоприятным путем…";
-          this.description1 = "Врата, это то, на что можно опереться, например мы как в болоте и не можем выбраться, потом появляется тонкий лед, он крепнет и мы уже можем спокойно ходить не проваливаясь... Ахимса – это такой лед, на который мы можем опереться и больше не проваливаться.";
-          this.description2 = "Что касается физиологических показателей – улучшилось давление, лучше переношу физические нагрузки, общие самочувствие стало легче... что касаемо эмоционального состояния – внутренняя агрессия, особенно беспричинная практически вообще ушла.";
-          this.description3 = "В каком мире мы хотим жить?! В мире где есть внутренне понимание единства, уважение, достоинства и священности жизни или в мире невежества, борьбы, нападения и защиты…";
-          this.description4 = "Я приняла обет ахимсы на всю жизнь, потому что поняла, что делаю неосознанные действия в мыслях, словах и делаю больно как другим людям, так и самой себе. Поэтому обет ахимсы стал для меня ключом к осознанности и контролю своих чувств…";
-          this.setRevieverRu();
-          break;
-        case Languages.Ukrainian:
-          this.description = "Так як я є мамою, то передаю знання ахімси (ненасильства) своєму синові, і це зароджує у дитини Дхармічне бачення світу, яке, звичайно ж, вестиме його по життю правильним, сприятливим шляхом…";
-          this.description1 = "Врата, це те, на що можна опиратись, наприклад ми як у болоті і не можемо вибратися, потім з'являється тонкий лід, він міцніє і ми вже можемо спокійно ходити не провалюючись... Ахімса – це такий лід, на який ми можемо опиратись і більше не провалюватися.";
-          this.description2 = "Що стосується фізіологічних показників - покращився тиск, краще переношу фізичні навантаження, загальнe самопочуття стало краще... що стосується емоційного стану - внутрішня агресія, особливо безпричинна практично взагалі зникла";
-          this.description3 = "У якому світі ми хочемо жити? У світі де є внутрішнє розуміння єдності, пошана, гідність та священність життя або у світі невігластва, боротьби, нападу та захисту…";
-          this.description4 = "Я прийняла обітницю ахімси на все життя, тому що зрозуміла, що роблю несвідомі дії в думках, словах і роблю боляче як іншим людям, так і самій собі. Тому обітниця ахімси стала для мене ключем до усвідомленості та контролю своїх чуттів.";
-          this.setRevieverRu();
-          break;
-      }
-      this.setSlides();
+    console.log(lan);
+    switch (lan) {
+      case Languages.English:
+        this.description = "Since I am a mother, I pass on the knowledge of ahimsa (non-violence) to my son, and this gives the child a Dharmic vision of the world, which, of course, will lead him through life in the right, favorable way ...";
+        this.description1 = "The Vrata is something that you can rely on, for example, we are like in a swamp and cannot get out, then thin ice appears, it gets stronger and we can already walk calmly without falling through ... Ahimsa is such ice that we can lean on and fail no more.";
+        this.description2 = "As for physiological indicators, my blood pressure has improved, I can tolerate physical activity better, my general state of health has become easier ... with regards to the emotional state, internal aggression, especially unreasonable, has practically completely disappeared";
+        this.description3 = "What world do we want to live in?! In a world where there is an internal understanding of unity, respect, dignity and sacredness of life, or in a world of ignorance, struggle, attack and defense ...";
+        this.description4 = "I took a vow of ahimsa for life, because I realized that I do unconscious actions in thoughts, words and hurt both other people and myself. Therefore, the vow of ahimsa became for me the key to awareness and control of my feelings ...";
+        this.setRevieverEn()
+        break;
+      case Languages.Russian:
+        this.description = "Так как я являюсь мамой, то передаю знание ахимсы (ненасилия) своему сыну, и это зарождает у ребенка Дхармичное видение мира, которое, конечно же, будет вести его по жизни правильным, благоприятным путем…";
+        this.description1 = "Врата, это то, на что можно опереться, например мы как в болоте и не можем выбраться, потом появляется тонкий лед, он крепнет и мы уже можем спокойно ходить не проваливаясь... Ахимса – это такой лед, на который мы можем опереться и больше не проваливаться.";
+        this.description2 = "Что касается физиологических показателей – улучшилось давление, лучше переношу физические нагрузки, общие самочувствие стало легче... что касаемо эмоционального состояния – внутренняя агрессия, особенно беспричинная практически вообще ушла.";
+        this.description3 = "В каком мире мы хотим жить?! В мире где есть внутренне понимание единства, уважение, достоинства и священности жизни или в мире невежества, борьбы, нападения и защиты…";
+        this.description4 = "Я приняла обет ахимсы на всю жизнь, потому что поняла, что делаю неосознанные действия в мыслях, словах и делаю больно как другим людям, так и самой себе. Поэтому обет ахимсы стал для меня ключом к осознанности и контролю своих чувств…";
+        this.setRevieverRu();
+        break;
+      case Languages.Ukrainian:
+        this.description = "Так як я є мамою, то передаю знання ахімси (ненасильства) своєму синові, і це зароджує у дитини Дхармічне бачення світу, яке, звичайно ж, вестиме його по життю правильним, сприятливим шляхом…";
+        this.description1 = "Врата, це те, на що можна опиратись, наприклад ми як у болоті і не можемо вибратися, потім з'являється тонкий лід, він міцніє і ми вже можемо спокійно ходити не провалюючись... Ахімса – це такий лід, на який ми можемо опиратись і більше не провалюватися.";
+        this.description2 = "Що стосується фізіологічних показників - покращився тиск, краще переношу фізичні навантаження, загальнe самопочуття стало краще... що стосується емоційного стану - внутрішня агресія, особливо безпричинна практично взагалі зникла";
+        this.description3 = "У якому світі ми хочемо жити? У світі де є внутрішнє розуміння єдності, пошана, гідність та священність життя або у світі невігластва, боротьби, нападу та захисту…";
+        this.description4 = "Я прийняла обітницю ахімси на все життя, тому що зрозуміла, що роблю несвідомі дії в думках, словах і роблю боляче як іншим людям, так і самій собі. Тому обітниця ахімси стала для мене ключем до усвідомленості та контролю своїх чуттів.";
+        this.setRevieverRu();
+        break;
+    }
+    this.setSlides();
   }
 
   setLanguage(language) {
@@ -375,7 +375,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-  sendRegistrationData() {
+  sendRegistration() {
     const contactForm = this.form.value;
     const email = contactForm.email;
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
@@ -414,35 +414,53 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
     this.form.reset();
   }
 
-  // sendRegistration() {
-  //   return;
-  //   const form = this.form.value;
-  //   console.log('sendRegistrationData');
-  //   this.http
-  //     .post(
-  //       this.url + 'crm.deal.list',
-  //       {}
-  //     )
-  //     .subscribe((dealListResponse: any) => {
-  //       let dealListTotal = dealListResponse.total;
-  //       this.http
-  //         .post(
-  //           this.url + 'crm.contact.list',
-  //           {
-  //             filter: { "EMAIL": form.email },
-  //             select: ["ID", "NAME", "LAST_NAME"]
-  //           },
-  //         )
-  //         .subscribe((contactListResponse: any) => {
-  //           console.log('contactListResponse ', contactListResponse);
-  //           if (contactListResponse.result.length) {
-  //             this.useContact(contactListResponse.result[0], dealListTotal);
-  //           } else {
-  //             this.addContact(dealListTotal);
-  //           }
-  //         });
-  //     });
-  // }
+  sendRegistrationData() {
+    const form = this.form.value;
+    const email = form.email;
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+
+    const message: FormMessage = {
+      name: form.name,
+      replyTo: 'yogisforpeace1008@gmail.com',
+      message: form.description ?? null,
+      phone: form.phone,
+      emailAddress: email,
+      from: 'Ahimsa',
+      date: +new Date(),
+      isChecked: false
+    };
+    this.angularFirestore.collection('users').add(message).then(
+      res => {
+  
+        this.isSendRegistrationMessage = true;
+      })
+
+    this.http
+      .post(
+        this.url + 'crm.deal.list',
+        {}
+      )
+      .subscribe((dealListResponse: any) => {
+        let dealListTotal = dealListResponse.total;
+        this.http
+          .post(
+            this.url + 'crm.contact.list',
+            {
+              filter: { "EMAIL": form.email },
+              select: ["ID", "NAME", "LAST_NAME"]
+            },
+          )
+          .subscribe((contactListResponse: any) => {
+            console.log('contactListResponse ', contactListResponse);
+            if (contactListResponse.result.length) {
+              this.useContact(contactListResponse.result[0], dealListTotal);
+            } else {
+              this.addContact(dealListTotal);
+            }
+          });
+      });
+  }
 
   useContact(contact, dealListTotal) {
     this.addDeal(contact.ID, dealListTotal);
@@ -477,14 +495,14 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
       .post(
         this.url + 'crm.deal.list',
         {
-          filter: { "CONTACT_ID": contactId, "SOURCE_DESCRIPTION": "Форум Ахимса и Гармония" },
+          filter: { "CONTACT_ID": contactId, "SOURCE_DESCRIPTION": this.lan == 'ru' ? "YFP_Ritual_Ahimsa_Ru" : "YFP_Ritual_Ahimsa_En" },
           select: ["ID", "TITLE", "SOURCE"]
         },
       )
       .subscribe((dealListResponse: any) => {
         console.log('dealListResponse ', dealListResponse);
         if (dealListResponse.result.length) {
-          alert( this.lan == 'ru' ? "Вы уже зарегестрировались" : "You are already registered")
+          alert(this.lan == 'ru' ? "Вы уже зарегестрировались" : "You are already registered")
         } else {
           this.http
             .post(
@@ -500,8 +518,8 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
                   STATUS_ID: 'NEW',
                   STATUS_DESCRIPTION: 'Новый',
                   SOURCE_ID: 'CALL',
-                  SOURCE_DESCRIPTION: "Форум Ахимса и Гармония",
-                  SOURCE: "Форум Ахимса и Гармония",
+                  SOURCE_DESCRIPTION: this.lan == 'ru' ? "YFP_Ritual_Ahimsa_Ru" : "YFP_Ritual_Ahimsa_En",
+                  SOURCE: this.lan == 'ru' ? "YFP_Ritual_Ahimsa_Ru" : "YFP_Ritual_Ahimsa_En",
                   UTM_CAMPAIGN: this.routeParams?.utm_campaign,
                   UTM_MEDIUM: this.routeParams?.utm_medium,
                   UTM_SOURCE: this.routeParams?.utm_source,
@@ -513,7 +531,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
             .subscribe((res) => {
               console.log(res);
               // this.router.navigate['/','thanks'];
-              this.router.navigateByUrl('/thanks');
+              this.router.navigateByUrl('/thanks-ahimsa');
             });
         }
       });
@@ -626,24 +644,24 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
 
-addScriptsToHead() {
+  addScriptsToHead() {
 
 
-  const head1 = document.getElementsByTagName('head')[0];
+    const head1 = document.getElementsByTagName('head')[0];
 
 
-  const script1 = document.createElement('noscript');
-  script1.innerHTML = `<img height="1" width="1" style="display:none"
+    const script1 = document.createElement('noscript');
+    script1.innerHTML = `<img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=626453055020322&ev=PageView&noscript=1"
 />`;
 
-  head1.insertBefore(script1, head1.firstChild);
+    head1.insertBefore(script1, head1.firstChild);
 
-  const head = document.getElementsByTagName('head')[0];
+    const head = document.getElementsByTagName('head')[0];
 
 
-  const script = document.createElement('script');
-  script.innerHTML = `  !function(f,b,e,v,n,t,s)
+    const script = document.createElement('script');
+    script.innerHTML = `  !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -654,6 +672,17 @@ addScriptsToHead() {
   fbq('init', '626453055020322');
   fbq('track', 'PageView');`;
 
-  head.insertBefore(script, head.firstChild);
-}
+    head.insertBefore(script, head.firstChild);
+  }
+  telegramClick() {
+    if (this.lan === 'ru') {
+      this.goToLink('https://t.me/obet_ahimsa')
+    } else {
+      this.goToLink('https://t.me/obet_ahimsa')
+
+    }
+  }
+  goToLink(url: string) {
+    window.open(url, "_blank");
+  }
 }

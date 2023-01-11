@@ -28,6 +28,7 @@ import { AdiitionalInfoComponent } from './components/adiitional-info/adiitional
 import { DownloadAhimsaComponent } from './components/download-ahimsa/download-ahimsa.component';
 import { MovementResolutionComponent } from './components/movement-resolution/movement-resolution.component';
 import { SecondForumComponent } from './components/second-forum/second-forum.component';
+import { ThanksAhimsaComponent } from './components/thanks-ahimsa/thanks-ahimsa.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -48,6 +49,7 @@ export function createTranslateLoader(http: HttpClient) {
     ResolutionComponent,
     MovementResolutionComponent,
     SecondForumComponent,
+    ThanksAhimsaComponent,
   ],
   imports: [
     BrowserModule,
