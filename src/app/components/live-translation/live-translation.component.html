@@ -13,9 +13,9 @@
   </div>
   <div class="content-container">
     <div class="video">
-      <iframe width="760" height="430" src="https://www.youtube.com/embed/EP0Rkg6SPAI" frameborder="0" allowfullscreen
+      <iframe width="760" height="430" src="https://www.youtube.com/embed/usJl7oiZPnc" frameborder="0" allowfullscreen
         class="item-iframe"></iframe>
-        <!-- <iframe width="760" height="430" src="https://www.youtube.com/embed/NKXKecHauuo" frameborder="0" allowfullscreen
+      <!-- <iframe width="760" height="430" src="https://www.youtube.com/embed/NKXKecHauuo" frameborder="0" allowfullscreen
         class="item-iframe"></iframe> -->
     </div>
   </div>
@@ -29,15 +29,16 @@
       <button class="btn_custom telegram">
         <img src="assets/Images/tel.png" alt="telegram">
         Присоединиться
-        </button>
+      </button>
     </div>
     <button (click)="goToURl('https://www.instagram.com/yogisforpeace/')" class="btn_custom instagram">
       <img src="assets/Images/inst.png" alt="instagram">Подписаться</button>
   </div>
   <div class="program-forum">
+    <h2 class="main-title">{{'second-forum.title-first' | translate}}</h2>
     <div class="program-forum-flex flex justify-between" id="forum-program">
       <img src="assets/Images/Star 2.png" alt="" class="img-star" />
-      <h2 class="main-title">{{'second-forum.schedule' | translate}}</h2>
+      <h2 class="main-title">{{'second-forum.schedule' | translate}} {{'second-forum.1st' | translate}}</h2>
       <img src="assets/Images/Star 2.png" alt="" class="img-star" />
     </div>
 
@@ -45,8 +46,7 @@
 
       <div class="container flex flex-col card">
         <app-master-card [imgUrl]="'swami-vishnudevananda.jpg'" [title]="'masters.guru-title' | translate"
-          [name]="'masters.guru' | translate" [tradition]="''"
-          [time]="'12.00, '+ ('second-forum.prague' | translate)">
+          [name]="'masters.guru' | translate" [tradition]="''" [time]="'12.00, '+ ('second-forum.prague' | translate)">
         </app-master-card>
 
         <app-master-card [imgUrl]="'second-forum/Sadhvi.jpg'" [title]="'masters.sadhvi-title' | translate"
@@ -121,7 +121,89 @@
           [name]="'masters.pullo' | translate" [time]="'20.00 UTC+1 , '+ ('second-forum.prague' | translate)">
         </app-master-card>
         <app-master-card [imgUrl]="'second-forum/lapshinovjpg.jpg'" [title]="'masters.lapshinov-title' | translate"
-          [name]="'masters.lapshinov' | translate" [tradition]="" [time]="'20.30 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
+          [name]="'masters.lapshinov' | translate" [tradition]=""
+          [time]="'20.30 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
+      </div>
+    </div>
+  </div>
+  <div class="program-forum">
+    <h2 class="main-title">{{'second-forum.title-sec' | translate}}</h2>
+    <div class="program-forum-flex flex justify-between" id="forum-program">
+      <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+      <h2 class="main-title">{{'second-forum.schedule' | translate}} {{'second-forum.2nd' | translate}}</h2>
+      <img src="assets/Images/Star 2.png" alt="" class="img-star" />
+    </div>
+
+    <div class="container  flex flex-col">
+
+      <div class="container flex flex-col card">
+        <app-master-card [imgUrl]="'swami-vishnudevananda.jpg'" [title]="'masters.guru-title2' | translate"
+          [name]="'masters.guru' | translate" [tradition]="''" [time]="'12.00, '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+
+
+        <app-master-card [imgUrl]="'second-forum/madukhar.jpg'" [title]="'masters.madukar-title' | translate"
+          [name]="'masters.madukar' | translate" [tradition]="''"
+          [time]="'12.30 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/kurovskij.jpg'" [title]="'masters.kurskii-title2' | translate"
+          [name]="'masters.kurskii' | translate" [tradition]="''"
+          [time]="'13.00 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+
+
+        <app-master-card [imgUrl]="'second-forum/balachandra.jpg'" [title]="'masters.doctor-title2' | translate"
+          [name]="'masters.doctor' | translate" [tradition]="''"
+          [time]="'13.30 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/tulku.JPG'" [title]="'masters.tulku-title2' | translate"
+          [name]="'masters.tulku' | translate" [tradition]="''"
+          [time]="'14.00 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/nagpalama.jpg'" [title]="'masters.nagpalama-title2' | translate"
+          [name]="'masters.nagpalama' | translate" [tradition]="''"
+          [time]="'14.30 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
+
+
+
+        <!-- <app-master-card [imgUrl]="'second-forum/paulus.jpg'" [title]="'masters.paulus-title' | translate"
+          [name]="'masters.paulus' | translate" [tradition]="''"
+          [time]="'17.30 UTC+1 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card> -->
+
+        <app-master-card [imgUrl]="'second-forum/sammasati.jpg'" [title]="'masters.samart-title2' | translate"
+          [name]="'masters.samart' | translate" [time]="'15.00 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+        <app-master-card [imgUrl]="'second-forum/adya.jpg'" [title]="'masters.adya-title' | translate"
+          [name]="'masters.adya' | translate" [tradition]="''"
+          [time]="'15.30 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
+        <!-- <app-master-card [imgUrl]="'second-forum/rusov.jpg'" [title]="'masters.rusov-title' | translate"
+          [name]="'masters.rusov' | translate" [time]="'18.30 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card> -->
+
+        <!-- <app-master-card [imgUrl]="'second-forum/kapustin.jpg'" [title]="'masters.kapustin-title' | translate"
+          [name]="'masters.kapustin' | translate" [time]="'19.00 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card> -->
+
+        <app-master-card [imgUrl]="'second-forum/starinin.jpg'" [title]="'masters.starinin-title' | translate"
+          [name]="'masters.starinin' | translate" [time]="'16.00 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/pullo.jpg'" [title]="'masters.pullo-title2' | translate"
+          [name]="'masters.pullo' | translate" [time]="'16.30 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+        <app-master-card [imgUrl]="'second-forum/rusov.jpg'" [title]="'masters.rusov-title2' | translate"
+          [name]="'masters.rusov' | translate" [time]="'17.00 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/arunadevi.jpg'" [title]="'masters.arunadevi-title' | translate"
+        [name]="'masters.arunadevi' | translate" [time]="'17.30 UTC+1 , '+ ('second-forum.prague' | translate)">
+      </app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/lapshinovjpg.jpg'" [title]="'masters.lapshinov-title2' | translate"
+          [name]="'masters.lapshinov' | translate" [tradition]=""
+          [time]="'17.40 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
       </div>
     </div>
   </div>

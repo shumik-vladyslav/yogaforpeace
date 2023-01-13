@@ -197,7 +197,11 @@
     "live-peace":"I'm signing up!",
     "can-register-through":"заменить на: You can sign up via the Telegram bot or via the classic form.",
     "prague":"in Prague",
-    "schedule":"Schedule"
+    "schedule":"Schedule",
+    "1st":"1st day of the Forum",
+    "2nd":"2nd day of the Forum",
+    "title-first":"January 14 is the day of lectures and satsangs",
+    "title-sec":"January 15 - practice day"
 
   },
   "masters": {
@@ -238,7 +242,22 @@
     "starinin":"Yuri Starinin, motivational coach, Russia",
     "starinin-title":"Ways of dealing with their condition for people prone to anxiety and aggression",
     "pullo":"Valentina Pullo, spiritual mentor and lead instructor of Givin School, Russia",
-    "pullo-title":"Spiritual awakening - the shortest way out of the crisis and to humanity's prosperity"
+    "pullo-title":"Spiritual awakening - the shortest way out of the crisis and to humanity's prosperity",
+    "adya":"Adityaprabha, co-founder School of Conscious Living “Potok”, Russia",
+    "guru-title2":"Shanti Karma - prayer for peace and meditation of unconditional love",
+    "madukar-title2":"Breathing practice 'Nine cycles of enlightened life'",
+    "kurskii-title2":"Meditation for opening the heart and the inner light",
+    "doctor-title2":"The practice of harmonizing of the inner strength using the Gayatri mantra",
+    "tulku-title2":"Tonglen - the practice of compassion",
+    "nagpalama-title2":"'Loving Eyes' Buddha practice",
+    "samart-title2":"Awareness of unity and love",
+    "adya-title":"Atma-vichara (exploration of one's essential nature)",
+    "starinin-title2":"Natural state meditation",
+    "pullo-title2":"The practice of heartwarming presence",
+    "rusov-title2":"Balancing the chakra system",
+    "lapshinov-title2":"Three foundations of the spiritual life",
+    "arunadevi":"Arunadevi, Sri Ramana Maharshi tradition",
+    "arunadevi-title":"The path of the heart is the path of love"
   },
   "thanks-page": {
     "namaste":"Namaste, thank you for registering",
