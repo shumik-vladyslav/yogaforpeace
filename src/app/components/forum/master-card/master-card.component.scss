@@ -1,10 +1,12 @@
 * {
   font-family: "Roboto Slab", serif !important;
 }
+
 h2 {
   font-family: "Roboto Slab", serif !important;
   font-weight: 400;
 }
+
 .card-wrapper {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.5);
@@ -13,6 +15,7 @@ h2 {
   max-height: initial;
   padding: 15px 10px;
 }
+
 .card-master-image {
   flex: 0 0 395px;
   // background: url('../../../../assets/Icons/mandhala.png') 0 0/100% auto no-repeat;
@@ -21,12 +24,15 @@ h2 {
   position: relative;
   margin-left: 40px;
 }
+
 .img-canva {
   // margin-top: -35px;
 }
+
 .img-master {
   width: 500px;
 }
+
 .master-image {
   position: absolute;
   top: 83px;
@@ -36,6 +42,7 @@ h2 {
   border-radius: 9999px;
   overflow: hidden;
 }
+
 .card-text {
   display: flex;
   flex-direction: column;
@@ -44,12 +51,14 @@ h2 {
   margin-left: 100px;
   padding-top: 30px;
 }
+
 .card-text-title {
   font-size: 25px;
   font-family: "RobotoSlab";
   line-height: 1.2;
   margin-bottom: 20px;
 }
+
 .card-text-name {
   font-size: 40px;
   font-family: "RobotoSlab";
@@ -61,53 +70,71 @@ h2 {
   // border-bottom: 3px solid transparent;
   background: linear-gradient(-90deg, #ebd385 0%, #ebd385 11%, #b7832b 43%, #edcd7b 73%, #b7832b 100%);
   margin: 20px 0;
+
   &.no-line {
     height: auto;
     background: transparent;
     margin: 0;
     // border-bottom: 3px solid transparent;
   }
+
+  &.margin--line {
+
+    margin-top: -18px;
+  }
 }
+
 .card-clock {
   height: 30px;
   margin-right: 15px;
 }
+
 .card-text-time {
-  margin-top: 22px;
+  margin-top: 8px;
+  margin-bottom: 16px;
   color: #ba7d18;
   font-size: 30px;
   line-height: 1;
   align-items: unset;
 }
+
 @media (max-width: 1000px) {
   .card-master-image {
     margin: 0;
   }
+
   .img-bird {
     height: 352px;
   }
+
   .content-img {
     top: 137px;
   }
+
   .card-text {
     margin-left: 30px;
     padding-top: 15px;
   }
+
   .card-text-title {
     margin-bottom: 15px;
   }
+
   .card-text-time {
     margin-top: 25px;
   }
+
   .card-text-name {
     font-size: 30px;
   }
 }
+
 @media (max-width: 900px) {
   .card-master-image {
     flex: 0 0 270px;
     height: 270px;
   }
+
   .master-image {
     top: 57px;
     width: 156px;
@@ -115,10 +142,12 @@ h2 {
     left: 57px;
   }
 }
+
 @media (max-width: 786px) {
   .img-canva {
     margin: 0;
   }
+
   .master-image {
     position: absolute;
     top: 65px;
@@ -128,6 +157,7 @@ h2 {
     border-radius: 9999px;
     overflow: hidden;
   }
+
   .card-master-image {
     flex: 0;
     height: 200px;
@@ -135,6 +165,7 @@ h2 {
     overflow: hidden;
     position: relative;
   }
+
   .card-wrapper {
     flex-direction: column;
     align-items: center;
@@ -142,49 +173,60 @@ h2 {
     padding: 20px;
     box-sizing: border-box;
   }
+
   .card-text {
     margin-left: 0;
     padding-top: 15px;
     text-align: center;
   }
+
   .card-text-time {
     display: flex;
     justify-content: center;
   }
 }
+
 @media (max-width: 350px) {
   .card-master-image {
     height: 170px;
     width: 230px;
   }
+
   .master-image {
     top: 49px;
     width: 132px;
     height: 132px;
     left: 49px;
   }
+
   .header-inner.header-inner-button.boreder {
     button {
       padding: 0 10px;
     }
   }
+
   .logo__container-little {
     width: 40px;
   }
+
   .registration-button {
     padding: 0;
   }
+
   .registration-form-title .program-forum-flex .main-title {
     font-size: 15px;
   }
+
   .registration-form-button {
     margin-bottom: 35px;
     font-size: 16px;
   }
+
   .card-master-image {
     height: 170px;
     width: 230px;
   }
+
   .master-image {
     top: 49px;
     width: 132px;
@@ -192,19 +234,23 @@ h2 {
     left: 49px;
   }
 }
+
 @media (max-width: 480px) {
   .card-text-time {
     font-size: 22px;
     text-align: left;
   }
+
   .card-text-name {
     font-size: 25px;
   }
 }
+
 @media (max-width: 320px) {
   .card-text-name {
     font-size: 21px;
   }
+
   .card-text-title {
     font-size: 20px;
   }

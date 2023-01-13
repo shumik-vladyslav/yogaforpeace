@@ -37,38 +37,92 @@
   <div class="program-forum">
     <div class="program-forum-flex flex justify-between" id="forum-program">
       <img src="assets/Images/Star 2.png" alt="" class="img-star" />
-      <h2 class="main-title">Программа форума</h2>
+      <h2 class="main-title">{{'second-forum.schedule' | translate}}</h2>
       <img src="assets/Images/Star 2.png" alt="" class="img-star" />
     </div>
 
-    <div class="container flex flex-col">
-      <app-master-card [imgUrl]="'swami-vishnudevananda.jpg'" [title]="vishnudevanandaTitle"
-        [name]="'Шри Гуру Свами Вишнудевананда Гири,'" [tradition]="'Пратьякша Адвайта Сиддхов'"
-        [time]="'12.00 по Праге (13.00 Киев, Мск)'"></app-master-card>
-      <app-master-card [imgUrl]="'pilot-baba.jpg'" [title]="pilotBabaTitle"
-        [name]="'Махайоги Пайлот Бабаджи, Гималайская йога Сиддхов'" [tradition]="''"
-        [time]="'12.30 по Праге (13.30 Киев, Мск)'"></app-master-card>
-      <app-master-card [imgUrl]="'avadhut_maharaj.png'" [title]="avanhutMaharajTitle" [name]="'Авадхут Махарадж,'"
-        [tradition]="'Гауди Сампрадая'" [time]="'13.00 по Праге (14.00 Киев, Мск)'"></app-master-card>
-      <app-master-card [imgUrl]="'satimata.jpg'" [title]="satiMataTitle" [name]="'Сати Мата Джи,'"
-        [tradition]="'Гималайская йога Сиддхов'" [time]="'14.00 по Праге (15.00 Киев, Мск)'"></app-master-card>
-      <app-master-card [imgUrl]="'adyanath.jpg'" [title]="adyanathTitle" [name]="'Йоги Адьянатх,'"
-        [tradition]="'Натха Сампрадая'" [time]="'15.00 по Праге (16.00 Киев, Мск)'"></app-master-card>
-      <app-master-card [imgUrl]="'bharati.jpg'" [title]="bhartiTitle" [name]="'Бхарати Махардж,'"
-        [tradition]="'Гауди Сампрадая'" [time]="'16.00 по Праге (17.00 Киев, Мск)'"></app-master-card>
-      <app-master-card [imgUrl]="'mihailconstantinov.jpg'" [title]="mihailconstantinovTitle"
-        [name]="'Михаил Константинов,'" [tradition]="'Вира-шайва сампрадая'"
-        [time]="'17.00 по Праге (18.00 Киев, Мск)'"></app-master-card>
-      <app-master-card [imgUrl]="'vishvashaarananda.jpg'" [title]="visvaranaandaTitle"
-        [name]="'Свами Вишвашарадаананда,'" [tradition]="'Бхакти Марга'" [time]="'18.00 по Праге (19.00 Киев, Мск)'">
-      </app-master-card>
-      <app-master-card [imgUrl]="'devi.jpg'" [title]="deviTitle" [name]="'Йогмата Четана Гири и Йогмата Шраддха Гири,'"
-        [tradition]="'Гималайская йога Сиддхов'" [time]="'19.00 по Праге (20.00 Киев, Мск)'"></app-master-card>
-      <app-master-card [imgUrl]="'shankara.jpg'" [title]="shankaraTitle" [name]="'Шанкара (Павел Калягин),'"
-        [tradition]="'Традиция Шивананды'" [time]="'19.30 по Праге (20.30 Киев, Мск)'"></app-master-card>
+    <div class="container  flex flex-col">
 
-      <app-master-card [imgUrl]="'earth.jpg'" [title]="lovetitle" [name]="'Всемирная медитация Безусловной Любви'"
-        [sname]="'В присутствии Учителей'" [time]="'20.00 по Праге (21.00 Киев, Мск)'"></app-master-card>
+      <div class="container flex flex-col card">
+        <app-master-card [imgUrl]="'swami-vishnudevananda.jpg'" [title]="'masters.guru-title' | translate"
+          [name]="'masters.guru' | translate" [tradition]="''"
+          [time]="'12.00, '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/Sadhvi.jpg'" [title]="'masters.sadhvi-title' | translate"
+          [name]="'masters.sadhvi' | translate" [tradition]="''"
+          [time]="'12.30 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/madukhar.jpg'" [title]="'masters.madukar-title' | translate"
+          [name]="'masters.madukar' | translate" [tradition]="''"
+          [time]="'13.00 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/hakimov.jpg'" [title]="'masters.shaitania-title' | translate"
+          [name]="'masters.shaitania' | translate" [tradition]="''"
+          [time]="'13.30 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/shalesh.jpg'" [title]="'masters.shaleshand-title' | translate"
+          [name]="'masters.shaleshand' | translate" [tradition]="''"
+          [time]="'14.00 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/alakh.png'" [title]="'masters.niragan-title' | translate"
+          [name]="'masters.niragan' | translate" [tradition]="''"
+          [time]="'14.30 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/kurovskij.jpg'" [title]="'masters.kurskii-title' | translate"
+          [name]="'masters.kurskii' | translate" [tradition]="''"
+          [time]="'15.00 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/photo_2.jpg'" [title]="'masters.shaitaniayoga-title' | translate"
+          [name]="'masters.shaitaniayoga' | translate" [tradition]="''"
+          [time]="'15.30 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/balachandra.jpg'" [title]="'masters.doctor-title' | translate"
+          [name]="'masters.doctor' | translate" [tradition]="''"
+          [time]="'16.00 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/tulku.JPG'" [title]="'masters.tulku-title' | translate"
+          [name]="'masters.tulku' | translate" [tradition]="''"
+          [time]="'16.30 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/nagpalama.jpg'" [title]="'masters.nagpalama-title' | translate"
+          [name]="'masters.nagpalama' | translate" [tradition]="''"
+          [time]="'17.00 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/samdanlama.jpg'" [title]="'masters.samdanlama-title' | translate"
+          [name]="'masters.samdanlama' | translate" [tradition]="''"
+          [time]="'17.15 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/paulus.jpg'" [title]="'masters.paulus-title' | translate"
+          [name]="'masters.paulus' | translate" [tradition]="''"
+          [time]="'17.30 UTC+1 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
+        <app-master-card [imgUrl]="'second-forum/sammasati.jpg'" [title]="'masters.samart-title' | translate"
+          [name]="'masters.samart' | translate" [time]="'18.00 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/rusov.jpg'" [title]="'masters.rusov-title' | translate"
+          [name]="'masters.rusov' | translate" [time]="'18.30 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/kapustin.jpg'" [title]="'masters.kapustin-title' | translate"
+          [name]="'masters.kapustin' | translate" [time]="'19.00 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/starinin.jpg'" [title]="'masters.starinin-title' | translate"
+          [name]="'masters.starinin' | translate" [time]="'19.30 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+
+        <app-master-card [imgUrl]="'second-forum/pullo.jpg'" [title]="'masters.pullo-title' | translate"
+          [name]="'masters.pullo' | translate" [time]="'20.00 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
+        <app-master-card [imgUrl]="'second-forum/lapshinovjpg.jpg'" [title]="'masters.lapshinov-title' | translate"
+          [name]="'masters.lapshinov' | translate" [tradition]="" [time]="'20.30 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
+      </div>
     </div>
   </div>
   <div class="support">

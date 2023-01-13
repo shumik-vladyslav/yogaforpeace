@@ -385,7 +385,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
       name: contactForm.name,
       replyTo: 'yogisforpeace1008@gmail.com',
       message: contactForm.description ?? null,
-      phone: contactForm.phone,
+      phone: contactForm.phone.e164Number,
       emailAddress: email,
       from: 'Ahimsa',
       date: +new Date(),
@@ -676,9 +676,9 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   telegramClick() {
     if (this.lan === 'ru') {
-      this.goToLink('https://t.me/obet_ahimsa')
+      this.goToLink('https://t.me/yogiesforpeas_bot?start=ZGw6MTI2NTI1')
     } else {
-      this.goToLink('https://t.me/obet_ahimsa')
+      this.goToLink('https://t.me/yogiesforpeas_bot?start=ZGw6MTI2NTI4')
 
     }
   }
