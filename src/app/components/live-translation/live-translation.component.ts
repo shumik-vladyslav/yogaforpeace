@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Location} from '@angular/common';
+import { Location } from '@angular/common';
+import { GeneralServiceService } from 'src/app/services/general-service.service';
+import { Languages } from 'src/app/app.component';
 @Component({
   selector: 'app-live-translation',
   templateUrl: './live-translation.component.html',
@@ -44,16 +46,38 @@ export class LiveTranslationComponent implements OnInit {
   lovetitle = `
   «На благо всего мира и всех существ в нем»
   `;
-  constructor(private _location: Location,) { }
+  lan;
+  translation = 'https://www.youtube.com/embed/J9ewn0un2Aw';
+  constructor(private _location: Location, private generalService: GeneralServiceService) { }
 
   ngOnInit(): void {
+    this.generalService.currentLanguage.subscribe(lan => {
+      this.setLanguage(lan)
+    })
   }
 
   goToURl(url) {
     window.open(url);
   }
 
-  goBack(){
+  goBack() {
     this._location.back();
+  }
+
+  setLanguage(language) {
+    window.localStorage.setItem("language", language);
+
+    this.lan = language;
+    switch (language) {
+      case Languages.English:
+        this.translation = 'https://www.youtube.com/embed/J9ewn0un2Aw'
+        break;
+      case Languages.Russian:
+        this.translation = 'https://www.youtube.com/embed/JaASJCMVKrE'
+        break;
+      case Languages.Ukrainian:
+        this.translation = 'https://www.youtube.com/embed/JaASJCMVKrE'
+        break;
+    }
   }
 }

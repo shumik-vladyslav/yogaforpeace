@@ -28,6 +28,7 @@ const routes: Routes = [
   { path: 'second-forum/:type', component: SecondForumComponent },
   { path: 'ahimsa/:type', component: AhimsaComponent },
   { path: 'thanks/:type', component: ThankyouPageComponent },
+  { path: 'live/:type', component: LiveTranslationComponent },
 ];
 
 @NgModule({

@@ -8,12 +8,12 @@
       </div>
     </div>
     <div class="text flex items-center text-margin log">
-      Присоединяйтесь к нам на трансляциях!
+      {{'second-forum.join-tr' | translate}}
     </div>
   </div>
   <div class="content-container">
     <div class="video">
-      <iframe width="760" height="430" src="https://www.youtube.com/embed/usJl7oiZPnc" frameborder="0" allowfullscreen
+      <iframe width="760" height="430" [src]="translation | safe" frameborder="0" allowfullscreen
         class="item-iframe"></iframe>
       <!-- <iframe width="760" height="430" src="https://www.youtube.com/embed/NKXKecHauuo" frameborder="0" allowfullscreen
         class="item-iframe"></iframe> -->
@@ -28,11 +28,11 @@
     <div (click)="goToURl('https://t.me/FORUM_AHIMSA')" class="btn_t_wrap">
       <button class="btn_custom telegram">
         <img src="assets/Images/tel.png" alt="telegram">
-        Присоединиться
+        {{'second-forum.join' | translate}}
       </button>
     </div>
     <button (click)="goToURl('https://www.instagram.com/yogisforpeace/')" class="btn_custom instagram">
-      <img src="assets/Images/inst.png" alt="instagram">Подписаться</button>
+      <img src="assets/Images/inst.png" alt="instagram">{{'second-forum.subscribe' | translate}}</button>
   </div>
   <div class="program-forum">
     <h2 class="main-title">{{'second-forum.title-first' | translate}}</h2>
@@ -123,6 +123,8 @@
         <app-master-card [imgUrl]="'second-forum/lapshinovjpg.jpg'" [title]="'masters.lapshinov-title' | translate"
           [name]="'masters.lapshinov' | translate" [tradition]=""
           [time]="'20.30 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
+        <app-master-card [imgUrl]="'earth.jpg'" [title]="'second-forum.love-title' | translate" [name]="'second-forum.love-med' | translate"
+          [sname]="'second-forum.teachers' | translate" [time]="'21.00 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
       </div>
     </div>
   </div>
@@ -142,7 +144,7 @@
         </app-master-card>
 
 
-        <app-master-card [imgUrl]="'second-forum/madukhar.jpg'" [title]="'masters.madukar-title' | translate"
+        <app-master-card [imgUrl]="'second-forum/madukhar.jpg'" [title]="'masters.madukar-title2' | translate"
           [name]="'masters.madukar' | translate" [tradition]="''"
           [time]="'12.30 UTC+1 , '+ ('second-forum.prague' | translate)"></app-master-card>
 
@@ -186,7 +188,7 @@
           [name]="'masters.kapustin' | translate" [time]="'19.00 UTC+1 , '+ ('second-forum.prague' | translate)">
         </app-master-card> -->
 
-        <app-master-card [imgUrl]="'second-forum/starinin.jpg'" [title]="'masters.starinin-title' | translate"
+        <app-master-card [imgUrl]="'second-forum/starinin.jpg'" [title]="'masters.starinin-title2' | translate"
           [name]="'masters.starinin' | translate" [time]="'16.00 UTC+1 , '+ ('second-forum.prague' | translate)">
         </app-master-card>
 
@@ -198,8 +200,8 @@
         </app-master-card>
 
         <app-master-card [imgUrl]="'second-forum/arunadevi.jpg'" [title]="'masters.arunadevi-title' | translate"
-        [name]="'masters.arunadevi' | translate" [time]="'17.30 UTC+1 , '+ ('second-forum.prague' | translate)">
-      </app-master-card>
+          [name]="'masters.arunadevi' | translate" [time]="'17.30 UTC+1 , '+ ('second-forum.prague' | translate)">
+        </app-master-card>
 
         <app-master-card [imgUrl]="'second-forum/lapshinovjpg.jpg'" [title]="'masters.lapshinov-title2' | translate"
           [name]="'masters.lapshinov' | translate" [tradition]=""
