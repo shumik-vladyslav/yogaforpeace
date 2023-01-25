@@ -55,6 +55,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
   description4;
   slides: any = [];
   unsubscribeAll$: Subject<null> = new Subject();
+  tgChannel = 'https://t.me/ahimsa_vow';
   slidesIm: any = [
     {
       index: 0,
@@ -184,6 +185,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
         this.description2 = "As for physiological indicators, my blood pressure has improved, I can tolerate physical activity better, my general state of health has become easier ... with regards to the emotional state, internal aggression, especially unreasonable, has practically completely disappeared";
         this.description3 = "What world do we want to live in?! In a world where there is an internal understanding of unity, respect, dignity and sacredness of life, or in a world of ignorance, struggle, attack and defense ...";
         this.description4 = "I took a vow of ahimsa for life, because I realized that I do unconscious actions in thoughts, words and hurt both other people and myself. Therefore, the vow of ahimsa became for me the key to awareness and control of my feelings ...";
+        this.tgChannel = 'https://t.me/ahimsa_vow';
         this.setRevieverEn()
         break;
       case Languages.Russian:
@@ -192,6 +194,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
         this.description2 = "Что касается физиологических показателей – улучшилось давление, лучше переношу физические нагрузки, общие самочувствие стало легче... что касаемо эмоционального состояния – внутренняя агрессия, особенно беспричинная практически вообще ушла.";
         this.description3 = "В каком мире мы хотим жить?! В мире где есть внутренне понимание единства, уважение, достоинства и священности жизни или в мире невежества, борьбы, нападения и защиты…";
         this.description4 = "Я приняла обет ахимсы на всю жизнь, потому что поняла, что делаю неосознанные действия в мыслях, словах и делаю больно как другим людям, так и самой себе. Поэтому обет ахимсы стал для меня ключом к осознанности и контролю своих чувств…";
+        this.tgChannel = 'https://t.me/yogisforpeace_life';
         this.setRevieverRu();
         break;
       case Languages.Ukrainian:
@@ -200,6 +203,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
         this.description2 = "Що стосується фізіологічних показників - покращився тиск, краще переношу фізичні навантаження, загальнe самопочуття стало краще... що стосується емоційного стану - внутрішня агресія, особливо безпричинна практично взагалі зникла";
         this.description3 = "У якому світі ми хочемо жити? У світі де є внутрішнє розуміння єдності, пошана, гідність та священність життя або у світі невігластва, боротьби, нападу та захисту…";
         this.description4 = "Я прийняла обітницю ахімси на все життя, тому що зрозуміла, що роблю несвідомі дії в думках, словах і роблю боляче як іншим людям, так і самій собі. Тому обітниця ахімси стала для мене ключем до усвідомленості та контролю своїх чуттів.";
+        this.tgChannel = 'https://t.me/yogisforpeace_life';
         this.setRevieverRu();
         break;
     }
