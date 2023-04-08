@@ -9,8 +9,8 @@ import { FormMessage } from '../main-page/main-page.component';
   styleUrls: ['./users-list.component.scss']
 })
 export class UsersListComponent implements OnInit {
-  usersMessages = [];
-  allMessages = [];
+  usersMessages: Array<FormMessage> = [];
+  allMessages: Array<FormMessage> = [];
   fromFieldFrom: FormControl;
   constructor(
     private angularFirestore: AngularFirestore,
@@ -41,10 +41,19 @@ export class UsersListComponent implements OnInit {
   filterUsersByFrom(from: string) {
     if(from == 'all') {
       this.usersMessages = this.allMessages;
+      this.sortUserMessages();
       return;
     }
     this.usersMessages = this.allMessages.filter(message => message.from === from);
+    this.sortUserMessages();
   }
+
+  sortUserMessages() {
+    this.usersMessages.sort((a, b) => {
+      return a.date - b.date;
+    });
+  }
+
   checkUser(userMessage, i) {
     console.log("USER CHECK", userMessage, i);
     const id = userMessage.id;
