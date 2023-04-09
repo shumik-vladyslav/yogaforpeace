@@ -50,7 +50,7 @@ export class UsersListComponent implements OnInit {
 
   sortUserMessages() {
     this.usersMessages.sort((a, b) => {
-      return a.date - b.date;
+      return b.date - a.date;
     });
   }
 
