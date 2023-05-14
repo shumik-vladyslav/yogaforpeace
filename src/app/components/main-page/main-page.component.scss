@@ -6,12 +6,27 @@
     background-image: -webkit-linear-gradient(top, rgba(241,239,250,1), rgba(241,239,250,1));
     position: relative;
 }
+.b1-4_wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.flex_t {
+    width: 50%;
+}
 .container {
     max-width: 1200px;
     height: 100vh;
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+.social-img.big {
+    height: 40px;
+    width: 40px;
+}
+.marg {
     align-items: center;
 }
 .logo__container {
@@ -349,8 +364,10 @@ p {
 .flex-1-4{
     display: flex;
     flex-wrap: wrap;
-
     justify-content: center;
+    &.ds {
+        flex-wrap: unset;
+    }
 }
 .flex-1-4_element{
     flex: 0 1 22%;
@@ -413,8 +430,9 @@ textarea.input-element{
     border-bottom: 1px solid #ba7d18;
 }
 .h-260{
-    height: 154px;
-    margin-top: 70px;
+    height: 110px;
+    margin: 70px auto 0 auto;
+    width: 100%;
 }
 .error-text{
     color: #ff0000;
@@ -468,6 +486,12 @@ textarea.input-element{
     }
     .h-260{
         height: auto;
+        width: auto;
+        flex-direction: column;
+        margin: 0 20px 50px 20px;
+    }
+    .b1-4_wrap {
+        margin-bottom: 20px;
     }
 }
 @media (max-width: 896px) {
@@ -520,6 +544,16 @@ textarea.input-element{
         width: auto;
     }
 }
+@media (max-width: 560px) {
+    .b1-4_wrap {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .flex_t {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+}
 @media (max-width: 470px) {
     .container {
         height: fit-content;
@@ -536,9 +570,6 @@ textarea.input-element{
     }
     .flex-1-4_element{
         flex: 0 1 90%;
-    }
-    .h-260{
-        height: auto;
     }
     .flex-element-1-2{
         margin-right: 0!important;

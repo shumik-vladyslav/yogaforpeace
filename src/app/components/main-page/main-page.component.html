@@ -434,58 +434,78 @@
   <div class="content-container flex-1-4 center column" [formGroup]="form">
     <h3 class="title-text pb-50">{{'main.contacts' | translate}}</h3>
     <h4>{{'main.send-info' | translate}}</h4>
-    <div class="flex-1-4 h-260">
-      <div class="flex-1-4_element">
-        <p>
-          <a
-            href="https://www.instagram.com/yogisforpeace/"
-            target="_blank"
-            class="text-underline-little"
-            >Instagram</a
-          >
-        </p>
-        <p class="flex-column-little-text">
-          {{'main.follow-life' | translate}}
-        </p>
+    <div class="flex-1-4 h-260 ds">
+      <div class="b1-4_wrap">
+        <div class="flex_t">
+          <div class="flex links marg" (click)="goToURl('https://www.instagram.com/yogisforpeace/')">
+            <img src="assets/Icons/inst.png" alt="" class="social-img big" />
+            <b>{{'main.follow-life' | translate}}</b>
+          </div>
+          <!-- <p>
+            <a
+              href="https://www.instagram.com/yogisforpeace/"
+              target="_blank"
+              class="text-underline-little"
+              >Instagram</a
+            >
+          </p> -->
+          <!-- <p class="flex-column-little-text">
+            {{'main.follow-life' | translate}}
+          </p> -->
+        </div>
+        <div class="flex_t">
+          <div class="flex links marg" (click)="goToURl('https://t.me/yogisforpeace_life')">
+            <img src="assets/Icons/tgpng.png" alt="telegram" class="social-img big" />
+            <b>{{'main.read-hews' | translate}}</b>
+          </div>
+          <!-- <p>
+            <a
+              href="https://t.me/yogisforpeace_life"
+              target="_blank"
+              class="text-underline-little"
+              >{{'main.tg-channel' | translate}}</a
+            >
+          </p>
+          <p class="flex-column-little-text">
+            {{'main.read-hews' | translate}}
+          </p> -->
+        </div>
       </div>
-      <div class="flex-1-4_element">
-        <p>
-          <a
-            href="https://t.me/yogisforpeace_life"
-            target="_blank"
-            class="text-underline-little"
-            >{{'main.tg-channel' | translate}}</a
-          >
-        </p>
-        <p class="flex-column-little-text">
-          {{'main.read-hews' | translate}}
-        </p>
-      </div>
-      <div class="flex-1-4_element">
-        <p>
-          <a
-            href="https://t.me/yogisforpeace"
-            target="_blank"
-            class="text-underline-little"
-            >{{'main.tg-chat' | translate}}</a
-          >
-        </p>
-        <p class="flex-column-little-text">
-          {{'main.write-number' | translate}}
-        </p>
-      </div>
-      <div class="flex-1-4_element">
-        <p>
-          <a
-            href="mailto:yogisforpeace1008@gmail.com"
-            target="_blank"
-            class="text-underline-little"
-            >{{'main.email-address' | translate}}</a
-          >
-        </p>
-        <p class="flex-column-little-text">
-          {{'main.for-cooperation' | translate}}
-        </p>
+      <div class="b1-4_wrap">
+        <div class="flex_t">
+          <div class="flex links marg" (click)="goToURl('https://t.me/yogisforpeace')">
+            <img src="assets/Icons/tgpng.png" alt="telegram" class="social-img big" />
+            <b>{{'main.write-number' | translate}}</b>
+          </div>
+          <!-- <p>
+            <a
+              href="https://t.me/yogisforpeace"
+              target="_blank"
+              class="text-underline-little"
+              >{{'main.tg-chat' | translate}}</a
+            >
+          </p>
+          <p class="flex-column-little-text">
+            {{'main.write-number' | translate}}
+          </p> -->
+        </div>
+        <div class="flex_t">
+          <div class="flex links marg" (click)="goToURl('mailto:yogisforpeace1008@gmail.com')">
+            <img src="assets/Icons/world.png" alt="mail" class="social-img big" />
+            <b>{{'main.for-cooperation' | translate}}</b>
+          </div>
+          <!-- <p>
+            <a
+              href="mailto:yogisforpeace1008@gmail.com"
+              target="_blank"
+              class="text-underline-little"
+              >{{'main.email-address' | translate}}</a
+            >
+          </p>
+          <p class="flex-column-little-text">
+            {{'main.for-cooperation' | translate}}
+          </p> -->
+        </div>
       </div>
     </div>
   </div>
