@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Languages } from 'src/app/app.component';
-import { GeneralServiceService } from 'src/app/services/general-service.service';
 
 @Component({
   selector: 'app-thanks-ahimsa',
@@ -8,34 +7,38 @@ import { GeneralServiceService } from 'src/app/services/general-service.service'
   styleUrls: ['./thanks-ahimsa.component.scss']
 })
 export class ThanksAhimsaComponent implements OnInit {
-
-  constructor(private generalService: GeneralServiceService) { }
+  lan: string = 'ru';
+  presentationUrl: string = '../../../assets/presentations/ahimsa.pdf';
+  constructor() { }
 
   ngOnInit(): void {
-    this.generalService.currentLanguage.subscribe(lan => {
-      this.setLanguage(lan)
-    })
+    let language = window.localStorage.getItem("language");
+    if (language) {
+      this.setLanguage(language);
+    } else {
+      this.setLanguage(this.lan);
+    }
   };
-  presentationUrl: string = '../../../assets/presentations/ahimsa.pdf';
+
   downloadPresentation(): void {
     window.open(
       this.presentationUrl,
       '_blank'
     );
   }
-  lan
+
   setLanguage(language) {
-    
     this.lan = language;
+    window.localStorage.setItem("language", this.lan);
     switch (language) {
       case Languages.English:
-        this.presentationUrl = '../../../assets/presentations/ahimsa_en.pdf'
+        this.presentationUrl = '../../../assets/presentations/ahimsa_en.pdf';
         break;
       case Languages.Russian:
-        this.presentationUrl = '../../../assets/presentations/ahimsa.pdf'
+        this.presentationUrl = '../../../assets/presentations/ahimsa.pdf';
         break;
       case Languages.Ukrainian:
-        this.presentationUrl = '../../../assets/presentations/ahimsa.pdf'
+        this.presentationUrl = '../../../assets/presentations/ahimsa.pdf';
         break;
     }
   }

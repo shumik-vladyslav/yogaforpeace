@@ -16,6 +16,28 @@
                 <div class="header-inner header-inner-text" (click)="scrollTo('forum-program')">
                   {{'second-forum.program' | translate}}
                 </div>
+                <div class="nav-wrapper desktop cs forum">
+                  <div class="sl-nav">
+                    <ul>
+                      <li style="display: flex;
+                      align-items: center;"><b>{{lan}}</b>
+                        <img style="margin: 0 5px -5px 5px;" src="assets/Icons/angle-arrow-down.png" alt="down">
+                        <div class="triangle"></div>
+                        <ul class="ut">
+                          <li (click)="setLanguage('ua')" class="lil"><i class="sl-flag flag-ua">
+                              <div id="ua"></div>
+                            </i> <span>ua</span></li>
+                          <li (click)="setLanguage('ru')" class="lil"><i class="sl-flag flag-ru">
+                              <div id="ru"></div>
+                            </i> <span>ru</span></li>
+                          <li (click)="setLanguage('en')" class="lil"><i class="sl-flag flag-usa">
+                              <div id="usa"></div>
+                            </i> <span>en</span></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="menu_wrap">
@@ -24,6 +46,28 @@
                   {{'second-forum.about-forum' | translate}}</div>
                 <div class="header-inner header-inner-text" (click)="scrollTo('forum-program')">
                   {{'second-forum.program' | translate}}
+                </div>
+                <div class="nav-wrapper desktop cs">
+                  <div class="sl-nav">
+                    <ul>
+                      <li style="display: flex;
+                      align-items: center;"><b>{{lan}}</b>
+                        <img style="margin: 0 5px -5px 5px;" src="assets/Icons/angle-arrow-down.png" alt="down">
+                        <div class="triangle"></div>
+                        <ul class="ut">
+                          <li (click)="setLanguage('ua')" class="lil"><i class="sl-flag flag-ua">
+                              <div id="ua"></div>
+                            </i> <span>ua</span></li>
+                          <li (click)="setLanguage('ru')" class="lil"><i class="sl-flag flag-ru">
+                              <div id="ru"></div>
+                            </i> <span>ru</span></li>
+                          <li (click)="setLanguage('en')" class="lil"><i class="sl-flag flag-usa">
+                              <div id="usa"></div>
+                            </i> <span>en</span></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <!-- <div class="header-inner header-inner-button boreder">

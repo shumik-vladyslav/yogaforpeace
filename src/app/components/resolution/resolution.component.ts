@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Languages } from 'src/app/app.component';
-import { GeneralServiceService } from 'src/app/services/general-service.service';
 
 @Component({
   selector: 'app-resolution',
@@ -10,7 +8,7 @@ import { GeneralServiceService } from 'src/app/services/general-service.service'
 })
 export class ResolutionComponent implements OnInit {
 
-  constructor(private generalService: GeneralServiceService) { }
+  constructor() { }
   textToShow: string;
   resolutionTextRu = `
   ПЕТИЦИЯ "ОБ ОБЪЯВЛЕНИИ XXI ВЕКА МЕЖДУНАРОДНЫМ ВЕКОМ НЕНАСИЛИЯ И СОСТРАДАНИЯ"
@@ -134,25 +132,34 @@ export class ResolutionComponent implements OnInit {
   Запрошуємо сказати «ні» війні та насильству, і «так» миру та гармонії – підписавши цю петицію.
  
   Міжнародна координаційна група організаторів руху Конгресу світу
-`
-  ngOnInit(): void {
-    console.log("QWEQWEWQEWQEWQEWQE");
+`;
+  lan: string = 'ru';
 
-    this.generalService.currentLanguage.subscribe((lan) => {
-      console.log(lan);
-      switch (lan) {
-        case Languages.English:
-          this.textToShow = this.resolutionTextEn
-          break;
-        case Languages.Russian:
-          this.textToShow = this.resolutionTextRu
-          break;
-        case Languages.Ukrainian:
-          this.textToShow = this.resolutionTextUa
-          break;
-      }
-    })
+  ngOnInit(): void {
+    let language = window.localStorage.getItem("language");
+    if (language) {
+      this.setLanguage(language);
+    } else {
+      this.setLanguage(this.lan);
+    }
   }
+
+  setLanguage(language) {
+    this.lan = language;
+    window.localStorage.setItem("language", this.lan);
+    switch (language) {
+      case Languages.English:
+        this.textToShow = this.resolutionTextEn;
+        break;
+      case Languages.Russian:
+        this.textToShow = this.resolutionTextRu;
+        break;
+      case Languages.Ukrainian:
+        this.textToShow = this.resolutionTextUa;
+        break;
+    }
+  }
+
   signPetition() {
     window.open('https://chng.it/bfcr9FSM', '_blank');
   }

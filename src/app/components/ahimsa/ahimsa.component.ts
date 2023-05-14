@@ -9,9 +9,7 @@ import { AdiitionalInfoComponent } from '../adiitional-info/adiitional-info.comp
 import { DownloadAhimsaComponent } from '../download-ahimsa/download-ahimsa.component';
 import { FormMessage } from '../main-page/main-page.component';
 import { CountryISO, PhoneNumberFormat, SearchCountryField } from 'ngx-intl-tel-input';
-import { GeneralServiceService } from 'src/app/services/general-service.service';
 import { TranslateService } from '@ngx-translate/core';
-import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -29,7 +27,8 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
   form: FormGroup;
   url = "https://vosd.bitrix24.eu/rest/4/idujiuxkvouf7pb9/";
   routeParams;
-  lan = 'ru';
+  lan: string = 'ru';
+  ahimsaImg: string;
   first: number = 0;
   middle: number = 1;
   last: number = 2;
@@ -114,22 +113,15 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
     private router: Router,
     private angularFirestore: AngularFirestore,
     private dialog: MatDialog,
-    public generalService: GeneralServiceService,
     private translate: TranslateService,
   ) {
     let language = window.localStorage.getItem("language");
-    // if (language) {
-    //   this.setLanguage(language);
-    //   this.checkLang(language);
-    // } else {
-    //   this.checkLang('ru');
-    // }
-    // this.setSlides();
-    this.generalService.currentLanguage.pipe(takeUntil(this.unsubscribeAll$)).subscribe((res) => {
-      this.lan = res;
-      this.checkLang(res);
-      this.setSlides();
-    })
+    if (language) {
+      this.setLanguage(language);
+    } else {
+      this.setLanguage(this.lan);
+    }
+    this.setSlides();
     this.form = new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -177,7 +169,6 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   checkLang(lan) {
-    console.log(lan);
     switch (lan) {
       case Languages.English:
         this.description = "Since I am a mother, I pass on the knowledge of ahimsa (non-violence) to my son, and this gives the child a Dharmic vision of the world, which, of course, will lead him through life in the right, favorable way ...";
@@ -186,6 +177,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
         this.description3 = "What world do we want to live in?! In a world where there is an internal understanding of unity, respect, dignity and sacredness of life, or in a world of ignorance, struggle, attack and defense ...";
         this.description4 = "I took a vow of ahimsa for life, because I realized that I do unconscious actions in thoughts, words and hurt both other people and myself. Therefore, the vow of ahimsa became for me the key to awareness and control of my feelings ...";
         this.tgChannel = 'https://t.me/ahimsa_vow';
+        this.ahimsaImg = 'assets/Images/log-shimsauk.png';
         this.setRevieverEn()
         break;
       case Languages.Russian:
@@ -195,6 +187,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
         this.description3 = "В каком мире мы хотим жить?! В мире где есть внутренне понимание единства, уважение, достоинства и священности жизни или в мире невежества, борьбы, нападения и защиты…";
         this.description4 = "Я приняла обет ахимсы на всю жизнь, потому что поняла, что делаю неосознанные действия в мыслях, словах и делаю больно как другим людям, так и самой себе. Поэтому обет ахимсы стал для меня ключом к осознанности и контролю своих чувств…";
         this.tgChannel = 'https://t.me/yogisforpeace_life';
+        this.ahimsaImg = 'assets/Images/log-shimsa.png';
         this.setRevieverRu();
         break;
       case Languages.Ukrainian:
@@ -204,6 +197,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
         this.description3 = "У якому світі ми хочемо жити? У світі де є внутрішнє розуміння єдності, пошана, гідність та священність життя або у світі невігластва, боротьби, нападу та захисту…";
         this.description4 = "Я прийняла обітницю ахімси на все життя, тому що зрозуміла, що роблю несвідомі дії в думках, словах і роблю боляче як іншим людям, так і самій собі. Тому обітниця ахімси стала для мене ключем до усвідомленості та контролю своїх чуттів.";
         this.tgChannel = 'https://t.me/yogisforpeace_life';
+        this.ahimsaImg = 'assets/Images/log-shimsa.png';
         this.setRevieverRu();
         break;
     }
@@ -211,9 +205,9 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   setLanguage(language) {
-    window.localStorage.setItem("language", language);
-    this.checkLang(language);
     this.lan = language;
+    window.localStorage.setItem("language", this.lan);
+    this.checkLang(this.lan);
     switch (language) {
       case Languages.English:
         this.translate.setDefaultLang(Languages.English);

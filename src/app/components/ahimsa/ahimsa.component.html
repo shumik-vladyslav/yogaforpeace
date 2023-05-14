@@ -29,7 +29,7 @@
           <div class="mob_h-wrap">
             <div *ngIf="!menu" class="header-inner header-inner-icon">
               <div class="logo__container-little">
-                <img src="assets/Images/log-shimsa.png" alt="logo" class="img img__logo-little" />
+                <img [src]="ahimsaImg" alt="logo" class="img img__logo-little" />
               </div>
             </div>
           </div>
@@ -37,7 +37,7 @@
             <div class="w_wrap m_hide">
               <div class="header-inner header-inner-icon add">
                 <div class="logo__container-little">
-                  <img src="assets/Images/log-shimsa.png" alt="logo" class="img img__logo-little" />
+                  <img [src]="ahimsaImg" alt="logo" class="img img__logo-little" />
                 </div>
               </div>
               <div (click)="scrollTo('ahimsa')" class="header-inner header-inner-text">{{'main.about' | translate}}
@@ -53,7 +53,7 @@
               <button class="registration-button" (click)="scrollTo('registration')">{{'main.registration' |
                 translate}}</button>
             </div>
-            <div class="nav-wrapper desktop">
+            <div class="nav-wrapper desktop respons">
               <div class="sl-nav">
                 <ul>
                   <li style="display: flex;

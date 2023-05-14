@@ -3,12 +3,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { ActivatedRoute, Params, Router } from '@angular/router';
 import { NewsPageComponent } from '../news-page/news-page.component';
-import { switchMap } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
-import { GeneralServiceService } from 'src/app/services/general-service.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Languages } from 'src/app/app.component';
 
 @Component({
   selector: 'app-main-page',
@@ -22,13 +20,12 @@ export class MainPageComponent implements OnInit {
       header.classList.add('bg_for_header')
     } else header.classList.remove('bg_for_header')
   }
+  lan: string = 'ru';
+
   constructor(
-    private router: Router,
     public dialog: MatDialog,
     private http: HttpClient,
-    private route: ActivatedRoute,
     private translateService: TranslateService,
-    private generalService: GeneralServiceService,
     private angularFirestore: AngularFirestore,
   ) {
     this.form = new FormGroup({
@@ -37,23 +34,15 @@ export class MainPageComponent implements OnInit {
       phone: new FormControl(''),
       description: new FormControl(''),
     });
-    generalService.currentLanguage.subscribe(res => {
-      this.language = res;
-      if (this.language == 'en') {
-        this.shantiSrc = 'https://www.youtube.com/embed/1sgG98jCq_g';
-        this.ahimsaSrc = 'https://www.youtube.com/embed/3diYSam4ZcU';
-        this.materialsUrl = 'https://drive.google.com/drive/folders/1Wt4YivmJzVC6Y4n048GMZ900p1FdczPa?usp=share_link';
-
-      } else if(this.language == 'ru' || this.language == 'ua') {
-        this.materialsUrl = 'https://drive.google.com/drive/folders/10XCW0lPJgox8d5khUZIBnyAocQ-RQI4H?usp=sharing';
-      }
-
-    })
-    // console.log("browserLang",browserLang);
-
+    let language = window.localStorage.getItem("language");
+    if (language) {
+      this.setLanguage(language);
+    } else {
+      this.setLanguage(this.lan);
+    }
   }
+
   form: FormGroup;
-  language;
   shantiSrc = '//youtube.com/embed/Em-y_bkTQYk?rel=0&fmt=18&html5=1&showinfo=0';
   ahimsaSrc = 'https://www.youtube.com/embed/nOubh8giCgM';
   materialsUrl = 'https://drive.google.com/drive/folders/10XCW0lPJgox8d5khUZIBnyAocQ-RQI4H?usp=sharing';
@@ -183,6 +172,7 @@ export class MainPageComponent implements OnInit {
       imgUrl: 'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/images%2F1886362-vse-o-mantre.jpg?alt=media&token=d1ffa158-12c7-4463-9d94-a8b24503a8f7',
     },
   ];
+
   ngOnInit(): void {
     this.news = null;
     // console.log(this.route.snapshot.params['type']);
@@ -203,6 +193,34 @@ export class MainPageComponent implements OnInit {
     const y = element.getBoundingClientRect().top + window.pageYOffset;
     window.scrollTo({ top: y, behavior: 'smooth' });
   }
+
+  setMaterials() {
+    if (this.lan == 'en') {
+      this.shantiSrc = 'https://www.youtube.com/embed/1sgG98jCq_g';
+      this.ahimsaSrc = 'https://www.youtube.com/embed/3diYSam4ZcU';
+      this.materialsUrl = 'https://drive.google.com/drive/folders/1Wt4YivmJzVC6Y4n048GMZ900p1FdczPa?usp=share_link';
+    } else if (this.lan == 'ru' || this.lan == 'ua') {
+      this.materialsUrl = 'https://drive.google.com/drive/folders/10XCW0lPJgox8d5khUZIBnyAocQ-RQI4H?usp=sharing';
+    }
+  }
+
+  setLanguage(language) {
+    window.localStorage.setItem("language", language);
+    this.lan = language;
+    this.setMaterials();
+    switch (language) {
+      case Languages.English:
+        this.translateService.setDefaultLang(Languages.English);
+        break;
+      case Languages.Russian:
+        this.translateService.setDefaultLang(Languages.Russian);
+        break;
+      case Languages.Ukrainian:
+        this.translateService.setDefaultLang(Languages.Ukrainian);
+        break;
+    }
+  }
+
   sendMail() {
     const contactForm = this.form.value;
     const email = contactForm.email;
@@ -218,7 +236,7 @@ export class MainPageComponent implements OnInit {
       isChecked: false
     };
     this.angularFirestore.collection('users').add(message).then(
-      res => console.log("this.angularFirestore.collection('users').add(message)  ",res)
+      res => console.log("this.angularFirestore.collection('users').add(message)  ", res)
     )
     this.http
       .post(
@@ -254,24 +272,24 @@ export class MainPageComponent implements OnInit {
   }
 
 
-addScriptsToHead() {
+  addScriptsToHead() {
 
 
-  const head1 = document.getElementsByTagName('head')[0];
+    const head1 = document.getElementsByTagName('head')[0];
 
 
-  const script1 = document.createElement('noscript');
-  script1.innerHTML = `<img height="1" width="1" style="display:none"
+    const script1 = document.createElement('noscript');
+    script1.innerHTML = `<img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=626453055020322&ev=PageView&noscript=1"
 />`;
 
-  head1.insertBefore(script1, head1.firstChild);
+    head1.insertBefore(script1, head1.firstChild);
 
-  const head = document.getElementsByTagName('head')[0];
+    const head = document.getElementsByTagName('head')[0];
 
 
-  const script = document.createElement('script');
-  script.innerHTML = `  !function(f,b,e,v,n,t,s)
+    const script = document.createElement('script');
+    script.innerHTML = `  !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -282,8 +300,8 @@ addScriptsToHead() {
   fbq('init', '626453055020322');
   fbq('track', 'PageView');`;
 
-  head.insertBefore(script, head.firstChild);
-}
+    head.insertBefore(script, head.firstChild);
+  }
 }
 export interface News {
   title: string;
