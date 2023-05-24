@@ -30,6 +30,7 @@ import { MovementResolutionComponent } from './components/movement-resolution/mo
 import { SecondForumComponent } from './components/second-forum/second-forum.component';
 import { ThanksAhimsaComponent } from './components/thanks-ahimsa/thanks-ahimsa.component';
 import {MatSelectModule} from '@angular/material/select';
+import { ArtContestComponent } from './components/art-contest/art-contest.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -51,6 +52,7 @@ export function createTranslateLoader(http: HttpClient) {
     MovementResolutionComponent,
     SecondForumComponent,
     ThanksAhimsaComponent,
+    ArtContestComponent,
   ],
   imports: [
     BrowserModule,

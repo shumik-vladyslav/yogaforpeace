@@ -6,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap");
-@import 'intl-tel-input/build/css/intlTelInput.css';
+@import "intl-tel-input/build/css/intlTelInput.css";
 * {
   padding: 0;
   margin: 0;
@@ -357,11 +357,19 @@ body {
   display: flex;
   justify-content: center;
 }
+.ml_wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+}
 .footer {
   height: 240px;
   padding: 30px 0 50px 0;
   background: rgb(149, 10, 39);
-  background: linear-gradient(0deg, rgba(149, 10, 39, 1) 0%, rgba(198, 23, 88, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(149, 10, 39, 1) 0%,
+    rgba(198, 23, 88, 1) 100%
+  );
 }
 .req_wrap {
   display: flex;
@@ -413,7 +421,14 @@ body {
   justify-content: center;
   height: 48px;
   border-radius: 9px;
-  background-image: linear-gradient(260deg, #ebd385 0%, #ebd385 11%, #b7832b 43%, #edcd7b 73%, #b7832b 100%);
+  background-image: linear-gradient(
+    260deg,
+    #ebd385 0%,
+    #ebd385 11%,
+    #b7832b 43%,
+    #edcd7b 73%,
+    #b7832b 100%
+  );
   cursor: pointer;
 }
 .btn_custom {
@@ -431,13 +446,25 @@ body {
     margin-right: 17px;
   }
   &.telegram {
-    background-image: linear-gradient(0deg, #950927 18%, #950927 31%, #d51b65 100%);
+    background-image: linear-gradient(
+      0deg,
+      #950927 18%,
+      #950927 31%,
+      #d51b65 100%
+    );
     height: 42px;
     width: calc(100% - 6px);
     z-index: 1;
   }
   &.instagram {
-    background-image: linear-gradient(260deg, #ebd385 0%, #ebd385 11%, #b7832b 43%, #edcd7b 73%, #b7832b 100%);
+    background-image: linear-gradient(
+      260deg,
+      #ebd385 0%,
+      #ebd385 11%,
+      #b7832b 43%,
+      #edcd7b 73%,
+      #b7832b 100%
+    );
   }
 }
 .btn_t_wrap.for {
@@ -448,6 +475,193 @@ body {
 }
 .content-footer-button {
   z-index: 20;
+}
+.outer_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.back {
+    background: url(assets/Images/art2.png);
+    background-repeat: round;
+    padding: 0 0 20px 0;
+  }
+  &.back_s {
+    flex-direction: column;
+    background: url(assets/Images/4ss.png);
+    &.blue {
+      background: url(assets/Images/blueb.png);
+      padding-top: 50px;
+      .cont_img {
+        width: 40%;
+        margin-right: 40px;
+        margin-left: 0;
+      }
+    }
+    padding: 0 0 30px 0;
+    &.pad {
+      padding-top: 30px;
+      .cont {
+        margin-left: auto;
+      }
+    }
+  }
+}
+.work_item {
+  max-width: 200px;
+  border-radius: 20px;
+  height: fit-content;
+  overflow: hidden;
+}
+.t_large {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.1;
+  font-size: 55px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+.gen_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 20px;
+}
+.sub_line {
+  font-family: "Playfair Display", sans-serif;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 2;
+  color: #fff;
+  span {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+}
+p.img_wrap {
+  width: 75%;
+  margin: 0 auto;
+}
+.bn_gr {
+  width: 420px;
+  height: 87px;
+  border-radius: 44px;
+  background-color: #91358e;
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  &.wide {
+    width: auto;
+    height: 95px;
+    padding: 0 20px;
+  }
+}
+.header_cs {
+  font-size: 45px;
+  line-height: 1;
+  color: #91358e;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  letter-spacing: -3px;
+  margin: 40px 0 !important;
+}
+.works_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: self-end;
+  width: 100%;
+}
+.cont_f {
+  display: flex;
+  position: relative;
+  &.col {
+    flex-direction: column;
+  }
+}
+.cont {
+  width: 61%;
+}
+.cont_img {
+  display: flex;
+  align-items: center;
+  width: 39%;
+  margin-left: 20px;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+p.linee {
+  max-width: 70%;
+  margin: 10px auto 30px auto;
+  &.bt {
+    margin: 30px auto 10px auto;
+  }
+}
+.cont_img_lg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+.genn {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+  font-size: 22px;
+  color: #2f618b;
+  margin-bottom: 36px !important;
+  span {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 700;
+    line-height: 1.4;
+    font-size: 22px;
+    color: #7b0d69;
+  }
+  &.center {
+    text-align: center;
+  }
+}
+.line_rap {
+  display: flex;
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  bottom: -70px;
+  img {
+    max-width: 110%;
+    z-index: 1;
+  }
+}
+li.genn {
+  margin-bottom: 10px !important;
+}
+.rel {
+  position: relative;
+}
+.back_s.pd {
+  padding: 70px 0 30px 0;
+}
+ul.l_gen {
+  list-style: disc;
+  padding-left: 40px;
+  margin-bottom: 36px;
+}
+.less {
+  .cont {
+    width: 55%;
+  }
+  .cont_img {
+    width: 45%;
+  }
 }
 .content-container {
   display: flex;
@@ -462,7 +676,7 @@ body {
   padding: 30px 0;
   //background: url('../../../assets/Logo/yogis-for-peace-logo.svg') no-repeat;
 }
-.header-img-logo{
+.header-img-logo {
   color: #ba7d18;
   font-size: 54px;
   padding: 24px 0 38px 0;
