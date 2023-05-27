@@ -11,6 +11,7 @@ import { ResolutionComponent } from './components/resolution/resolution.componen
 import { SecondForumComponent } from './components/second-forum/second-forum.component';
 import { ThanksAhimsaComponent } from './components/thanks-ahimsa/thanks-ahimsa.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
+import { CourseComponent } from './components/course/course.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'live', component: LiveTranslationComponent },
   { path: 'ahimsa', component: AhimsaComponent },
   { path: 'art', component: ArtContestComponent },
+  { path: 'course', component: CourseComponent },
   { path: 'thanks', component: ThankyouPageComponent },
   { path: 'message-from-users', component: UsersListComponent },
   { path: 'resolution', component: ResolutionComponent },

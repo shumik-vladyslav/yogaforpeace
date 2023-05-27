@@ -31,6 +31,7 @@ import { SecondForumComponent } from './components/second-forum/second-forum.com
 import { ThanksAhimsaComponent } from './components/thanks-ahimsa/thanks-ahimsa.component';
 import {MatSelectModule} from '@angular/material/select';
 import { ArtContestComponent } from './components/art-contest/art-contest.component';
+import { CourseComponent } from './components/course/course.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -53,6 +54,7 @@ export function createTranslateLoader(http: HttpClient) {
     SecondForumComponent,
     ThanksAhimsaComponent,
     ArtContestComponent,
+    CourseComponent,
   ],
   imports: [
     BrowserModule,

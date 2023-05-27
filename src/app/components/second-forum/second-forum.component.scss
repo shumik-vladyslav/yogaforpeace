@@ -7,36 +7,6 @@
 // .content-title-el {
 //     text-transform: unset;
 // }
-.registration-form-container{
-
-}
-
-.header-inner.header-inner-button.boreder {
-    display: flex;
-    align-items: center;
-    height: 70px;
-    border-radius: 999px;
-    background-color: #b21243;
-    padding: 0 3px !important;
-    margin: 0 15px;
-    &.grad {
-        margin: 0 15px 0 0;
-    }
-    &.grad {
-        background-image: linear-gradient(260deg, #ebd385 0%, #ebd385 11%, #b7832b 43%, #edcd7b 73%, #b7832b 100%);
-        width: 300px;
-        button {
-            font-size: 22px;
-            background: transparent;
-            width: 100%;
-        }
-    }
-    button {
-        padding: 0 30px;
-        height: 64px;
-        border: 1px solid #fff;
-    }
-}
 .wrapper {
     border-bottom: none;
     .icons-wrapper.top {
