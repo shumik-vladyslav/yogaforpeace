@@ -358,8 +358,9 @@ body {
   justify-content: center;
 }
 .ml_wrapper {
-  max-width: 400px;
+  max-width: 190px;
   margin: 0 auto;
+  cursor: pointer;
 }
 .footer {
   height: 240px;
@@ -481,13 +482,17 @@ body {
   align-items: center;
   justify-content: center;
   &.back {
-    background: url(assets/Images/art2.png);
+    background: url(assets/Images/art2.jpg);
     background-repeat: round;
     padding: 0 0 20px 0;
+    height: 100%;
   }
   &.back_s {
     flex-direction: column;
     background: url(assets/Images/4ss.png);
+    &.pd {
+      background: url(assets/Images/gr.png);
+    }
     &.blue {
       background: url(assets/Images/blueb.png);
       padding-top: 50px;
@@ -506,11 +511,31 @@ body {
     }
   }
 }
-.work_item {
-  max-width: 200px;
+p.pr_nx {
+  margin-right: 20px;
+  cursor: pointer;
+  &.rot {
+    margin-right: 0;
+    margin-left: 20px;
+    transform: rotate(180deg);
+  }
+  img.qarr {
+    width: 40px;
+    height: 40px;
+    max-width: unset;
+    max-height: unset;
+  }
+}
+p.work_item {
+  max-width: initial;
   border-radius: 20px;
   height: fit-content;
   overflow: hidden;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  &.last {
+    margin-right: 0;
+  }
 }
 .t_large {
   font-family: "Montserrat", sans-serif;
@@ -543,7 +568,7 @@ body {
   }
 }
 p.img_wrap {
-  width: 75%;
+  max-width: 60%;
   margin: 0 auto;
 }
 .bn_gr {
@@ -571,12 +596,13 @@ p.img_wrap {
   text-align: center;
   letter-spacing: -3px;
   margin: 40px 0 !important;
+  &.pointer {
+    cursor: pointer;
+  }
 }
 .works_wrap {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: self-end;
+  flex-direction: column;
   width: 100%;
 }
 .cont_f {
@@ -594,6 +620,9 @@ p.img_wrap {
   align-items: center;
   width: 39%;
   margin-left: 20px;
+  &.top {
+    align-items: flex-start;
+  }
   img {
     max-width: 100%;
     max-height: 100%;

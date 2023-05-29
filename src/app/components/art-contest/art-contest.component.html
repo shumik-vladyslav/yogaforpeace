@@ -1,10 +1,10 @@
 <div class="cs-gen_wrapper">
   <div class="art-cont_wrapper">
-    <div class="cs_shadow">
+    <div class="cs_shadow vh">
       <div class="outer_wrap back">
         <div class="gen_wrap">
           <p class="img_wrap">
-            <img src="assets/Images/join.png" alt="peace" />
+            <img src="assets/Images/join.svg" alt="peace" />
           </p>
           <p class="t_large">
             МЕЖДУНАРОДНЫЙ<br />
@@ -181,7 +181,15 @@
               </p>
             </div>
             <div class="cont_img">
-              <img src="assets/Images/expl.png" alt="sold" />
+              <p (click)="previous()" class="pr_nx">
+                <img class="qarr" src="assets/Images/prw.png" alt="arrow">
+              </p>
+              <img [hidden]="index !== 1" src="assets/Images/1.png" alt="sold" />
+              <img [hidden]="index !== 2" src="assets/Images/2.png" alt="sold" />
+              <img [hidden]="index !== 3" src="assets/Images/3.png" alt="sold" />
+              <p (click)="next()" class="pr_nx rot">
+                <img class="qarr" src="assets/Images/prw.png" alt="arrow">
+              </p>
             </div>
           </div>
         </div>
@@ -192,7 +200,7 @@
         <div class="gen_wrap">
           <p class="header_cs">ПРАВИЛА УЧАСТИЯ В КОНКУРСЕ</p>
           <div class="cont_f">
-            <div class="cont_img">
+            <div class="cont_img top">
               <img src="assets/Images/face.png" alt="sold" />
             </div>
             <div class="cont">
@@ -268,7 +276,7 @@
                 </li>
               </ul>
               <p class="genn">Работы присылайте на почту</p>
-              <button class="bn_gr wide">
+              <button class="bn_gr wide" (click)="goToURl('mailto:contestyogisforpearce@gmail.com')">
                 CONTESTYOGISFORPEARCE@GMAIL.COM
               </button>
             </div>
@@ -287,44 +295,30 @@
             <span>Самые интересные работы получат памятные призы</span>
           </p>
           <div class="works_wrap">
-            <p class="work_item">
-              <img src="assets/Images/han.png" alt="work" />
-            </p>
-            <p class="work_item">
-              <img src="assets/Images/join.png" alt="work" />
-            </p>
-            <p class="work_item">
-              <img src="assets/Images/5gg.png" alt="work" />
-            </p>
-            <p class="work_item">
-              <img src="assets/Images/dr.png" alt="work" />
-            </p>
-            <p class="work_item">
-              <img src="assets/Images/9s.png" alt="work" />
-            </p>
-            <p class="work_item">
-              <img src="assets/Images/lso.png" alt="work" />
-            </p>
-            <p class="work_item">
-              <img src="assets/Images/expl.png" alt="work" />
-            </p>
-            <p class="work_item">
-              <img src="assets/Images/face.png" alt="work" />
-            </p>
-            <p class="work_item">
-              <img src="assets/Images/han.png" alt="work" />
-            </p>
-            <p class="work_item">
-              <img src="assets/Images/join.png" alt="work" />
-            </p>
-            <p class="work_item">
-              <img src="assets/Images/5gg.png" alt="work" />
-            </p>
-            <p class="work_item">
-              <img src="assets/Images/dr.png" alt="work" />
-            </p>
+            <div class="flex">
+              <p class="work_item">
+                <img src="assets/Images/w4.png" alt="work" />
+              </p>
+              <p class="work_item">
+                <img src="assets/Images/w5.png" alt="work" />
+              </p>
+              <p class="work_item last">
+                <img src="assets/Images/w6.png" alt="work" />
+              </p>
+            </div>
+            <div class="flex">
+              <p class="work_item">
+                <img src="assets/Images/w7.png" alt="work" />
+              </p>
+              <p class="work_item">
+                <img src="assets/Images/w8.png" alt="work" />
+              </p>
+              <p class="work_item last">
+                <img src="assets/Images/w9.png" alt="work" />
+              </p>
+            </div>
           </div>
-          <button class="bn_gr wide">Смотреть остальные работы</button>
+          <!-- <button class="bn_gr wide">Смотреть остальные работы</button> -->
         </div>
       </div>
     </div>
@@ -340,10 +334,10 @@
             <p class="genn center">
               Творите для Мира и во имя Мира! Ждем ваши работы
             </p>
-            <div class="ml_wrapper">
+            <div class="ml_wrapper" (click)="goToURl('mailto:contestyogisforpearce@gmail.com')">
               <img src="assets/Images/mlr.png" alt="sold" />
             </div>
-            <p class="header_cs">CONTESTYOGISFORPEARCE@GMAIL.COM</p>
+            <p class="header_cs pointer" (click)="goToURl('mailto:contestyogisforpearce@gmail.com')">CONTESTYOGISFORPEARCE@GMAIL.COM</p>
           </div>
         </div>
       </div>
