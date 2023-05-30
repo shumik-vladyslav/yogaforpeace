@@ -568,7 +568,7 @@ p.work_item {
   }
 }
 p.img_wrap {
-  max-width: 60%;
+  max-width: 50%;
   margin: 0 auto;
 }
 .bn_gr {
@@ -1071,7 +1071,7 @@ p.cs_log {
   max-height: 100%;
   bottom: -70px;
   img {
-    max-width: 110%;
+    max-width: 100%;
     z-index: 1;
   }
 }
@@ -1094,7 +1094,7 @@ ul.l_gen {
     width: 55%;
   }
   .cont_img {
-    width: 45%;
+    max-width: 45%;
   }
 }
 .content-container {
