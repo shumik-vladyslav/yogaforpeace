@@ -13,3 +13,46 @@
 .cs-gen_wrapper {
   padding: 30px 0 5px 0;
 }
+@media (max-width: 900px) {
+  .bn_gr {
+    width: 395px;
+    height: 70px;
+    font-size: 25px;
+    &.cons {
+      width: auto;
+    }
+  }
+  .cs-gen_wrapper {
+    padding: 5px 0;
+  }
+  .cs_shadow {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 786px) {
+  .cs_shadow.vh {
+    height: auto;
+  }
+}
+@media (max-width: 650px) {
+  .bn_gr.cons {
+    height: 60px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 550px) {
+  .bn_gr {
+    width: auto;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 480px) {
+  .bn_gr {
+    height: 63px;
+    font-size: 20px;
+  }
+  .bn_gr.cons {
+    height: 45px;
+    font-size: 11px;
+  }
+}
