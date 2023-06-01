@@ -32,6 +32,7 @@ import { ThanksAhimsaComponent } from './components/thanks-ahimsa/thanks-ahimsa.
 import {MatSelectModule} from '@angular/material/select';
 import { ArtContestComponent } from './components/art-contest/art-contest.component';
 import { CourseComponent } from './components/course/course.component';
+import { PicturePreviewComponent } from './components/picture-preview/picture-preview.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -55,6 +56,7 @@ export function createTranslateLoader(http: HttpClient) {
     ThanksAhimsaComponent,
     ArtContestComponent,
     CourseComponent,
+    PicturePreviewComponent,
   ],
   imports: [
     BrowserModule,

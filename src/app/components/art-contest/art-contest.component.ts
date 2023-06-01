@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { PicturePreviewComponent } from '../picture-preview/picture-preview.component';
 
 @Component({
   selector: 'app-art-contest',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtContestComponent implements OnInit {
   index: number = 1;
-  constructor() { } 
+  constructor(
+    private dialog: MatDialog
+  ) { } 
 
   ngOnInit(): void {
   }
@@ -17,15 +21,29 @@ export class ArtContestComponent implements OnInit {
   }
   previous() {
     if (this.index == 1) {
-      return;
+      this.index = 3;
     } else {
       this.index = this.index - 1;
     }
   }
 
+  scrollTo(id): void {
+    const element = document.getElementById(id);
+    const y = element.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+
+  showFullSize(path: string) {
+    this.dialog.open(PicturePreviewComponent, {
+      width: 'auto',
+      height: 'auto',
+      data: path
+    });
+  }
+
   next() {
     if (this.index == 3) {
-      return;
+      this.index = 1;
     } else {
       this.index = this.index + 1;
     }

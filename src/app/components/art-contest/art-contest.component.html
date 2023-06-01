@@ -13,7 +13,7 @@
           <p class="sub_line">
             Переключаем внимание на <span>правильные</span> смыслы
           </p>
-          <button class="bn_gr">Принять участие</button>
+          <button class="bn_gr" (click)="scrollTo('participate')">Принять участие</button>
         </div>
       </div>
     </div>
@@ -184,9 +184,9 @@
               <p (click)="previous()" class="pr_nx">
                 <img class="qarr" src="assets/Images/prw.png" alt="arrow">
               </p>
-              <img [hidden]="index !== 1" src="assets/Images/1.png" alt="sold" />
-              <img [hidden]="index !== 2" src="assets/Images/2.png" alt="sold" />
-              <img [hidden]="index !== 3" src="assets/Images/3.png" alt="sold" />
+              <img (click)="showFullSize('assets/Images/1.png')" [hidden]="index !== 1" src="assets/Images/1.png" alt="sold" />
+              <img (click)="showFullSize('assets/Images/2.png')" [hidden]="index !== 2" src="assets/Images/2.png" alt="sold" />
+              <img (click)="showFullSize('assets/Images/3.png')" [hidden]="index !== 3" src="assets/Images/3.png" alt="sold" />
               <p (click)="next()" class="pr_nx rot">
                 <img class="qarr" src="assets/Images/prw.png" alt="arrow">
               </p>
@@ -241,7 +241,7 @@
         </div>
       </div>
     </div>
-    <div class="cs_shadow">
+    <div id="participate" class="cs_shadow">
       <div class="outer_wrap back_s less blue">
         <div class="gen_wrap pad_md">
           <div class="cont_f plains">

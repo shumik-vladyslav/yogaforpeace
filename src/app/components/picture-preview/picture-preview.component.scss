@@ -1,0 +1,30 @@
+.c_wrap {
+  position: relative;
+}
+.close_x {
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: cursive;
+  cursor: pointer;
+  right: -15px;
+  top: -13px;
+  width: 21px;
+  height: 10px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ava {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  float: left;
+  margin-right: 20px !important;
+  img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+}
