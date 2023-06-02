@@ -543,7 +543,7 @@ p.work_item {
 .t_large {
   font-family: "Montserrat", sans-serif;
   line-height: 1.1;
-  font-size: 55px;
+  font-size: 53px;
   color: #fff;
   font-weight: 700;
   text-align: center;
@@ -560,7 +560,7 @@ p.work_item {
 .sub_line {
   font-family: "Playfair Display", sans-serif;
   text-align: center;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
   line-height: 2;
   color: #fff;
@@ -1164,7 +1164,7 @@ ul.l_gen {
 }
 @media (max-width: 1410px) {
   .coln {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .cont_img.ful {
     width: 100%;
@@ -1173,7 +1173,12 @@ ul.l_gen {
   }
   .less.carousel .cont {
     width: auto;
-    margin-top: 30px;
+    margin-top: 0;
+  }
+  .less.carousel {
+    .cont_img.ful {
+      margin: 0 auto 20px auto;
+    }
   }
 }
 @media (max-width: 1260px) {
@@ -1229,6 +1234,9 @@ ul.l_gen {
   }
   .cont_f {
     flex-direction: column-reverse;
+    &.coln {
+      flex-direction: column;
+    }
     &.plain {
       flex-direction: column;
     }
@@ -1339,7 +1347,7 @@ ul.l_gen {
     }
   }
   .t_large {
-    font-size: 45px;
+    font-size: 42px;
   }
   .header.small {
     &.rw {
@@ -1399,7 +1407,7 @@ ul.l_gen {
     }
   }
   .sub_line {
-    font-size: 25px;
+    font-size: 23px;
     line-height: 1;
   }
 }
@@ -1448,10 +1456,10 @@ ul.l_gen {
 }
 @media (max-width: 550px) {
   .t_large {
-    font-size: 30px;
+    font-size: 28px;
   }
   .sub_line {
-    font-size: 20px;
+    font-size: 18px;
   }
   .cont_img {
     width: 75%;
@@ -1530,7 +1538,7 @@ ul.l_gen {
     }
   }
   .t_large {
-    font-size: 25px;
+    font-size: 21px;
   }
   .header_cs {
     font-size: 25px;

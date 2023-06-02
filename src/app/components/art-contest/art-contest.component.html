@@ -13,16 +13,21 @@
           <p class="sub_line">
             Переключаем внимание на <span>правильные</span> смыслы
           </p>
-          <button class="bn_gr" (click)="scrollTo('participate')">Принять участие</button>
+          <button class="bn_gr" (click)="scrollTo('participate')">
+            Принять участие
+          </button>
         </div>
       </div>
     </div>
     <div class="cs_shadow">
       <div class="outer_wrap back_s">
         <div class="gen_wrap pad_md">
-          <p class="header_cs">
+          <p class="header_cs shw">
             ПОЧЕМУ ВОЗНИКЛА ИДЕЯ<br />
             ПРОВЕСТИ ЭТОТ КОНКУРС?
+          </p>
+          <p class="header_cs hid">
+            ПОЧЕМУ ВОЗНИКЛА ИДЕЯ ПРОВЕСТИ ЭТОТ КОНКУРС?
           </p>
           <div class="cont_f">
             <div class="cont">
@@ -182,13 +187,28 @@
             </div>
             <div class="cont_img ful">
               <p (click)="previous()" class="pr_nx">
-                <img class="qarr" src="assets/Images/prw.png" alt="arrow">
+                <img class="qarr" src="assets/Images/prw.png" alt="arrow" />
               </p>
-              <img (click)="showFullSize('assets/Images/1.png')" [hidden]="index !== 1" src="assets/Images/1.png" alt="sold" />
-              <img (click)="showFullSize('assets/Images/2.png')" [hidden]="index !== 2" src="assets/Images/2.png" alt="sold" />
-              <img (click)="showFullSize('assets/Images/3.png')" [hidden]="index !== 3" src="assets/Images/3.png" alt="sold" />
+              <img
+                (click)="showFullSize('assets/Images/1.png')"
+                [hidden]="index !== 1"
+                src="assets/Images/1.png"
+                alt="sold"
+              />
+              <img
+                (click)="showFullSize('assets/Images/2.png')"
+                [hidden]="index !== 2"
+                src="assets/Images/2.png"
+                alt="sold"
+              />
+              <img
+                (click)="showFullSize('assets/Images/3.png')"
+                [hidden]="index !== 3"
+                src="assets/Images/3.png"
+                alt="sold"
+              />
               <p (click)="next()" class="pr_nx rot">
-                <img class="qarr" src="assets/Images/prw.png" alt="arrow">
+                <img class="qarr" src="assets/Images/prw.png" alt="arrow" />
               </p>
             </div>
           </div>
@@ -277,7 +297,10 @@
               </ul>
               <div class="flex sames">
                 <p class="genn">Работы присылайте на почту</p>
-                <button class="bn_gr wide cons" (click)="goToURl('mailto:contestyogisforpearce@gmail.com')">
+                <button
+                  class="bn_gr wide cons"
+                  (click)="goToURl('mailto:contestyogisforpearce@gmail.com')"
+                >
                   CONTESTYOGISFORPEARCE@GMAIL.COM
                 </button>
               </div>
@@ -289,9 +312,12 @@
     <div class="cs_shadow">
       <div class="outer_wrap back_s less">
         <div class="gen_wrap pad_md">
-          <p class="header_cs">
+          <p class="header_cs shw">
             РАБОТЫ ВСЕХ УЧАСТНИКОВ БУДУТ<br />
             ОПУБЛИКОВАНЫ НА ЭТОЙ СТРАНИЦЕ
+          </p>
+          <p class="header_cs hid">
+            РАБОТЫ ВСЕХ УЧАСТНИКОВ БУДУТ ОПУБЛИКОВАНЫ НА ЭТОЙ СТРАНИЦЕ
           </p>
           <p class="genn">
             <span>Самые интересные работы получат памятные призы</span>
@@ -335,10 +361,18 @@
             <p class="genn center">
               Творите для Мира и во имя Мира! Ждем ваши работы
             </p>
-            <div class="ml_wrapper" (click)="goToURl('mailto:contestyogisforpearce@gmail.com')">
+            <div
+              class="ml_wrapper"
+              (click)="goToURl('mailto:contestyogisforpearce@gmail.com')"
+            >
               <img src="assets/Images/mlr.png" alt="sold" />
             </div>
-            <p class="header_cs pointer" (click)="goToURl('mailto:contestyogisforpearce@gmail.com')">CONTESTYOGISFORPEARCE@GMAIL.COM</p>
+            <p
+              class="header_cs pointer"
+              (click)="goToURl('mailto:contestyogisforpearce@gmail.com')"
+            >
+              CONTESTYOGISFORPEARCE@GMAIL.COM
+            </p>
           </div>
         </div>
       </div>
