@@ -783,9 +783,7 @@
                   <div class="topic_img">
                     <img src="assets/Images/course/chess.png" alt="health" />
                   </div>
-                  <p class="topic_txt">
-                    <span>Ахимса и</span> лидерство
-                  </p>
+                  <p class="topic_txt"><span>Ахимса и</span> лидерство</p>
                 </div>
                 <div class="wrap_dd right">
                   <div class="sep_rap">
@@ -895,9 +893,7 @@
                   <div class="topic_img">
                     <img src="assets/Images/course/dove.png" alt="health" />
                   </div>
-                  <p class="topic_txt">
-                    <span>Завершение</span> курса
-                  </p>
+                  <p class="topic_txt"><span>Завершение</span> курса</p>
                 </div>
                 <div class="wrap_dd right">
                   <div class="sep_rap">
@@ -926,10 +922,279 @@
         </div>
       </div>
     </div>
-    <!-- <div class="cs_blank">
-      <div class="cs_container">
-        <p class="titl_lg sm">В результате мы обязательно научимся:</p>
+    <div class="cs_blank">
+      <div class="cs_container sots">
+        <p class="titl_lg sm">Этот курс для тех</p>
+        <div class="main_sot-cont flex">
+          <div class="sots_col-wrp">
+            <div class="sott">
+              <div class="ims_wr">
+                <img class="v_chk" src="assets/Images/course/vv.png" alt="v" />
+                <img
+                  class="wep_wr"
+                  src="assets/Images/course/wep.png"
+                  alt="pic"
+                />
+              </div>
+              <p class="cs_t_bl">
+                кто <span> переживает </span> тяжелые
+                <span>последствия войны</span>
+              </p>
+            </div>
+            <div class="sott">
+              <div class="ims_wr">
+                <img class="v_chk" src="assets/Images/course/vv.png" alt="v" />
+                <img
+                  class="wep_wr"
+                  src="assets/Images/course/strs.png"
+                  alt="pic"
+                />
+              </div>
+              <p class="cs_t_bl">
+                кто <span> переживает стресс </span>и хотел бы выйти из него
+              </p>
+            </div>
+            <div class="sott">
+              <div class="ims_wr">
+                <img class="v_chk" src="assets/Images/course/vv.png" alt="v" />
+                <img
+                  class="wep_wr"
+                  src="assets/Images/course/hth.png"
+                  alt="pic"
+                />
+              </div>
+              <p class="cs_t_bl">кто хочет <span>быть здоровым</span></p>
+            </div>
+          </div>
+          <div class="sots_col-wrp">
+            <div class="sott">
+              <div class="ims_wr">
+                <img class="v_chk" src="assets/Images/course/vv.png" alt="v" />
+                <img
+                  class="wep_wr"
+                  src="assets/Images/course/kly.png"
+                  alt="pic"
+                />
+              </div>
+              <p class="cs_t_bl">у кого<span> есть семья и дети</span></p>
+            </div>
+            <div class="sott">
+              <div class="ims_wr">
+                <img class="v_chk" src="assets/Images/course/vv.png" alt="v" />
+                <img
+                  class="wep_wr"
+                  src="assets/Images/course/hrt.png"
+                  alt="pic"
+                />
+              </div>
+              <p class="cs_t_bl">
+                кто <span>устал от "нелюбви"</span>к себе и другим
+              </p>
+            </div>
+            <div class="sott">
+              <div class="ims_wr">
+                <img class="v_chk" src="assets/Images/course/vv.png" alt="v" />
+                <img
+                  class="wep_wr"
+                  src="assets/Images/course/self.png"
+                  alt="pic"
+                />
+              </div>
+              <p class="cs_t_bl">кого интересует <span>саморазвитие</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="outer_wrap_cs lss">
+          <div class="butt_b_wrap">
+            <div class="header-inner header-inner-button boreder grad xl">
+              <button class="registration-button rd">Присоединиться</button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div> -->
+    </div>
+    <div class="cs_blank rews">
+      <div class="cs_container eres">
+        <p class="titl_lg smm lt">отзывы</p>
+        <p class="titl_eht">
+          Движение «Йоги за мир» существует уже больше года и за это время у нас
+          накопилось более <span>150 отзывов</span> о нашей деятельности, вот
+          некоторые из них:
+        </p>
+        <div class="res_s">
+          <img src="assets/Images/course/res.png" alt="rewiews" />
+        </div>
+        <p class="titl_eht">
+          Также за год мы провели <span>больше 100000 практик</span> и медитаций
+          «За мир»
+        </p>
+      </div>
+    </div>
+    <div class="cs_blank rewsss">
+      <div class="cs_container eres">
+        <p class="titl_lg sm">регистрация</p>
+        <p class="cs_t_bl mgg text-center">
+          Вы можете зарегистрироваться через Телеграм-бот<br />
+          или через классическую форму регистрации
+        </p>
+        <div class="outer_wrap_cs lss relatives">
+          <img src="assets/Images/tel.png" alt="talegramm" />
+          <div class="butt_b_wrap">
+            <div class="header-inner header-inner-button boreder grad xl">
+              <button class="registration-button rd">Регистрация</button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="form-registration-form flex justify-between course"
+          [formGroup]="form"
+          id="registration-form"
+        >
+          <div class="flex formss">
+            <input
+              type="text"
+              class="input-form-gold"
+              placeholder="{{ 'main.name' | translate }}"
+              formControlName="name"
+            />
+            <input
+              type="email"
+              class="input-form-gold"
+              placeholder="e-mail"
+              formControlName="email"
+            />
+          </div>
+          <ngx-intl-tel-input
+            [cssClass]="'custom'"
+            [preferredCountries]="preferredCountries"
+            [enableAutoCountrySelect]="true"
+            [enablePlaceholder]="true"
+            [searchCountryFlag]="true"
+            [searchCountryField]="[
+              SearchCountryField.Iso2,
+              SearchCountryField.Name
+            ]"
+            [selectFirstCountry]="false"
+            [selectedCountryISO]="selectedCountry"
+            [maxLength]="15"
+            [phoneValidation]="true"
+            [separateDialCode]="true"
+            [numberFormat]="PhoneNumberFormat.National"
+            name="phone"
+            formControlName="phone"
+          >
+          </ngx-intl-tel-input>
+        </div>
+        <div class="outer_wrap_cs lss">
+          <div class="butt_b_wrap">
+            <div class="header-inner header-inner-button boreder grad xl">
+              <button class="registration-button rd">Зарегистрироваться</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cs_blank">
+      <div class="cs_container sots bottom">
+        <p class="titl_lg sm">В результате мы получим:</p>
+        <div class="main_sot-cont flex">
+          <div class="sots_col-wrp">
+            <div class="sott">
+              <div class="ims_wr">
+                <img class="v_chk" src="assets/Images/course/vv.png" alt="v" />
+                <img
+                  class="wep_wr"
+                  src="assets/Images/course/heit.png"
+                  alt="pic"
+                />
+              </div>
+              <p class="cs_t_bl">
+                <span>развитие </span> сознания, духовный <span>рост</span>
+              </p>
+            </div>
+            <div class="sott">
+              <div class="ims_wr">
+                <img class="v_chk" src="assets/Images/course/vv.png" alt="v" />
+                <img
+                  class="wep_wr"
+                  src="assets/Images/course/bless.png"
+                  alt="pic"
+                />
+              </div>
+              <p class="cs_t_bl">
+                всеобщее <span>процветание, </span>крепкое
+                <span>здоровье и долголетие</span>
+              </p>
+            </div>
+            <div class="sott">
+              <div class="ims_wr">
+                <img class="v_chk" src="assets/Images/course/vv.png" alt="v" />
+                <img
+                  class="wep_wr"
+                  src="assets/Images/course/artt.png"
+                  alt="pic"
+                />
+              </div>
+              <p class="cs_t_bl">
+                <span>раскрытие </span>всех наших
+                <span>творческих способностей</span>
+              </p>
+            </div>
+          </div>
+          <div class="sots_col-wrp">
+            <div class="sott">
+              <div class="ims_wr">
+                <img class="v_chk" src="assets/Images/course/vv.png" alt="v" />
+                <img
+                  class="wep_wr"
+                  src="assets/Images/course/qw.png"
+                  alt="pic"
+                />
+              </div>
+              <p class="cs_t_bl">
+                новые жизнеобеспечивающие <span>изобретения,</span> развитие
+                <span> квантовых технологий</span>
+              </p>
+            </div>
+            <div class="sott">
+              <div class="ims_wr">
+                <img class="v_chk" src="assets/Images/course/vv.png" alt="v" />
+                <img
+                  class="wep_wr"
+                  src="assets/Images/course/soty.png"
+                  alt="pic"
+                />
+              </div>
+              <p class="cs_t_bl">
+                повышение<span> самоорганизации общества</span>
+              </p>
+            </div>
+            <div class="sott">
+              <div class="ims_wr">
+                <img class="v_chk" src="assets/Images/course/vv.png" alt="v" />
+                <img
+                  class="wep_wr"
+                  src="assets/Images/course/demi.png"
+                  alt="pic"
+                />
+              </div>
+              <p class="cs_t_bl">
+                <span>переход</span> человечества
+                <span>к состоянию Боголюдей</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="lin_cs"></div>
+        <div class="blue_block_cs transp">
+          <p class="cs_dt center">
+            <span>Ведь с ненасилия все только начинается!</span><br />
+            именно здесь мы обретаем внутреннюю <span>СИЛУ</span>, способную
+            изменить мир к лучшему!
+          </p>
+        </div>
+        <div class="lin_cs"></div>
+      </div>
+    </div>
   </div>
 </div>

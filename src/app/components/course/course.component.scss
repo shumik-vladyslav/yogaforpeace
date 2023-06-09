@@ -1,7 +1,24 @@
+@import "../ahimsa/ahimsa.component.scss";
 .cs_shadow {
   max-width: 1640px;
   margin: 0 auto;
   box-shadow: 10px 0px 24px #aba6a6;
   background: url(../../../assets/Images/course/strip2.png);
   background-size: contain;
+}
+.course {
+  .input-form-gold {
+    width: 500px;
+    height: 70px;
+    border-radius: 30px;
+  }
+}
+.formss {
+  justify-content: center;
+}
+ngx-intl-tel-input {
+  margin: 0 25px 0 0 !important;
+}
+.form-registration-form {
+  margin: 120px 0 -30px 0;
 }
