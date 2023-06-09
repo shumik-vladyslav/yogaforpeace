@@ -516,79 +516,416 @@
         </div>
       </div>
     </div>
-    <!-- <div class="cs_blank">
-      <div class="cs_container">
-        <div class="blue_block_cs transp mg-2">
-          <p class="titl_lg sm mar">Что будет на курсе?</p>
-          <p class="dk_cs sm">
-            На курсе мы поделимся опытом практики ненасилия (ахимсы) в различных
-            сферах жизни, таких как:
-          </p>
-          <div class="topics_wrapper">
-            <div class="topic_cs_wrap">
-              <div class="topic_row">
-                <div class="topic_item">
+    <div class="cs_blank">
+      <div class="cs_container padd">
+        <p class="titl_lg smm">программа курса</p>
+        <p class="cs_t_bl mgg text-center">
+          Наша жизнь очень многообразна – поэтому мы предлагаем системный,
+          целостный и многогранный подход трансформации.
+        </p>
+        <p class="cs_fr centered m-0">Присоединяйтесь – будет интересно!</p>
+        <div class="topics_wrapper">
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(1)" class="topic_item">
+                <div class="wrap_dd left">
                   <div class="topic_img">
-                    <img src="assets/Images/course/ansd.png" alt="health" />
+                    <img src="assets/Images/course/str.png" alt="health" />
                   </div>
-                  <p class="topic_txt">«Ахимса <span>к себе</span>»</p>
+                  <p class="topic_txt">старт <span> курса</span></p>
                 </div>
-                <div class="topic_item">
-                  <div class="topic_img">
-                    <img src="assets/Images/course/ansd.png" alt="health" />
-                  </div>>
-                  <p class="topic_txt">«Ахимса <span>в семье</span>»</p>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <p class="dk_center sma">
+                      8<br />
+                      июля
+                    </p>
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[1] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
                 </div>
               </div>
-            </div>
-            <div class="topic_cs_wrap">
-              <div class="topic_row">
-                <div class="topic_item">
-                  <div class="topic_img">
-                    <img src="assets/Images/course/ansd.png" alt="health" />
-                  </div>
-                  <p class="topic_txt">«Ахимса и <span>здоровье</span>»</p>
-                </div>
-                <div class="topic_item">
-                  <div class="topic_img">
-                    <img src="assets/Images/course/ansd.png" alt="health" />
-                  </div>
-                  <p class="topic_txt">«Ахимса и<span> питание</span>»</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="topics_wrapper">
-            <div class="topic_cs_wrap">
-              <div class="topic_row">
-                <div class="topic_item">
-                  <div class="topic_img">
-                    <img src="assets/Images/course/ansd.png" alt="health" />
-                  </div>
-                  <p class="topic_txt">«Ахимса в <span>бизнесе</span>»</p>
-                </div>
-                <div class="topic_item">
-                  <div class="topic_img">
-                    <img src="assets/Images/course/ansd.png" alt="health" />
-                  </div>
-                  <p class="topic_txt">«Ахимса в <span>военное время</span>»</p>
-                </div>
-              </div>
+              <div
+                [ngClass]="hasExpand[1] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
             </div>
           </div>
-          <div class="outer_wrap_cs relative">
-            <div class="butt_b_wrap">
-              <p class="buttfl">
-                <img src="assets/Images/course/Butterfly.png" alt="butterfly" />
-              </p>
-              <div class="header-inner header-inner-button boreder grad xl">
-                <button class="registration-button rd">участвовать</button>
+          <div class="yellw_pl"></div>
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(2)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/ast.png" alt="health" />
+                  </div>
+                  <p class="topic_txt">
+                    <span>Ахимса </span><span class="smal">и</span> астрология
+                  </p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <p class="dk_center sma">
+                      10-12<br />
+                      июля
+                    </p>
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[2] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
               </div>
+              <div
+                [ngClass]="hasExpand[2] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="yellw_pl transpr"></div>
+        <div class="topics_wrapper">
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(3)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/war.png" alt="health" />
+                  </div>
+                  <p class="topic_txt"><span> Ахимса</span> в военное время</p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <p class="dk_center sma">
+                      13-15<br />
+                      июля
+                    </p>
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[3] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[3] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+          <div class="yellw_pl"></div>
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(4)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/hlt.png" alt="health" />
+                  </div>
+                  <p class="topic_txt">
+                    <span>Ахимса </span><span class="smal">и</span> здоровье
+                  </p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <p class="dk_center sma">
+                      17-19<br />
+                      июля
+                    </p>
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[4] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[4] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+          <div class="yellw_pl"></div>
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(5)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/pit.png" alt="health" />
+                  </div>
+                  <p class="topic_txt">
+                    <span>Ахимса </span><span class="smal">и</span> питание
+                  </p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <p class="dk_center sma">
+                      20-22<br />
+                      июля
+                    </p>
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[5] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[5] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="yellw_pl transpr"></div>
+        <div class="topics_wrapper">
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(6)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/fam.png" alt="health" />
+                  </div>
+                  <p class="topic_txt"><span>Ахимса </span>в семье</p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <p class="dk_center sma">
+                      24-26<br />
+                      июля
+                    </p>
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[6] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[6] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+          <div class="yellw_pl"></div>
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(7)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/pc.png" alt="health" />
+                  </div>
+                  <p class="topic_txt">
+                    <span>Ахимса </span>в воспитании<br />
+                    детей
+                  </p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <p class="dk_center sma">
+                      27-29<br />
+                      июля
+                    </p>
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[7] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[7] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+          <div class="yellw_pl"></div>
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(8)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/chess.png" alt="health" />
+                  </div>
+                  <p class="topic_txt">
+                    <span>Ахимса и</span> лидерство
+                  </p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <p class="dk_center sma">
+                      31 июля-<br />
+                      2 августа
+                    </p>
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[8] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[8] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="yellw_pl transpr"></div>
+        <div class="topics_wrapper">
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(9)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/natt.png" alt="health" />
+                  </div>
+                  <p class="topic_txt">
+                    <span>Ахимса </span> к себе<br />
+                    и другим
+                  </p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <p class="dk_center sma">
+                      3-5<br />
+                      августа
+                    </p>
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[9] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[9] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+          <div class="yellw_pl"></div>
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(10)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/nat.png" alt="health" />
+                  </div>
+                  <p class="topic_txt">
+                    <span>Ахимса - </span> путь к<br />
+                    счастью
+                  </p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <p class="dk_center sma">
+                      7<br />
+                      августа
+                    </p>
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[10] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[10] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+          <div class="yellw_pl"></div>
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(11)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/dove.png" alt="health" />
+                  </div>
+                  <p class="topic_txt">
+                    <span>Завершение</span> курса
+                  </p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <p class="dk_center sma">
+                      8<br />
+                      августа
+                    </p>
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[11] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[11] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
             </div>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <!-- <div class="cs_blank">
       <div class="cs_container">
         <p class="titl_lg sm">В результате мы обязательно научимся:</p>

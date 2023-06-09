@@ -7,10 +7,14 @@ import { tns } from "../../../../node_modules/tiny-slider/src/tiny-slider"
   styleUrls: ['./course.component.scss']
 })
 export class CourseComponent implements OnInit {
-
+  hasExpand = {};
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  expand(idx: number) {
+    this.hasExpand[idx] = !this.hasExpand[idx];
   }
 
   ngAfterViewInit() {
