@@ -9,11 +9,25 @@ import { PicturePreviewComponent } from '../picture-preview/picture-preview.comp
 })
 export class ArtContestComponent implements OnInit {
   index: number = 1;
+  video;
+  video1;
   constructor(
     private dialog: MatDialog
-  ) { } 
+  ) {
+   } 
 
   ngOnInit(): void {
+    this.video = document.getElementById("bgvideo");
+    this.video1 = document.getElementById("bgvideot");
+    window.addEventListener("mousemove", (event) => {
+      console.log(event);
+      this.playVid();
+    });
+  }
+
+  playVid() {
+    this.video.play();
+    this.video1.play();
   }
 
   goToURl(url) {
