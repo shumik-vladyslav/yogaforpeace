@@ -6,6 +6,51 @@
   background: url(../../../assets/Images/course/strip2.png);
   background-size: contain;
 }
+.flex-1-4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &.ds {
+    flex-wrap: unset;
+  }
+}
+.h-260 {
+  height: 110px;
+  margin: 30px auto 0 auto;
+  width: 100%;
+}
+.rty {
+  font-size: 1.7em;
+}
+.pb-50 {
+  padding-bottom: 10px;
+}
+.flex.links {
+  display: flex;
+  align-items: center;
+  margin: 0 20px 0 0;
+}
+.title-text {
+  font-family: "Arimo", sans-serif;
+  font-weight: 400;
+  color: #ba7d18;
+  font-size: 42px;
+  line-height: 1.23;
+  text-align: center;
+  width: 100%;
+}
+.b1-4_wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.content-container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
 .course {
   .input-form-gold {
     width: 500px;
@@ -39,4 +84,20 @@ ngx-intl-tel-input {
 }
 .text-center {
   text-align: center;
+}
+@media (max-width: 1260px) {
+  .flex-1-4.ds {
+    flex-direction: column;
+    align-items: center;
+  }
+  .h-260 {
+    margin: 10px auto 0 auto;
+  }
+  .b1-4_wrap {
+    width: 830px;
+    .flex_t {
+      width: 50%;
+      margin-bottom: 15px;
+    }
+  }
 }

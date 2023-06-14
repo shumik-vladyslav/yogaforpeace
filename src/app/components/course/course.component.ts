@@ -22,7 +22,7 @@ export class CourseComponent implements OnInit {
   PhoneNumberFormat = PhoneNumberFormat;
   SearchCountryField = SearchCountryField;
   preferredCountries: CountryISO[] = [CountryISO.UnitedStates, CountryISO.UnitedKingdom];
-  selectedCountry = CountryISO["Ukraine"];
+  selectedCountry = CountryISO["CzechRepublic"];
   routeParams;
   constructor(
     private http: HttpClient,
@@ -48,6 +48,16 @@ export class CourseComponent implements OnInit {
 
   expand(idx: number) {
     this.hasExpand[idx] = !this.hasExpand[idx];
+  }
+
+  goToURl(url) {
+    window.open(url);
+  }
+
+  scrollTo(id): void {
+    const element = document.getElementById(id);
+    const y = element.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
   }
 
   ngAfterViewInit() {

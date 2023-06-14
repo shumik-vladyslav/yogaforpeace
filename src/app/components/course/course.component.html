@@ -9,11 +9,14 @@
                 <img src="assets/Images/course/logo.png" alt="logo" />
               </p>
               <div class="blue_block_cs menus">
-                <p class="head_th">О НАС</p>
-                <p class="head_th">ТЕМЫ ИЗУЧЕНИЯ</p>
-                <p class="head_th">ОTЗЫВЫ</p>
-                <p class="head_th">ФОТО</p>
-                <p class="head_th">КАНАЛ НА YOUTUBE</p>
+                <p (click)="scrollTo('about')" class="head_th">О НАС</p>
+                <p (click)="scrollTo('course')" class="head_th">О КУРСЕ</p>
+                <p (click)="scrollTo('programm')" class="head_th">ПРОГРАММА</p>
+                <p (click)="scrollTo('speakers')" class="head_th">СПИКЕРЫ</p>
+                <p (click)="scrollTo('reviews')" class="head_th">ОTЗЫВЫ</p>
+                <p (click)="scrollTo('register')" class="head_th">
+                  РЕГИСТРАЦИЯ
+                </p>
               </div>
             </div>
           </div>
@@ -67,12 +70,12 @@
                   </div>
                 </div>
               </div>
-              <p class="abs_img">
+              <div class="abs_img">
                 <img src="assets/Images/course/man_happy.png" alt="happy" />
-              </p>
-              <p class="abs_img mdd">
-                <img src="assets/Images/course/happ_md.png" alt="happy" />
-              </p>
+                <p class="mdd">
+                  <img src="assets/Images/course/hap_man.png" alt="happy" />
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -89,7 +92,7 @@
               Как часто нам приходится
               <span>делать то, что мы не выбирали</span>, постоянно жить под
               флагом слов <span>«надо»</span> и <span>«вы должны»</span>, а
-              <span>не следовать зову сердца</span> - состоянию парения и игры.
+              <span>не следовать зову сердца</span> – состоянию парения и игры
             </p>
           </div>
           <div class="contais-item_wrapp">
@@ -100,7 +103,7 @@
               Мы каждый день <span>принуждаем себя</span> делать так-то и не
               делать так-то, <span>подчиняться</span> правилам общества, чужим
               давлеющим мнениям, <span>следовать</span>
-              чьим-то ожиданиям, забывая о своих мечтах.
+              чьим-то ожиданиям, забывая о своих мечтах
             </p>
           </div>
         </div>
@@ -120,20 +123,20 @@
       <img src="assets/Images/course/stat.png" alt="girl" />
     </div>
     <div class="cs_blank stat relative">
-      <div class="cs_container">
+      <div id="about" class="cs_container">
         <p class="titl_lg sm">О КУРСЕ</p>
         <div class="blue_block_cs transp mg-12">
           <p class="cs_t_bl mg text-center">
             Мы – движение «Йоги за мир» практикуем ахимсу
             <span class="xdeb">«жизнь без насилия»</span>
             уже множество лет, опираясь на учения Йоги и Веданты, эффективность
-            которых проверена тысячелетиями.
+            которых проверена тысячелетиями
           </p>
           <p class="cs_t_bl mg text-center">
-            <span class="xdeb">Наш опыт - это жизнь в постоянной практике</span>
+            <span class="xdeb">Наш опыт – это жизнь в постоянной практике</span>
             <span class="xde"> и </span> <span class="xdeb">медитации</span>, и
             мы с удовольствием поделимся тем, как «быть в гармонии с собой и
-            целым миром».
+            целым миром»
           </p>
           <div class="video_wrapper">
             <h1>Video</h1>
@@ -171,7 +174,7 @@
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
                   • <span>Работать или учиться с утра до вечера,</span> потому
-                  что такой распорядок.
+                  что такой распорядок
                 </p>
               </div>
             </div>
@@ -184,7 +187,7 @@
               </div>
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
-                  • <span>Сам решаешь,</span> как распределять свое время.
+                  • <span>Сам решаешь,</span> как распределять свое время
                 </p>
               </div>
             </div>
@@ -194,7 +197,7 @@
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
                   • <span>Жить в семье из-за обязанностей,</span> чувства
-                  приличия или просто привычки.
+                  приличия или просто привычки
                 </p>
               </div>
             </div>
@@ -202,7 +205,7 @@
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
                   • <span>Спешить возвращаться домой,</span> потому что тебя
-                  любят, ценят и понимают.
+                  любят, ценят и понимают
                 </p>
               </div>
             </div>
@@ -212,7 +215,7 @@
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
                   • <span>Ты – самый большой агрессор</span> и критик для себя
-                  самомого.
+                  самомого
                 </p>
               </div>
             </div>
@@ -229,14 +232,14 @@
             <div class="cs_block bl_left">
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
-                  • <span>Подавлять</span> творческий потенциал других.
+                  • <span>Подавлять</span> творческий потенциал других
                 </p>
               </div>
             </div>
             <div class="cs_block bl_right">
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
-                  • <span>Быть вдохновителем</span> и мотиватором людей.
+                  • <span>Быть вдохновителем</span> и мотиватором людей
                 </p>
               </div>
             </div>
@@ -245,7 +248,7 @@
             <div class="cs_block bl_left">
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
-                  • Есть то, что <span>транслируeт реклама.</span>
+                  • Есть то, что <span>транслируeт реклама</span>
                 </p>
               </div>
             </div>
@@ -253,7 +256,7 @@
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
                   • Можешь <span>управлять здоровьем</span> и не ходить по
-                  врачам.
+                  врачам
                 </p>
               </div>
             </div>
@@ -262,14 +265,14 @@
             <div class="cs_block bl_left">
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
-                  • Зарабатывать деньги <span>из под палки.</span>
+                  • Зарабатывать деньги <span>из под палки</span>
                 </p>
               </div>
             </div>
             <div class="cs_block bl_right">
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
-                  • Работать и <span>творить с удовольствием.</span>
+                  • Работать и <span>творить с удовольствием</span>
                 </p>
               </div>
             </div>
@@ -286,7 +289,7 @@
             <div class="cs_block bl_right">
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
-                  • Быть <span>творцом своей судьбы…</span>
+                  • Быть <span>творцом своей судьбы</span>
                 </p>
               </div>
             </div>
@@ -295,7 +298,7 @@
       </div>
     </div>
     <div class="cs_blank">
-      <div class="cs_container">
+      <div id="course" class="cs_container">
         <p class="titl_lg smm">на курсе вы научитесь</p>
         <div class="learn_wrapp">
           <p class="le_img">
@@ -317,7 +320,7 @@
       <div class="craph_tb">
         <div class="cr_wrap-top">
           <p class="tab_head">
-            Обучение на курсе:&nbsp;<span>8 июля - 8 августа</span>
+            Обучение на курсе:&nbsp;<span>8 июля – 8 августа</span>
           </p>
         </div>
         <div class="cr_wrap-cont">
@@ -353,7 +356,7 @@
           </div>
         </div>
       </div>
-      <p class="cs_fr centered">Вход на курс - свободный!</p>
+      <p class="cs_fr centered">Вход на курс – свободный!</p>
       <div class="outer_wrap_cs lss">
         <div class="butt_b_wrap">
           <div class="header-inner header-inner-button boreder grad xl">
@@ -363,42 +366,43 @@
       </div>
     </div>
     <div class="cs_blank sps">
-      <div class="cs_container fxw">
+      <div id="speakers" class="cs_container fxw">
         <div class="sps_wrap">
           <p class="titl_lg smm lt">наши спикеры</p>
           <div class="my-slider">
             <div>
               <div class="inert">
-                <img src="assets/Images/course/mtg.png" alt="logo" />
+                <img src="assets/Images/course/9.png" alt="logo" />
               </div>
-              <div>
+              <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span>Matagi,</span><br />
-                  духовный учитель, Украина
+                  <span>Карма-санньяси Индубваха</span><br />
+                  инструктор йоги и медитации<br />
+                  Тема «Ахимса — путь к счастью»
                 </p>
               </div>
             </div>
             <div>
               <div class="inert">
-                <img src="assets/Images/course/ar.png" alt="happy" />
+                <img src="assets/Images/course/9.png" alt="logo" />
               </div>
-              <div>
+              <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span>Aravindini,</span><br />
-                  духовный учитель, Украина
+                  <span>Карма-санньяси Амрита</span><br />
+                  инструктор йоги и медитации<br />
+                  Тема «Ахимса и духовная практика»
                 </p>
               </div>
             </div>
             <div>
               <div class="inert">
-                <img src="assets/Images/course/gr.png" alt="logo" />
+                <img src="assets/Images/course/10.png" alt="logo" />
               </div>
-              <div>
+              <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span
-                    >Махамандалешвар Шри Гуру Свами Вишнудевананда Гири,</span
-                  ><br />
-                  духовный учитель, Украина
+                  <span>Шри Гуру Свами Вишнудевананда Гири</span><br />
+                  Духовный учитель Пратьякша Адвайты<br />
+                  Тема «Ахимсa и недвойственное видение»
                 </p>
               </div>
             </div>
@@ -406,21 +410,11 @@
               <div class="inert">
                 <img src="assets/Images/course/ad.png" alt="happy" />
               </div>
-              <div>
+              <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span>Advaytavadini,</span><br />
-                  духовный учитель, Украина
-                </p>
-              </div>
-            </div>
-            <div>
-              <div class="inert">
-                <img src="assets/Images/course/mc.png" alt="logo" />
-              </div>
-              <div>
-                <p class="sl_m_wrapp">
-                  <span>Devanatha,</span><br />
-                  духовный учитель, Украина
+                  <span>Махант Адвайтавадини Гири</span><br />
+                  Монахиня, инструктор йоги и медитации<br />
+                  Тема «Ахимса и созерцание»
                 </p>
               </div>
             </div>
@@ -428,59 +422,179 @@
               <div class="inert">
                 <img src="assets/Images/mahshv.png" alt="logo" />
               </div>
-              <div>
+              <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span>Maheshvari,</span><br />
-                  духовный учитель, Украина
+                  <span>Санньяси Махешвари Гири</span><br />
+                  Монахиня, инструктор йоги и медитации<br />
+                  Тема «Ахимса как миссия садху»
                 </p>
               </div>
             </div>
             <div>
               <div class="inert">
-                <img
-                  src="assets/Images/swami-vishnudevananda.jpg"
-                  alt="happy"
-                />
+                <img src="assets/Images/course/9.png" alt="happy" />
               </div>
-              <div>
+              <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span
-                    >Махамандалешвар Шри Гуру Свами Вишнудевананда Гири,</span
-                  ><br />
-                  духовный учитель, Украина
+                  <span>Санньяси Экантини Гири</span><br />
+                  Монахиня, инструктор йоги и медитации<br />
+                  Тема «Ахимса в повседневной жизни. Ганди об ахимсе»
                 </p>
               </div>
             </div>
             <div>
               <div class="inert">
-                <img src="assets/Images/pilot-baba.jpg" alt="logo" />
+                <img src="assets/Images/course/9.png" alt="logo" />
               </div>
-              <div>
+              <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span>Pilot Baba,</span><br />
-                  духовный учитель, Украина
+                  <span>Санньяси Санаткумара</span><br />
+                  Монах, инструктор йоги и медитации<br />
+                  Тема «Ахимса в ведической мифологии, Шри Рамана об ахимсе»
                 </p>
               </div>
             </div>
             <div>
               <div class="inert">
-                <img src="assets/Images/advayta.png" alt="happy" />
+                <img src="assets/Images/course/ar.png" alt="logo" />
               </div>
-              <div>
+              <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span>Advaytevadini,</span><br />
-                  духовный учитель, Украина
+                  <span>Санньяси Аравиндини Гири</span><br />
+                  Монахиня, инструктор йоги и медитации<br />
+                  Тема «Ахимса в Санатана Дхарме»
                 </p>
               </div>
             </div>
             <div>
               <div class="inert">
-                <img src="assets/Images/vishvashaarananda1.jpg" alt="logo" />
+                <img src="assets/Images/course/9.png" alt="happy" />
               </div>
-              <div>
+              <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span>Vishvashaarananda,</span><br />
-                  духовный учитель, Украина
+                  <span>Санньяси Адимата Гири</span><br />
+                  Монахиня, инструктор йоги и медитации<br />
+                  Тема «Ахимса и миссия души»
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/2.png" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Карма-санньяси Зоряна</span><br />
+                  инструктор йоги и медитации<br />
+                  Тема «Ахимса в военное время»
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/6.png" alt="happy" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Карма-санньяси Сарада</span><br />
+                  инструктор йоги и медитации<br />
+                  Тема «Ахимса в воспитании детей и образовании»
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/1.png" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Карма-санньяси Видьягаури</span><br />
+                  инструктор йоги и медитации<br />
+                  Тема «Ахимса и астрология»
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/3.png" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Карма-санньяси Амаранатха и Ниранджана</span><br />
+                  инструкторa йоги и медитации<br />
+                  Тема «Ахимса и здоровье»
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/4.png" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Карма-санньяси Даршани</span><br />
+                  инструктор йоги и медитации<br />
+                  Тема «Ахимса и питание»
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/5.png" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Карма-санньяси Савитри</span><br />
+                  инструктор йоги и медитации<br />
+                  Тема «Ахимса в семье»
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/second-forum/adya.jpg" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Карма-санньяси Адитьяпрабха</span><br />
+                  инструктор йоги и медитации<br />
+                  Тема «Ахимса и бизнес»
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/7.png" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Карма-санньяси Махалакшми</span><br />
+                  инструктор йоги и медитации<br />
+                  Тема «Ахимса и лидерство»
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/9.png" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Карма-санньяси Омкар</span><br />
+                  инструктор йоги и медитации<br />
+                  Тема «Ахимса и самодисциплина садху»
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/mc.png" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Карма-санньяси Дэванатха</span><br />
+                  инструктор йоги и медитации<br />
+                  Тема «Ахимса к себе и другим»
                 </p>
               </div>
             </div>
@@ -508,20 +622,20 @@
         </div>
         <div class="proj_wrp">
           <p class="imh_er">
-            <img src="assets/Images/course/logo.png" alt="logo" />
+            <img src="assets/Images/course/logosm.png" alt="logo" />
           </p>
           <p class="sl_m_wrapp">
-            Петиция "21-й век - международный век ненасилия и состарадания"
+            Петиция "21-й век – международный век ненасилия и состарадания"
           </p>
         </div>
       </div>
     </div>
     <div class="cs_blank">
-      <div class="cs_container padd">
+      <div id="programm" class="cs_container padd">
         <p class="titl_lg smm">программа курса</p>
         <p class="cs_t_bl mgg text-center">
           Наша жизнь очень многообразна – поэтому мы предлагаем системный,
-          целостный и многогранный подход трансформации.
+          целостный и многогранный подход трансформации
         </p>
         <p class="cs_fr centered m-0">Присоединяйтесь – будет интересно!</p>
         <div class="topics_wrapper">
@@ -594,9 +708,7 @@
               ></div>
             </div>
           </div>
-        </div>
-        <div class="yellw_pl transpr"></div>
-        <div class="topics_wrapper">
+          <div class="yellw_pl"></div>
           <div class="topic_cs_wrap">
             <div class="topic_row">
               <div (click)="expand(3)" class="topic_item">
@@ -702,9 +814,7 @@
               ></div>
             </div>
           </div>
-        </div>
-        <div class="yellw_pl transpr"></div>
-        <div class="topics_wrapper">
+          <div class="yellw_pl"></div>
           <div class="topic_cs_wrap">
             <div class="topic_row">
               <div (click)="expand(6)" class="topic_item">
@@ -747,8 +857,7 @@
                     <img src="assets/Images/course/pc.png" alt="health" />
                   </div>
                   <p class="topic_txt">
-                    <span>Ахимса </span>в воспитании<br />
-                    детей
+                    <span>Ахимса </span>в воспитании детей
                   </p>
                 </div>
                 <div class="wrap_dd right">
@@ -809,9 +918,7 @@
               ></div>
             </div>
           </div>
-        </div>
-        <div class="yellw_pl transpr"></div>
-        <div class="topics_wrapper">
+          <div class="yellw_pl"></div>
           <div class="topic_cs_wrap">
             <div class="topic_row">
               <div (click)="expand(9)" class="topic_item">
@@ -819,10 +926,7 @@
                   <div class="topic_img">
                     <img src="assets/Images/course/natt.png" alt="health" />
                   </div>
-                  <p class="topic_txt">
-                    <span>Ахимса </span> к себе<br />
-                    и другим
-                  </p>
+                  <p class="topic_txt"><span>Ахимса </span> к себе и другим</p>
                 </div>
                 <div class="wrap_dd right">
                   <div class="sep_rap">
@@ -856,10 +960,7 @@
                   <div class="topic_img">
                     <img src="assets/Images/course/nat.png" alt="health" />
                   </div>
-                  <p class="topic_txt">
-                    <span>Ахимса - </span> путь к<br />
-                    счастью
-                  </p>
+                  <p class="topic_txt"><span>Ахимса – </span> путь к счастью</p>
                 </div>
                 <div class="wrap_dd right">
                   <div class="sep_rap">
@@ -1014,7 +1115,7 @@
       </div>
     </div>
     <div class="cs_blank rews">
-      <div class="cs_container eres">
+      <div id="reviews" class="cs_container eres">
         <p class="titl_lg smm lt">отзывы</p>
         <p class="titl_eht">
           Движение «Йоги за мир» существует уже больше года и за это время у нас
@@ -1031,7 +1132,7 @@
       </div>
     </div>
     <div class="cs_blank rewsss">
-      <div class="cs_container eres">
+      <div id="register" class="cs_container eres">
         <p class="titl_lg sm">регистрация</p>
         <p class="cs_t_bl mgg text-center">
           Вы можете зарегистрироваться через Телеграм-бот<br />
@@ -1194,6 +1295,64 @@
           </p>
         </div>
         <div class="lin_cs"></div>
+      </div>
+    </div>
+    <div class="content-container flex-1-4 center column">
+      <h3 class="title-text pb-50">{{ "main.contacts" | translate }}</h3>
+      <h4 class="rty">{{ "main.send-info" | translate }}</h4>
+      <div class="flex-1-4 h-260 ds">
+        <div class="b1-4_wrap">
+          <div class="flex_t">
+            <div
+              class="flex links"
+              (click)="goToURl('https://www.instagram.com/yogisforpeace/')"
+            >
+              <img src="assets/Icons/inst.png" alt="" class="social-img big" />
+              <b>{{ "main.follow-life" | translate }}</b>
+            </div>
+          </div>
+          <div class="flex_t">
+            <div
+              class="flex links"
+              (click)="goToURl('https://t.me/yogisforpeace_life')"
+            >
+              <img
+                src="assets/Icons/tgpng.png"
+                alt="telegram"
+                class="social-img big"
+              />
+              <b>{{ "main.read-hews" | translate }}</b>
+            </div>
+          </div>
+        </div>
+        <div class="b1-4_wrap">
+          <div class="flex_t">
+            <div
+              class="flex links"
+              (click)="goToURl('https://t.me/yogisforpeace')"
+            >
+              <img
+                src="assets/Icons/tgpng.png"
+                alt="telegram"
+                class="social-img big"
+              />
+              <b>{{ "main.write-number" | translate }}</b>
+            </div>
+          </div>
+          <div class="flex_t">
+            <div
+              class="flex links"
+              (click)="goToURl('mailto:yogisforpeace1008@gmail.com')"
+            >
+              <img
+                src="assets/Icons/world.png"
+                alt="mail"
+                class="social-img big"
+              />
+              <b>{{ "main.for-cooperation" | translate }}</b>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
