@@ -329,11 +329,15 @@ body {
   }
   &.wht {
     color: #fff;
+    font-family: "Roboto";
   }
 }
 .sps_wrap {
   .cs_tx_tw.lgold {
+    font-family: "Playfair Display" !important;
+    font-size: 3.9em;
     margin: 12px !important;
+    color: #fff;
   }
 }
 .outer_wrap_cs.lss {
@@ -853,7 +857,7 @@ div.abs_img {
   }
 }
 p.titl_eht {
-  font-size: 1.5em;
+  font-size: 2.2em;
   color: #fff;
   font-weight: 400;
   font-family: "Roboto";
@@ -1011,11 +1015,14 @@ p.titl_eht {
     object-fit: cover;
   }
 }
+.sps_wrapp {
+  margin-top: 20px;
+}
 footer.bottom_ {
   background: url(assets/Images/course/unv.png) center no-repeat;
   margin-top: 60px;
   padding: 40px 0;
-  .sps_wrap .cs_tx_tw.lgold {
+  .sps_wrapp .cs_tx_tw.lgold {
     margin: 30px 0 10px 0 !important;
   }
 }
@@ -1182,7 +1189,7 @@ p.dk_center {
   height: fit-content;
 }
 .cs_t_bl {
-  font-size: 1.6em;
+  font-size: 1.8em;
   color: #1a171b;
   font-weight: 400;
   font-family: "Roboto";
@@ -1466,12 +1473,50 @@ p.cs_log {
   width: 10%;
   margin: 0 15px 0 30px !important;
 }
+.res_s-wrap {
+  position: absolute;
+  width: 100px;
+  height: 57.735px;
+  background: red;
+  position: relative;
+}
+.res_s-wrap::before {
+  content: "";
+  top: -28.8675px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 28.8675px solid red;
+}
+.res_s-wrap::after {
+  content: "";
+  bottom: -28.8675px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 28.8675px solid red;
+}
+.res_s {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.res_s_cont {
+  position: relative;
+  display: flex;
+  width: 40%;
+  height: auto;
+}
 .fw_wdth {
   display: flex;
   justify-content: space-around;
   max-width: 85%;
   margin: 0 auto;
-  margin-top: -20px;
+  margin-top: 0;
 }
 .proj_wrp {
   display: flex;
@@ -1491,6 +1536,9 @@ p.cs_log {
 .imh_er {
   width: 50%;
   margin: -5px 5px !important;
+}
+.cs_tx_tw.lgold.mar {
+  margin: 20px auto !important;
 }
 .cs_tx_tw {
   font-size: 2em;
@@ -1606,7 +1654,7 @@ p.cs_log {
 .cs_d_wra {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 30px;
+  margin-bottom: 90px;
   margin-top: -70px;
 }
 .wei-cs_wrap {
@@ -1932,7 +1980,7 @@ ul.l_gen {
     font-size: 3.2em;
   }
   .cs_t_bl {
-    font-size: 1.4em;
+    font-size: 1.6em;
   }
   .cs_t_gn {
     font-size: 1.5em;
@@ -1965,6 +2013,9 @@ ul.l_gen {
   }
   .mp_wrap {
     height: auto;
+  }
+  p.titl_eht {
+    font-size: 1.7em;
   }
   .main_sot-cont .cs_t_bl {
     font-size: 1.6em;

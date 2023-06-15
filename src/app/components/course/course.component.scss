@@ -14,14 +14,21 @@
     flex-wrap: unset;
   }
 }
+.flex_cc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .h-260 {
   height: auto;
-  margin: 30px auto 0 auto;
+  margin: 0 auto;
   width: 100%;
 }
 .flex.links {
   display: flex;
-  color: #fff;
+  font-size: 1.5em;
+  color: #e5bb65;
   align-items: center;
   margin: 0 20px 0 0;
 }
