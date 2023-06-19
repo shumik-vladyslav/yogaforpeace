@@ -14,6 +14,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CourseComponent implements OnInit {
   hasExpand = {};
+  menu: boolean = false;
   form: FormGroup;
   url = "https://vosd.bitrix24.eu/rest/4/idujiuxkvouf7pb9/";
   isSendRegistrationMessage: boolean = false;
@@ -230,4 +231,7 @@ export class CourseComponent implements OnInit {
       });
   }
 
+  showMenu() {
+    this.menu = true;
+  }
 }
