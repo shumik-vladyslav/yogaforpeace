@@ -1068,12 +1068,13 @@ footer.bottom_ {
   font-size: 14px;
   color: #444445;
   font-weight: lighter;
-  font-family: "Roboto";
+  font-family: 'Roboto Flex', sans-serif !important;
   text-align: center;
   margin: 0 !important;
   padding: 7px;
   line-height: 1.2;
   span {
+    font-family: 'Roboto Flex', sans-serif;
     font-weight: 700;
   }
 }
@@ -1836,6 +1837,9 @@ ul.l_gen {
   .wei-cs_wrap {
     padding: 0 30px;
   }
+  .contais_wrapp {
+    margin: -60px auto 0 auto;
+  }
 }
 @media (max-width: 1410px) {
   .cs_container.main {
@@ -2144,7 +2148,7 @@ ul.l_gen {
     width: 49.3%;
   }
   .contais_wrapp {
-    margin: -55px auto 0 auto;
+    margin: -30px auto 0 auto;
   }
   .lin_cs {
     margin: 3em auto;
