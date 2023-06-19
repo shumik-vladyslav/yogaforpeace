@@ -14,6 +14,10 @@
     flex-wrap: unset;
   }
 }
+.burg {
+  display: none;
+  margin-right: 20px;
+}
 .flex_cc {
   display: flex;
   align-items: center;
@@ -24,6 +28,9 @@
   height: auto;
   margin: 0 auto;
   width: 100%;
+}
+.grrl_md {
+  display: none;
 }
 .flex.links {
   display: flex;
@@ -51,6 +58,11 @@
     border-radius: 30px;
   }
 }
+.craph_tb {
+  &.vis {
+    display: none;
+  }
+}
 .formss {
   justify-content: center;
 }
@@ -68,6 +80,61 @@ ngx-intl-tel-input {
 }
 .relative {
   position: relative;
+}
+.menu_wrap {
+  position: relative;
+  top: -450px;
+  transition: 0.5s;
+  height: 0;
+  .header-inner.header-inner-text {
+    color: transparent;
+  }
+  .cs_log {
+    display: none;
+  }
+}
+.x {
+  right: 15px;
+  font-size: 35px;
+}
+.hide_dd {
+  display: none;
+}
+.head_wrap_cor {
+  display: none;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background: #0000;
+  margin: 0 auto;
+  transition: all 0.5s;
+  p.cs_log {
+    width: 70px;
+    height: 70px;
+    margin: 15px;
+  }
+  &.show {
+    background-color: #fff;
+    box-shadow: 0 1px 7px #000;
+    height: auto;
+    transition: all 0.5s;
+    .menu_wrap {
+      top: 0;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px auto 20px auto;
+      height: auto;
+      .header-inner.header-inner-text {
+        color: #000;
+      }
+    }
+    .cs_log {
+      display: flex;
+    }
+  }
+}
+.mn_ag_wrap {
+  display: none;
 }
 .justify-between {
   justify-content: space-between;
@@ -92,5 +159,282 @@ ngx-intl-tel-input {
       width: 50%;
       margin-bottom: 15px;
     }
+  }
+}
+@media (max-width: 1000px) {
+  .cs_subhead {
+    margin-top: 30px !important;
+    margin-bottom: -10px !important;
+  }
+  .cs_d_wra {
+    justify-content: space-around;
+    margin-bottom: 30px;
+    margin-top: -50px;
+  }
+  .cs_fr.centered {
+    margin-top: 1em !important;
+  }
+  .outer_wrap_cs.lss {
+    margin: 2em auto 0 auto;
+    scale: 0.9;
+  }
+}
+@media (max-width: 900px) {
+  .cs_block {
+    padding: 10px 15px 10px 15px;
+  }
+  .burg {
+    display: flex;
+  }
+  .head_wrap_cor {
+    display: block;
+  }
+  .cs_dt span {
+    line-height: 1.2;
+  }
+  .video_wrapper {
+    width: 90%;
+  }
+  .craph_tb {
+    max-width: 95%;
+  }
+}
+@media (max-width: 786px) {
+  .couse_st.hide_dd {
+    font-size: 2em;
+    display: flex;
+    margin: 35px 0 50px;
+    width: fit-content;
+  }
+  .cs_right_cont.absolute {
+    position: relative;
+  }
+  div.abs_img {
+    margin: -40% 0 0 0;
+  }
+  .cs_container.main {
+    background-size: auto;
+  }
+  .mdd {
+    right: 1%;
+    max-width: 37%;
+    bottom: 10%;
+    z-index: -1;
+  }
+  p.dk_center {
+    font-size: 2em;
+  }
+}
+@media (max-width: 630px) {
+  .craph_tb {
+    border-radius: 17px;
+  }
+  .cr_wrap-top {
+    padding: 15px 0 5px 0;
+    border-bottom: 2px solid #b88214;
+  }
+  .cr_wrap-cont {
+    padding: 15px 12px 20px 12px;
+  }
+  .cr_wrap-content {
+    margin-top: 15px;
+  }
+  .cs_d_wra {
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .video_wrapper {
+    height: 210px;
+  }
+  div.abs_img {
+    margin: -48% 0 0 0;
+  }
+  .mg-12 {
+    margin-top: 20px;
+  }
+  .cs_t_bl {
+    font-size: 1.3em;
+  }
+  .wei-cs_wrap {
+    display: none;
+  }
+  .mn_ag_wrap {
+    display: flex;
+    justify-content: center;
+  }
+  .cs_subhead {
+    span {
+      color: #fef49b;
+    }
+  }
+  .cs_d_wra {
+    .cs_tx_tw {
+      font-size: 2em;
+    }
+    .cs_tx_tw.blf {
+      font-size: 2em;
+      color: #58585a;
+    }
+  }
+  .cs_blank.waves {
+    background: url(../../../assets/Images/course/wwa.png) top center;
+    background-repeat: no-repeat;
+    background-size: 100% 77%;
+    margin-top: -150px;
+    padding-top: 140px;
+    padding-bottom: 20px;
+  }
+  .craph_tb {
+    &.hid {
+      display: none;
+    }
+    &.vis {
+      display: flex;
+      flex-direction: column;
+      max-width: 92%;
+      margin-bottom: 20px;
+      border-radius: 23px;
+      .cs_block_top {
+        align-items: center;
+      }
+      .cs_block {
+        width: 100%;
+        border: none;
+        padding: 12px 20px;
+      }
+    }
+  }
+  .cr_wrap-tx {
+    font-size: 1.1em;
+    width: 100%;
+  }
+  .cr_wrap_wrapper:before {
+    content: "";
+    background: url("../../../assets/Images/course/vv.png");
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+    display: block;
+    margin-right: 8px;
+  }
+  .cs_fr.centered {
+    font-size: 1.2em;
+  }
+  .outer_wrap_cs.lss {
+    margin: 1em auto 0 auto;
+    scale: 0.7;
+  }
+}
+@media (max-width: 530px) {
+  .header-inner.header-inner-button.boreder.grad button.rd {
+    font-size: 1.7em;
+    padding: 0 45px;
+  }
+  .cs_d_wra .cs_tx_tw.blf {
+    font-size: 1.6em;
+  }
+  .cs_d_wra .cs_tx_tw {
+    font-size: 1.6em;
+  }
+  .craph_tb.vis .sml_wr {
+    width: 14%;
+    margin: 0 15px 0 -10px !important;
+  }
+  .craph_tb.vis .cs_block_top {
+    padding: 0 10px;
+  }
+  .grrl {
+    display: none;
+  }
+  .grrl_md {
+    display: block;
+  }
+  p.dk_center {
+    font-size: 1.5em;
+  }
+  .cs_right_cont {
+    max-width: 95%;
+  }
+  .cs_fr:not(.centerd) {
+    font-size: 1em;
+  }
+  .cs_left_cont {
+    margin-top: 0;
+  }
+  .outer_wrap_cs.relative.lft {
+    scale: 1;
+    margin: 0 auto;
+  }
+  .mdd {
+    right: -1%;
+    max-width: 60%;
+    bottom: -20%;
+  }
+  div.abs_img {
+    margin: -45% 0 0 0;
+    padding-top: 12%;
+  }
+}
+@media (max-width: 470px) {
+  .mdd {
+    right: -18%;
+    max-width: 75%;
+    bottom: -18%;
+  }
+  div.abs_img {
+    margin: -58% 0 0 0;
+    padding-top: 35%;
+  }
+  .cs_subhead {
+    font-size: 1.6em;
+  }
+}
+@media (max-width: 400px) {
+  .cs_blank.waves {
+    padding-bottom: 0px;
+  }
+  .mdd {
+    max-width: 69%;
+    bottom: -6%;
+  }
+  .titl_lg.mg {
+    font-size: 2.5em;
+  }
+  .srt_tx {
+    font-size: 1em;
+  }
+  .outer_wrap_cs.relative.lft {
+    scale: 0.7;
+    margin-left: -15px;
+  }
+  .cs_t_bl {
+    font-size: 1.3em;
+  }
+  .header-inner.header-inner-button.boreder.grad button.rd {
+    font-size: 1.5em;
+    padding: 0 40px;
+  }
+}
+@media (max-width: 330px) {
+  .craph_tb.vis .cs_block {
+    padding: 10px 15px;
+  }
+  .outer_wrap_cs.relative.lft {
+    scale: 0.6;
+    margin-left: -35px;
+  }
+  .couse_st.hide_dd {
+    font-size: 2em;
+    margin: 20px 0 30px;
+  }
+  .srt_tx {
+    font-size: 0.8em;
+  }
+  div.abs_img {
+    padding-top: 25%;
+  }
+  .mdd {
+    max-width: 61%;
   }
 }

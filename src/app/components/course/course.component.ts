@@ -16,6 +16,7 @@ export class CourseComponent implements OnInit {
   hasExpand = {};
   menu: boolean = false;
   form: FormGroup;
+  less: boolean = false;
   url = "https://vosd.bitrix24.eu/rest/4/idujiuxkvouf7pb9/";
   isSendRegistrationMessage: boolean = false;
   lan: string = 'ru';
@@ -31,6 +32,9 @@ export class CourseComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router: Router
   ) {
+    if (window.innerWidth <= 1000) {
+      this.less = true;
+    }
     this.form = new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -62,13 +66,23 @@ export class CourseComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    tns({
-      "container": '.my-slider',
-      "items": 5,
-      "arrowKeys": true,
-      "swipeAngle": false,
-      "speed": 400
-    });
+    if (window.innerWidth > 1000) {
+      tns({
+        "container": '.my-slider',
+        "items": 5,
+        "arrowKeys": true,
+        "swipeAngle": false,
+        "speed": 400
+      });
+    } else {
+      tns({
+        "container": '.my-slider',
+        "items": 3,
+        "arrowKeys": true,
+        "swipeAngle": false,
+        "speed": 400
+      });
+    }
   }
 
   sendRegistration() {
