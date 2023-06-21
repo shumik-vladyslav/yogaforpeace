@@ -30,6 +30,7 @@
     "intl-tel-input": "^17.0.3",
     "ngx-bootstrap": "^6.2.0",
     "ngx-intl-tel-input": "^3.2.0",
+    "ngx-useful-swiper": "^10.0.1",
     "node-sass": "^8.0.0",
     "rxjs": "~6.6.0",
     "tiny-slider": "^2.9.4",

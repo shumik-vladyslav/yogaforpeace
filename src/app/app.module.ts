@@ -33,6 +33,8 @@ import {MatSelectModule} from '@angular/material/select';
 import { ArtContestComponent } from './components/art-contest/art-contest.component';
 import { CourseComponent } from './components/course/course.component';
 import { PicturePreviewComponent } from './components/picture-preview/picture-preview.component';
+import { VideoDialogComponent } from './components/video-dialog/video-dialog.component';
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -57,9 +59,11 @@ export function createTranslateLoader(http: HttpClient) {
     ArtContestComponent,
     CourseComponent,
     PicturePreviewComponent,
+    VideoDialogComponent,
   ],
   imports: [
     BrowserModule,
+    NgxUsefulSwiperModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

@@ -6,6 +6,9 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { CountryISO, PhoneNumberFormat, SearchCountryField } from 'ngx-intl-tel-input';
 import { FormMessage } from '../main-page/main-page.component';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { VideoDialogComponent } from '../video-dialog/video-dialog.component';
+import { SwiperOptions } from 'swiper';
 
 @Component({
   selector: 'app-course',
@@ -26,11 +29,24 @@ export class CourseComponent implements OnInit {
   preferredCountries: CountryISO[] = [CountryISO.UnitedStates, CountryISO.UnitedKingdom];
   selectedCountry = CountryISO["CzechRepublic"];
   routeParams;
+  // @HostListener('window:resize') onResize() {}
+  config: SwiperOptions = {
+    pagination: { 
+      el: '.swiper-pagination', 
+      clickable: true 
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    spaceBetween: 30
+  };  
   constructor(
     private http: HttpClient,
     private angularFirestore: AngularFirestore,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private dialog: MatDialog,
   ) {
     if (window.innerWidth <= 1000) {
       this.less = true;
@@ -42,12 +58,28 @@ export class CourseComponent implements OnInit {
     });
   }
 
+  showVideo(url: string) {
+    this.dialog.open(VideoDialogComponent, {
+      width: 'auto',
+      height: 'auto',
+      data: url,
+      panelClass: "no-resize"
+    });
+  }
+
   ngOnInit(): void {
+    if (tns.length) {
+      tns({
+        "container": '.my-slider-mob',
+        items: 3,
+        "arrowKeys": true,
+        "swipeAngle": false,
+        "speed": 400
+      });
+    }
     this.activatedRoute.queryParams.subscribe((params) => {
       console.log(params);
       this.routeParams = params;
-      // const userId = params['userId'];
-      // console.log(userId);
     });
   }
 
@@ -66,18 +98,12 @@ export class CourseComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    if (window.innerWidth > 1000) {
-      tns({
-        "container": '.my-slider',
-        "items": 5,
-        "arrowKeys": true,
-        "swipeAngle": false,
-        "speed": 400
-      });
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && window.innerWidth <= 1000) {
+      console.log('mobile'); 
     } else {
       tns({
         "container": '.my-slider',
-        "items": 3,
+        "items": 5,
         "arrowKeys": true,
         "swipeAngle": false,
         "speed": 400

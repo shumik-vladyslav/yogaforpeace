@@ -254,7 +254,7 @@ export class MainPageComponent implements OnInit {
     console.log(this.form);
   }
   openDialog(e) {
-    const dialogRef = this.dialog.open(NewsPageComponent, {
+    this.dialog.open(NewsPageComponent, {
       width: '80vw',
       maxHeight: AUTO_STYLE,
       data: { dialog: true, new: e },
