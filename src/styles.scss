@@ -235,6 +235,9 @@ ngx-intl-tel-input input[disabled] {
 input::-ms-clear {
   display: none;
 }
+.swiper-pagination-bullet-active {
+  background: #af8632 !important;
+}
 .mat-dialog-container {
   padding: 0 !important;
 }
