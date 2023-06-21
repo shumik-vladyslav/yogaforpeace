@@ -31,16 +31,12 @@ export class CourseComponent implements OnInit {
   routeParams;
   // @HostListener('window:resize') onResize() {}
   config: SwiperOptions = {
-    pagination: { 
-      el: '.swiper-pagination', 
-      clickable: true 
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
     },
     spaceBetween: 30
-  };  
+  };
   constructor(
     private http: HttpClient,
     private angularFirestore: AngularFirestore,
@@ -56,6 +52,14 @@ export class CourseComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.email]),
       phone: new FormControl('', [Validators.required]),
     });
+  }
+
+  mouseEnter(clas: string) {
+    document.getElementById("rewiew-wrp" + clas).classList.add(clas);
+  }
+
+  mouseLeave(clas: string) {
+    document.getElementById("rewiew-wrp" + clas).classList.remove(clas);
   }
 
   showVideo(url: string) {
@@ -99,7 +103,7 @@ export class CourseComponent implements OnInit {
 
   ngAfterViewInit() {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && window.innerWidth <= 1000) {
-      console.log('mobile'); 
+      console.log('mobile');
     } else {
       tns({
         "container": '.my-slider',
