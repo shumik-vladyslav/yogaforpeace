@@ -9,6 +9,9 @@
     max-height: 1020px;
   }
 }
+.flex_d {
+  display: flex;
+}
 .header_cs {
   &.shw {
     display: block;
@@ -16,6 +19,14 @@
   &.hid {
     display: none;
   }
+}
+@media (max-width: 1410px) {
+  // .outer_wrap.back {
+  //   background: url(../../../assets/Images/artmob.jpg);
+  //   background-repeat: round;
+  //   padding: 0 0 20px 0;
+  //   height: 100%;
+  // }
 }
 @media (max-width: 900px) {
   .bn_gr {
