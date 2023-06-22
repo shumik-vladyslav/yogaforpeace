@@ -35,7 +35,8 @@
 .flex.links {
   display: flex;
   font-size: 1.5em;
-  color: #e5bb65;
+  font-family: "Playfair Display";
+  color: #fff;
   align-items: center;
   margin: 0 20px 0 0;
 }
@@ -46,6 +47,8 @@
 }
 .content-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
   justify-content: center;
   margin-bottom: 20px;
@@ -85,6 +88,17 @@
     height: 50px;
     width: 60px;
     margin: 0 -11px 2px 0 !important;
+  }
+}
+.rewss {
+  .add_info .ply {
+    height: 33px;
+    width: 33px;
+    margin: 0 -11px -5px 0 !important;
+  }
+  .tre {
+    font-size: 7px;
+    line-height: 8px;
   }
 }
 .swipe_program {
@@ -461,6 +475,24 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 1000px) {
+  .b1-4_wrap {
+    width: auto;
+    flex-direction: column;
+    .flex_t {
+      width: auto;
+    }
+  }
+  .flex_cc {
+    .sps_wrapp {
+      margin-top: 5px;
+    }
+  }
+  footer.bottom_ .sps_wrapp .cs_tx_tw.lgold {
+    margin: 15px 0 10px 0 !important;
+  }
+  .main_sot-cont .cs_t_bl {
+    font-size: 1.4em;
+  }
   .cs_subhead {
     margin-top: 30px !important;
     margin-bottom: -10px !important;
@@ -479,6 +511,38 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 900px) {
+  .cs_blank.rewsss {
+    padding: 25px 0;
+    .course .input-form-gold {
+      max-width: 500px;
+      width: 100%;
+      height: 60px;
+      border-radius: 20px;
+    }
+  }
+  p.mgg {
+    font-size: 1.4em;
+    margin: 18px 6%;
+  }
+  .input-form-gold {
+    margin: 0 10px;
+  }
+  .form-registration-form {
+    margin: 50px 0 -25px 0;
+  }
+  .main_sot-cont .cs_t_bl {
+    width: 60%;
+    margin: 0 15px 0 20px;
+  }
+  .topics_wrapper {
+    width: 95%;
+  }
+  .main_sot-cont {
+    max-width: 95%;
+  }
+  .v_chk {
+    display: none;
+  }
   .cs_block {
     padding: 10px 15px 10px 15px;
   }
@@ -499,6 +563,51 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 786px) {
+  .fw_wdth {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .proj_wrp {
+      width: 320px;
+      min-height: 85px;
+      .imh_er {
+        width: 32%;
+        margin: 5px 7px !important;
+        img {
+          max-width: 90%;
+        }
+      }
+    }
+  }
+  footer.bottom_ {
+    margin-top: 45px;
+    padding: 10px 0;
+    .sps_wrapp .cs_tx_tw.lgold {
+      margin: 15px 15px 22px 15px !important;
+    }
+  }
+  .sott {
+    flex-direction: column;
+    min-height: 160px;
+    margin: 15px 0 0 0;
+  }
+  .sots_col-wrp {
+    width: 49%;
+  }
+  .cs_container.sots.bottom .wep_wr {
+    width: auto;
+  }
+  .ims_wr {
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  .main_sot-cont .cs_t_bl {
+    width: auto;
+    margin: 0 15px;
+    text-align: center;
+  }
   .couse_st.hide_dd {
     font-size: 2em;
     display: flex;
@@ -524,7 +633,30 @@ ngx-intl-tel-input {
     font-size: 2em;
   }
 }
+@media (max-width: 701px) {
+  .res_s {
+    position: unset;
+    display: block;
+  }
+  .hide_sev {
+    display: none !important;
+  }
+  .rews {
+    position: relative;
+    p.titl_eht {
+      font-size: 1.4em;
+    }
+    .rewiew_wrp {
+      width: 50%;
+      top: 50%;
+      transform: translate(-50%, 30%);
+    }
+  }
+}
 @media (max-width: 660px) {
+  .cs_container.sots:not(.bottom) {
+    padding-top: 200px;
+  }
   .swipe_program {
     display: block;
     .socv {
@@ -550,6 +682,11 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 630px) {
+  .fw_wdth .proj_wrp {
+    width: 320px;
+    max-height: 70px;
+    min-height: unset;
+  }
   .swipe_program .topic_img {
     max-width: 44%;
     margin: 0;
@@ -657,6 +794,28 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 530px) {
+  .rews {
+    .rew_text {
+      font-size: 12px;
+      line-height: 1.2;
+      &.nm {
+        font-size: 17px;
+      }
+    }
+  }
+  .flex.links {
+    font-size: 1.3em;
+    margin: 0 10px 0 0;
+  }
+  .not_re {
+    border: 3px solid #beb8b8;
+    padding: 10px 10px 20px 10px;
+  }
+  .bottom {
+    .main_sot-cont .cs_t_bl {
+      font-size: 1.1em;
+    }
+  }
   .header-inner.header-inner-button.boreder.grad button.rd {
     font-size: 1.7em;
     padding: 0 45px;
@@ -707,6 +866,18 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 500px) {
+  p.yello {
+    margin: 1em 0;
+  }
+  p.yello.b {
+    margin: 1em 0 0 0;
+  }
+  .titl_lg.smm.lt.ff {
+    font-size: 1.5em;
+  }
+  .form-registration-form {
+    margin: 15px 0 -25px 0;
+  }
   .swipe_program .pl_content.expanded {
     margin: -120px 20px 40px 20px;
   }
@@ -720,6 +891,27 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 470px) {
+  p.mgg {
+    font-size: 1em;
+  }
+  .main_sot-cont .cs_t_bl {
+    font-size: 1.2em;
+  }
+  .ims_wr {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 12px;
+  }
+  .cs_container.sots:not(.bottom) {
+    padding-top: 170px;
+    padding-bottom: 1em;
+  }
+  .cs_container.sots .outer_wrap_cs.lss {
+    margin: 1em auto 0 auto;
+  }
+  .sott {
+    min-height: 140px;
+  }
   .swipe_program .topic_img {
     max-width: 54%;
   }
@@ -746,6 +938,21 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 400px) {
+  .flex.links {
+    font-size: 1em;
+  }
+  .fw_wdth .proj_wrp {
+    width: 100%;
+    .imh_er img {
+      max-width: 70%;
+    }
+  }
+  .cs_blank.rewsss {
+    .course .input-form-gold {
+      height: 45px;
+      border-radius: 12px;
+    }
+  }
   .swipe_program .socv {
     font-size: 12px;
     margin-bottom: 8px !important;
@@ -792,6 +999,29 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 350px) {
+  footer.bottom_ .sps_wrapp .cs_tx_tw.lgold {
+    margin: 2px 15px 0 15px !important;
+  }
+  .cs_tx_l {
+    font-size: 1.3em;
+    margin: 0 !important;
+  }
+  .cs_tx_tw.rrr {
+    font-size: 1.3em;
+  }
+  .main_sot-cont .cs_t_bl {
+    font-size: 1em;
+  }
+  .ims_wr {
+    width: 50px;
+    height: 50px;
+  }
+  .sott {
+    min-height: 120px;
+  }
+  .main_sot-cont .cs_t_bl {
+    margin: 0 5px;
+  }
   .swipe_program .topic_item {
     height: 80px;
   }
@@ -805,6 +1035,13 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 330px) {
+  footer.bottom_ {
+    .social-img {
+      height: 18px;
+      width: 18px;
+      margin: 7px 6px 0 0;
+    }
+  }
   .craph_tb.vis .cs_block {
     padding: 10px 15px;
   }

@@ -20,6 +20,7 @@ export class CourseComponent implements OnInit {
   menu: boolean = false;
   form: FormGroup;
   less: boolean = false;
+  mobile: boolean = false;
   url = "https://vosd.bitrix24.eu/rest/4/idujiuxkvouf7pb9/";
   isSendRegistrationMessage: boolean = false;
   lan: string = 'ru';
@@ -46,6 +47,9 @@ export class CourseComponent implements OnInit {
   ) {
     if (window.innerWidth <= 1000) {
       this.less = true;
+    }
+    if (window.innerWidth <= 700) {
+      this.mobile = true;
     }
     this.form = new FormGroup({
       name: new FormControl('', Validators.required),
@@ -75,6 +79,13 @@ export class CourseComponent implements OnInit {
     if (tns.length) {
       tns({
         "container": '.my-slider-mob',
+        items: 3,
+        "arrowKeys": true,
+        "swipeAngle": false,
+        "speed": 400
+      });
+      tns({
+        "container": '.my-slider-mob-rewiews',
         items: 3,
         "arrowKeys": true,
         "swipeAngle": false,
