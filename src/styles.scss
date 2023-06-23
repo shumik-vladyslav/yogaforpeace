@@ -342,8 +342,15 @@ body {
   }
   &.wht {
     color: #fff;
-    font-family: "Roboto";
+    font-family: "Roboto" !important;
   }
+}
+.sub_ph_tx {
+  font-size: 20px;
+  color: #af8632;
+  font-weight: 700;
+  font-family: "Roboto";
+  text-align: center;
 }
 .sps_wrap {
   .cs_tx_tw.lgold {
@@ -378,7 +385,7 @@ body {
   font-size: 1.7em;
   color: #434344;
   font-weight: 400;
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
   margin: 0 0 8px 0 !important;
   line-height: 1;
   span {
@@ -418,7 +425,7 @@ body {
   text-transform: uppercase;
   color: #af8632;
   font-weight: 400;
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
   text-align: center;
   span {
     font-size: 1em;
@@ -777,7 +784,7 @@ div.abs_img {
   font-size: 1.5em;
   color: #414143;
   font-weight: 400;
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
   line-height: 1.3;
   span {
     font-size: 1em;
@@ -832,7 +839,7 @@ div.abs_img {
         font-size: 2em;
         color: #fff;
         font-weight: 500;
-        font-family: "Roboto";
+        font-family: "Roboto" !important;
         border-radius: 40px;
         width: auto;
         padding: 0 50px;
@@ -875,7 +882,7 @@ p.titl_eht {
   font-size: 2.2em;
   color: #fff;
   font-weight: 400;
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
   text-align: center;
   line-height: 1.2;
   margin: 2% 0;
@@ -1055,7 +1062,7 @@ p.titl_eht {
   height: 337px;
   .inert {
     width: 100%;
-    height: 260px;
+    height: 230px;
   }
   img {
     height: 100%;
@@ -1067,7 +1074,7 @@ p.titl_eht {
   margin-top: 20px;
 }
 footer.bottom_ {
-  background: url(assets/Images/course/unv.png) center no-repeat;
+  background: url(assets/Images/course/unvb.png) center no-repeat;
   margin-top: 60px;
   padding: 40px 0;
   .sps_wrapp .cs_tx_tw.lgold {
@@ -1196,7 +1203,7 @@ p.dk_center {
   color: #58585a;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
   text-align: center;
   margin-bottom: 0.5em;
   line-height: 1.2;
@@ -1213,7 +1220,7 @@ p.dk_center {
   font-size: 2em;
   color: #b88214;
   font-weight: 400;
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
   line-height: 1;
   span {
     font-size: 1em;
@@ -1231,7 +1238,7 @@ p.dk_center {
   font-size: 1.6em;
   color: #af8632;
   font-weight: 700;
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
   text-align: center;
   margin: 0 !important;
   line-height: 1.1;
@@ -1241,7 +1248,7 @@ p.dk_center {
   text-transform: uppercase;
   color: #1a171b;
   font-weight: 400;
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
   line-height: 1.2;
 }
 .couse_st {
@@ -1255,24 +1262,24 @@ p.dk_center {
   font-size: 1.8em;
   color: #1a171b;
   font-weight: 400;
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
   line-height: 1.2;
   span {
     color: #1a171b;
     font-weight: 700;
-    font-family: "Roboto";
+    font-family: "Roboto" !important;
     line-height: 1.2;
   }
   span.xdeb {
     text-transform: uppercase;
     color: #af8632;
-    font-family: "Roboto";
+    font-family: "Roboto" !important;
     line-height: 1.2;
   }
   span.xde {
     text-transform: none;
     color: #af8632;
-    font-family: "Roboto";
+    font-family: "Roboto" !important;
     line-height: 1.2;
   }
 }
@@ -1303,7 +1310,7 @@ p.head_th {
   font-size: 16px;
   color: #fff;
   font-weight: 400;
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
   text-align: center;
   margin: 0;
   cursor: pointer;
@@ -1402,13 +1409,13 @@ p.topic_txt {
   text-transform: uppercase;
   color: #af8632;
   font-weight: 700;
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
   span {
     font-size: 1em;
     line-height: 1.3;
     color: #af8632;
     font-weight: 400;
-    font-family: "Roboto";
+    font-family: "Roboto" !important;
   }
   span.smal {
     text-transform: lowercase;
@@ -1419,46 +1426,55 @@ p.topic_txt {
   position: relative;
   z-index: 1;
 }
-.yellw_pl {
-  position: relative;
-  z-index: 0;
-  height: 100px;
-  width: 97%;
-  margin: 0 auto;
-  background: #fff;
-  filter: drop-shadow(0.279px -3.99px 13px rgba(71, 72, 74, 0.34));
-  &.hide {
-    height: 0;
-  }
-}
 .pl_content {
+  display: flex;
+  justify-content: space-between;
   position: relative;
   display: flex;
   z-index: 0;
-  max-height: 0;
+  max-height: 100px;
   width: 97%;
   margin: 0 auto;
   background: #fff;
   filter: drop-shadow(0.279px -3.99px 13px rgba(71, 72, 74, 0.34));
   padding: 0;
+  transition: all 0.5s ease-in;
+  .plash {
+    transition: all 0.5s ease-in;
+    opacity: 0;
+  }
   &.expanded {
+    .plash {
+      transition: all 0.5s ease-in;
+      opacity: 1;
+    }
     max-height: 10000px;
     transition: max-height 0.5s ease-in;
     padding: 6em 3em;
   }
 }
+.img_ch_wrap {
+  max-width: 200px;
+  margin: 0 auto 20px !important;
+}
 .plash {
   width: 70%;
   &.tt {
-    width: 30%;
+    width: 27%;
+  }
+}
+.pl_content {
+  .socv {
+    font-weight: 700;
   }
 }
 .socv {
-  font-size: 22px;
+  font-size: 2em;
+  line-height: 1.1;
   color: #58585a;
   font-weight: 400;
-  font-family: "Roboto";
-  margin-bottom: 20px !important;
+  font-family: "Roboto" !important;
+  margin-bottom: 32px !important;
 }
 .topics_wrapper {
   margin: 80px auto;
@@ -1488,7 +1504,7 @@ p.topic_txt {
   line-height: 1;
   color: #000;
   font-weight: 400;
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
   text-align: center;
   &.cap {
     font-size: 1.6em;
@@ -1613,14 +1629,14 @@ p.cs_log {
   margin: 20px auto !important;
 }
 .cs_tx_tw.lgold.rrr {
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
 }
 .cs_tx_tw {
   font-size: 2em;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
   text-align: center;
   line-height: 1.2;
   &.gold {
@@ -1709,12 +1725,12 @@ p.cs_log {
   font-size: 1.6em;
   color: #0a0a10;
   font-weight: 400;
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
   line-height: 1.2;
   margin: 0 !important;
   span {
     font-weight: 700;
-    font-family: "Roboto";
+    font-family: "Roboto" !important;
     line-height: 1.2;
   }
 }
@@ -1740,13 +1756,13 @@ p.cs_log {
   text-transform: uppercase;
   color: #fff;
   font-weight: 700;
-  font-family: "Roboto";
+  font-family: "Roboto" !important;
   text-align: center;
   line-height: 1;
   margin-top: 40px !important;
   margin-bottom: -80px !important;
   span {
-    font-family: "Roboto";
+    font-family: "Roboto" !important;
     color: #172983;
     line-height: 1;
     font-weight: 700;
@@ -1842,9 +1858,6 @@ ul.l_gen {
   p.topic_txt {
     font-size: 1.9em;
   }
-  .sl_m_wrapp {
-    font-size: 12px;
-  }
   .proj_wrp .sl_m_wrapp {
     font-size: 13px;
   }
@@ -1888,16 +1901,11 @@ ul.l_gen {
   }
 }
 @media (max-width: 1510px) {
+  .sl_m_wrapp {
+    font-size: 14px;
+  }
   p.topic_txt {
     font-size: 1.8em;
-  }
-  .pr {
-    .sl_m_wrapp {
-      font-size: 12px;
-    }
-  }
-  .sl_m_wrapp {
-    font-size: 11px;
   }
   .cs_container.fxw {
     max-width: 98%;
@@ -1955,8 +1963,11 @@ ul.l_gen {
       max-width: 60%;
     }
   }
-  .yellw_pl {
-    height: 80px;
+  .pl_content {
+    max-height: 80px;
+    &.expanded {
+      padding: 4em 2em;
+    }
   }
   p.dk_center.sma {
     font-size: 1.6em;
@@ -2085,6 +2096,9 @@ ul.l_gen {
   }
 }
 @media (max-width: 1260px) {
+  .sl_m_wrapp {
+    font-size: 13px;
+  }
   .cs_tx_tw.rrr {
     font-size: 1.6em;
   }
@@ -2130,8 +2144,21 @@ ul.l_gen {
   .topics_wrapper {
     margin: 60px auto 30px auto;
   }
-  .yellw_pl {
-    height: 70px;
+  .pl_content {
+    max-height: 70px;
+    .socv {
+      font-size: 1.7em;
+      margin-bottom: 20px !important;
+    }
+    .sub_ph_tx {
+      font-size: 17px;
+    }
+    .img_ch_wrap {
+      max-width: 170px;
+    }
+    &.expanded {
+      padding: 4em 2em;
+    }
   }
   p.pipe_imgg {
     margin: 15px 0;
@@ -2290,6 +2317,18 @@ ul.l_gen {
   }
 }
 @media (max-width: 1000px) {
+  .pl_content {
+    .socv {
+      font-size: 1.5em;
+      margin-bottom: 15px !important;
+    }
+    .sub_ph_tx {
+      font-size: 15px;
+    }
+    &.expanded {
+      padding: 3em 2em;
+    }
+  }
   p.arr_imgg {
     width: 30px;
     margin: 0 10px 0 0;
@@ -2527,6 +2566,10 @@ ul.l_gen {
   }
 }
 @media (max-width: 950px) {
+  .pl_content .sub_ph_tx {
+    font-size: 13px;
+    margin-bottom: 5px !important;
+  }
   ngx-intl-tel-input {
     margin: 0 10px !important;
   }
@@ -2592,8 +2635,8 @@ ul.l_gen {
     font-size: 1.2em;
     margin: 0 0 0 -210px;
   }
-  .yellw_pl {
-    height: 50px;
+  .pl_content {
+    max-height: 50px;
   }
   .topic_item {
     border-radius: 15px;
@@ -2830,6 +2873,64 @@ ul.l_gen {
   }
 }
 @media (max-width: 660px) {
+  .lin_cs.bn {
+    display: none;
+  }
+  .foot_rel {
+    position: relative;
+    top: -90px;
+  }
+  .ch {
+    .cs_dt {
+      color: #58585a;
+      font-family: "Roboto" !important;
+      span {
+        color: #b88214;
+        font-family: "Roboto" !important;
+      }
+    }
+  }
+  footer.bottom_ {
+    background: url(assets/Images/course/unvbm.png) center no-repeat;
+    background-size: cover;
+    padding: 270px 0 10px 0 !important;
+    margin-top: -57px !important;
+  }
+  .pl_content {
+    max-height: 0;
+  }
+  .swipe_program {
+    .strp {
+      height: 1px;
+      background-image: linear-gradient(
+        -90deg,
+        #edd97c 0%,
+        #edd97c 5%,
+        #af8531 91%,
+        #af8531 100%
+      );
+      margin: 20px 0;
+    }
+    .socv {
+      font-size: 11px;
+    }
+    .pl_content .sub_ph_tx {
+      font-size: 14px;
+      color: #58585a;
+    }
+    .pl_content {
+      flex-direction: column-reverse;
+      &.expanded {
+        padding: 3em 1.5em 2em 1.5em;
+      }
+    }
+    .plash.tt {
+      width: auto;
+    }
+    .plash {
+      width: auto;
+    }
+  }
   .topics_wrapper.hide_xd {
     display: none;
   }
@@ -2956,6 +3057,9 @@ ul.l_gen {
   }
 }
 @media (max-width: 550px) {
+  .swipe_program .pl_content.expanded {
+    margin: -125px 20px 40px 20px;
+  }
   .my-slider-mob-rewiews {
     padding: 80px 0 !important;
     .tns-item:not(.tns-slide-active) + .tns-slide-active + .tns-slide-active {
@@ -3127,6 +3231,24 @@ ul.l_gen {
   }
 }
 @media (max-width: 450px) {
+  footer.bottom_ {
+    margin-top: -108px !important;
+  }
+  .pl_content .img_ch_wrap {
+    max-width: 120px;
+    margin: 0 auto 10px !important;
+  }
+  .pl_content .sub_ph_tx {
+    font-size: 12px;
+    margin-bottom: -2px !important;
+  }
+  .swipe_program .strp {
+    margin: 15px 0;
+  }
+  .swipe_program .socv {
+    font-size: 12px;
+    margin-bottom: 7px !important;
+  }
   .rews p.titl_eht {
     font-size: 1.2em !important;
   }
