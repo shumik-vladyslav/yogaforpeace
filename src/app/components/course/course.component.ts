@@ -20,6 +20,7 @@ export class CourseComponent implements OnInit {
   menu: boolean = false;
   form: FormGroup;
   less: boolean = false;
+  visible: boolean = false;
   mobile: boolean = false;
   url = "https://vosd.bitrix24.eu/rest/4/idujiuxkvouf7pb9/";
   isSendRegistrationMessage: boolean = false;
@@ -36,6 +37,11 @@ export class CourseComponent implements OnInit {
       el: '.swiper-pagination',
       clickable: true
     },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    loop: true,
     spaceBetween: 30
   };
   constructor(
@@ -66,13 +72,17 @@ export class CourseComponent implements OnInit {
     document.getElementById("rewiew-wrp" + clas).classList.remove(clas);
   }
 
-  showVideo(url: string) {
+  showVideo(url: string, tube?: boolean) {
     this.dialog.open(VideoDialogComponent, {
       width: 'auto',
       height: 'auto',
-      data: url,
+      data: { url, tube },
       panelClass: "no-resize"
     });
+  }
+
+  toggleRewiews() {
+    this.visible = !this.visible;
   }
 
   ngOnInit(): void {
@@ -107,6 +117,7 @@ export class CourseComponent implements OnInit {
   }
 
   scrollTo(id): void {
+    this.menu = false;
     const element = document.getElementById(id);
     const y = element.getBoundingClientRect().top + window.pageYOffset;
     window.scrollTo({ top: y, behavior: 'smooth' });

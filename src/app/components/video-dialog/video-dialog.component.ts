@@ -8,12 +8,14 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class VideoDialogComponent implements OnInit {
   video;
+  tube: boolean = false;
 
   constructor(
     public dialogRef: MatDialogRef<VideoDialogComponent>,
     @Inject(MAT_DIALOG_DATA) data
   ) {
-    this.video = data;
+    this.video = data.url;
+    this.tube = data.tube;
   }
 
   ngOnInit(): void {

@@ -1056,10 +1056,12 @@ p.titl_eht {
   }
 }
 .tns-item {
+  position: relative;
   border-radius: 27px;
   background-color: #ffffff;
   overflow: hidden;
   height: 337px;
+  top: 0;
   .inert {
     width: 100%;
     height: 230px;

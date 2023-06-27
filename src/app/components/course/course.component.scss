@@ -6,6 +6,9 @@
   background: url(../../../assets/Images/course/strip2.png);
   background-size: contain;
 }
+.cs-gen_wrapper {
+  overflow-x: hidden;
+}
 .flex-1-4 {
   display: flex;
   flex-wrap: wrap;
@@ -62,6 +65,61 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.res_s_cont.right.visible {
+  opacity: 1;
+  transition: all 0.9s;
+  left: unset;
+  right: 0 !important;
+}
+.res_s_cont.right {
+  opacity: 0;
+  transition: all 0.9s;
+  right: -100% !important;
+}
+.res_s_cont.left.visible {
+  opacity: 1;
+  transition: all 0.9s;
+  left: 0;
+}
+.res_s_cont.left {
+  opacity: 0;
+  transition: all 0.9s;
+  left: -100%;
+}
+button.rew-button-prev {
+  position: absolute;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  z-index: 112;
+}
+button.rew-button-next {
+  position: absolute;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  z-index: 112;
+}
+button.rew-button-prev:after {
+  position: absolute;
+  z-index: 33;
+  width: 100%;
+  height: 45px;
+  content: url("../../../assets/Images/course/prev.png");
+  display: block;
+}
+button.rew-button-next:after {
+  position: absolute;
+  z-index: 33;
+  width: 100%;
+  height: 45px;
+  content: url("../../../assets/Images/course/next.png");
+  display: block;
 }
 .tre {
   font-size: 14px;
@@ -139,6 +197,26 @@
     scale: 1;
     transition: all 0.5s;
   }
+  &.sev {
+    scale: 1;
+    transition: all 0.5s;
+  }
+  &.eigt {
+    scale: 1;
+    transition: all 0.5s;
+  }
+  &.nine {
+    scale: 1;
+    transition: all 0.5s;
+  }
+  &.ten {
+    scale: 1;
+    transition: all 0.5s;
+  }
+  &.ellv {
+    scale: 1;
+    transition: all 0.5s;
+  }
 }
 .rew_text {
   font-size: 15px;
@@ -202,6 +280,7 @@
   .thr {
     width: 34%;
     margin: 38% 0 0 31%;
+    z-index: 12;
   }
   .thr:hover {
     .shine {
@@ -293,6 +372,7 @@
   .eit {
     width: 34%;
     margin: 38% 0 0 31%;
+    z-index: 12;
   }
   .eit:hover {
     .shine {
@@ -637,6 +717,12 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 701px) {
+  button.rew-button-prev {
+    display: none;
+  }
+  button.rew-button-next {
+    display: none;
+  }
   .res_s {
     position: unset;
     display: block;
@@ -657,6 +743,32 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 660px) {
+  .swiper-button-next {
+    right: 45px;
+    top: unset;
+    bottom: 8px;
+  }
+  .swiper-button-prev {
+    left: 20px;
+    top: unset;
+    bottom: 9px;
+  }
+  .swiper-button-prev:after {
+    position: relative;
+    z-index: 33;
+    width: 100%;
+    height: 45px;
+    content: url("../../../assets/Images/course/prev.png");
+    display: block;
+  }
+  .swiper-button-next:after {
+    position: relative;
+    z-index: 33;
+    width: 100%;
+    height: 45px;
+    content: url("../../../assets/Images/course/next.png");
+    display: block;
+  }
   .cs_container.sots:not(.bottom) {
     padding-top: 200px;
   }
@@ -797,6 +909,9 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 530px) {
+  .cs_container.main {
+    background-position: center;
+  }
   .rews {
     .rew_text {
       font-size: 12px;
@@ -856,7 +971,17 @@ ngx-intl-tel-input {
   }
   .outer_wrap_cs.relative.lft {
     scale: 1;
-    margin: 0 -1% 0 auto;
+    margin: 0;
+    width: 100%;
+    .buttfl {
+      left: -20px;
+    }
+    .header-inner.header-inner-button.boreder.grad.xl {
+      width: 100%;
+      button.rd {
+        width: 100%;
+      }
+    }
   }
   .mdd {
     right: -1%;
@@ -989,10 +1114,6 @@ ngx-intl-tel-input {
   .srt_tx {
     font-size: 1em;
   }
-  .outer_wrap_cs.relative.lft {
-    scale: 0.7;
-    margin: 0 -8% 0 auto;
-  }
   .cs_t_bl {
     font-size: 1.3em;
   }
@@ -1049,7 +1170,7 @@ ngx-intl-tel-input {
     padding: 10px 15px;
   }
   .outer_wrap_cs.relative.lft {
-    scale: 0.6;
+    scale: 0.9;
   }
   .cs_right_cont {
     max-width: 92%;
