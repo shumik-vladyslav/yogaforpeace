@@ -868,6 +868,81 @@
         <div class="topics_wrapper hide_xd">
           <div class="topic_cs_wrap">
             <div class="topic_row">
+              <div (click)="expand(4)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/hlt.png" alt="health" />
+                  </div>
+                  <p class="topic_txt">
+                    <span>Ахимса </span><span class="smal">и</span> здоровье
+                  </p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <!-- <p class="dk_center sma">31 июля</p> -->
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[4] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[4] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+          <div [ngClass]="hasExpand[4] ? 'expanded' : ''" class="pl_content">
+            <div class="plash">
+              <p class="socv">• Действительно ли вы здоровы, как считаете?</p>
+              <p class="socv">
+                • Тело, психика, ум — как они связаны, и что происходит при их
+                дисбалансе?
+              </p>
+              <p class="socv">
+                • Как эмоции напрямую влияют на работу внутренних органов?
+              </p>
+              <p class="socv">
+                • Здоровая психика — это как? Шесть пунктов для анализа своего
+                состояния.
+              </p>
+              <p class="socv">
+                • «Неудобные вопросы» — является ли вообще здоровье вашей
+                истинной ценностью?
+              </p>
+              <p class="socv">
+                • К чему приводят разрушающие состояния — гнев, жадность,
+                неприятие, страх? Как с ними правильно работать?
+              </p>
+              <p class="socv">
+                • Как ахимса (ненасилие) связано лично с моим здоровьем?
+              </p>
+              <p class="socv">
+                • Действенные методы очищения тела. Про бережную корректировку
+                питания.
+              </p>
+              <p class="socv">
+                • Как практика помогает очистить ум — подробнее про медитации,
+                дыхательные практики и энергетические.
+              </p>
+            </div>
+            <div class="plash tt">
+              <p class="img_ch_wrap">
+                <img src="assets/Images/course/aah.png" alt="ava" />
+              </p>
+              <p class="sub_ph_tx">Карма-санньяси Амаранатха и Ниранджана</p>
+              <p class="sub_ph_tx">инструктора йоги и медитации</p>
+              <p class="sub_ph_tx">Тема «Ахимса и здоровье»</p>
+            </div>
+          </div>
+          <!-- <div class="topic_cs_wrap">
+            <div class="topic_row">
               <div (click)="expand(1)" class="topic_item">
                 <div class="wrap_dd left">
                   <div class="topic_img">
@@ -914,186 +989,8 @@
               </p>
             </div>
             <div class="plash tt">
-              <!-- <p class="img_ch_wrap">
-                <img src="assets/Images/course/aas.png" alt="ava" />
-              </p>
-              <p class="sub_ph_tx">Карма-санньяси Видьягаури</p>
-              <p class="sub_ph_tx">инструктор йоги и медитации</p>
-              <p class="sub_ph_tx">Тема «Ахимса и астрология»</p> -->
             </div>
-          </div>
-          <div class="topic_cs_wrap">
-            <div class="topic_row">
-              <div (click)="expand(2)" class="topic_item">
-                <div class="wrap_dd left">
-                  <div class="topic_img">
-                    <img src="assets/Images/course/ast.png" alt="health" />
-                  </div>
-                  <p class="topic_txt">
-                    <span>Ахимса </span><span class="smal">и</span> астрология
-                  </p>
-                </div>
-                <div class="wrap_dd right">
-                  <div class="sep_rap">
-                    <p class="pipe_imgg">
-                      <img src="assets/Images/course/pip.png" />
-                    </p>
-                    <p class="dk_center sma">24 июля</p>
-                  </div>
-                  <p class="arr_imgg">
-                    <img
-                      [ngClass]="hasExpand[2] ? 'expand' : ''"
-                      src="assets/Images/course/arrr.png"
-                    />
-                  </p>
-                </div>
-              </div>
-              <div
-                [ngClass]="hasExpand[2] ? 'expanded' : ''"
-                class="more_info"
-              ></div>
-            </div>
-          </div>
-          <div [ngClass]="hasExpand[2] ? 'expanded' : ''" class="pl_content">
-            <div class="plash">
-              <p class="socv">
-                • Как привить ребёнку высокие ценности и цели? Которые будут
-                поддерживать и направлять его на протяжении всей жизни
-              </p>
-              <p class="socv">
-                • Как и для чего помочь выработать здоровые привычки
-              </p>
-              <p class="socv">
-                • Как быть с ребёнком на одной волне, не взирая на возраст и
-                другие различия
-              </p>
-              <p class="socv">
-                • Как менять свою жизнь к лучшему и практиковать всей семье
-              </p>
-            </div>
-            <div class="plash tt">
-              <p class="img_ch_wrap">
-                <img src="assets/Images/course/aas.png" alt="ava" />
-              </p>
-              <p class="sub_ph_tx">Карма-санньяси Видьягаури</p>
-              <p class="sub_ph_tx">инструктор йоги и медитации</p>
-              <p class="sub_ph_tx">Тема «Ахимса и астрология»</p>
-            </div>
-          </div>
-          <div class="topic_cs_wrap">
-            <div class="topic_row">
-              <div (click)="expand(6)" class="topic_item">
-                <div class="wrap_dd left">
-                  <div class="topic_img">
-                    <img src="assets/Images/course/fam.png" alt="health" />
-                  </div>
-                  <p class="topic_txt"><span>Ахимса </span>в семье</p>
-                </div>
-                <div class="wrap_dd right">
-                  <div class="sep_rap">
-                    <p class="pipe_imgg">
-                      <img src="assets/Images/course/pip.png" />
-                    </p>
-                    <p class="dk_center sma">27 июля</p>
-                  </div>
-                  <p class="arr_imgg">
-                    <img
-                      [ngClass]="hasExpand[6] ? 'expand' : ''"
-                      src="assets/Images/course/arrr.png"
-                    />
-                  </p>
-                </div>
-              </div>
-              <div
-                [ngClass]="hasExpand[6] ? 'expanded' : ''"
-                class="more_info"
-              ></div>
-            </div>
-          </div>
-          <div [ngClass]="hasExpand[6] ? 'expanded' : ''" class="pl_content">
-            <div class="plash">
-              <p class="socv">
-                • Как привить ребёнку высокие ценности и цели? Которые будут
-                поддерживать и направлять его на протяжении всей жизни
-              </p>
-              <p class="socv">
-                • Как и для чего помочь выработать здоровые привычки
-              </p>
-              <p class="socv">
-                • Как быть с ребёнком на одной волне, не взирая на возраст и
-                другие различия
-              </p>
-              <p class="socv">
-                • Как менять свою жизнь к лучшему и практиковать всей семье
-              </p>
-            </div>
-            <div class="plash tt">
-              <p class="img_ch_wrap">
-                <img src="assets/Images/course/aaf.png" alt="ava" />
-              </p>
-              <p class="sub_ph_tx">Карма-санньяси Савитри</p>
-              <p class="sub_ph_tx">инструктор йоги и медитации</p>
-              <p class="sub_ph_tx">Тема «Ахимса в семье»</p>
-            </div>
-          </div>
-          <div class="topic_cs_wrap">
-            <div class="topic_row">
-              <div (click)="expand(4)" class="topic_item">
-                <div class="wrap_dd left">
-                  <div class="topic_img">
-                    <img src="assets/Images/course/hlt.png" alt="health" />
-                  </div>
-                  <p class="topic_txt">
-                    <span>Ахимса </span><span class="smal">и</span> здоровье
-                  </p>
-                </div>
-                <div class="wrap_dd right">
-                  <div class="sep_rap">
-                    <p class="pipe_imgg">
-                      <img src="assets/Images/course/pip.png" />
-                    </p>
-                    <p class="dk_center sma">31 июля</p>
-                  </div>
-                  <p class="arr_imgg">
-                    <img
-                      [ngClass]="hasExpand[4] ? 'expand' : ''"
-                      src="assets/Images/course/arrr.png"
-                    />
-                  </p>
-                </div>
-              </div>
-              <div
-                [ngClass]="hasExpand[4] ? 'expanded' : ''"
-                class="more_info"
-              ></div>
-            </div>
-          </div>
-          <div [ngClass]="hasExpand[4] ? 'expanded' : ''" class="pl_content">
-            <div class="plash">
-              <p class="socv">
-                • Как привить ребёнку высокие ценности и цели? Которые будут
-                поддерживать и направлять его на протяжении всей жизни
-              </p>
-              <p class="socv">
-                • Как и для чего помочь выработать здоровые привычки
-              </p>
-              <p class="socv">
-                • Как быть с ребёнком на одной волне, не взирая на возраст и
-                другие различия
-              </p>
-              <p class="socv">
-                • Как менять свою жизнь к лучшему и практиковать всей семье
-              </p>
-            </div>
-            <div class="plash tt">
-              <p class="img_ch_wrap">
-                <img src="assets/Images/course/aah.png" alt="ava" />
-              </p>
-              <p class="sub_ph_tx">Карма-санньяси Амаранатха и Ниранджана</p>
-              <p class="sub_ph_tx">инструктора йоги и медитации</p>
-              <p class="sub_ph_tx">Тема «Ахимса и здоровье»</p>
-            </div>
-          </div>
+          </div> -->
           <div class="topic_cs_wrap">
             <div class="topic_row">
               <div (click)="expand(5)" class="topic_item">
@@ -1110,7 +1007,7 @@
                     <p class="pipe_imgg">
                       <img src="assets/Images/course/pip.png" />
                     </p>
-                    <p class="dk_center sma">3 августа</p>
+                    <!-- <p class="dk_center sma">3 августа</p> -->
                   </div>
                   <p class="arr_imgg">
                     <img
@@ -1129,18 +1026,29 @@
           <div [ngClass]="hasExpand[5] ? 'expanded' : ''" class="pl_content">
             <div class="plash">
               <p class="socv">
-                • Как привить ребёнку высокие ценности и цели? Которые будут
-                поддерживать и направлять его на протяжении всей жизни
+                • «Скажи мне, что ты ешь, и я скажу, кто ты» - как на нас влияет
+                то, что мы едим?
               </p>
               <p class="socv">
-                • Как и для чего помочь выработать здоровые привычки
+                • Мясоедение как распространение энергии насилия. Как ежегодные
+                массовые убийства животных, птиц и рыб влияют на судьбу
+                человечества?
               </p>
               <p class="socv">
-                • Как быть с ребёнком на одной волне, не взирая на возраст и
-                другие различия
+                • «Пиар-кампании мясных изделий» – кому выгодно, чтобы мы
+                думали, что это вкусно и полезно?
               </p>
               <p class="socv">
-                • Как менять свою жизнь к лучшему и практиковать всей семье
+                • Гуны (качества) материальной природы - как это древнее знание
+                поможет нам быть более осознанными в своем ежедневном выборе.
+              </p>
+              <p class="socv">
+                • Пища с энергией благости - какая она? Неужели мы так зависим
+                от пищи?
+              </p>
+              <p class="socv">
+                • Советы для решительных: вы определились со своим выбором
+                правильно питаться? Что дальше?
               </p>
             </div>
             <div class="plash tt">
@@ -1150,6 +1058,73 @@
               <p class="sub_ph_tx">Карма-санньяси Даршани</p>
               <p class="sub_ph_tx">инструктор йоги и медитации</p>
               <p class="sub_ph_tx">Тема «Ахимса и питание»</p>
+            </div>
+          </div>
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(6)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/fam.png" alt="health" />
+                  </div>
+                  <p class="topic_txt"><span>Ахимса </span>в семье</p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <!-- <p class="dk_center sma">27 июля</p> -->
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[6] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[6] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+          <div [ngClass]="hasExpand[6] ? 'expanded' : ''" class="pl_content">
+            <div class="plash">
+              <p class="socv">
+                • Ненасилие в семье - наша карма? Почему каждый из нас получает
+                разные «уроки жизни» в семье?
+              </p>
+              <p class="socv">
+                • Эгоистичные желания и базовые потребности – как найти баланс
+                между эгоизмом и самодостаточностью?
+              </p>
+              <p class="socv">
+                • Манипуляция в отношениях с близкими. Устали от зависимости?
+                Рекомендации, как этого избежать.
+              </p>
+              <p class="socv">
+                • Наши дети как яркий «показатель» отношений в семье – получаем
+                то, что засеваем?
+              </p>
+              <p class="socv">• Важная роль - быть родителем.</p>
+              <p class="socv">
+                • Психология отношений: муж и жена – разница в подходах
+                построения ведических и тантрических семей.
+              </p>
+              <p class="socv">
+                • Свобода и творчество – счастье выбираю я сам. Как стать
+                автором и режиссёром своей жизни.
+              </p>
+            </div>
+            <div class="plash tt">
+              <p class="img_ch_wrap">
+                <img src="assets/Images/course/aaf.png" alt="ava" />
+              </p>
+              <p class="sub_ph_tx">Карма-санньяси Савитри</p>
+              <p class="sub_ph_tx">инструктор йоги и медитации</p>
+              <p class="sub_ph_tx">Тема «Ахимса в семье»</p>
             </div>
           </div>
           <!-- <div class="topic_cs_wrap">
@@ -1226,7 +1201,7 @@
                     <p class="pipe_imgg">
                       <img src="assets/Images/course/pip.png" />
                     </p>
-                    <p class="dk_center sma">7 августа</p>
+                    <!-- <p class="dk_center sma">7 августа</p> -->
                   </div>
                   <p class="arr_imgg">
                     <img
@@ -1244,19 +1219,21 @@
           </div>
           <div [ngClass]="hasExpand[7] ? 'expanded' : ''" class="pl_content">
             <div class="plash">
+              <p class="socv">• Как привить ребёнку высокие ценности?</p>
               <p class="socv">
-                • Как привить ребёнку высокие ценности и цели? Которые будут
-                поддерживать и направлять его на протяжении всей жизни
+                • Как мотивировать ребенка достигать целей, которые будут
+                поддерживать и направлять его на протяжении всей жизни?
               </p>
               <p class="socv">
-                • Как и для чего помочь выработать здоровые привычки
+                • Принципы для выработки здоровых привычек с самого детства.
               </p>
               <p class="socv">
                 • Как быть с ребёнком на одной волне, не взирая на возраст и
-                другие различия
+                другие различия?
               </p>
               <p class="socv">
-                • Как менять свою жизнь к лучшему и практиковать всей семье
+                • Практика Ахимсы для всей семьи как способ гармонизации
+                отношений в семье и за ее пределами.
               </p>
             </div>
             <div class="plash tt">
@@ -1284,7 +1261,7 @@
                     <p class="pipe_imgg">
                       <img src="assets/Images/course/pip.png" />
                     </p>
-                    <p class="dk_center sma">10 августа</p>
+                    <!-- <p class="dk_center sma">10 августа</p> -->
                   </div>
                   <p class="arr_imgg">
                     <img
@@ -1303,18 +1280,28 @@
           <div [ngClass]="hasExpand[8] ? 'expanded' : ''" class="pl_content">
             <div class="plash">
               <p class="socv">
-                • Как привить ребёнку высокие ценности и цели? Которые будут
-                поддерживать и направлять его на протяжении всей жизни
+                • Как эффективно управлять людьми через раскрытие их потенциала,
+                отказавшись от мотивации "кнут и пряник".
               </p>
               <p class="socv">
-                • Как и для чего помочь выработать здоровые привычки
+                • Как раскрыть личный потенциал лидера через потоковое состояние
+                и принятие себя.
               </p>
               <p class="socv">
-                • Как быть с ребёнком на одной волне, не взирая на возраст и
-                другие различия
+                • Как из состояния "жертва обстоятельств" войти в состояние "я
+                управляю своей судьбой". Как научиться легко брать
+                ответственность за себя и на себя.
               </p>
               <p class="socv">
-                • Как менять свою жизнь к лучшему и практиковать всей семье
+                • Как быстро находить оптимальные решения, доверяя ситуациям,
+                людям, себе. Закон сохранения энергии. Фильтры сознания.
+              </p>
+              <p class="socv">
+                • Как сохранять позицию наблюдателя для получения наилучшего
+                результата. Ассоциация и диссоциация.
+              </p>
+              <p class="socv">
+                • Как получить кратчайший путь к реализации целей?
               </p>
             </div>
             <div class="plash tt">
@@ -1340,7 +1327,7 @@
                     <p class="pipe_imgg">
                       <img src="assets/Images/course/pip.png" />
                     </p>
-                    <p class="dk_center sma">14 авугста</p>
+                    <!-- <p class="dk_center sma">14 авугста</p> -->
                   </div>
                   <p class="arr_imgg">
                     <img
@@ -1358,19 +1345,27 @@
           </div>
           <div [ngClass]="hasExpand[9] ? 'expanded' : ''" class="pl_content">
             <div class="plash">
+              <p class="socv">• Почему Ахимса, зачем и кому это нужно?</p>
               <p class="socv">
-                • Как привить ребёнку высокие ценности и цели? Которые будут
-                поддерживать и направлять его на протяжении всей жизни
+                • Метафизика процессов: через понимание - к действию и изменению
+                судьбы.
               </p>
               <p class="socv">
-                • Как и для чего помочь выработать здоровые привычки
+                • Полюбить себя, а вместе с тем ответить на вопрос: кто Я на
+                самом деле?
+              </p>
+              <p class="socv">• Почему важно полюбить Себя?</p>
+              <p class="socv">
+                • Как увидеть свою сущность божественной и полюбить внутреннее
+                божество?
               </p>
               <p class="socv">
-                • Как быть с ребёнком на одной волне, не взирая на возраст и
-                другие различия
+                • МИР – проекция ума, как мы можем применять это знание на
+                практике?
               </p>
+              <p class="socv">• Я и другой – иллюзорная дуальность сознания.</p>
               <p class="socv">
-                • Как менять свою жизнь к лучшему и практиковать всей семье
+                • Знание ИСТИНЫ – совершенная мудрость – совершенная жизнь.
               </p>
             </div>
             <div class="plash tt">
@@ -1380,6 +1375,84 @@
               <p class="sub_ph_tx">Карма-санньяси Дэванатха</p>
               <p class="sub_ph_tx">инструктор йоги и медитации</p>
               <p class="sub_ph_tx">Тема «Ахимса к себе и другим»</p>
+            </div>
+          </div>
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(2)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/ast.png" alt="health" />
+                  </div>
+                  <p class="topic_txt">
+                    <span>Ахимса </span><span class="smal">и</span> астрология
+                  </p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <!-- <p class="dk_center sma">24 июля</p> -->
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[2] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[2] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+          <div [ngClass]="hasExpand[2] ? 'expanded' : ''" class="pl_content">
+            <div class="plash">
+              <p class="socv">
+                • Древняя наука Джьотиш – почему она важна для нас?
+              </p>
+              <p class="socv">
+                • Гороскоп – астральная матрица и ахимса как ее важнейший
+                принцип.
+              </p>
+              <p class="socv">
+                • Великие космические силы – грахи, как научиться преодолевать
+                их и, более того, делать их своей «силой».
+              </p>
+              <p class="socv">• Ахимса и граха Сурья (Солнце) – Сила Духа</p>
+              <p class="socv">
+                • Ахимса и граха Чандра (Луна) – Сила Восприятия
+              </p>
+              <p class="socv">
+                • Ахимса и граха Гуру (Юпитер) – Сила Пространства
+              </p>
+              <p class="socv">
+                • Ахимса и граха Шани (Сатурн) – Сила Ограничения
+              </p>
+              <p class="socv">
+                • Ахимса и граха Мангала (Марс) – Сила Действия
+              </p>
+              <p class="socv">
+                • Ахимса и граха Шукра (Венера) – Сила Телесности
+              </p>
+              <p class="socv">
+                • Ахимса и граха Буддха (Меркурий) – Сила Объективности
+              </p>
+              <p class="socv">
+                • Искусные упаи (методы практики) для устранения препятствий в
+                жизни.
+              </p>
+            </div>
+            <div class="plash tt">
+              <p class="img_ch_wrap">
+                <img src="assets/Images/course/aas.png" alt="ava" />
+              </p>
+              <p class="sub_ph_tx">Карма-санньяси Видьягаури</p>
+              <p class="sub_ph_tx">инструктор йоги и медитации</p>
+              <p class="sub_ph_tx">Тема «Ахимса и астрология»</p>
             </div>
           </div>
           <div class="topic_cs_wrap">
@@ -1396,7 +1469,7 @@
                     <p class="pipe_imgg">
                       <img src="assets/Images/course/pip.png" />
                     </p>
-                    <p class="dk_center sma">17 августа</p>
+                    <!-- <p class="dk_center sma">17 августа</p> -->
                   </div>
                   <p class="arr_imgg">
                     <img
@@ -1415,18 +1488,27 @@
           <div [ngClass]="hasExpand[3] ? 'expanded' : ''" class="pl_content">
             <div class="plash">
               <p class="socv">
-                • Как привить ребёнку высокие ценности и цели? Которые будут
-                поддерживать и направлять его на протяжении всей жизни
+                • Ахимса во времена Кали Юги – когда завершится 5000-летняя
+                война?
+              </p>
+              <p class="socv">• Что мы можем сделать, чтобы ее завершить?</p>
+              <p class="socv">
+                • Ахимса (ненасилие) и Сатья (истина) – неразделимые понятия:
+                хочешь жить в мире без насилия – познай истину.
               </p>
               <p class="socv">
-                • Как и для чего помочь выработать здоровые привычки
+                • Как перестать причинять химсу (зло, насилие, вред)? «Причинять
+                добро» и «жить ахимсой» - как уловить тонкую грань?
               </p>
               <p class="socv">
-                • Как быть с ребёнком на одной волне, не взирая на возраст и
-                другие различия
+                • Как мир и покой внутри (реализованная Ахимса) по отношению к
+                себе открывает путь к гармонии по отношению к Миру.
               </p>
               <p class="socv">
-                • Как менять свою жизнь к лучшему и практиковать всей семье
+                • 3 уровня Ахимсы. Как перейти от философии к практике.
+              </p>
+              <p class="socv">
+                • Плоды Ахимсы – краткосрочная и долгосрочная перспектива.
               </p>
             </div>
             <div class="plash tt">
@@ -1438,7 +1520,7 @@
               <p class="sub_ph_tx">Тема «Ахимса в военное время»</p>
             </div>
           </div>
-          <div class="topic_cs_wrap">
+          <!-- <div class="topic_cs_wrap">
             <div class="topic_row">
               <div (click)="expand(11)" class="topic_item">
                 <div class="wrap_dd left">
@@ -1489,14 +1571,8 @@
               </p>
             </div>
             <div class="plash tt">
-              <!-- <p class="img_ch_wrap">
-                <img src="assets/Images/course/child.png" alt="ava" />
-              </p>
-              <p class="sub_ph_tx">Карма-санньяси Индубваха</p>
-              <p class="sub_ph_tx">инструктор йоги и медитации</p>
-              <p class="sub_ph_tx">Тема «Ахимса — путь к счастью»</p> -->
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -1504,6 +1580,81 @@
       <swiper [config]="config">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
+            <div class="topic_cs_wrap">
+              <div class="topic_row">
+                <div (click)="expand(4)" class="topic_item">
+                  <div class="wrap_dd left">
+                    <div class="topic_img">
+                      <img src="assets/Images/course/hlt.png" alt="health" />
+                    </div>
+                    <div class="flex_flex-column">
+                      <p class="topic_txt">
+                        <span>Ахимса </span><span class="smal">и</span> здоровье
+                      </p>
+                      <!-- <p class="dk_center sma">31 июля</p> -->
+                    </div>
+                  </div>
+                  <div class="wrap_dd right">
+                    <p class="arr_imgg">
+                      <img
+                        [ngClass]="hasExpand[4] ? 'expand' : ''"
+                        src="assets/Images/course/arrr.png"
+                      />
+                    </p>
+                  </div>
+                </div>
+                <div
+                  [ngClass]="hasExpand[4] ? 'expanded' : ''"
+                  class="more_info"
+                ></div>
+              </div>
+            </div>
+            <div [ngClass]="hasExpand[4] ? 'expanded' : ''" class="pl_content">
+              <div class="plash">
+                <p class="socv">• Действительно ли вы здоровы, как считаете?</p>
+                <p class="socv">
+                  • Тело, психика, ум — как они связаны, и что происходит при их
+                  дисбалансе?
+                </p>
+                <p class="socv">
+                  • Как эмоции напрямую влияют на работу внутренних органов?
+                </p>
+                <p class="socv">
+                  • Здоровая психика — это как? Шесть пунктов для анализа своего
+                  состояния.
+                </p>
+                <p class="socv">
+                  • «Неудобные вопросы» — является ли вообще здоровье вашей
+                  истинной ценностью?
+                </p>
+                <p class="socv">
+                  • К чему приводят разрушающие состояния — гнев, жадность,
+                  неприятие, страх? Как с ними правильно работать?
+                </p>
+                <p class="socv">
+                  • Как ахимса (ненасилие) связано лично с моим здоровьем?
+                </p>
+                <p class="socv">
+                  • Действенные методы очищения тела. Про бережную корректировку
+                  питания.
+                </p>
+                <p class="socv">
+                  • Как практика помогает очистить ум — подробнее про медитации,
+                  дыхательные практики и энергетические.
+                </p>
+              </div>
+              <div class="plash tt">
+                <p class="img_ch_wrap">
+                  <img src="assets/Images/course/aah.png" alt="ava" />
+                </p>
+                <p class="sub_ph_tx">Карма-санньяси Амаранатха и Ниранджана</p>
+                <p class="sub_ph_tx">инструктора йоги и медитации</p>
+                <p class="sub_ph_tx">Тема «Ахимса и здоровье»</p>
+                <div class="strp"></div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="swiper-slide">
             <div class="topic_cs_wrap">
               <div class="topic_row">
                 <div (click)="expand(1)" class="topic_item">
@@ -1549,189 +1700,9 @@
                 </p>
               </div>
               <div class="plash tt">
-                <!-- <p class="img_ch_wrap">
-                  <img src="assets/Images/course/aas.png" alt="ava" />
-                </p>
-                <p class="sub_ph_tx">Карма-санньяси Видьягаури</p>
-                <p class="sub_ph_tx">инструктор йоги и медитации</p>
-                <p class="sub_ph_tx">Тема «Ахимса и астрология»</p>
-                <div class="strp"></div> -->
               </div>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="topic_cs_wrap">
-              <div class="topic_row">
-                <div (click)="expand(2)" class="topic_item">
-                  <div class="wrap_dd left">
-                    <div class="topic_img">
-                      <img src="assets/Images/course/ast.png" alt="health" />
-                    </div>
-                    <div class="flex_flex-column">
-                      <p class="topic_txt">
-                        <span>Ахимса </span
-                        ><span class="smal">и</span> астрология
-                      </p>
-                      <p class="dk_center sma">24 июля</p>
-                    </div>
-                  </div>
-                  <div class="wrap_dd right">
-                    <p class="arr_imgg">
-                      <img
-                        [ngClass]="hasExpand[2] ? 'expand' : ''"
-                        src="assets/Images/course/arrr.png"
-                      />
-                    </p>
-                  </div>
-                </div>
-                <div
-                  [ngClass]="hasExpand[2] ? 'expanded' : ''"
-                  class="more_info"
-                ></div>
-              </div>
-            </div>
-            <div [ngClass]="hasExpand[2] ? 'expanded' : ''" class="pl_content">
-              <div class="plash">
-                <p class="socv">
-                  • Как привить ребёнку высокие ценности и цели? Которые будут
-                  поддерживать и направлять его на протяжении всей жизни
-                </p>
-                <p class="socv">
-                  • Как и для чего помочь выработать здоровые привычки
-                </p>
-                <p class="socv">
-                  • Как быть с ребёнком на одной волне, не взирая на возраст и
-                  другие различия
-                </p>
-                <p class="socv">
-                  • Как менять свою жизнь к лучшему и практиковать всей семье
-                </p>
-              </div>
-              <div class="plash tt">
-                <p class="img_ch_wrap">
-                  <img src="assets/Images/course/aas.png" alt="ava" />
-                </p>
-                <p class="sub_ph_tx">Карма-санньяси Видьягаури</p>
-                <p class="sub_ph_tx">инструктор йоги и медитации</p>
-                <p class="sub_ph_tx">Тема «Ахимса и астрология»</p>
-                <div class="strp"></div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="topic_cs_wrap">
-              <div class="topic_row">
-                <div (click)="expand(6)" class="topic_item">
-                  <div class="wrap_dd left">
-                    <div class="topic_img">
-                      <img src="assets/Images/course/fam.png" alt="health" />
-                    </div>
-                    <div class="flex_flex-column">
-                      <p class="topic_txt"><span>Ахимса </span>в семье</p>
-                      <p class="dk_center sma">27 июля</p>
-                    </div>
-                  </div>
-                  <div class="wrap_dd right">
-                    <p class="arr_imgg">
-                      <img
-                        [ngClass]="hasExpand[6] ? 'expand' : ''"
-                        src="assets/Images/course/arrr.png"
-                      />
-                    </p>
-                  </div>
-                </div>
-                <div
-                  [ngClass]="hasExpand[6] ? 'expanded' : ''"
-                  class="more_info"
-                ></div>
-              </div>
-            </div>
-            <div [ngClass]="hasExpand[6] ? 'expanded' : ''" class="pl_content">
-              <div class="plash">
-                <p class="socv">
-                  • Как привить ребёнку высокие ценности и цели? Которые будут
-                  поддерживать и направлять его на протяжении всей жизни
-                </p>
-                <p class="socv">
-                  • Как и для чего помочь выработать здоровые привычки
-                </p>
-                <p class="socv">
-                  • Как быть с ребёнком на одной волне, не взирая на возраст и
-                  другие различия
-                </p>
-                <p class="socv">
-                  • Как менять свою жизнь к лучшему и практиковать всей семье
-                </p>
-              </div>
-              <div class="plash tt">
-                <p class="img_ch_wrap">
-                  <img src="assets/Images/course/aaf.png" alt="ava" />
-                </p>
-                <p class="sub_ph_tx">Карма-санньяси Савитри</p>
-                <p class="sub_ph_tx">инструктор йоги и медитации</p>
-                <p class="sub_ph_tx">Тема «Ахимса в семье»</p>
-                <div class="strp"></div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="topic_cs_wrap">
-              <div class="topic_row">
-                <div (click)="expand(4)" class="topic_item">
-                  <div class="wrap_dd left">
-                    <div class="topic_img">
-                      <img src="assets/Images/course/hlt.png" alt="health" />
-                    </div>
-                    <div class="flex_flex-column">
-                      <p class="topic_txt">
-                        <span>Ахимса </span><span class="smal">и</span> здоровье
-                      </p>
-                      <p class="dk_center sma">31 июля</p>
-                    </div>
-                  </div>
-                  <div class="wrap_dd right">
-                    <p class="arr_imgg">
-                      <img
-                        [ngClass]="hasExpand[4] ? 'expand' : ''"
-                        src="assets/Images/course/arrr.png"
-                      />
-                    </p>
-                  </div>
-                </div>
-                <div
-                  [ngClass]="hasExpand[4] ? 'expanded' : ''"
-                  class="more_info"
-                ></div>
-              </div>
-            </div>
-            <div [ngClass]="hasExpand[4] ? 'expanded' : ''" class="pl_content">
-              <div class="plash">
-                <p class="socv">
-                  • Как привить ребёнку высокие ценности и цели? Которые будут
-                  поддерживать и направлять его на протяжении всей жизни
-                </p>
-                <p class="socv">
-                  • Как и для чего помочь выработать здоровые привычки
-                </p>
-                <p class="socv">
-                  • Как быть с ребёнком на одной волне, не взирая на возраст и
-                  другие различия
-                </p>
-                <p class="socv">
-                  • Как менять свою жизнь к лучшему и практиковать всей семье
-                </p>
-              </div>
-              <div class="plash tt">
-                <p class="img_ch_wrap">
-                  <img src="assets/Images/course/aah.png" alt="ava" />
-                </p>
-                <p class="sub_ph_tx">Карма-санньяси Амаранатха и Ниранджана</p>
-                <p class="sub_ph_tx">инструктора йоги и медитации</p>
-                <p class="sub_ph_tx">Тема «Ахимса и здоровье»</p>
-                <div class="strp"></div>
-              </div>
-            </div>
-          </div>
+          </div> -->
           <div class="swiper-slide">
             <div class="topic_cs_wrap">
               <div class="topic_row">
@@ -1744,7 +1715,7 @@
                       <p class="topic_txt">
                         <span>Ахимса </span><span class="smal">и</span> питание
                       </p>
-                      <p class="dk_center sma">3 августа</p>
+                      <!-- <p class="dk_center sma">3 августа</p> -->
                     </div>
                   </div>
                   <div class="wrap_dd right">
@@ -1765,18 +1736,30 @@
             <div [ngClass]="hasExpand[5] ? 'expanded' : ''" class="pl_content">
               <div class="plash">
                 <p class="socv">
-                  • Как привить ребёнку высокие ценности и цели? Которые будут
-                  поддерживать и направлять его на протяжении всей жизни
+                  • «Скажи мне, что ты ешь, и я скажу, кто ты» - как на нас
+                  влияет то, что мы едим?
                 </p>
                 <p class="socv">
-                  • Как и для чего помочь выработать здоровые привычки
+                  • Мясоедение как распространение энергии насилия. Как
+                  ежегодные массовые убийства животных, птиц и рыб влияют на
+                  судьбу человечества?
                 </p>
                 <p class="socv">
-                  • Как быть с ребёнком на одной волне, не взирая на возраст и
-                  другие различия
+                  • «Пиар-кампании мясных изделий» – кому выгодно, чтобы мы
+                  думали, что это вкусно и полезно?
                 </p>
                 <p class="socv">
-                  • Как менять свою жизнь к лучшему и практиковать всей семье
+                  • Гуны (качества) материальной природы - как это древнее
+                  знание поможет нам быть более осознанными в своем ежедневном
+                  выборе.
+                </p>
+                <p class="socv">
+                  • Пища с энергией благости - какая она? Неужели мы так зависим
+                  от пищи?
+                </p>
+                <p class="socv">
+                  • Советы для решительных: вы определились со своим выбором
+                  правильно питаться? Что дальше?
                 </p>
               </div>
               <div class="plash tt">
@@ -1793,6 +1776,73 @@
           <div class="swiper-slide">
             <div class="topic_cs_wrap">
               <div class="topic_row">
+                <div (click)="expand(6)" class="topic_item">
+                  <div class="wrap_dd left">
+                    <div class="topic_img">
+                      <img src="assets/Images/course/fam.png" alt="health" />
+                    </div>
+                    <div class="flex_flex-column">
+                      <p class="topic_txt"><span>Ахимса </span>в семье</p>
+                      <!-- <p class="dk_center sma">27 июля</p> -->
+                    </div>
+                  </div>
+                  <div class="wrap_dd right">
+                    <p class="arr_imgg">
+                      <img
+                        [ngClass]="hasExpand[6] ? 'expand' : ''"
+                        src="assets/Images/course/arrr.png"
+                      />
+                    </p>
+                  </div>
+                </div>
+                <div
+                  [ngClass]="hasExpand[6] ? 'expanded' : ''"
+                  class="more_info"
+                ></div>
+              </div>
+            </div>
+            <div [ngClass]="hasExpand[6] ? 'expanded' : ''" class="pl_content">
+              <div class="plash">
+                <p class="socv">
+                  • Ненасилие в семье - наша карма? Почему каждый из нас
+                  получает разные «уроки жизни» в семье?
+                </p>
+                <p class="socv">
+                  • Эгоистичные желания и базовые потребности – как найти баланс
+                  между эгоизмом и самодостаточностью?
+                </p>
+                <p class="socv">
+                  • Манипуляция в отношениях с близкими. Устали от зависимости?
+                  Рекомендации, как этого избежать.
+                </p>
+                <p class="socv">
+                  • Наши дети как яркий «показатель» отношений в семье –
+                  получаем то, что засеваем?
+                </p>
+                <p class="socv">• Важная роль - быть родителем.</p>
+                <p class="socv">
+                  • Психология отношений: муж и жена – разница в подходах
+                  построения ведических и тантрических семей.
+                </p>
+                <p class="socv">
+                  • Свобода и творчество – счастье выбираю я сам. Как стать
+                  автором и режиссёром своей жизни.
+                </p>
+              </div>
+              <div class="plash tt">
+                <p class="img_ch_wrap">
+                  <img src="assets/Images/course/aaf.png" alt="ava" />
+                </p>
+                <p class="sub_ph_tx">Карма-санньяси Савитри</p>
+                <p class="sub_ph_tx">инструктор йоги и медитации</p>
+                <p class="sub_ph_tx">Тема «Ахимса в семье»</p>
+                <div class="strp"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="topic_cs_wrap">
+              <div class="topic_row">
                 <div (click)="expand(7)" class="topic_item">
                   <div class="wrap_dd left">
                     <div class="topic_img">
@@ -1802,7 +1852,7 @@
                       <p class="topic_txt">
                         <span>Ахимса </span>в воспитании детей
                       </p>
-                      <p class="dk_center sma">7 августа</p>
+                      <!-- <p class="dk_center sma">7 августа</p> -->
                     </div>
                   </div>
                   <div class="wrap_dd right">
@@ -1822,19 +1872,21 @@
             </div>
             <div [ngClass]="hasExpand[7] ? 'expanded' : ''" class="pl_content">
               <div class="plash">
+                <p class="socv">• Как привить ребёнку высокие ценности?</p>
                 <p class="socv">
-                  • Как привить ребёнку высокие ценности и цели? Которые будут
-                  поддерживать и направлять его на протяжении всей жизни
+                  • Как мотивировать ребенка достигать целей, которые будут
+                  поддерживать и направлять его на протяжении всей жизни?
                 </p>
                 <p class="socv">
-                  • Как и для чего помочь выработать здоровые привычки
+                  • Принципы для выработки здоровых привычек с самого детства.
                 </p>
                 <p class="socv">
                   • Как быть с ребёнком на одной волне, не взирая на возраст и
-                  другие различия
+                  другие различия?
                 </p>
                 <p class="socv">
-                  • Как менять свою жизнь к лучшему и практиковать всей семье
+                  • Практика Ахимсы для всей семьи как способ гармонизации
+                  отношений в семье и за ее пределами.
                 </p>
               </div>
               <div class="plash tt">
@@ -1918,7 +1970,7 @@
                     </div>
                     <div class="flex_flex-column">
                       <p class="topic_txt"><span>Ахимса и </span>лидерство</p>
-                      <p class="dk_center sma">10 августа</p>
+                      <!-- <p class="dk_center sma">10 августа</p> -->
                     </div>
                   </div>
                   <div class="wrap_dd right">
@@ -1939,18 +1991,28 @@
             <div [ngClass]="hasExpand[8] ? 'expanded' : ''" class="pl_content">
               <div class="plash">
                 <p class="socv">
-                  • Как привить ребёнку высокие ценности и цели? Которые будут
-                  поддерживать и направлять его на протяжении всей жизни
+                  • Как эффективно управлять людьми через раскрытие их
+                  потенциала, отказавшись от мотивации "кнут и пряник".
                 </p>
                 <p class="socv">
-                  • Как и для чего помочь выработать здоровые привычки
+                  • Как раскрыть личный потенциал лидера через потоковое
+                  состояние и принятие себя.
                 </p>
                 <p class="socv">
-                  • Как быть с ребёнком на одной волне, не взирая на возраст и
-                  другие различия
+                  • Как из состояния "жертва обстоятельств" войти в состояние "я
+                  управляю своей судьбой". Как научиться легко брать
+                  ответственность за себя и на себя.
                 </p>
                 <p class="socv">
-                  • Как менять свою жизнь к лучшему и практиковать всей семье
+                  • Как быстро находить оптимальные решения, доверяя ситуациям,
+                  людям, себе. Закон сохранения энергии. Фильтры сознания.
+                </p>
+                <p class="socv">
+                  • Как сохранять позицию наблюдателя для получения наилучшего
+                  результата. Ассоциация и диссоциация.
+                </p>
+                <p class="socv">
+                  • Как получить кратчайший путь к реализации целей?
                 </p>
               </div>
               <div class="plash tt">
@@ -1976,7 +2038,7 @@
                       <p class="topic_txt">
                         <span>Ахимса </span> к себе и другим
                       </p>
-                      <p class="dk_center sma">14 авугста</p>
+                      <!-- <p class="dk_center sma">14 авугста</p> -->
                     </div>
                   </div>
                   <div class="wrap_dd right">
@@ -1996,19 +2058,29 @@
             </div>
             <div [ngClass]="hasExpand[9] ? 'expanded' : ''" class="pl_content">
               <div class="plash">
+                <p class="socv">• Почему Ахимса, зачем и кому это нужно?</p>
                 <p class="socv">
-                  • Как привить ребёнку высокие ценности и цели? Которые будут
-                  поддерживать и направлять его на протяжении всей жизни
+                  • Метафизика процессов: через понимание - к действию и
+                  изменению судьбы.
                 </p>
                 <p class="socv">
-                  • Как и для чего помочь выработать здоровые привычки
+                  • Полюбить себя, а вместе с тем ответить на вопрос: кто Я на
+                  самом деле?
+                </p>
+                <p class="socv">• Почему важно полюбить Себя?</p>
+                <p class="socv">
+                  • Как увидеть свою сущность божественной и полюбить внутреннее
+                  божество?
                 </p>
                 <p class="socv">
-                  • Как быть с ребёнком на одной волне, не взирая на возраст и
-                  другие различия
+                  • МИР – проекция ума, как мы можем применять это знание на
+                  практике?
                 </p>
                 <p class="socv">
-                  • Как менять свою жизнь к лучшему и практиковать всей семье
+                  • Я и другой – иллюзорная дуальность сознания.
+                </p>
+                <p class="socv">
+                  • Знание ИСТИНЫ – совершенная мудрость – совершенная жизнь.
                 </p>
               </div>
               <div class="plash tt">
@@ -2025,6 +2097,85 @@
           <div class="swiper-slide">
             <div class="topic_cs_wrap">
               <div class="topic_row">
+                <div (click)="expand(2)" class="topic_item">
+                  <div class="wrap_dd left">
+                    <div class="topic_img">
+                      <img src="assets/Images/course/ast.png" alt="health" />
+                    </div>
+                    <div class="flex_flex-column">
+                      <p class="topic_txt">
+                        <span>Ахимса </span
+                        ><span class="smal">и</span> астрология
+                      </p>
+                      <!-- <p class="dk_center sma">24 июля</p> -->
+                    </div>
+                  </div>
+                  <div class="wrap_dd right">
+                    <p class="arr_imgg">
+                      <img
+                        [ngClass]="hasExpand[2] ? 'expand' : ''"
+                        src="assets/Images/course/arrr.png"
+                      />
+                    </p>
+                  </div>
+                </div>
+                <div
+                  [ngClass]="hasExpand[2] ? 'expanded' : ''"
+                  class="more_info"
+                ></div>
+              </div>
+            </div>
+            <div [ngClass]="hasExpand[2] ? 'expanded' : ''" class="pl_content">
+              <div class="plash">
+                <p class="socv">
+                  • Древняя наука Джьотиш – почему она важна для нас?
+                </p>
+                <p class="socv">
+                  • Гороскоп – астральная матрица и ахимса как ее важнейший
+                  принцип.
+                </p>
+                <p class="socv">
+                  • Великие космические силы – грахи, как научиться преодолевать
+                  их и, более того, делать их своей «силой».
+                </p>
+                <p class="socv">• Ахимса и граха Сурья (Солнце) – Сила Духа</p>
+                <p class="socv">
+                  • Ахимса и граха Чандра (Луна) – Сила Восприятия
+                </p>
+                <p class="socv">
+                  • Ахимса и граха Гуру (Юпитер) – Сила Пространства
+                </p>
+                <p class="socv">
+                  • Ахимса и граха Шани (Сатурн) – Сила Ограничения
+                </p>
+                <p class="socv">
+                  • Ахимса и граха Мангала (Марс) – Сила Действия
+                </p>
+                <p class="socv">
+                  • Ахимса и граха Шукра (Венера) – Сила Телесности
+                </p>
+                <p class="socv">
+                  • Ахимса и граха Буддха (Меркурий) – Сила Объективности
+                </p>
+                <p class="socv">
+                  • Искусные упаи (методы практики) для устранения препятствий в
+                  жизни.
+                </p>
+              </div>
+              <div class="plash tt">
+                <p class="img_ch_wrap">
+                  <img src="assets/Images/course/aas.png" alt="ava" />
+                </p>
+                <p class="sub_ph_tx">Карма-санньяси Видьягаури</p>
+                <p class="sub_ph_tx">инструктор йоги и медитации</p>
+                <p class="sub_ph_tx">Тема «Ахимса и астрология»</p>
+                <div class="strp"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="topic_cs_wrap">
+              <div class="topic_row">
                 <div (click)="expand(3)" class="topic_item">
                   <div class="wrap_dd left">
                     <div class="topic_img">
@@ -2034,7 +2185,7 @@
                       <p class="topic_txt">
                         <span>Ахимса</span> в военное время
                       </p>
-                      <p class="dk_center sma">17 августа</p>
+                      <!-- <p class="dk_center sma">17 августа</p> -->
                     </div>
                   </div>
                   <div class="wrap_dd right">
@@ -2055,18 +2206,27 @@
             <div [ngClass]="hasExpand[3] ? 'expanded' : ''" class="pl_content">
               <div class="plash">
                 <p class="socv">
-                  • Как привить ребёнку высокие ценности и цели? Которые будут
-                  поддерживать и направлять его на протяжении всей жизни
+                  • Ахимса во времена Кали Юги – когда завершится 5000-летняя
+                  война?
+                </p>
+                <p class="socv">• Что мы можем сделать, чтобы ее завершить?</p>
+                <p class="socv">
+                  • Ахимса (ненасилие) и Сатья (истина) – неразделимые понятия:
+                  хочешь жить в мире без насилия – познай истину.
                 </p>
                 <p class="socv">
-                  • Как и для чего помочь выработать здоровые привычки
+                  • Как перестать причинять химсу (зло, насилие, вред)?
+                  «Причинять добро» и «жить ахимсой» - как уловить тонкую грань?
                 </p>
                 <p class="socv">
-                  • Как быть с ребёнком на одной волне, не взирая на возраст и
-                  другие различия
+                  • Как мир и покой внутри (реализованная Ахимса) по отношению к
+                  себе открывает путь к гармонии по отношению к Миру.
                 </p>
                 <p class="socv">
-                  • Как менять свою жизнь к лучшему и практиковать всей семье
+                  • 3 уровня Ахимсы. Как перейти от философии к практике.
+                </p>
+                <p class="socv">
+                  • Плоды Ахимсы – краткосрочная и долгосрочная перспектива.
                 </p>
               </div>
               <div class="plash tt">
@@ -2080,7 +2240,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <div class="topic_cs_wrap">
               <div class="topic_row">
                 <div (click)="expand(11)" class="topic_item">
@@ -2126,16 +2286,10 @@
                 </p>
               </div>
               <div class="plash tt">
-                <!-- <p class="img_ch_wrap">
-                  <img src="assets/Images/course/child.png" alt="ava" />
-                </p>
-                <p class="sub_ph_tx">Карма-санньяси Индубваха</p>
-                <p class="sub_ph_tx">инструктор йоги и медитации</p>
-                <p class="sub_ph_tx">Тема «Ахимса — путь к счастью»</p> -->
                 <div class="strp"></div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
@@ -2833,7 +2987,7 @@
               Я ощутил, что где-то глубоко внутри есть гораздо более глубокое,
               чистое и совершенное мироощущение бытия, и я могу с ним
               сонастраиваться и идти к нему. Что эта самая ахимса, она совсем не
-              про других а она только про меня.
+              про других, а она только про меня.
             </p>
             <p class="lnln">
               <img src="assets/Images/course/lnnm.png" alt="line" />
@@ -2842,9 +2996,9 @@
           </div>
           <div id="rewiew-wrptw" class="rewiew_wrp">
             <p class="rew_text">
-              Для меня это возможность быть более осознанной в повседневной
-              жизни. И это мне кажется самым естественным желанием, исходящим из
-              самой глубинной сути.
+              Для меня практика ахимсы это возможность быть более осознанной в
+              повседневной жизни. И это мне кажется самым естественным желанием,
+              исходящим из самой глубинной сути.
             </p>
             <p class="lnln">
               <img src="assets/Images/course/lnnm.png" alt="line" />
@@ -2853,10 +3007,10 @@
           </div>
           <div id="rewiew-wrpthr" class="rewiew_wrp">
             <p class="rew_text">
-              Обет Ахимсы разбудил моего внутреннего наблюдателя. Теперь чаще
-              останавливаю дисгармоничные эмоции, мысли, выводы. Это экономит
-              много сил и я чувствую себя гармоничнее. Стала более внимательной,
-              спокойной, доброй - по отношению к себя и другим.
+              Практика ахимсы разбудила моего внутреннего наблюдателя. Теперь
+              чаще останавливаю дисгармоничные эмоции, мысли, выводы. Это
+              экономит много сил и я чувствую себя гармоничнее. Стала более
+              внимательной, спокойной, доброй по отношению к себе и другим.
             </p>
             <p class="lnln">
               <img src="assets/Images/course/lnnm.png" alt="line" />
@@ -2865,8 +3019,8 @@
           </div>
           <div id="rewiew-wrpfv" class="rewiew_wrp">
             <p class="rew_text">
-              Прощение, легкость, сострадание, любовь, радость, спокойствие -
-              всё это плоды принятия этого обета.
+              Прощение, легкость, сострадание, любовь, радость, спокойствие —
+              всё это плоды практики ахимсы.
             </p>
             <p class="lnln">
               <img src="assets/Images/course/lnnm.png" alt="line" />
@@ -2875,8 +3029,8 @@
           </div>
           <div id="rewiew-wrpsx" class="rewiew_wrp">
             <p class="rew_text">
-              Мы становимся на путь своей трансформации, а Боги и Святые
-              начинают помогать нам в этом. А когда внутри спокойно,
+              Практикуя ахимсу мы становимся на путь своей трансформации, а Боги
+              и Святые начинают помогать нам в этом. А когда внутри спокойно,
               взаимодействовать с другими людьми гораздо приятнее и эффективнее.
             </p>
             <p class="lnln">
@@ -2887,7 +3041,7 @@
 
           <div id="rewiew-wrpsev" class="rewiew_wrp">
             <p class="rew_text">
-              Это выражение активной гражданской позиции по отношению к
+              Ахимса — это выражение активной гражданской позиции по отношению к
               происходящему в мире. Я своими руками строю тот мир в который я
               верю.
             </p>
@@ -2909,7 +3063,7 @@
           </div>
           <div id="rewiew-wrpnine" class="rewiew_wrp">
             <p class="rew_text">
-              Это практика способная помочь миру стать СЧАСТЛИВЕЕ. Её передают
+              Практика ахимсы способна помочь миру стать СЧАСТЛИВЕЕ. Её передают
               нам Духовные Просветленные Мастера. Я свято верю в то, что любая
               молитва идущая из Сердца, способна творить чудеса.
             </p>
@@ -2920,10 +3074,11 @@
           </div>
           <div id="rewiew-wrpten" class="rewiew_wrp">
             <p class="rew_text">
-              Ахимса становится естественным намерением и путём, если ты что-то
-              понял в своей практике. Это фундаментальная вещь, которой ты
-              будешь следовать в любом случае, потому что ты пребываешь со всеми
-              живыми существами в единстве, в тончайшей телепатический связи.
+              Практика ненасилия, ахимса становится естественным намерением и
+              путём, если ты что-то понял в своей практике. Это фундаментальная
+              вещь, которой ты будешь следовать в любом случае, потому что ты
+              пребываешь со всеми живыми существами в единстве, в тончайшей
+              телепатический связи.
             </p>
             <p class="lnln">
               <img src="assets/Images/course/lnnm.png" alt="line" />
@@ -2932,12 +3087,11 @@
           </div>
           <div id="rewiew-wrpellv" class="rewiew_wrp">
             <p class="rew_text">
-              Появилось больше внимательности к мыслям, речи и действиям.
-              Почувствовалось как трансформации внутри в тот же момент поменяли
-              события и пространство снаружи. Так же заметила больше силы воли в
-              практике и в соблюдении ненасилия мысленного, которое привело к
-              усилению осознанности и сохранялось особенно ярко на период
-              принятия обета.
+              Когда я стала практиковать ахимсу, появилось больше внимательности
+              к мыслям, речи и действиям. Почувствовалось как трансформации
+              внутри в тот же момент поменяли события и пространство снаружи.
+              Так же заметила больше силы воли в практике и в соблюдении
+              ненасилия мысленного, которое привело к усилению осознанности.
             </p>
             <p class="lnln">
               <img src="assets/Images/course/lnnm.png" alt="line" />
