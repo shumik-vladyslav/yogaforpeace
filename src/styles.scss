@@ -318,13 +318,14 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  border-radius: 7px;
+  border-radius: 0;
+  background-color: #fff7f9 ;
 }
 .sames {
   flex-direction: column;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #cddaee;
+  background-color: #162883;
   border: 0 white solid;
   border-radius: 7px;
 }
