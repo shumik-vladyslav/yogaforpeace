@@ -1562,7 +1562,7 @@ p.cs_log {
   align-items: center;
   justify-content: center;
   width: 60%;
-  height: 400px;
+  height: auto;
   box-shadow: 0px 0px 12px #c1bdbd;
   margin: 68px auto;
   background: aliceblue;
@@ -2232,7 +2232,6 @@ ul.l_gen {
   }
   .video_wrapper {
     margin: 35px auto;
-    height: 300px;
   }
   .cs_blank.stat {
     margin-top: -30px;
