@@ -247,8 +247,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.addScriptsToHead()
-
+    this.addScriptsToHead();
     this.http.get("https://api.ipregistry.co/?key=tryout", {}).subscribe((resp: any) => {
       const findMe = Object.keys(CountryISO)[Object.values(CountryISO as any).indexOf(resp.location.country.code.toLowerCase())];
       console.log(findMe);
@@ -262,8 +261,6 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
     });
     window.scroll(0, 0);
   }
-
-
 
   showMenu() {
     this.menu = true;
@@ -377,8 +374,6 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
     const contactForm = this.form.value;
     const email = contactForm.email;
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-
-
     const message: FormMessage = {
       name: contactForm.name,
       replyTo: 'yogisforpeace1008@gmail.com',
@@ -393,7 +388,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
       res => {
         console.log("this.angularFirestore.collection('users').add(message)  ", res);
         this.isSendRegistrationMessage = true;
-        const dialogRef = this.dialog.open(DownloadAhimsaComponent, {
+        this.dialog.open(DownloadAhimsaComponent, {
           width: '60vw',
           maxHeight: "800px",
           minHeight: "400px",
@@ -415,9 +410,6 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
   sendRegistrationData() {
     const form = this.form.value;
     const email = form.email;
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-
-
     const message: FormMessage = {
       name: form.name,
       replyTo: 'yogisforpeace1008@gmail.com',
@@ -430,7 +422,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
     };
     this.angularFirestore.collection('users').add(message).then(
       res => {
-  
+
         this.isSendRegistrationMessage = true;
       })
 
@@ -534,6 +526,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
         }
       });
   }
+
   setRevieverRu() {
     this.slidesIm = [
       {
@@ -587,6 +580,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
       }
     ]
   }
+
   setRevieverEn() {
     this.slidesIm = [
       {
@@ -641,45 +635,26 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
     ]
   }
 
-
   addScriptsToHead() {
-
-
     const head1 = document.getElementsByTagName('head')[0];
-
-
     const script1 = document.createElement('noscript');
-    script1.innerHTML = `<img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=626453055020322&ev=PageView&noscript=1"
-/>`;
-
+    script1.innerHTML = `<img height="1" width="1" style="display:none"src="https://www.facebook.com/tr?id=626453055020322&ev=PageView&noscript=1"/>`;
     head1.insertBefore(script1, head1.firstChild);
-
     const head = document.getElementsByTagName('head')[0];
-
-
     const script = document.createElement('script');
     script.innerHTML = `  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '626453055020322');
-  fbq('track', 'PageView');`;
-
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefor(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '626453055020322');fbq('track', 'PageView');`;
     head.insertBefore(script, head.firstChild);
   }
+
   telegramClick() {
     if (this.lan === 'ru') {
       this.goToLink('https://t.me/yogiesforpeas_bot?start=ZGw6MTI2NTI1')
     } else {
       this.goToLink('https://t.me/yogiesforpeas_bot?start=ZGw6MTI2NTI4')
-
     }
   }
+
   goToLink(url: string) {
     window.open(url, "_blank");
   }
