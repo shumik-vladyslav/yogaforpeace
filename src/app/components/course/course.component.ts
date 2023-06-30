@@ -9,7 +9,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { VideoDialogComponent } from '../video-dialog/video-dialog.component';
 import { SwiperOptions } from 'swiper';
-
 @Component({
   selector: 'app-course',
   templateUrl: './course.component.html',
@@ -49,7 +48,7 @@ export class CourseComponent implements OnInit {
     private angularFirestore: AngularFirestore,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private dialog: MatDialog,
+    private dialog: MatDialog
   ) {
     if (window.innerWidth <= 1000) {
       this.less = true;
@@ -72,6 +71,10 @@ export class CourseComponent implements OnInit {
     document.getElementById("rewiew-wrp" + clas).classList.remove(clas);
   }
 
+  telegramRegister() {
+    window.open(`https://tg.pulse.is/yogiesforpeas_bot?start=648054e04ec7d4580107e9da|Сегменты=YPF_Ahimsa_Course_Free|UTM_Source=${this.routeParams?.utm_source}|UTM_medium=${this.routeParams?.utm_medium}|UTM_campaign=${this.routeParams?.utm_campaign}`)
+  }
+
   showVideo(url: string, tube?: boolean) {
     this.dialog.open(VideoDialogComponent, {
       width: 'auto',
@@ -86,6 +89,8 @@ export class CourseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // const script1 = document.createElement('no1script');
+    // script1.innerHTML = `<script src="//web.webformscr.com/apps/fc3/build/loader.js" async sp-form-id="5a021b81ce135f80e6332d5cdb470194 d1377e5d7bdc31a2330840532f819428"></script>`;
     if (tns.length) {
       tns({
         "container": '.my-slider-mob',
@@ -174,128 +179,28 @@ export class CourseComponent implements OnInit {
     this.form.reset();
   }
 
-  sendRegistrationData() {
-    const form = this.form.value;
-    const email = form.email;
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-
-
-    const message: FormMessage = {
-      name: form.name,
-      replyTo: 'yogisforpeace1008@gmail.com',
-      message: form.description ?? null,
-      phone: form.phone,
-      emailAddress: email,
-      from: 'Ahimsa',
-      date: +new Date(),
-      isChecked: false
-    };
-    this.angularFirestore.collection('users').add(message).then(
-      res => {
-
-        this.isSendRegistrationMessage = true;
-      })
-
-    this.http
-      .post(
-        this.url + 'crm.deal.list',
-        {}
-      )
-      .subscribe((dealListResponse: any) => {
-        let dealListTotal = dealListResponse.total;
-        this.http
-          .post(
-            this.url + 'crm.contact.list',
-            {
-              filter: { "EMAIL": form.email },
-              select: ["ID", "NAME", "LAST_NAME"]
-            },
-          )
-          .subscribe((contactListResponse: any) => {
-            console.log('contactListResponse ', contactListResponse);
-            if (contactListResponse.result.length) {
-              this.useContact(contactListResponse.result[0], dealListTotal);
-            } else {
-              this.addContact(dealListTotal);
-            }
-          });
-      });
+  addScriptsToHead() {
+    const head1 = document.getElementsByTagName('head')[0];
+    const script1 = document.createElement('noscript');
+    script1.innerHTML = `<img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=626453055020322&ev=PageView&noscript=1"/>`;
+    head1.insertBefore(script1, head1.firstChild);
+    const head = document.getElementsByTagName('head')[0];
+    const script = document.createElement('script');
+    script.innerHTML = `  !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '626453055020322');
+    fbq('track', 'CompleteRegistration');`;
+    head.insertBefore(script, head.firstChild);
   }
 
-  addContact(dealListTotal) {
-    const form = this.form.value;
-    this.http
-      .post(
-        this.url + 'crm.contact.add',
-        {
-          fields: {
-            "NAME": form.name,
-            "FROM": this.lan == 'ru' ? "forum_ru" : "forum_en",
-            PHONE: [{ VALUE: form.phone, VALUE_TYPE: "WORK" }],
-            EMAIL: [{ VALUE: form.email, VALUE_TYPE: "HOME" }],
-            UTM_CAMPAIGN: this.routeParams?.utm_campaign,
-            UTM_MEDIUM: this.routeParams?.utm_medium,
-            UTM_SOURCE: this.routeParams?.utm_source,
-            UTM_TERM: this.routeParams?.utm_term,
-          },
-        }
-      )
-      .subscribe((contact: any) => {
-        console.log(contact);
-        this.addDeal(contact.result, dealListTotal);
-      });
-  }
-
-  useContact(contact, dealListTotal) {
-    this.addDeal(contact.ID, dealListTotal);
-  }
-
-  addDeal(contactId, dealListTotal) {
-    this.http
-      .post(
-        this.url + 'crm.deal.list',
-        {
-          filter: { "CONTACT_ID": contactId, "SOURCE_DESCRIPTION": this.lan == 'ru' ? "YFP_Ritual_Ahimsa_Ru" : "YFP_Ritual_Ahimsa_En" },
-          select: ["ID", "TITLE", "SOURCE"]
-        },
-      )
-      .subscribe((dealListResponse: any) => {
-        console.log('dealListResponse ', dealListResponse);
-        if (dealListResponse.result.length) {
-          alert(this.lan == 'ru' ? "Вы уже зарегестрировались" : "You are already registered")
-        } else {
-          this.http
-            .post(
-              this.url + 'crm.deal.add',
-              {
-                fields: {
-                  TITLE: `Заявка номер ${dealListTotal + 1}`,
-                  CONTACT_ID: contactId,
-                  STATUS: 'NEW',
-                  OPENED: 'Y',
-                  HAS_PHONE: 'Y',
-                  HAS_EMAIL: 'Y',
-                  STATUS_ID: 'NEW',
-                  STATUS_DESCRIPTION: 'Новый',
-                  SOURCE_ID: 'CALL',
-                  SOURCE_DESCRIPTION: this.lan == 'ru' ? "YFP_Ritual_Ahimsa_Ru" : "YFP_Ritual_Ahimsa_En",
-                  SOURCE: this.lan == 'ru' ? "YFP_Ritual_Ahimsa_Ru" : "YFP_Ritual_Ahimsa_En",
-                  UTM_CAMPAIGN: this.routeParams?.utm_campaign,
-                  UTM_MEDIUM: this.routeParams?.utm_medium,
-                  UTM_SOURCE: this.routeParams?.utm_source,
-                  UTM_TERM: this.routeParams?.utm_term,
-
-                },
-              }
-            )
-            .subscribe((res) => {
-              console.log(res);
-              // this.router.navigate['/','thanks'];
-              this.router.navigateByUrl('/thanks-ahimsa');
-            });
-        }
-      });
-  }
+  submitForm() {}
 
   showMenu() {
     this.menu = true;

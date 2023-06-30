@@ -79,7 +79,7 @@
                   <div class="couse_st hide_mb">
                     <p class="srt_tx">
                       Старт курса<br />
-                      8 ИЮЛЯ
+                      22 ИЮЛЯ
                     </p>
                   </div>
                 </div>
@@ -105,7 +105,7 @@
                   <p class="srt_tx">
                     Старт<br />
                     курса<br />
-                    8 ИЮЛЯ
+                    22 ИЮЛЯ
                   </p>
                 </div>
                 <div class="outer_wrap_cs relative lft">
@@ -119,7 +119,10 @@
                     <div
                       class="header-inner header-inner-button boreder grad xl"
                     >
-                      <button class="registration-button rd">
+                      <button
+                        (click)="submitForm()"
+                        class="registration-button rd"
+                      >
                         Зарегистрироваться
                       </button>
                     </div>
@@ -196,7 +199,7 @@
             целым миром»
           </p>
           <div class="video_wrapper">
-            <h1>Video</h1>
+            <img src="assets/Images/course/video.jpg" alt="video" />
           </div>
         </div>
       </div>
@@ -561,7 +564,7 @@
       <div class="craph_tb">
         <div class="cr_wrap-top">
           <p class="tab_head">
-            Обучение на курсе:&nbsp;<span>8 июля – 8 августа</span>
+            Обучение на курсе:&nbsp;<span>22 июля – 22 августа</span>
           </p>
         </div>
         <div class="cr_wrap-cont">
@@ -689,9 +692,7 @@
               </div>
               <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span
-                    >Лекция «Ахимса в повседневной жизни. Ганди об ахимсе»</span
-                  ><br />
+                  <span>Лекция «Ахимса в повседневной жизни»</span><br />
                   Санньяси Экантини Гири<br />
                   Монахиня, инструктор йоги и медитации
                 </p>
@@ -703,10 +704,7 @@
               </div>
               <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span
-                    >Лекция «Ахимса в ведической мифологии, Шри Рамана об
-                    ахимсе»</span
-                  ><br />
+                  <span>Лекция «Ахимса в ведической мифологии»</span><br />
                   Санньяси Санаткумара<br />
                   Монах, инструктор йоги и медитации
                 </p>
@@ -795,9 +793,7 @@
               </div>
               <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span
-                    >Лекция «Ахимса в повседневной жизни. Ганди об ахимсе»</span
-                  ><br />
+                  <span>Лекция «Ахимса в повседневной жизни»</span><br />
                   Санньяси Экантини Гири<br />
                   Монахиня, инструктор йоги и медитации
                 </p>
@@ -809,10 +805,7 @@
               </div>
               <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span
-                    >Лекция «Ахимса в ведической мифологии, Шри Рамана об
-                    ахимсе»</span
-                  ><br />
+                  <span>Лекция «Ахимса в ведической мифологии»</span><br />
                   Санньяси Санаткумара<br />
                   Монах, инструктор йоги и медитации
                 </p>
@@ -1515,7 +1508,7 @@
               <p class="img_ch_wrap">
                 <img src="assets/Images/course/wae.png" alt="ava" />
               </p>
-              <p class="sub_ph_tx">Карма-санньяси Зоряна</p>
+              <p class="sub_ph_tx">Пурна-санньясини Сатья Гири</p>
               <p class="sub_ph_tx">инструктор йоги и медитации</p>
               <p class="sub_ph_tx">Тема «Ахимса в военное время»</p>
             </div>
@@ -2233,7 +2226,7 @@
                 <p class="img_ch_wrap">
                   <img src="assets/Images/course/wae.png" alt="ava" />
                 </p>
-                <p class="sub_ph_tx">Карма-санньяси Зоряна</p>
+                <p class="sub_ph_tx">Пурна-санньясини Сатья Гири</p>
                 <p class="sub_ph_tx">инструктор йоги и медитации</p>
                 <p class="sub_ph_tx">Тема «Ахимса в военное время»</p>
                 <div class="strp"></div>
@@ -3295,7 +3288,12 @@
           <img src="assets/Images/tel.png" alt="talegramm" />
           <div class="butt_b_wrap">
             <div class="header-inner header-inner-button boreder grad xl">
-              <button (click)="telegramRegister()" class="registration-button rd">Регистрация</button>
+              <button
+                (click)="telegramRegister()"
+                class="registration-button rd"
+              >
+                Регистрация
+              </button>
             </div>
           </div>
         </div>
@@ -3347,6 +3345,7 @@
           </div>
         </div>
       </div>
+      <!-- <button sp-show-form="225114">Показать форму</button> -->
     </div>
     <div class="cs_blank">
       <div class="cs_container sots bottom">
