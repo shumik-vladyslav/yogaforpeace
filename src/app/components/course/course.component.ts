@@ -30,6 +30,7 @@ export class CourseComponent implements OnInit {
   preferredCountries: CountryISO[] = [CountryISO.UnitedStates, CountryISO.UnitedKingdom];
   selectedCountry = CountryISO["CzechRepublic"];
   routeParams;
+  mobExpanded: boolean = false;
   // @HostListener('window:resize') onResize() {}
   config: SwiperOptions = {
     pagination: {
@@ -114,7 +115,11 @@ export class CourseComponent implements OnInit {
   }
 
   expand(idx: number) {
-    this.hasExpand[idx] = !this.hasExpand[idx];
+    if (window.innerWidth <= 660) {
+      this.mobExpanded = !this.mobExpanded;
+    } else {
+      this.hasExpand[idx] = !this.hasExpand[idx];
+    }
   }
 
   goToURl(url) {

@@ -1472,7 +1472,7 @@ p.topic_txt {
   }
 }
 .socv {
-  font-size: 1.7em;
+  font-size: 20px;
   line-height: 1.1;
   color: #58585a;
   font-weight: 400;
@@ -2150,7 +2150,7 @@ ul.l_gen {
   .pl_content {
     max-height: 70px;
     .socv {
-      font-size: 1.5em;
+      font-size: 17px;
     }
     .sub_ph_tx {
       font-size: 17px;
@@ -2325,6 +2325,9 @@ ul.l_gen {
     &.expanded {
       padding: 3em 2em;
     }
+  }
+  .pl_content .socv {
+    font-size: 15px;
   }
   p.arr_imgg {
     width: 30px;
@@ -2799,9 +2802,6 @@ ul.l_gen {
   }
 }
 @media (max-width: 774px) {
-  .pl_content .socv {
-    font-size: 1.2em;
-  }
   p.dk_center.sma {
     margin: 0 0 0 15px;
   }

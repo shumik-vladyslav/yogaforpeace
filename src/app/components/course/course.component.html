@@ -73,7 +73,7 @@
             <div class="cs_left_cont relative">
               <div class="cs_right_cont absolute">
                 <div class="flex_d">
-                  <p class="cs_fr">
+                  <p class="cs_fr he_mb">
                     бесплатный месячный онлайн<br />курс-интенсив
                   </p>
                   <div class="couse_st hide_mb">
@@ -90,11 +90,14 @@
                 <p class="cs_t_gn mg">
                   Будьте в гармонии с самим собой и целым миром!
                 </p>
-                <p class="cs_t_bl mg">
+                <p class="cs_fr he_ds">
+                  бесплатный месячный онлайн<br />курс-интенсив
+                </p>
+                <p class="cs_t_bl mg he_mb">
                   • <span>Надоело «насильственно» заставлять себя</span><br />
                   делать то или это?
                 </p>
-                <p class="cs_t_bl mg">
+                <p class="cs_t_bl mg he_mb">
                   •
                   <span
                     >Не справляетесь с постоянным<br />
@@ -929,7 +932,7 @@
               <p class="img_ch_wrap">
                 <img src="assets/Images/course/aah.png" alt="ava" />
               </p>
-              <p class="sub_ph_tx">Карма-санньяси Амаранатха и Ниранджана</p>
+              <p class="sub_ph_tx">Карма-санньяси<br />Амаранатха и Ниранджана</p>
               <p class="sub_ph_tx">инструктора йоги и медитации</p>
               <p class="sub_ph_tx">Тема «Ахимса и здоровье»</p>
             </div>
@@ -1590,19 +1593,19 @@
                   <div class="wrap_dd right">
                     <p class="arr_imgg">
                       <img
-                        [ngClass]="hasExpand[4] ? 'expand' : ''"
+                        [ngClass]="mobExpanded ? 'expand' : ''"
                         src="assets/Images/course/arrr.png"
                       />
                     </p>
                   </div>
                 </div>
                 <div
-                  [ngClass]="hasExpand[4] ? 'expanded' : ''"
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
                   class="more_info"
                 ></div>
               </div>
             </div>
-            <div [ngClass]="hasExpand[4] ? 'expanded' : ''" class="pl_content">
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
               <div class="plash">
                 <p class="socv">• Действительно ли вы здоровы, как считаете?</p>
                 <p class="socv">
@@ -1640,7 +1643,7 @@
                 <p class="img_ch_wrap">
                   <img src="assets/Images/course/aah.png" alt="ava" />
                 </p>
-                <p class="sub_ph_tx">Карма-санньяси Амаранатха и Ниранджана</p>
+                <p class="sub_ph_tx">Карма-санньяси<br />Амаранатха и Ниранджана</p>
                 <p class="sub_ph_tx">инструктора йоги и медитации</p>
                 <p class="sub_ph_tx">Тема «Ахимса и здоровье»</p>
                 <div class="strp"></div>
@@ -1663,19 +1666,19 @@
                   <div class="wrap_dd right">
                     <p class="arr_imgg">
                       <img
-                        [ngClass]="hasExpand[1] ? 'expand' : ''"
+                        [ngClass]="mobExpanded ? 'expand' : ''"
                         src="assets/Images/course/arrr.png"
                       />
                     </p>
                   </div>
                 </div>
                 <div
-                  [ngClass]="hasExpand[1] ? 'expanded' : ''"
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
                   class="more_info"
                 ></div>
               </div>
             </div>
-            <div [ngClass]="hasExpand[1] ? 'expanded' : ''" class="pl_content">
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
               <div class="plash">
                 <p class="socv">
                   • Как привить ребёнку высокие ценности и цели? Которые будут
@@ -1714,19 +1717,19 @@
                   <div class="wrap_dd right">
                     <p class="arr_imgg">
                       <img
-                        [ngClass]="hasExpand[5] ? 'expand' : ''"
+                        [ngClass]="mobExpanded ? 'expand' : ''"
                         src="assets/Images/course/arrr.png"
                       />
                     </p>
                   </div>
                 </div>
                 <div
-                  [ngClass]="hasExpand[5] ? 'expanded' : ''"
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
                   class="more_info"
                 ></div>
               </div>
             </div>
-            <div [ngClass]="hasExpand[5] ? 'expanded' : ''" class="pl_content">
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
               <div class="plash">
                 <p class="socv">
                   • «Скажи мне, что ты ешь, и я скажу, кто ты» - как на нас
@@ -1782,19 +1785,19 @@
                   <div class="wrap_dd right">
                     <p class="arr_imgg">
                       <img
-                        [ngClass]="hasExpand[6] ? 'expand' : ''"
+                        [ngClass]="mobExpanded ? 'expand' : ''"
                         src="assets/Images/course/arrr.png"
                       />
                     </p>
                   </div>
                 </div>
                 <div
-                  [ngClass]="hasExpand[6] ? 'expanded' : ''"
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
                   class="more_info"
                 ></div>
               </div>
             </div>
-            <div [ngClass]="hasExpand[6] ? 'expanded' : ''" class="pl_content">
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
               <div class="plash">
                 <p class="socv">
                   • Ненасилие в семье - наша карма? Почему каждый из нас
@@ -1851,19 +1854,19 @@
                   <div class="wrap_dd right">
                     <p class="arr_imgg">
                       <img
-                        [ngClass]="hasExpand[7] ? 'expand' : ''"
+                        [ngClass]="mobExpanded ? 'expand' : ''"
                         src="assets/Images/course/arrr.png"
                       />
                     </p>
                   </div>
                 </div>
                 <div
-                  [ngClass]="hasExpand[7] ? 'expanded' : ''"
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
                   class="more_info"
                 ></div>
               </div>
             </div>
-            <div [ngClass]="hasExpand[7] ? 'expanded' : ''" class="pl_content">
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
               <div class="plash">
                 <p class="socv">• Как привить ребёнку высокие ценности?</p>
                 <p class="socv">
@@ -1913,19 +1916,19 @@
                   <div class="wrap_dd right">
                     <p class="arr_imgg">
                       <img
-                        [ngClass]="hasExpand[10] ? 'expand' : ''"
+                        [ngClass]=""mobExpanded ? 'expand' : ''"
                         src="assets/Images/course/arrr.png"
                       />
                     </p>
                   </div>
                 </div>
                 <div
-                  [ngClass]="hasExpand[10] ? 'expanded' : ''"
+                  [ngClass]=""mobExpanded ? 'expanded' : ''"
                   class="more_info"
                 ></div>
               </div>
             </div>
-            <div [ngClass]="hasExpand[10] ? 'expanded' : ''" class="pl_content">
+            <div [ngClass]=""mobExpanded ? 'expanded' : ''" class="pl_content">
               <div class="plash">
                 <p class="socv">
                   • Как привить ребёнку высокие ценности и цели? Которые будут
@@ -1969,19 +1972,19 @@
                   <div class="wrap_dd right">
                     <p class="arr_imgg">
                       <img
-                        [ngClass]="hasExpand[8] ? 'expand' : ''"
+                        [ngClass]="mobExpanded ? 'expand' : ''"
                         src="assets/Images/course/arrr.png"
                       />
                     </p>
                   </div>
                 </div>
                 <div
-                  [ngClass]="hasExpand[8] ? 'expanded' : ''"
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
                   class="more_info"
                 ></div>
               </div>
             </div>
-            <div [ngClass]="hasExpand[8] ? 'expanded' : ''" class="pl_content">
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
               <div class="plash">
                 <p class="socv">
                   • Как эффективно управлять людьми через раскрытие их
@@ -2037,19 +2040,19 @@
                   <div class="wrap_dd right">
                     <p class="arr_imgg">
                       <img
-                        [ngClass]="hasExpand[9] ? 'expand' : ''"
+                        [ngClass]="mobExpanded ? 'expand' : ''"
                         src="assets/Images/course/arrr.png"
                       />
                     </p>
                   </div>
                 </div>
                 <div
-                  [ngClass]="hasExpand[9] ? 'expanded' : ''"
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
                   class="more_info"
                 ></div>
               </div>
             </div>
-            <div [ngClass]="hasExpand[9] ? 'expanded' : ''" class="pl_content">
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
               <div class="plash">
                 <p class="socv">• Почему Ахимса, зачем и кому это нужно?</p>
                 <p class="socv">
@@ -2106,19 +2109,19 @@
                   <div class="wrap_dd right">
                     <p class="arr_imgg">
                       <img
-                        [ngClass]="hasExpand[2] ? 'expand' : ''"
+                        [ngClass]="mobExpanded ? 'expand' : ''"
                         src="assets/Images/course/arrr.png"
                       />
                     </p>
                   </div>
                 </div>
                 <div
-                  [ngClass]="hasExpand[2] ? 'expanded' : ''"
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
                   class="more_info"
                 ></div>
               </div>
             </div>
-            <div [ngClass]="hasExpand[2] ? 'expanded' : ''" class="pl_content">
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
               <div class="plash">
                 <p class="socv">
                   • Древняя наука Джьотиш – почему она важна для нас?
@@ -2184,19 +2187,19 @@
                   <div class="wrap_dd right">
                     <p class="arr_imgg">
                       <img
-                        [ngClass]="hasExpand[3] ? 'expand' : ''"
+                        [ngClass]="mobExpanded ? 'expand' : ''"
                         src="assets/Images/course/arrr.png"
                       />
                     </p>
                   </div>
                 </div>
                 <div
-                  [ngClass]="hasExpand[3] ? 'expanded' : ''"
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
                   class="more_info"
                 ></div>
               </div>
             </div>
-            <div [ngClass]="hasExpand[3] ? 'expanded' : ''" class="pl_content">
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
               <div class="plash">
                 <p class="socv">
                   • Ахимса во времена Кали Юги – когда завершится 5000-летняя
@@ -2249,19 +2252,19 @@
                   <div class="wrap_dd right">
                     <p class="arr_imgg">
                       <img
-                        [ngClass]="hasExpand[11] ? 'expand' : ''"
+                        [ngClass]=""mobExpanded ? 'expand' : ''"
                         src="assets/Images/course/arrr.png"
                       />
                     </p>
                   </div>
                 </div>
                 <div
-                  [ngClass]="hasExpand[11] ? 'expanded' : ''"
+                  [ngClass]=""mobExpanded ? 'expanded' : ''"
                   class="more_info"
                 ></div>
               </div>
             </div>
-            <div [ngClass]="hasExpand[11] ? 'expanded' : ''" class="pl_content">
+            <div [ngClass]=""mobExpanded ? 'expanded' : ''" class="pl_content">
               <div class="plash">
                 <p class="socv">
                   • Как привить ребёнку высокие ценности и цели? Которые будут

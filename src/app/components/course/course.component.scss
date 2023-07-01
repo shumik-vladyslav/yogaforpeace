@@ -455,6 +455,9 @@ ngx-intl-tel-input {
     display: none;
   }
 }
+.he_ds {
+  display: none;
+}
 .x {
   right: 15px;
   font-size: 35px;
@@ -906,6 +909,12 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 530px) {
+  .he_mb {
+    display: none;
+  }
+  .he_ds {
+    display: block;
+  }
   .cs_container.main {
     background-position: center;
   }
@@ -968,7 +977,7 @@ ngx-intl-tel-input {
   }
   .outer_wrap_cs.relative.lft {
     scale: 1;
-    margin: 0;
+    margin: 85px 0 50px 0;
     width: 100%;
     .buttfl {
       left: -20px;
@@ -981,13 +990,13 @@ ngx-intl-tel-input {
     }
   }
   .mdd {
-    right: -1%;
+    right: -4%;
     max-width: 60%;
-    bottom: -20%;
+    bottom: 0;
   }
   div.abs_img {
-    margin: -45% 0 0 0;
-    padding-top: 12%;
+    margin: -85% 0 0 0;
+    padding-top: 34%;
   }
 }
 @media (max-width: 500px) {
@@ -1047,19 +1056,18 @@ ngx-intl-tel-input {
     padding: 42px 14px;
   }
   .mdd {
-    right: -18%;
-    max-width: 75%;
-    bottom: -18%;
+    right: -7%;
+    max-width: 60%;
   }
   div.abs_img {
     margin: -58% 0 0 0;
-    padding-top: 35%;
+    padding-top: 26%;
   }
   .cs_subhead {
     font-size: 1.6em;
   }
   .outer_wrap_cs.relative.lft {
-    margin: 0 -4% 0 auto;
+    margin: 70px 0 0 0;
   }
 }
 @media (max-width: 400px) {
@@ -1079,7 +1087,6 @@ ngx-intl-tel-input {
     }
   }
   .swipe_program .socv {
-    font-size: 12px;
     margin-bottom: 8px !important;
   }
   .swipe_program .topic_item {
@@ -1101,10 +1108,6 @@ ngx-intl-tel-input {
   .cs_blank.waves {
     padding-bottom: 0px;
   }
-  .mdd {
-    max-width: 69%;
-    bottom: -6%;
-  }
   .titl_lg.mg {
     font-size: 2.5em;
   }
@@ -1117,6 +1120,19 @@ ngx-intl-tel-input {
   .header-inner.header-inner-button.boreder.grad button.rd {
     font-size: 1.5em;
     padding: 0 40px;
+  }
+}
+@media (max-width: 370px) {
+  div.abs_img {
+    margin: -70% 0 0 0;
+    padding-top: 27%;
+  }
+  .outer_wrap_cs.relative.lft {
+    margin: 30px 0 60px 0;
+  }
+  .mdd {
+    right: -10%;
+    max-width: 54%;
   }
 }
 @media (max-width: 350px) {
@@ -1183,7 +1199,7 @@ ngx-intl-tel-input {
     padding-top: 25%;
   }
   .mdd {
-    max-width: 61%;
+    max-width: 54%;
   }
 }
 @media (max-width: 310px) {
