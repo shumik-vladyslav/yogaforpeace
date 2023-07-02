@@ -932,7 +932,9 @@
               <p class="img_ch_wrap">
                 <img src="assets/Images/course/aah.png" alt="ava" />
               </p>
-              <p class="sub_ph_tx">Карма-санньяси<br />Амаранатха и Ниранджана</p>
+              <p class="sub_ph_tx">
+                Карма-санньяси<br />Амаранатха и Ниранджана
+              </p>
               <p class="sub_ph_tx">инструктора йоги и медитации</p>
               <p class="sub_ph_tx">Тема «Ахимса и здоровье»</p>
             </div>
@@ -1643,7 +1645,9 @@
                 <p class="img_ch_wrap">
                   <img src="assets/Images/course/aah.png" alt="ava" />
                 </p>
-                <p class="sub_ph_tx">Карма-санньяси<br />Амаранатха и Ниранджана</p>
+                <p class="sub_ph_tx">
+                  Карма-санньяси<br />Амаранатха и Ниранджана
+                </p>
                 <p class="sub_ph_tx">инструктора йоги и медитации</p>
                 <p class="sub_ph_tx">Тема «Ахимса и здоровье»</p>
                 <div class="strp"></div>
@@ -2392,8 +2396,14 @@
           некоторые из них:
         </p>
         <div class="res_s">
-          <button (click)="toggleRewiews()" class="rew-button-next"></button>
-          <button (click)="toggleRewiews()" class="rew-button-prev"></button>
+          <button
+            (click)="toggleNextRewiews()"
+            class="rew-button-next"
+          ></button>
+          <button
+            (click)="togglePrevRewiews()"
+            class="rew-button-prev"
+          ></button>
           <div [hidden]="!mobile" class="my-slider-mob-rewiews">
             <div>
               <div class="inert">
@@ -2813,9 +2823,205 @@
                 </p>
               </div>
             </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s38.png" alt="logo" />
+              </div>
+              <div (click)="showVideo('6', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s31.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('twf')"
+                (mouseleave)="mouseLeave('twf')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s34.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('thte')"
+                (mouseleave)="mouseLeave('thte')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s36.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('fhte')"
+                (mouseleave)="mouseLeave('fhte')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s39.png" alt="logo" />
+              </div>
+              <div (click)="showVideo('7', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s310.png" alt="logo" />
+              </div>
+              <div (click)="showVideo('8', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s35.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('fity')"
+                (mouseleave)="mouseLeave('fity')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s32.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('sity')"
+                (mouseleave)="mouseLeave('sity')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s37.png" alt="logo" />
+              </div>
+              <div (click)="showVideo('9', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s33.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('sety')"
+                (mouseleave)="mouseLeave('sety')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
           </div>
           <div
-            [ngClass]="{ visible: !visible }"
+            [ngClass]="{ visible: visible === 1 }"
             class="res_s_cont left hide_sev"
           >
             <div class="res_s-wrap on">
@@ -2904,7 +3110,7 @@
             </div>
           </div>
           <div
-            [ngClass]="{ visible: visible }"
+            [ngClass]="{ visible: visible === 2 }"
             class="res_s_cont left hide_sev"
           >
             <div
@@ -2978,6 +3184,81 @@
               </div>
             </div>
           </div>
+          <div
+            [ngClass]="{ visible: visible === 3 }"
+            class="res_s_cont left hide_sev"
+          >
+            <div class="res_s-wrap on">
+              <img src="assets/Images/course/s38.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div (click)="showVideo('6', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div
+              (mouseenter)="mouseEnter('twf')"
+              (mouseleave)="mouseLeave('twf')"
+              class="res_s-wrap tw"
+            >
+              <img src="assets/Images/course/s31.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div
+              (mouseenter)="mouseEnter('thte')"
+              (mouseleave)="mouseLeave('thte')"
+              class="res_s-wrap thr"
+            >
+              <img src="assets/Images/course/s34.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div
+              (mouseenter)="mouseEnter('fhte')"
+              (mouseleave)="mouseLeave('fhte')"
+              class="res_s-wrap fou"
+            >
+              <img src="assets/Images/course/s36.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div class="res_s-wrap fiv">
+              <img src="assets/Images/course/s39.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div (click)="showVideo('7', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+          </div>
           <div id="rewiew-wrpon" class="rewiew_wrp">
             <p class="rew_text">
               Я ощутил, что где-то глубоко внутри есть гораздо более глубокое,
@@ -3034,7 +3315,6 @@
             </p>
             <p class="rew_text nm">Таирова Юлия</p>
           </div>
-
           <div id="rewiew-wrpsev" class="rewiew_wrp">
             <p class="rew_text">
               Ахимса — это выражение активной гражданской позиции по отношению к
@@ -3094,13 +3374,97 @@
             </p>
             <p class="rew_text nm">Юлия</p>
           </div>
+          <div id="rewiew-wrptwf" class="rewiew_wrp">
+            <p class="rew_text">
+              После того как я начала практиковать ахимсу, я все чаще чувствую
+              как действую более осознанно, контролирую свои эмоции, наблюдаю,
+              чаще вспоминаю о сострадании, даже не то что вспоминаю, а оно
+              словно проникает в меня на более глубоком уровне.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Даршани</p>
+          </div>
+          <div id="rewiew-wrpthte" class="rewiew_wrp">
+            <p class="rew_text">
+              Когда я стала практиковать ахимсу, стала больше видеть как она
+              трансформирует: окрыляет, знакомит с внутренним спокойствием и что
+              даже демонически настроенные люди, успокаиваются и исцеляются при
+              нахождении рядом. Даёт возможность творить, выполнять сложные
+              практики йоги и вообще преобразовывает мир в мандалу божеств.
+              Останавливает погони за ложными идеями, такими как богатство,
+              соперничество, власть... Остаётся только расслабление, радость,
+              любовь и благодарность Богу, всему живому за возможности, за
+              жизнь, за то что все есть.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Кристиана</p>
+          </div>
+          <div id="rewiew-wrpfhte" class="rewiew_wrp">
+            <p class="rew_text">
+              Ахимса — это продолжение накопления саттвы персонажем, в котором
+              по непонятной пока для меня причине оказалось сознание. Священные
+              писания учат совершать больше поступков, несущих благо не только
+              себе, но и другим, и во избежание вселенского хаоса я воспитываю
+              этого персонажа жить, как велит Гуру. Потому что на ум надежды
+              нет.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Ананда</p>
+          </div>
+          <div id="rewiew-wrpfity" class="rewiew_wrp">
+            <p class="rew_text">
+              Когда я практикую Шанти-карму бывает по разному. Иногда участвую
+              всеми своими телами и умом и воображением и происходит глубокий
+              опыт и осознание чего-то очень важного и тайного. Такое было не
+              редко, что поток Шанти-кармы просто смывал все наносное. И силы
+              быстро восстанавливались. А для ума важно быть сопричастным к
+              Великому, Доброму, Вечному.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Лалита</p>
+          </div>
+          <div id="rewiew-wrpsity" class="rewiew_wrp">
+            <p class="rew_text">
+              Практика ахимсы, это скорее толчек к более глубокому и чистому.
+              Ненасилие — это основа, принцип, опора. Естественно выбор
+              ненасилия это выбор который не навяжешь, но выбрав который не
+              возможно больше так страдать. За счёт него мы подымаемся выше,
+              отбрасываем старого себя и создаём нового. Более гибкого, чистого,
+              принимающего и сильного.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Мария</p>
+          </div>
+          <div id="rewiew-wrpsety" class="rewiew_wrp">
+            <p class="rew_text">
+              Когда я только начала практиковать ахимсу, были сомнения, смогу ли
+              я ее правильно выполнять. Но после прояснений с более опытными
+              практиками, поняла, что я уже не одна, меня поддерживает поле
+              практики. Даже если что-то не получилось, ты это осознаешь и
+              исправляешься.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Ирина</p>
+          </div>
           <img
             class="hideee hide_sev"
             src="assets/Images/course/res.png"
             alt="rewiews"
           />
           <div
-            [ngClass]="{ visible: !visible }"
+            [ngClass]="{ visible: visible === 1 }"
             class="res_s_cont right hide_sev"
           >
             <div class="res_s-wrap sx">
@@ -3194,7 +3558,7 @@
             </div>
           </div>
           <div
-            [ngClass]="{ visible: visible }"
+            [ngClass]="{ visible: visible === 2 }"
             class="res_s_cont right hide_sev"
           >
             <div class="res_s-wrap sx">
@@ -3266,6 +3630,81 @@
               class="res_s-wrap tb"
             >
               <img src="assets/Images/course/44.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+          </div>
+          <div
+            [ngClass]="{ visible: visible === 3 }"
+            class="res_s_cont right hide_sev"
+          >
+            <div class="res_s-wrap sx">
+              <img src="assets/Images/course/s310.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div (click)="showVideo('8', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div
+              (mouseenter)="mouseEnter('fity')"
+              (mouseleave)="mouseLeave('fity')"
+              class="res_s-wrap sv"
+            >
+              <img src="assets/Images/course/s35.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div
+              (mouseenter)="mouseEnter('sity')"
+              (mouseleave)="mouseLeave('sity')"
+              class="res_s-wrap eit"
+            >
+              <img src="assets/Images/course/s32.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div class="res_s-wrap ni">
+              <img src="assets/Images/course/s37.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div (click)="showVideo('9', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div
+              (mouseenter)="mouseEnter('sety')"
+              (mouseleave)="mouseLeave('sety')"
+              class="res_s-wrap tb"
+            >
+              <img src="assets/Images/course/s33.png" alt="review" />
               <img
                 class="shine"
                 src="assets/Images/course/shine.png"

@@ -173,7 +173,7 @@ button.rew-button-next:after {
   background-color: #fff;
   z-index: 22;
   padding: 15px;
-  width: 200px;
+  width: 250px;
   left: 50%;
   transform: translate(-50%, 0);
   filter: drop-shadow(0 0 24px #ffe691);
@@ -214,6 +214,30 @@ button.rew-button-next:after {
     transition: all 0.5s;
   }
   &.ellv {
+    scale: 1;
+    transition: all 0.5s;
+  }
+  &.twf {
+    scale: 1;
+    transition: all 0.5s;
+  }
+  &.thte {
+    scale: 1;
+    transition: all 0.5s;
+  }
+  &.fhte {
+    scale: 1;
+    transition: all 0.5s;
+  }
+  &.fity {
+    scale: 1;
+    transition: all 0.5s;
+  }
+  &.sity {
+    scale: 1;
+    transition: all 0.5s;
+  }
+  &.sety {
     scale: 1;
     transition: all 0.5s;
   }
@@ -739,7 +763,7 @@ ngx-intl-tel-input {
       font-size: 1.4em;
     }
     .rewiew_wrp {
-      width: 50%;
+      width: 55%;
       top: 50%;
       transform: translate(-50%, 30%);
     }

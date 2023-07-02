@@ -19,7 +19,7 @@ export class CourseComponent implements OnInit {
   menu: boolean = false;
   form: FormGroup;
   less: boolean = false;
-  visible: boolean = false;
+  visible: number = 1;
   mobile: boolean = false;
   url = "https://vosd.bitrix24.eu/rest/4/idujiuxkvouf7pb9/";
   isSendRegistrationMessage: boolean = false;
@@ -85,8 +85,20 @@ export class CourseComponent implements OnInit {
     });
   }
 
-  toggleRewiews() {
-    this.visible = !this.visible;
+  toggleNextRewiews() {
+    if (this.visible == 3) {
+      this.visible = 1;
+    } else {
+      this.visible = this.visible + 1;
+    }
+  }
+
+  togglePrevRewiews() {
+    if (this.visible == 1) {
+      this.visible = 3;
+    } else {
+      this.visible = this.visible - 1;
+    }
   }
 
   ngOnInit(): void {
