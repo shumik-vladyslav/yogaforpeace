@@ -347,11 +347,12 @@ body {
   }
 }
 .sub_ph_tx {
-  font-size: 20px;
+  font-size: 16px;
   color: #af8632;
   font-weight: 700;
   font-family: "Roboto";
   text-align: center;
+  margin: 0 !important;
 }
 .sps_wrap {
   .cs_tx_tw.lgold {
@@ -994,6 +995,9 @@ p.titl_eht {
 }
 #tns1-ow {
   display: none;
+}
+.ngx-overlay.ngx-position-absolute.loading-foreground {
+  scale: 6;
 }
 .tns-outer .tns-controls button:first-of-type:after {
   position: relative;
@@ -2153,7 +2157,7 @@ ul.l_gen {
       font-size: 16px;
     }
     .sub_ph_tx {
-      font-size: 17px;
+      font-size: 15px;
     }
     .img_ch_wrap {
       max-width: 170px;
@@ -2320,7 +2324,7 @@ ul.l_gen {
 @media (max-width: 1000px) {
   .pl_content {
     .sub_ph_tx {
-      font-size: 15px;
+      font-size: 14px;
     }
     &.expanded {
       padding: 3em 2em;
@@ -2568,7 +2572,6 @@ ul.l_gen {
 @media (max-width: 950px) {
   .pl_content .sub_ph_tx {
     font-size: 13px;
-    margin-bottom: 5px !important;
   }
   ngx-intl-tel-input {
     margin: 0 10px !important;
@@ -3192,6 +3195,9 @@ ul.l_gen {
   }
 }
 @media (max-width: 480px) {
+  .ngx-overlay.ngx-position-absolute.loading-foreground {
+    scale: 4;
+  }
   .titl_lg.smm {
     font-size: 2em;
   }

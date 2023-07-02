@@ -35,6 +35,7 @@ import { CourseComponent } from './components/course/course.component';
 import { PicturePreviewComponent } from './components/picture-preview/picture-preview.component';
 import { VideoDialogComponent } from './components/video-dialog/video-dialog.component';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { NgxUiLoaderModule } from 'ngx-ui-loader';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -65,6 +66,7 @@ export function createTranslateLoader(http: HttpClient) {
     BrowserModule,
     NgxUsefulSwiperModule,
     AppRoutingModule,
+    NgxUiLoaderModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,

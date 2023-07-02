@@ -2,13 +2,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { tns } from "../../../../node_modules/tiny-slider/src/tiny-slider";
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { CountryISO, PhoneNumberFormat, SearchCountryField } from 'ngx-intl-tel-input';
 import { FormMessage } from '../main-page/main-page.component';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { VideoDialogComponent } from '../video-dialog/video-dialog.component';
 import { SwiperOptions } from 'swiper';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 @Component({
   selector: 'app-course',
   templateUrl: './course.component.html',
@@ -30,7 +30,8 @@ export class CourseComponent implements OnInit {
   preferredCountries: CountryISO[] = [CountryISO.UnitedStates, CountryISO.UnitedKingdom];
   selectedCountry = CountryISO["CzechRepublic"];
   routeParams;
-  mobExpanded: boolean = false;
+  mobExpanded: boolean = true;
+  imgLoaded: boolean = false;
   // @HostListener('window:resize') onResize() {}
   config: SwiperOptions = {
     pagination: {
@@ -46,11 +47,11 @@ export class CourseComponent implements OnInit {
   };
   constructor(
     private http: HttpClient,
-    private angularFirestore: AngularFirestore,
     private activatedRoute: ActivatedRoute,
-    private router: Router,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    public ngxService: NgxUiLoaderService
   ) {
+    this.ngxService.startLoader('ahimsa');
     if (window.innerWidth <= 1000) {
       this.less = true;
     }
@@ -74,6 +75,11 @@ export class CourseComponent implements OnInit {
 
   telegramRegister() {
     window.open(`https://tg.pulse.is/yogiesforpeas_bot?start=648054e04ec7d4580107e9da|Сегменты=YPF_Ahimsa_Course_Free|UTM_Source=${this.routeParams?.utm_source}|UTM_medium=${this.routeParams?.utm_medium}|UTM_campaign=${this.routeParams?.utm_campaign}`)
+  }
+
+  checkImgLoad() {
+    this.imgLoaded = true;
+    this.ngxService.stopLoader('ahimsa');
   }
 
   showVideo(url: string, tube?: boolean) {

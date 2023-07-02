@@ -933,6 +933,15 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 530px) {
+  .cs_blank.stat {
+    margin-top: 5px;
+  }
+  .srt_tx {
+    font-size: 1em;
+  }
+  .couse_st.hide_dd {
+    margin: 90px 0;
+  }
   .he_mb {
     display: none;
   }
@@ -1081,11 +1090,11 @@ ngx-intl-tel-input {
   }
   .mdd {
     right: -7%;
-    max-width: 60%;
+    max-width: 66%;
   }
   div.abs_img {
-    margin: -58% 0 0 0;
-    padding-top: 26%;
+    margin: -72% 0 0 0;
+    padding-top: 35%;
   }
   .cs_subhead {
     font-size: 1.6em;
@@ -1148,11 +1157,15 @@ ngx-intl-tel-input {
 }
 @media (max-width: 370px) {
   div.abs_img {
-    margin: -70% 0 0 0;
-    padding-top: 27%;
+    margin: -95% 0 0 0;
+    padding-top: 30%;
+    margin-bottom: 55px;
+  }
+  .couse_st.hide_dd {
+    margin: 55px 0 39px 0;
   }
   .outer_wrap_cs.relative.lft {
-    margin: 30px 0 60px 0;
+    margin: 30px 0 92px 0;
   }
   .mdd {
     right: -10%;
