@@ -7,7 +7,7 @@ import { FormMessage } from '../main-page/main-page.component';
 import { ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { VideoDialogComponent } from '../video-dialog/video-dialog.component';
-import { SwiperOptions } from 'swiper';
+// import { SwiperOptions } from 'swiper';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 @Component({
   selector: 'app-course',
@@ -30,21 +30,21 @@ export class CourseComponent implements OnInit {
   preferredCountries: CountryISO[] = [CountryISO.UnitedStates, CountryISO.UnitedKingdom];
   selectedCountry = CountryISO["CzechRepublic"];
   routeParams;
-  mobExpanded: boolean = true;
+  // mobExpanded: boolean = true;
   imgLoaded: boolean = false;
   // @HostListener('window:resize') onResize() {}
-  config: SwiperOptions = {
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    loop: true,
-    spaceBetween: 30
-  };
+  // config: SwiperOptions = {
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //     clickable: true
+  //   },
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev'
+  //   },
+  //   loop: true,
+  //   spaceBetween: 30
+  // };
   constructor(
     private http: HttpClient,
     private activatedRoute: ActivatedRoute,
@@ -133,11 +133,11 @@ export class CourseComponent implements OnInit {
   }
 
   expand(idx: number) {
-    if (window.innerWidth <= 660) {
-      this.mobExpanded = !this.mobExpanded;
-    } else {
+    // if (window.innerWidth <= 660) {
+    //   this.mobExpanded = !this.mobExpanded;
+    // } else {
       this.hasExpand[idx] = !this.hasExpand[idx];
-    }
+    // }
   }
 
   goToURl(url) {

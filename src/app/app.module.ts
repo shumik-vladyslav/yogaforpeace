@@ -34,7 +34,7 @@ import { ArtContestComponent } from './components/art-contest/art-contest.compon
 import { CourseComponent } from './components/course/course.component';
 import { PicturePreviewComponent } from './components/picture-preview/picture-preview.component';
 import { VideoDialogComponent } from './components/video-dialog/video-dialog.component';
-import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+// import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { NgxUiLoaderModule } from 'ngx-ui-loader';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -64,7 +64,7 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   imports: [
     BrowserModule,
-    NgxUsefulSwiperModule,
+    // NgxUsefulSwiperModule,
     AppRoutingModule,
     NgxUiLoaderModule,
     FormsModule,

@@ -162,9 +162,9 @@ button.rew-button-next:after {
     line-height: 8px;
   }
 }
-.swipe_program {
-  display: none;
-}
+// .swipe_program {
+//   display: none;
+// }
 .rewiew_wrp {
   position: absolute;
   scale: 0;
@@ -534,31 +534,31 @@ ngx-intl-tel-input {
 .text-center {
   text-align: center;
 }
-.swiper-slide {
-  .topic_cs_wrap {
-    padding: 52px 20px;
-  }
-  .topic_row {
-    margin: 0 0 25px 0;
-  }
-}
-.swipe_program {
-  .topic_img {
-    max-width: 45%;
-    img {
-      max-width: 100%;
-    }
-  }
-  .topic_item {
-    height: 120px;
-  }
-  p.dk_center.sma {
-    margin: 0;
-  }
-  .wrap_dd.right {
-    width: 12%;
-  }
-}
+// .swiper-slide {
+//   .topic_cs_wrap {
+//     padding: 52px 20px;
+//   }
+//   .topic_row {
+//     margin: 0 0 25px 0;
+//   }
+// }
+// .swipe_program {
+//   .topic_img {
+//     max-width: 45%;
+//     img {
+//       max-width: 100%;
+//     }
+//   }
+//   .topic_item {
+//     height: 120px;
+//   }
+//   p.dk_center.sma {
+//     margin: 0;
+//   }
+//   .wrap_dd.right {
+//     width: 12%;
+//   }
+// }
 .flex_flex-column {
   display: flex;
   flex-direction: column;
@@ -770,52 +770,93 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 660px) {
-  .swiper-button-next {
-    right: 45px;
-    top: unset;
-    bottom: 8px;
+  .pipe_imgg {
+    display: none;
   }
-  .swiper-button-prev {
-    left: 20px;
-    top: unset;
-    bottom: 9px;
-  }
-  .swiper-button-prev:after {
-    position: relative;
-    z-index: 33;
-    width: 100%;
-    height: 45px;
-    content: url("../../../assets/Images/course/prev.png");
-    display: block;
-  }
-  .swiper-button-next:after {
-    position: relative;
-    z-index: 33;
-    width: 100%;
-    height: 45px;
-    content: url("../../../assets/Images/course/next.png");
-    display: block;
-  }
+  // .swiper-button-next {
+  //   right: 45px;
+  //   top: unset;
+  //   bottom: 8px;
+  // }
+  // .swiper-button-prev {
+  //   left: 20px;
+  //   top: unset;
+  //   bottom: 9px;
+  // }
+  // .swiper-button-prev:after {
+  //   position: relative;
+  //   z-index: 33;
+  //   width: 100%;
+  //   height: 45px;
+  //   content: url("../../../assets/Images/course/prev.png");
+  //   display: block;
+  // }
+  // .swiper-button-next:after {
+  //   position: relative;
+  //   z-index: 33;
+  //   width: 100%;
+  //   height: 45px;
+  //   content: url("../../../assets/Images/course/next.png");
+  //   display: block;
+  // }
   .cs_container.sots:not(.bottom) {
     padding-top: 200px;
   }
-  .swipe_program {
-    display: block;
+  .topics_wrapper {
+    p.topic_txt {
+      margin: 0;
+    }
+    .topic_img {
+      max-width: 45%;
+      img {
+        max-width: 100%;
+      }
+    }
+    .topic_item {
+      height: 120px;
+    }
+    p.dk_center.sma {
+      margin: 0;
+      .wrap_dd.right {
+        width: 12%;
+      }
+    }
     .socv {
       font-size: 14px;
       line-height: 1.2;
       margin-bottom: 10px !important;
     }
     .pl_content {
+      max-height: 65px;
+      margin-top: -15px !important;
       width: auto;
       margin: 0;
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
       &.expanded {
-        margin: -95px 20px 40px 20px;
+        margin: 0 0 30px 0;
+        max-height: initial;
+        padding: 3em 1em 2em 1em;
       }
     }
   }
+  // .swipe_program {
+  //   display: block;
+  //   .socv {
+  //     font-size: 14px;
+  //     line-height: 1.2;
+  //     margin-bottom: 10px !important;
+  //   }
+  //   .pl_content {
+  //     width: auto;
+  //     margin: 0;
+  //     border-bottom-left-radius: 15px;
+  //     border-bottom-right-radius: 15px;
+  //     &.expanded {
+  //       margin: -95px 20px 40px 20px;
+  //     }
+  //   }
+  // }
   .cs_container.padd {
     padding: 3% 0 0 0;
   }
@@ -829,7 +870,11 @@ ngx-intl-tel-input {
     max-height: 70px;
     min-height: unset;
   }
-  .swipe_program .topic_img {
+  // .swipe_program .topic_img {
+  //   max-width: 44%;
+  //   margin: 0;
+  // }
+  .topics_wrapper .topic_img {
     max-width: 44%;
     margin: 0;
   }
@@ -933,6 +978,9 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 530px) {
+  .topics_wrapper .topic_item {
+    height: 100px;
+  }
   .cs_blank.stat {
     margin-top: 5px;
   }
@@ -1045,9 +1093,9 @@ ngx-intl-tel-input {
   .form-registration-form {
     margin: 15px 0 -25px 0;
   }
-  .swipe_program .pl_content.expanded {
-    margin: -120px 20px 40px 20px;
-  }
+  // .swipe_program .pl_content.expanded {
+  //   margin: -120px 20px 40px 20px;
+  // }
   .flex_flex-column {
     p.topic_txt {
       font-size: 1.3em;
@@ -1079,15 +1127,18 @@ ngx-intl-tel-input {
   .sott {
     min-height: 140px;
   }
-  .swipe_program .topic_img {
-    max-width: 54%;
+  .topics_wrapper .topic_img {
+    max-width: 51%;
   }
-  .swipe_program .pl_content.expanded {
-    margin: -100px 14px 40px 14px;
-  }
-  .swiper-slide .topic_cs_wrap {
-    padding: 42px 14px;
-  }
+  // .swipe_program .topic_img {
+  //   max-width: 54%;
+  // }
+  // .swipe_program .pl_content.expanded {
+  //   margin: -100px 14px 40px 14px;
+  // }
+  // .swiper-slide .topic_cs_wrap {
+  //   padding: 42px 14px;
+  // }
   .mdd {
     right: -7%;
     max-width: 66%;
@@ -1119,16 +1170,26 @@ ngx-intl-tel-input {
       border-radius: 12px;
     }
   }
-  .swipe_program .socv {
+  .topics_wrapper .socv {
     margin-bottom: 8px !important;
   }
-  .swipe_program .topic_item {
+  .topics_wrapper .topic_item {
     height: 95px;
   }
-  .swipe_program .wrap_dd.right {
+  .topics_wrapper .wrap_dd.right {
     width: 9%;
     margin: 0 5px;
   }
+  // .swipe_program .socv {
+  //   margin-bottom: 8px !important;
+  // }
+  // .swipe_program .topic_item {
+  //   height: 95px;
+  // }
+  // .swipe_program .wrap_dd.right {
+  //   width: 9%;
+  //   margin: 0 5px;
+  // }
   .flex_flex-column {
     margin-left: 10px;
     p.topic_txt {
@@ -1171,6 +1232,9 @@ ngx-intl-tel-input {
     right: -10%;
     max-width: 54%;
   }
+  .topics_wrapper .pl_content {
+    max-height: 50px;
+  }
 }
 @media (max-width: 350px) {
   footer.bottom_ .sps_wrapp .cs_tx_tw.lgold {
@@ -1196,9 +1260,9 @@ ngx-intl-tel-input {
   .main_sot-cont .cs_t_bl {
     margin: 0 5px;
   }
-  .swipe_program .topic_item {
-    height: 80px;
-  }
+  // .swipe_program .topic_item {
+  //   height: 80px;
+  // }
   .flex_flex-column {
     p.topic_txt {
       font-size: 1em;
