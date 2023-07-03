@@ -273,21 +273,11 @@ export class MainPageComponent implements OnInit {
 
 
   addScriptsToHead() {
-
-
     const head1 = document.getElementsByTagName('head')[0];
-
-
     const script1 = document.createElement('noscript');
-    script1.innerHTML = `<img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=626453055020322&ev=PageView&noscript=1"
-/>`;
-
+    script1.innerHTML = `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=626453055020322&ev=PageView&noscript=1" />`;
     head1.insertBefore(script1, head1.firstChild);
-
     const head = document.getElementsByTagName('head')[0];
-
-
     const script = document.createElement('script');
     script.innerHTML = `  !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -299,8 +289,12 @@ export class MainPageComponent implements OnInit {
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '626453055020322');
   fbq('track', 'PageView');`;
-
     head.insertBefore(script, head.firstChild);
+    //TODO
+    // const head2 = document.getElementsByTagName('head')[0];
+    // const script2 = document.createElement('script');
+    // script.innerHTML = `type="text/javascript" async="async" src="//web.webformscr.com/apps/fc3/build/default-handler.js?1680250029423"`;
+    // head.insertBefore(script2, head2.firstChild);
   }
 }
 export interface News {

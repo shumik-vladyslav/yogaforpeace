@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { tns } from "../../../../node_modules/tiny-slider/src/tiny-slider";
 import { CountryISO, PhoneNumberFormat, SearchCountryField } from 'ngx-intl-tel-input';
@@ -14,7 +14,7 @@ import { NgxUiLoaderService } from 'ngx-ui-loader';
   templateUrl: './course.component.html',
   styleUrls: ['./course.component.scss']
 })
-export class CourseComponent implements OnInit {
+export class CourseComponent implements OnInit, AfterViewInit {
   hasExpand = {};
   menu: boolean = false;
   form: FormGroup;
@@ -51,6 +51,8 @@ export class CourseComponent implements OnInit {
     private dialog: MatDialog,
     public ngxService: NgxUiLoaderService
   ) {
+    //TODO
+    this.addScriptsToHead();
     this.ngxService.startLoader('ahimsa');
     if (window.innerWidth <= 1000) {
       this.less = true;
@@ -202,25 +204,27 @@ export class CourseComponent implements OnInit {
     this.form.reset();
   }
 
+  //TODO
   addScriptsToHead() {
-    const head1 = document.getElementsByTagName('head')[0];
-    const script1 = document.createElement('noscript');
-    script1.innerHTML = `<img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=626453055020322&ev=PageView&noscript=1"/>`;
-    head1.insertBefore(script1, head1.firstChild);
-    const head = document.getElementsByTagName('head')[0];
-    const script = document.createElement('script');
-    script.innerHTML = `  !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '626453055020322');
-    fbq('track', 'CompleteRegistration');`;
-    head.insertBefore(script, head.firstChild);
+    const head2 = document.getElementsByTagName('body')[0];
+    const script2 = document.createElement('script');
+    script2.setAttribute('type', 'text/javascript');
+    script2.async = true;
+    script2.setAttribute(
+      'src',
+      '//web.webformscr.com/apps/fc3/build/default-handler.js?1680250029423"',
+    );
+    script2.setAttribute('sp-form-id','sp-form-225114');
+//      <script>
+//     var body=document.getElementsByTagName('body')[0];
+//     var script=document.createElement('script');
+//     script.async=true;
+//     script.src='//static-login.sendpulse.com/apps/fc3/build/loader.js';
+//     script.setAttribute('sp-form-id','sp-form-225114');
+//     body.appendChild(script);
+// </script>
+    // script2.innerHTML = `type="text/javascript" async="async" src="https://web.webformscr.com/apps/fc3/build/default-handler.js?1680250029423"`;
+    head2.appendChild(script2);
   }
 
   submitForm() {}
