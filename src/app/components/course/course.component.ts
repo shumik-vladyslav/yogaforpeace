@@ -1,9 +1,7 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { tns } from "../../../../node_modules/tiny-slider/src/tiny-slider";
 import { CountryISO, PhoneNumberFormat, SearchCountryField } from 'ngx-intl-tel-input';
-import { FormMessage } from '../main-page/main-page.component';
 import { ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { VideoDialogComponent } from '../video-dialog/video-dialog.component';
@@ -46,13 +44,10 @@ export class CourseComponent implements OnInit, AfterViewInit {
   //   spaceBetween: 30
   // };
   constructor(
-    private http: HttpClient,
     private activatedRoute: ActivatedRoute,
     private dialog: MatDialog,
     public ngxService: NgxUiLoaderService
   ) {
-    //TODO
-    this.addScriptsToHead();
     this.ngxService.startLoader('ahimsa');
     if (window.innerWidth <= 1000) {
       this.less = true;
@@ -110,8 +105,6 @@ export class CourseComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    // const script1 = document.createElement('no1script');
-    // script1.innerHTML = `<script src="//web.webformscr.com/apps/fc3/build/loader.js" async sp-form-id="5a021b81ce135f80e6332d5cdb470194 d1377e5d7bdc31a2330840532f819428"></script>`;
     if (tns.length) {
       tns({
         "container": '.my-slider-mob',
@@ -167,67 +160,6 @@ export class CourseComponent implements OnInit, AfterViewInit {
     }
   }
 
-  sendRegistration() {
-    const contactForm = this.form.value;
-    const email = contactForm.email;
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    const message: FormMessage = {
-      name: contactForm.name,
-      replyTo: 'yogisforpeace1008@gmail.com',
-      message: contactForm.description ?? null,
-      phone: contactForm.phone.e164Number,
-      emailAddress: email,
-      from: 'Ahimsa',
-      date: +new Date(),
-      isChecked: false
-    };
-    // this.angularFirestore.collection('users').add(message).then(
-    //   res => {
-    //     console.log("this.angularFirestore.collection('users').add(message)  ", res);
-    //     this.isSendRegistrationMessage = true;
-    //     const dialogRef = this.dialog.open(DownloadAhimsaComponent, {
-    //       width: '60vw',
-    //       maxHeight: "800px",
-    //       minHeight: "400px",
-    //     });
-    //   }
-    // )
-    this.http
-      .post(
-        'https://formspree.io/f/mnqrjklr',
-        message,
-        { headers: headers }
-      )
-      .subscribe((response) => {
-        console.log(response);
-      });
-    this.form.reset();
-  }
-
-  //TODO
-  addScriptsToHead() {
-    const head2 = document.getElementsByTagName('body')[0];
-    const script2 = document.createElement('script');
-    script2.setAttribute('type', 'text/javascript');
-    script2.async = true;
-    script2.setAttribute(
-      'src',
-      '//web.webformscr.com/apps/fc3/build/default-handler.js?1680250029423"',
-    );
-    script2.setAttribute('sp-form-id','sp-form-225114');
-//      <script>
-//     var body=document.getElementsByTagName('body')[0];
-//     var script=document.createElement('script');
-//     script.async=true;
-//     script.src='//static-login.sendpulse.com/apps/fc3/build/loader.js';
-//     script.setAttribute('sp-form-id','sp-form-225114');
-//     body.appendChild(script);
-// </script>
-    // script2.innerHTML = `type="text/javascript" async="async" src="https://web.webformscr.com/apps/fc3/build/default-handler.js?1680250029423"`;
-    head2.appendChild(script2);
-  }
-
-  submitForm() {}
 
   showMenu() {
     this.menu = true;

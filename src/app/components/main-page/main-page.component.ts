@@ -178,7 +178,6 @@ export class MainPageComponent implements OnInit {
     // console.log(this.route.snapshot.params['type']);
     window.scroll(0, 0);
     this.addScriptsToHead()
-
   }
 
   navigateDownload() {
@@ -290,11 +289,6 @@ export class MainPageComponent implements OnInit {
   fbq('init', '626453055020322');
   fbq('track', 'PageView');`;
     head.insertBefore(script, head.firstChild);
-    //TODO
-    // const head2 = document.getElementsByTagName('head')[0];
-    // const script2 = document.createElement('script');
-    // script.innerHTML = `type="text/javascript" async="async" src="//web.webformscr.com/apps/fc3/build/default-handler.js?1680250029423"`;
-    // head.insertBefore(script2, head2.firstChild);
   }
 }
 export interface News {
