@@ -1,7 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { tns } from "../../../../node_modules/tiny-slider/src/tiny-slider";
-import { CountryISO, PhoneNumberFormat, SearchCountryField } from 'ngx-intl-tel-input';
 import { ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { VideoDialogComponent } from '../video-dialog/video-dialog.component';
@@ -15,18 +13,9 @@ import { NgxUiLoaderService } from 'ngx-ui-loader';
 export class CourseComponent implements OnInit, AfterViewInit {
   hasExpand = {};
   menu: boolean = false;
-  form: FormGroup;
   less: boolean = false;
   visible: number = 1;
   mobile: boolean = false;
-  url = "https://vosd.bitrix24.eu/rest/4/idujiuxkvouf7pb9/";
-  isSendRegistrationMessage: boolean = false;
-  lan: string = 'ru';
-  CountryISO = CountryISO;
-  PhoneNumberFormat = PhoneNumberFormat;
-  SearchCountryField = SearchCountryField;
-  preferredCountries: CountryISO[] = [CountryISO.UnitedStates, CountryISO.UnitedKingdom];
-  selectedCountry = CountryISO["CzechRepublic"];
   routeParams;
   // mobExpanded: boolean = true;
   imgLoaded: boolean = false;
@@ -55,11 +44,6 @@ export class CourseComponent implements OnInit, AfterViewInit {
     if (window.innerWidth <= 700) {
       this.mobile = true;
     }
-    this.form = new FormGroup({
-      name: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      phone: new FormControl('', [Validators.required]),
-    });
   }
 
   mouseEnter(clas: string) {
@@ -159,7 +143,6 @@ export class CourseComponent implements OnInit, AfterViewInit {
       });
     }
   }
-
 
   showMenu() {
     this.menu = true;

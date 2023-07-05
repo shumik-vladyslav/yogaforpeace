@@ -438,10 +438,15 @@ button.rew-button-next:after {
   }
 }
 .course {
-  .input-form-gold {
-    width: 500px;
-    height: 70px;
-    border-radius: 30px;
+  .sp-form-control.input-form-gold {
+    width: 500px !important;
+    height: 70px !important;
+    border-radius: 30px !important;
+    font-size: 22px !important;
+    border: 1px solid #ba7d18 !important;
+  }
+  .sp-form-control.input-form-gold:not(.tel) {
+    padding-left: 30px !important;
   }
 }
 .craph_tb {
@@ -450,7 +455,7 @@ button.rew-button-next:after {
   }
 }
 .formss {
-  justify-content: center;
+  justify-content: space-evenly;
 }
 ngx-intl-tel-input {
   margin: 0 25px 0 0 !important;
@@ -583,6 +588,9 @@ ngx-intl-tel-input {
       margin-bottom: 15px;
     }
   }
+  .course .sp-form-control.input-form-gold {
+    width: 400px !important;
+  }
 }
 @media (max-width: 1000px) {
   .b1-4_wrap {
@@ -623,19 +631,19 @@ ngx-intl-tel-input {
 @media (max-width: 900px) {
   .cs_blank.rewsss {
     padding: 25px 0;
-    .course .input-form-gold {
-      max-width: 500px;
-      width: 100%;
-      height: 60px;
-      border-radius: 20px;
+    .course .sp-form-control.input-form-gold {
+      max-width: 500px !important;
+      width: 100% !important;
+      height: 60px !important;
+      border-radius: 20px !important;
     }
   }
   p.mgg {
     font-size: 1.4em;
     margin: 18px 6%;
   }
-  .input-form-gold {
-    margin: 0 10px;
+  .sp-form-control.input-form-gold {
+    margin: 0 10px !important;
   }
   .form-registration-form {
     margin: 50px 0 -25px 0;
@@ -1105,6 +1113,11 @@ ngx-intl-tel-input {
     }
   }
 }
+@media (max-width: 480px) {
+  .cs_blank.rewsss .course .sp-form-control.input-form-gold.tel {
+    width: 100% !important;
+  }
+}
 @media (max-width: 470px) {
   p.mgg {
     font-size: 1em;
@@ -1165,9 +1178,9 @@ ngx-intl-tel-input {
     }
   }
   .cs_blank.rewsss {
-    .course .input-form-gold {
-      height: 45px;
-      border-radius: 12px;
+    .course .sp-form-control.input-form-gold {
+      height: 45px !important;
+      border-radius: 12px !important;
     }
   }
   .topics_wrapper .socv {
