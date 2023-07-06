@@ -20,38 +20,34 @@
       <div class="bny_p mbb">
         <p class="sub_y">Подписывайтесь на странички движения "Йоги за мир"</p>
       </div>
-      <!-- <p class="bnt_er">
-        <img src="assets/Images/course/butr.png" alt="logo" />
-      </p> -->
-      <div class="b1-4_wrap">
-        <div class="flex_t">
-          <div
-            class="flex links"
-            (click)="goToURl('https://www.instagram.com/yogisforpeace/')"
-          >
-            <img
-              src="assets/Images/course/in.png"
-              alt=""
-              class="social-img big"
-            />
-            <b>{{ "main.follow-life" | translate }}</b>
-          </div>
-        </div>
-        <div class="flex_t">
-          <div
-            class="flex links"
-            (click)="goToURl('https://t.me/yogisforpeace')"
-          >
-            <img
-              src="assets/Images/course/ttr.png"
-              alt="telegram"
-              class="social-img big"
-            />
-            <b>{{ "main.read-hews" | translate }}</b>
+      <div class="outer_wrap_cs lss relatives">
+        <div class="butt_b_wrap">
+          <div class="header-inner header-inner-button boreder grad xl">
+            <button
+              (click)="goToURl('https://www.instagram.com/yogisforpeace/')"
+              class="registration-button rd"
+            >
+              <img src="assets/Images/course/f2.svg" alt="instagram" />
+              <span>Следите за жизнью движения</span>
+              <img src="assets/Images/course/f1.svg" alt=">" />
+            </button>
           </div>
         </div>
       </div>
-      <p></p>
+      <div class="outer_wrap_cs lss relatives">
+        <div class="butt_b_wrap">
+          <div class="header-inner header-inner-button boreder grad xl rb">
+            <button
+              (click)="goToURl('https://t.me/yogisforpeace')"
+              class="registration-button rd"
+            >
+              <img src="assets/Images/course/f3.svg" alt="telegramm" />
+              <span>Читайте новости движения</span>
+              <img src="assets/Images/course/f1.svg" alt=">" />
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

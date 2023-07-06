@@ -6,15 +6,6 @@ h2 {
   font-family: "Roboto Slab", serif !important;
   font-weight: 400;
 }
-.flex.links {
-  font-size: 20px;
-  color: #2a2929;
-  margin: 0 20px 10px 0;
-}
-.b1-4_wrap {
-  flex-direction: column;
-  width: auto;
-}
 .content {
   margin: auto;
   height: 100vh;
@@ -26,6 +17,7 @@ h2 {
   align-items: center;
   text-align: center;
   line-height: 1.2;
+  overflow: hidden;
 }
 .bny_p {
   border-radius: 8px;
@@ -73,6 +65,46 @@ h2 {
 .mbb {
   display: none;
 }
+.header-inner.header-inner-button.boreder.grad {
+  background: url(../../../assets/Images/course/rainbow.png);
+  background-size: contain;
+  &.rb {
+    background: url(../../../assets/Images/course/rainb.png);
+    background-size: contain;
+    margin: 25px 0;
+  }
+}
+.outer_wrap_cs.lss.relatives .header-inner.header-inner-button.boreder {
+  width: auto !important;
+  min-width: 400px;
+}
+.header-inner.header-inner-button.boreder button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px !important;
+}
+.outer_wrap_cs.lss.relatives {
+  img {
+    position: relative;
+    display: block;
+    margin: 0 15px;
+    top: unset;
+    left: unset;
+  }
+  .registration-button.rd {
+    span {
+      font-size: 18px;
+      color: #ffffff;
+      font-weight: 500;
+      font-family: "Roboto";
+      text-align: center;
+    }
+  }
+}
+.outer_wrap_cs.lss {
+  margin: 0;
+}
 .i_smp {
   font-size: 1.5em;
   color: #58585a;
@@ -116,12 +148,23 @@ h2 {
   background: url(../../../assets/Images/course/lgft.png) center no-repeat;
   background-size: cover;
 }
-@media (max-width: 1260px) {
-  .b1-4_wrap .flex_t {
-    width: auto;
-  }
-}
 @media (max-width: 1200px) {
+  .outer_wrap_cs.lss.relatives .header-inner.header-inner-button.boreder {
+    min-width: 360px;
+  }
+  .outer_wrap_cs.lss.relatives {
+    .registration-button.rd {
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+  .header-inner.header-inner-button.boreder {
+    height: 64px;
+  }
+  .header-inner.header-inner-button.boreder button {
+    height: 60px;
+  }
   .imn_w {
     width: 135px;
     height: 170px;
@@ -140,13 +183,18 @@ h2 {
     height: 110px;
   }
 }
+@media (max-width: 630px) {
+  .header-inner.header-inner-button.boreder.grad.rb {
+    margin: 0;
+  }
+  .outer_wrap_cs.lss.relatives .header-inner.header-inner-button.boreder {
+    white-space: nowrap;
+  }
+  .outer_wrap_cs.lss {
+    margin: 0 -100px;
+  }
+}
 @media (max-width: 550px) {
-  .flex.links {
-    font-size: 16px;
-  }
-  .b1-4_wrap .flex_t {
-    margin-bottom: 0px;
-  }
   .bny_p {
     display: none;
     &.mbb {
@@ -165,10 +213,5 @@ h2 {
       font-size: 0.8em;
       margin: 0 15px;
     }
-  }
-}
-@media (max-width: 370px) {
-  .flex.links {
-    font-size: 14px;
   }
 }
