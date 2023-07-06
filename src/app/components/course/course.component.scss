@@ -165,6 +165,9 @@ button.rew-button-next:after {
 // .swipe_program {
 //   display: none;
 // }
+.relative {
+  position: relative;
+}
 .rewiew_wrp {
   position: absolute;
   scale: 0;
@@ -621,7 +624,7 @@ ngx-intl-tel-input {
     margin-top: -50px;
   }
   .cs_fr.centered {
-    margin-top: 1em !important;
+    margin-top: 30px !important;
   }
   .outer_wrap_cs.lss {
     margin: 2em auto 0 auto;
@@ -672,9 +675,6 @@ ngx-intl-tel-input {
   }
   .cs_dt span {
     line-height: 1.2;
-  }
-  .video_wrapper {
-    width: 90%;
   }
   .craph_tb {
     max-width: 95%;
@@ -772,7 +772,7 @@ ngx-intl-tel-input {
     }
     .rewiew_wrp {
       width: 55%;
-      top: 50%;
+      top: 25%;
       transform: translate(-50%, 30%);
     }
   }
@@ -993,10 +993,10 @@ ngx-intl-tel-input {
     margin-top: 5px;
   }
   .srt_tx {
-    font-size: 1em;
+    font-size: 0.8em;
   }
   .couse_st.hide_dd {
-    margin: 90px 0;
+    margin: 20px 0 90px 0;
   }
   .he_mb {
     display: none;
@@ -1084,7 +1084,7 @@ ngx-intl-tel-input {
     bottom: 0;
   }
   div.abs_img {
-    margin: -85% 0 0 0;
+    margin: -66% 0 0 0;
     padding-top: 34%;
   }
 }
@@ -1157,7 +1157,7 @@ ngx-intl-tel-input {
     max-width: 66%;
   }
   div.abs_img {
-    margin: -72% 0 0 0;
+    margin: -58% 0 0 0;
     padding-top: 35%;
   }
   .cs_subhead {
@@ -1168,6 +1168,9 @@ ngx-intl-tel-input {
   }
 }
 @media (max-width: 400px) {
+  div.abs_img {
+    margin: -65% 0 0 0;
+  }
   .flex.links {
     font-size: 1em;
   }
@@ -1213,13 +1216,10 @@ ngx-intl-tel-input {
     }
   }
   .cs_blank.waves {
-    padding-bottom: 0px;
+    padding-bottom: 10px;
   }
   .titl_lg.mg {
     font-size: 2.5em;
-  }
-  .srt_tx {
-    font-size: 1em;
   }
   .cs_t_bl {
     font-size: 1.3em;
@@ -1236,7 +1236,7 @@ ngx-intl-tel-input {
     margin-bottom: 55px;
   }
   .couse_st.hide_dd {
-    margin: 55px 0 39px 0;
+    margin: 20px 0 39px 0;
   }
   .outer_wrap_cs.relative.lft {
     margin: 30px 0 92px 0;
@@ -1307,7 +1307,7 @@ ngx-intl-tel-input {
     margin: 20px 0 30px;
   }
   .srt_tx {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   div.abs_img {
     padding-top: 25%;

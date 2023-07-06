@@ -138,9 +138,14 @@ li.lil:hover {
     background-color: transparent !important;
   }
 }
-.course .sp-form-control.input-form-gold.tel {
-  padding-left: 23% !important;
-  box-sizing: border-box;
+.course {
+  .sp-form-control.input-form-gold.tel {
+    padding-left: 30% !important;
+    box-sizing: border-box;
+  }
+  .iti__selected-flag {
+    padding: 0 6px 0 30px;
+  }
 }
 .sp-form {
   width: 100% !important;
@@ -1588,14 +1593,9 @@ p.cs_log {
   }
 }
 .video_wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60%;
-  height: auto;
   box-shadow: 0px 0px 12px #c1bdbd;
   margin: 68px auto;
-  background: aliceblue;
+  width: fit-content;
 }
 .art-cont_wrapper {
   box-shadow: 10px 0px 24px #aba6a6;
@@ -3141,6 +3141,10 @@ ul.l_gen {
   }
 }
 @media (max-width: 550px) {
+  .sl_m_wrapp span {
+    padding: 0 10px;
+    display: block;
+  }
   .sp-form {
     padding: 0 !important;
   }
@@ -3279,6 +3283,9 @@ ul.l_gen {
   }
 }
 @media (max-width: 480px) {
+  .course .sp-form-control.input-form-gold.tel {
+    padding-left: 45% !important;
+  }
   .course {
     .form-registration-form .sp-field-horizontal .sp-field .sp-checkbox-option,
     .form-registration-form .sp-field-horizontal .sp-field .sp-form-control,
@@ -3509,6 +3516,9 @@ ul.l_gen {
   }
 }
 @media (max-width: 350px) {
+  .course .iti__selected-flag {
+    padding: 0 6px 0 20px;
+  }
   .cs_blank.rewsss {
     .outer_wrap_cs.lss.relatives .header-inner.header-inner-button.boreder {
       width: 300px !important;
