@@ -37,6 +37,9 @@ import { VideoDialogComponent } from './components/video-dialog/video-dialog.com
 // import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { NgxUiLoaderModule } from 'ngx-ui-loader';
 import { ThanksComponent } from './components/thanks/thanks.component';
+import { CreationComponent } from './components/creation/creation.component';
+import { LightgalleryModule } from 'lightgallery/angular/12';
+import {MatTabsModule} from '@angular/material/tabs';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -63,6 +66,7 @@ export function createTranslateLoader(http: HttpClient) {
     PicturePreviewComponent,
     VideoDialogComponent,
     ThanksComponent,
+    CreationComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,10 +78,12 @@ export function createTranslateLoader(http: HttpClient) {
     BrowserAnimationsModule,
     MatDialogModule,
     MatSelectModule,
+    MatTabsModule,
     HttpClientModule,
     AngularFirestoreModule,
     AngularFireModule,
     NgxIntlTelInputModule,
+    LightgalleryModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

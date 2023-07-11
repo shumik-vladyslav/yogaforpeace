@@ -13,6 +13,7 @@ import { ThanksAhimsaComponent } from './components/thanks-ahimsa/thanks-ahimsa.
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { CourseComponent } from './components/course/course.component';
 import { ThanksComponent } from './components/thanks/thanks.component';
+import { CreationComponent } from './components/creation/creation.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'resolution', component: ResolutionComponent },
   { path: 'movement-resolution', component: MovementResolutionComponent },
   { path: 'thanks-ahimsa', component: ThanksAhimsaComponent},
+  { path: 'creation', component: CreationComponent },
   { path: ':type', component: MainPageComponent },
   { path: 'resolution/:type', component: ResolutionComponent },
   { path: 'second-forum/:type', component: SecondForumComponent },

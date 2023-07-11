@@ -28,6 +28,7 @@
     "firebase": "^9.10.0",
     "google-libphonenumber": "^3.2.31",
     "intl-tel-input": "^17.0.3",
+    "lightgallery": "^2.7.1",
     "ngx-bootstrap": "^6.2.0",
     "ngx-intl-tel-input": "^3.2.0",
     "ngx-ui-loader": "^11.0.0",
