@@ -126,30 +126,30 @@ li.lil:hover {
   border-radius: 5px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
-.form-registration-form {
-  .sp-field-horizontal .sp-field .sp-checkbox-option,
-  .sp-field-horizontal .sp-field .sp-form-control,
-  .sp-field-horizontal .sp-field .sp-radio-options,
-  .sp-field-horizontal .sp-field > .intl-tel-input,
-  .sp-field-horizontal .sp-field > .iti.iti--allow-dropdown {
-    width: 500px !important;
-  }
-  .iti--separate-dial-code .iti__selected-flag {
-    background-color: transparent !important;
-  }
-}
+// .form-registration-form {
+//   .sp-field-horizontal .sp-field .sp-checkbox-option,
+//   .sp-field-horizontal .sp-field .sp-form-control,
+//   .sp-field-horizontal .sp-field .sp-radio-options,
+//   .sp-field-horizontal .sp-field > .intl-tel-input,
+//   .sp-field-horizontal .sp-field > .iti.iti--allow-dropdown {
+//     width: 500px !important;
+//   }
+//   .iti--separate-dial-code .iti__selected-flag {
+//     background-color: transparent !important;
+//   }
+// }
 .course {
   .sp-form-control.input-form-gold.tel {
     padding-left: 30% !important;
     box-sizing: border-box;
   }
-  .iti__selected-flag {
-    padding: 0 6px 0 30px;
-  }
+  // .iti__selected-flag {
+  //   padding: 0 6px 0 30px;
+  // }
 }
-.sp-form {
-  width: 100% !important;
-}
+// .sp-form {
+//   width: 100% !important;
+// }
 .sp-form-fixed,
 .sp-form-popup {
   box-shadow: none !important;
@@ -221,16 +221,16 @@ li.lil:hover {
   background-position: center center;
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTM0A1t6AAABhUlEQVQ4T2Ows82PjGixsc4LD2tysC/09Kjw8622tyuICG8u0w/cpGSCBzF4e1VmZkzw9anOzOj38a4KCW4IC22ECHYk1l9tn4gHMeTlTnZxLikvm+XiUpKW2hvgX+vnV5OVOQEoOGfOtv94AYOzU3Fd7XxHh6Lq6rlurqUx0W0J8Z1AnbW18yotonaYuOJBDBXls4A+bGpaBCTz86YEBtQCvVBSPAPIbY0oP1/aiAcxABU1Ny+2tclvbFjo5FgUF9uenNwNDLnmpkWEnV1TPRcY1O1tS4H6i4umA/0MDK2K8tlAwRqHpP1uoXgQKKraWpcClTY3LQZaCLQ5NaUX5OaWJY3++SeTC/AgBmA4AXUClUJs9ver8fKsAAYEUJCws4G21dXNB1oFdD/Qz8DQTk4C+bm2dn6DZ9bRiDQ8iAEYt8CoBpK5YBIYw0AEEZwSXX4oMB4PYoC6gCzAcDqrjGzEsMfen2xEmbMv1rSTjRi26dqRjShz9o2+6WQjBrSShQSkZAIADvW/HLrLY6cAAAAASUVORK5CYII=");
 }
-.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
-  background-color: transparent !important;
-}
+// .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+//   background-color: transparent !important;
+// }
 ngx-intl-tel-input input:hover {
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.24);
 }
-.iti__selected-flag {
-  transform: scale(1.5);
-  padding: 0 0 0 25px;
-}
+// .iti__selected-flag {
+//   transform: scale(1.5);
+//   padding: 0 0 0 25px;
+// }
 .iti.separate-dial-code input {
   padding-left: 130px !important;
 }
@@ -1871,6 +1871,24 @@ ul.l_gen {
   padding: 24px 0 38px 0;
   line-height: 1;
 }
+.content.sp {
+  @media(min-height: 500px) and (max-height: 600px) {
+    scale: .55;
+  }
+  @media(min-height: 601px) and (max-height: 700px) {
+    scale: .65;
+  }
+  @media(min-height: 701px) and (max-height: 800px) {
+    scale: .75;
+  }
+  @media(min-height: 801px) and (max-height: 900px) {
+    scale: .85;
+  }
+  @media(min-height: 901px) and (max-height: 1080px) {
+    scale: .95;
+  }
+  max-height: initial;
+}
 @media (max-width: 1620px) {
   .ide_a_wrap.rtx {
     margin: 60px auto 0 -35px;
@@ -2365,6 +2383,14 @@ ul.l_gen {
   }
   #tns1-ow {
     display: flex;
+  }
+  @media (orientation: landscape) {
+    #tns1-ow {
+      transform: scale(0.7);
+    }
+    .cs_blank.rews {
+      max-height: initial;
+    }
   }
   .pr .sl_m_wrapp {
     font-size: 15px;
@@ -3145,9 +3171,9 @@ ul.l_gen {
     padding: 0 10px;
     display: block;
   }
-  .sp-form {
-    padding: 0 !important;
-  }
+  // .sp-form {
+  //   padding: 0 !important;
+  // }
   // .swipe_program .pl_content.expanded {
   //   margin: -125px 20px 40px 20px;
   // }
@@ -3516,9 +3542,9 @@ ul.l_gen {
   }
 }
 @media (max-width: 350px) {
-  .course .iti__selected-flag {
-    padding: 0 6px 0 20px;
-  }
+  // .course .iti__selected-flag {
+  //   padding: 0 6px 0 20px;
+  // }
   .cs_blank.rewsss {
     .outer_wrap_cs.lss.relatives .header-inner.header-inner-button.boreder {
       width: 300px !important;

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 import { tns } from "../../../../node_modules/tiny-slider/src/tiny-slider";
 import { ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
@@ -19,7 +19,13 @@ export class CourseComponent implements OnInit, AfterViewInit {
   routeParams;
   // mobExpanded: boolean = true;
   imgLoaded: boolean = false;
-  // @HostListener('window:resize') onResize() {}
+  @HostListener('window:resize') onResize() {
+    if (window.innerWidth <= 700) {
+      this.mobile = true;
+    } else {
+      this.mobile = false;
+    }
+  }
   // config: SwiperOptions = {
   //   pagination: {
   //     el: '.swiper-pagination',
