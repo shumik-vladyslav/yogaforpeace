@@ -1029,7 +1029,15 @@ p.titl_eht {
   display: none;
 }
 .ngx-overlay.ngx-position-absolute.loading-foreground {
-  scale: 6;
+  .ngx-foreground-spinner.center-center {
+    scale: 6;
+    transform: translate(0%, 0%);
+    top: 3% !important;
+  }
+}
+.ngx-overlay {
+  height: 1500% !important;
+  background-color: rgba(40, 40, 40, 0.96) !important;
 }
 .tns-outer .tns-controls button:first-of-type:after {
   position: relative;
@@ -3337,7 +3345,9 @@ ul.l_gen {
     width: auto !important;
   }
   .ngx-overlay.ngx-position-absolute.loading-foreground {
-    scale: 4;
+    .ngx-foreground-spinner.center-center {
+      scale: 4;
+    }
   }
   .titl_lg.smm {
     font-size: 2em;
