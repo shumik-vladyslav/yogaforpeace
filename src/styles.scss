@@ -14,7 +14,6 @@
   border: 0;
   font-family: "Arimo", sans-serif;
 }
-
 *,
 *:before,
 *:after {
@@ -73,7 +72,9 @@ ngx-intl-tel-input input {
   border-radius: 30px;
   font-size: 23px !important;
 }
-
+.mat-tab-group {
+  width: 100% !important;
+}
 ngx-intl-tel-input.ng-invalid.ng-touched input {
   border: 1px solid #c0392b;
 }

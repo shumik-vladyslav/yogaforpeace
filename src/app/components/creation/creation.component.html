@@ -8,120 +8,154 @@
     </a>
 </lightgallery> -->
 <div class="flex main-bg">
-    <div class="flex-[0_0_50%]">
-        <div class="header-item-container">
-            <div class="flex flex-col my-12">
-                <div class="flex flex-row">
-                    <span class="text-header-main">
-                        МИР
-                    </span>
-                    <span class="text-header-second mt-3 ml-2">
-                        МЕЖДУНАРОДНЫЙ <br>
-                        ТВОРЧЕСКИЙ КОНКУРС
-                    </span>
-                </div>
-                <div class="flex">
-                    <span class="text-header-main">
-                        И ЛЮБОВЬ
-                    </span>
-                </div>
-
-            </div>
-            <p class="text-item mb-4">
-                Творческий конкурс «Мир и Любовь» — это один из проектов движения «Йоги за Мир», мы верим, что за идеями
-                мира, отраженными в творчестве, стоит большая трансформирующая сила!
-            </p>
-            <p class="text-item mb-4">
-                Эта страница посвящена онлайн выставке с конкурсными работами. В конкурсе можно принять участие,
-                отправив
-                свою работу на почту. Про условия участия рассказываем ниже.
-            </p>
-            <div class="flex flex-row">
-                <div class="flex mx-1">
-                    <a href="" class="item-img-link">
-                        <img src="https://thumb.tildacdn.com/tild3061-6235-4161-a330-333430626630/-/resize/92x/-/format/webp/19.png"
-                            alt="" class="link-img">
-                    </a>
-                </div>
-                <div class="flex mx-1">
-                    <a href="" class="item-img-link">
-                        <img src="https://thumb.tildacdn.com/tild6231-6236-4063-a261-633532636336/-/resize/92x/-/format/webp/17.png"
-                            alt="" class="link-img">
-                    </a>
-                </div>
-                <div class="flex mx-1">
-                    <a href="" class="item-img-link">
-                        <img src="../../../assets/Icons/png-transparent-telegram.png" alt="" class="link-img">
-                    </a>
-                </div>
-            </div>
+  <div class="flex-[0_0_50%]">
+    <div class="header-item-container">
+      <div class="flex flex-col my-12">
+        <div class="flex flex-row">
+          <span class="text-header-main"> МИР </span>
+          <span class="text-header-second mt-3 ml-2">
+            МЕЖДУНАРОДНЫЙ <br />
+            ТВОРЧЕСКИЙ КОНКУРС
+          </span>
         </div>
-
-
+        <div class="flex">
+          <span class="text-header-main"> И ЛЮБОВЬ </span>
+        </div>
+      </div>
+      <p class="text-item mb-4">
+        Творческий конкурс «Мир и Любовь» — это один из проектов движения «Йоги
+        за Мир», мы верим, что за идеями мира, отраженными в творчестве, стоит
+        большая трансформирующая сила!
+      </p>
+      <p class="text-item mb-4">
+        Эта страница посвящена онлайн выставке с конкурсными работами. В
+        конкурсе можно принять участие, отправив свою работу на почту. Про
+        условия участия рассказываем ниже.
+      </p>
+      <div class="flex flex-row">
+        <div class="flex mx-1">
+          <a href="" class="item-img-link">
+            <img
+              src="https://thumb.tildacdn.com/tild3061-6235-4161-a330-333430626630/-/resize/92x/-/format/webp/19.png"
+              alt=""
+              class="link-img"
+            />
+          </a>
+        </div>
+        <div class="flex mx-1">
+          <a href="" class="item-img-link">
+            <img
+              src="https://thumb.tildacdn.com/tild6231-6236-4063-a261-633532636336/-/resize/92x/-/format/webp/17.png"
+              alt=""
+              class="link-img"
+            />
+          </a>
+        </div>
+        <div class="flex mx-1">
+          <a href="" class="item-img-link">
+            <img
+              src="../../../assets/Icons/png-transparent-telegram.png"
+              alt=""
+              class="link-img"
+            />
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="flex-[0_0_50%] item-main-back"></div>
+  </div>
+  <div class="flex-[0_0_50%] item-main-back"></div>
 </div>
 <div class="wrapper main-bg py-16">
-    <div class="container">
-        <div class="flex justify-center">
-            <mat-tab-group>
-                <mat-tab>
-                    <ng-template mat-tab-label>
-                        <span class="mat-tab-span">Картины, рисунки</span>
-                    </ng-template>
-                </mat-tab>
-                <mat-tab>
-                    <ng-template mat-tab-label>
-                        <span class="mat-tab-span">Стихотвориния</span>
-                    </ng-template>
-                </mat-tab>
-                <mat-tab>
-                    <ng-template mat-tab-label>
-                        <span class="mat-tab-span">Фотографии</span>
-                    </ng-template>
-                </mat-tab>
-                <mat-tab>
-                    <ng-template mat-tab-label>
-                        <span class="mat-tab-span">Деское творчество</span>
-                    </ng-template>
-                </mat-tab>
-                <mat-tab>
-                    <ng-template mat-tab-label>
-                        <span class="mat-tab-span">Песни</span>
-                    </ng-template>
-                </mat-tab>
-            </mat-tab-group>
-        </div>
-
+  <div class="container">
+    <div class="flex justify-center">
+      <mat-tab-group>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <span class="mat-tab-span">Картины, рисунки</span>
+          </ng-template>
+          <div class="image-list">
+            <ng-container *ngFor="let img of images; let i = index">
+              <figure [ngClass]="'gallery__item--'+i+'a'" class="gallery__item">
+                <img class="gallery__img" [src]='img' (click)="openPreview(i)">
+              </figure>
+            </ng-container>
+          </div>
+          <div class="preview-container">
+            <div class="overlay"></div>
+            <div class="preview">
+              <img class="preview-image" src="">
+            </div>
+            <div class="close-button" (click)="closePreview()">&times;</div>
+              <div class="prev-button" (click)="showPrevImage()">&lt;</div>
+              <div class="next-button" (click)="showNextImage()">&gt;</div>
+          </div>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <span class="mat-tab-span">Стихотвориния</span>
+          </ng-template>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <span class="mat-tab-span">Фотографии</span>
+          </ng-template>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <span class="mat-tab-span">Детское творчество</span>
+          </ng-template>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <span class="mat-tab-span">Песни</span>
+          </ng-template>
+        </mat-tab>
+      </mat-tab-group>
     </div>
+  </div>
 </div>
 <div class="wrapper py-16">
-    <div class=" container flex">
-        <div class="flex-[0_0_45%]">
-            <div class="text-4xl font-bold text-center mt-4">Какая цель у конкурса</div>
-            <div class="main-text mt-8">
-                Создавая прекрасные картины, глубокомысленные стихи, красивую умиротворяющую музыку, снимая добрые
-                фильмы, показывая в соц. сетях фотографии гармонии и любви — привнося позитивное творчество во имя
-                воплощения возвышенных идеалов, мы сможем легко <b>рассеять все тяжелые настроения внутри на самих.</b>
-            </div>
-            <div class="main-text mt-4">
-                Взрастив мир и любовь в себе, мы сможем наполнить<b> позитивными смыслами</b> наше окружение, а наше окружение — свое окружение, так шаг за шагом через наши правильные мысли и действия мы сможем наполнить этот мир гармонией, показать его красоту, а главное — напомнить всем о ценности самого большого дара — <b>ценности этой жизни</b>.
-            </div>
-        </div>
-        <div class="flex-[0_0_50%]">
-            <img src="../../../assets/Images/tcel.PNG" alt="i">
-        </div>
+  <div class="container flex">
+    <div class="flex-[0_0_45%]">
+      <div class="text-4xl font-bold text-center mt-4">
+        Какая цель у конкурса
+      </div>
+      <div class="main-text mt-8">
+        Создавая прекрасные картины, глубокомысленные стихи, красивую
+        умиротворяющую музыку, снимая добрые фильмы, показывая в соц. сетях
+        фотографии гармонии и любви — привнося позитивное творчество во имя
+        воплощения возвышенных идеалов, мы сможем легко
+        <b>рассеять все тяжелые настроения внутри на самих.</b>
+      </div>
+      <div class="main-text mt-4">
+        Взрастив мир и любовь в себе, мы сможем наполнить<b>
+          позитивными смыслами</b
+        >
+        наше окружение, а наше окружение — свое окружение, так шаг за шагом
+        через наши правильные мысли и действия мы сможем наполнить этот мир
+        гармонией, показать его красоту, а главное — напомнить всем о ценности
+        самого большого дара — <b>ценности этой жизни</b>.
+      </div>
     </div>
+    <div class="flex-[0_0_50%]">
+      <img src="../../../assets/Images/tcel.PNG" alt="i" />
+    </div>
+  </div>
 </div>
 <div class="wrapper main-bg pt-12">
-    <div class="flex flex-col">
-        <div class="text-4xl font-bold text-center mt-4">Правила участия в конкурсе</div>
-        <div class="main-text text-center mt-8">Правила довольно «условны» и призваны не для того, чтобы ограничить, но для того, <br> чтобы «упорядочить» глубокий трансформирующий созидательный процесс</div>
-        <div class="flex">
-            <div class="flex-[0_0_34%] relative">
-                <img src="../../../assets/Images/__.png" alt="i" сlass="rules-img">
-            </div>
-        </div>
+  <div class="flex flex-col">
+    <div class="text-4xl font-bold text-center mt-4">
+      Правила участия в конкурсе
     </div>
-
+    <div class="main-text text-center mt-8">
+      Правила довольно «условны» и призваны не для того, чтобы ограничить, но
+      для того, <br />
+      чтобы «упорядочить» глубокий трансформирующий созидательный процесс
+    </div>
+    <div class="flex">
+      <div class="flex-[0_0_34%] relative">
+        <img src="../../../assets/Images/__.png" alt="i" сlass="rules-img" />
+      </div>
+    </div>
+  </div>
 </div>
