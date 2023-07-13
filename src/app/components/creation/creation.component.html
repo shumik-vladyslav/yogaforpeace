@@ -22,10 +22,16 @@
         <div class="text-item mb-4">
           Эта страница посвящена онлайн выставке с конкурсными работами. В
           конкурсе можно принять участие, отправив свою работу на почту. Про
-          условия участия <p class="text-item mb-4 link" (click)="scrollTo('rules')">рассказываем ниже</p>
+          условия участия
+          <p class="text-item mb-4 link" (click)="scrollTo('rules')">
+            рассказываем ниже
+          </p>
         </div>
         <div class="flex flex-row">
-          <div (click)="goToURl('mailto:contestyogisforpearce@gmail.com')" class="flex mx-1">
+          <div
+            (click)="goToURl('mailto:contestyogisforpearce@gmail.com')"
+            class="flex mx-1"
+          >
             <p class="item-img-link">
               <img
                 src="https://thumb.tildacdn.com/tild3061-6235-4161-a330-333430626630/-/resize/92x/-/format/webp/19.png"
@@ -35,7 +41,10 @@
             </p>
           </div>
           <div class="flex mx-1">
-            <p (click)="goToURl('https://www.instagram.com/yogisforpeace/')" class="item-img-link">
+            <p
+              (click)="goToURl('https://www.instagram.com/yogisforpeace/')"
+              class="item-img-link"
+            >
               <img
                 src="https://thumb.tildacdn.com/tild6231-6236-4063-a261-633532636336/-/resize/92x/-/format/webp/17.png"
                 alt=""
@@ -44,7 +53,10 @@
             </p>
           </div>
           <div class="flex mx-1">
-            <p (click)="goToURl('https://t.me/yogisforpeace')" class="item-img-link">
+            <p
+              (click)="goToURl('https://t.me/yogisforpeace')"
+              class="item-img-link"
+            >
               <img
                 src="assets/Icons/png-transparent-telegram.png"
                 alt=""
@@ -74,7 +86,7 @@
               >
                 <img
                   class="gallery__img"
-                  [src]="img"
+                  [src]="img.url"
                   (click)="openPreview(i, 2)"
                 />
               </figure>
@@ -88,12 +100,35 @@
             <div class="close-button" (click)="closePreview()">&times;</div>
             <div class="prev-button" (click)="showPrevImage(2)">&lt;</div>
             <div class="next-button" (click)="showNextImage(2)">&gt;</div>
+            <div class="preview_text">
+              <p class="preview-t">{{ currentPortraitsText }}</p>
+            </div>
           </div>
         </mat-tab>
         <mat-tab>
           <ng-template mat-tab-label>
             <span class="mat-tab-span">Стихотвориния</span>
           </ng-template>
+          <div class="mai_wrp">
+            <div class="t257__icon">“</div>
+            <div class="t257__wrapper">
+              <div class="t257__text t-text">
+                <p style="text-align: center">Если хочешь Светить, то Свети,</p>
+                <p style="text-align: center">оcвещай непроглядную Тьму!</p>
+                <p style="text-align: center">Её много, на Жизни Пути,</p>
+                <p style="text-align: center">и во Сне, и, как есть, на Яву.</p>
+                <p style="text-align: center">И тогда будет Солнечный Свет,</p>
+                <p style="text-align: center">
+                  где бы ни был ты, всюду с тобой!
+                </p>
+                <p style="text-align: center">Как лекарство от тысячи бед,</p>
+                <p style="text-align: center">и душевный, безликий Покой!</p>
+              </div>
+              <div class="t257__author t-text" style="" field="authorname">
+                <strong>—</strong> <strong>Иван Иванов</strong>
+              </div>
+            </div>
+          </div>
         </mat-tab>
         <mat-tab>
           <ng-template mat-tab-label>
@@ -107,7 +142,7 @@
               >
                 <img
                   class="gallery__img"
-                  [src]="img"
+                  [src]="img.url"
                   (click)="openPreview(i, 0)"
                 />
               </figure>
@@ -121,6 +156,9 @@
             <div class="close-button" (click)="closePreview()">&times;</div>
             <div class="prev-button" (click)="showPrevImage(0)">&lt;</div>
             <div class="next-button" (click)="showNextImage(0)">&gt;</div>
+            <div class="preview_text">
+              <p class="preview-t">{{ currentPhotoText }}</p>
+            </div>
           </div>
         </mat-tab>
         <mat-tab>
@@ -135,7 +173,7 @@
               >
                 <img
                   class="gallery__img"
-                  [src]="img"
+                  [src]="img.url"
                   (click)="openPreview(i, 1)"
                 />
               </figure>
@@ -149,6 +187,9 @@
             <div class="close-button" (click)="closePreview()">&times;</div>
             <div class="prev-button" (click)="showPrevImage(1)">&lt;</div>
             <div class="next-button" (click)="showNextImage(1)">&gt;</div>
+            <div class="preview_text">
+              <p class="preview-t">{{ currentChildrenText }}</p>
+            </div>
           </div>
         </mat-tab>
         <mat-tab>
@@ -241,7 +282,9 @@
         поможем и другим людям провести внутри себя трансформацию в сторону
         высоких идеалов и ценностей!
       </div>
-      <div class="main-text mt-4 text-center">Творите для Мира и во имя Мира!</div>
+      <div class="main-text mt-4 text-center">
+        Творите для Мира и во имя Мира!
+      </div>
       <div class="main-text text-center">Ждем ваши работы на почту</div>
       <div class="flex_d sames">
         <button

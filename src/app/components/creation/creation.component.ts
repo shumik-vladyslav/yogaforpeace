@@ -13,6 +13,9 @@ export class CreationComponent implements OnInit {
   currentPhotoIndex = 0;
   currentChildrenIndex = 0;
   currentPortraitsIndex = 0;
+  currentPhotoText = '';
+  currentChildrenText = '';
+  currentPortraitsText = '';
 
   constructor(
     public dataService: DataService
@@ -37,18 +40,22 @@ export class CreationComponent implements OnInit {
   }
 
   showImage(index, slider: number, direction?) {
+    document.body.style.overflowY = "hidden";
     var img = document.querySelector('.preview-image');
     switch (slider) {
       case 0:
-        (img as any).src = this.photo[index];
+        (img as any).src = this.photo[index].url;
+        this.currentPhotoText = this.photo[index].description
         this.currentPhotoIndex = index;
         break;
       case 1:
-        (img as any).src = this.children[index];
+        (img as any).src = this.children[index].url;
+        this.currentChildrenText = this.children[index].description
         this.currentChildrenIndex = index;
         break;
       case 2:
-        (img as any).src = this.portraits[index];
+        (img as any).src = this.portraits[index].url;
+        this.currentPortraitsText = this.portraits[index].description
         this.currentPortraitsIndex = index;
         break;
       default: 0
@@ -226,6 +233,7 @@ export class CreationComponent implements OnInit {
   }
 
   closePreview() {
+    document.body.style.overflowY = "auto";
     var previewContainer = document.querySelector('.preview-container');
     previewContainer.classList.remove('open');
   }

@@ -1912,6 +1912,10 @@ ul.l_gen {
   padding: 30px 0;
   //background: url('../../../assets/Logo/yogis-for-peace-logo.svg') no-repeat;
 }
+.mat-tab-nav-bar,
+.mat-tab-header {
+  border-bottom: none !important;
+}
 .header-img-logo {
   color: #ba7d18;
   font-size: 54px;
