@@ -7,7 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap");
 @import "intl-tel-input/build/css/intlTelInput.css";
-@import '~lightgallery/scss/lightgallery';
+@import "~lightgallery/scss/lightgallery";
 * {
   padding: 0;
   margin: 0;
@@ -1811,6 +1811,43 @@ p.cs_log {
     font-weight: 700;
   }
 }
+.mat-tab-labels {
+  justify-content: center;
+  margin: 0 auto 65px auto;
+  border: 1px solid #7b0d69;
+  background-color: #edf0f8 !important;
+  border-radius: 10px;
+  width: fit-content;
+  overflow: hidden;
+  .mat-tab-span {
+    color: #151515;
+  }
+  .mat-tab-label {
+    padding: 0 30px;
+    opacity: 1;
+    height: 60px;
+    border-right: 1px solid #7b0d69;
+    .mat-tab-span {
+      color: #000000;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 20px;
+    }
+  }
+  .mat-tab-label:last-of-type {
+    border-right: none;
+  }
+  .mat-tab-label.mat-tab-label-active {
+    background-color: #7b0d69 !important;
+    .mat-tab-span {
+      color: #f3f2f2;
+    }
+  }
+}
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: transparent !important;
+}
 .genn {
   font-family: "Playfair Display", sans-serif;
   font-weight: 700;
@@ -1882,20 +1919,20 @@ ul.l_gen {
   line-height: 1;
 }
 .content.sp {
-  @media(min-height: 500px) and (max-height: 600px) {
-    scale: .75;
+  @media (min-height: 500px) and (max-height: 600px) {
+    scale: 0.75;
   }
-  @media(min-height: 601px) and (max-height: 700px) {
-    scale: .85;
+  @media (min-height: 601px) and (max-height: 700px) {
+    scale: 0.85;
   }
-  @media(min-height: 701px) and (max-height: 800px) {
-    scale: .95;
+  @media (min-height: 701px) and (max-height: 800px) {
+    scale: 0.95;
   }
-  @media(min-height: 801px) and (max-height: 900px) {
-    scale: .95;
+  @media (min-height: 801px) and (max-height: 900px) {
+    scale: 0.95;
   }
-  @media(min-height: 901px) and (max-height: 1080px) {
-    scale: .95;
+  @media (min-height: 901px) and (max-height: 1080px) {
+    scale: 0.95;
   }
   max-height: initial;
   overflow: visible !important;

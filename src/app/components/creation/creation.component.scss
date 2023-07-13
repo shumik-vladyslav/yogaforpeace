@@ -8,7 +8,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block; 
+  display: block;
+}
+.gallery__item {
+  cursor: pointer;
 }
 .gallery__item--0a {
   grid-column-start: 1;
@@ -52,22 +55,22 @@
 }
 .gallery__item--6a {
   grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 11;
-    grid-row-end: 9;
+  grid-column-end: 3;
+  grid-row-start: 11;
+  grid-row-end: 9;
 }
 .gallery__item--7a {
   grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 11;
-    grid-row-end: 9;
+  grid-column-end: 5;
+  grid-row-start: 11;
+  grid-row-end: 9;
 }
 
 .gallery__item--8a {
   grid-column-start: 5;
-    grid-column-end: 9;
-    grid-row-start: 14;
-    grid-row-end: 9;
+  grid-column-end: 9;
+  grid-row-start: 14;
+  grid-row-end: 9;
 }
 
 .gallery__item--9a {
@@ -130,6 +133,65 @@
 //   grid-row-start: 6;
 //   grid-row-end: 9;
 // }
+.bn_gr.wide.cons {
+  width: fit-content;
+  border-radius: 25px;
+  margin: 0 auto;
+  text-transform: lowercase;
+  padding: 0 50px;
+}
+.flex_d.sames:before {
+  content: "";
+  position: absolute;
+  background: url("../../../assets/Images/bh6.png");
+  background-size: cover;
+  width: 80px;
+  height: 130px;
+  display: block;
+  margin-right: 8px;
+  margin-top: -93px;
+  left: 24%;
+}
+.flex_d.sames {
+  display: flex;
+  justify-content: center;
+  margin: 3em auto;
+  width: 100%;
+}
+.wd {
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.md_hf {
+  width: 44%;
+}
+.md_hff {
+  width: 56%;
+}
+.wd_half {
+  width: 50%;
+  &.mg {
+    margin-left: 30px;
+    img {
+      object-fit: cover;
+    }
+  }
+}
+.width_wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+}
+.item-main-back {
+  background: url("https://static.tildacdn.com/tild6632-3663-4362-b435-646664373337/___1.png")
+    no-repeat;
+  width: 50%;
+  background-size: cover;
+  margin-left: 20px;
+}
 .preview-container {
   position: fixed;
   top: 0;
@@ -237,11 +299,6 @@
 .preview-container.open {
   opacity: 1;
   pointer-events: auto;
-}
-.item-main-back {
-  background: url("https://static.tildacdn.com/tild6632-3663-4362-b435-646664373337/___1.png")
-    0 0 / auto 100% no-repeat;
-  height: 100vh;
 }
 .container {
   margin: 0 auto;
