@@ -26,6 +26,16 @@ export class CreationComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  scrollTo(id): void {
+    const element = document.getElementById(id);
+    let yOffset = 0;
+    // if (window.innerWidth < 661) {
+    //   yOffset = 120;
+    // }
+    const y = element.getBoundingClientRect().top + window.pageYOffset - yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+
   showImage(index, slider: number, direction?) {
     var img = document.querySelector('.preview-image');
     switch (slider) {

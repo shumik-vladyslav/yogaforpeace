@@ -19,38 +19,38 @@
           «Йоги за Мир», мы верим, что за идеями мира, отраженными в творчестве,
           стоит большая трансформирующая сила!
         </p>
-        <p class="text-item mb-4">
+        <div class="text-item mb-4">
           Эта страница посвящена онлайн выставке с конкурсными работами. В
           конкурсе можно принять участие, отправив свою работу на почту. Про
-          условия участия рассказываем ниже.
-        </p>
+          условия участия <p class="text-item mb-4 link" (click)="scrollTo('rules')">рассказываем ниже</p>
+        </div>
         <div class="flex flex-row">
-          <div class="flex mx-1">
-            <a href="" class="item-img-link">
+          <div (click)="goToURl('mailto:contestyogisforpearce@gmail.com')" class="flex mx-1">
+            <p class="item-img-link">
               <img
                 src="https://thumb.tildacdn.com/tild3061-6235-4161-a330-333430626630/-/resize/92x/-/format/webp/19.png"
                 alt=""
                 class="link-img"
               />
-            </a>
+            </p>
           </div>
           <div class="flex mx-1">
-            <a href="" class="item-img-link">
+            <p (click)="goToURl('https://www.instagram.com/yogisforpeace/')" class="item-img-link">
               <img
                 src="https://thumb.tildacdn.com/tild6231-6236-4063-a261-633532636336/-/resize/92x/-/format/webp/17.png"
                 alt=""
                 class="link-img"
               />
-            </a>
+            </p>
           </div>
           <div class="flex mx-1">
-            <a href="" class="item-img-link">
+            <p (click)="goToURl('https://t.me/yogisforpeace')" class="item-img-link">
               <img
                 src="assets/Icons/png-transparent-telegram.png"
                 alt=""
                 class="link-img"
               />
-            </a>
+            </p>
           </div>
         </div>
       </div>
@@ -156,6 +156,11 @@
             <span class="mat-tab-span">Песни</span>
           </ng-template>
         </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <span class="mat-tab-span">Видео</span>
+          </ng-template>
+        </mat-tab>
       </mat-tab-group>
     </div>
   </div>
@@ -188,7 +193,7 @@
     </div>
   </div>
 </div>
-<div class="wrapper main-bg pt-12 pb-12">
+<div id="rules" class="wrapper main-bg pt-12 pb-12">
   <div class="flex flex-col container">
     <div class="text-4xl text-center mt-4">Правила участия в конкурсе</div>
     <div class="main-text text-center mt-8">
