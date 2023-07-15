@@ -1,11 +1,11 @@
 <div class="flex main-bg">
   <div class="width_wrap">
-    <div class="flex-[0_0_50%] m-auto">
+    <div class="flex-[0_0_50%] m-bc">
       <div class="header-item-container">
-        <div class="flex flex-col my-12">
+        <div class="flex flex-col mymarg spec">
           <div class="flex flex-row">
             <span class="text-header-main"> МИР </span>
-            <span class="text-header-second mt-3 ml-2">
+            <span class="text-header-second ml-2">
               МЕЖДУНАРОДНЫЙ <br />
               ТВОРЧЕСКИЙ КОНКУРС
             </span>
@@ -14,20 +14,21 @@
             <span class="text-header-main"> И ЛЮБОВЬ </span>
           </div>
         </div>
-        <p class="text-item mb-4">
+        <div class="flex item-main-back ds_none"></div>
+        <p class="text-item cr mb-4">
           Творческий конкурс «Мир и Любовь» — это один из проектов движения
           «Йоги за Мир», мы верим, что за идеями мира, отраженными в творчестве,
           стоит большая трансформирующая сила!
         </p>
-        <div class="text-item mb-4">
+        <div class="text-item cr mb-4">
           Эта страница посвящена онлайн выставке с конкурсными работами. В
           конкурсе можно принять участие, отправив свою работу на почту. Про
           условия участия
-          <p class="text-item mb-4 link" (click)="scrollTo('rules')">
+          <p class="text-item cr mb-4 link" (click)="scrollTo('rules')">
             рассказываем ниже
           </p>
         </div>
-        <div class="flex flex-row">
+        <div class="flex flex-row spec">
           <div
             (click)="goToURl('mailto:contestyogisforpearce@gmail.com')"
             class="flex mx-1"
@@ -67,11 +68,11 @@
         </div>
       </div>
     </div>
-    <div class="flex-[0_0_50%] item-main-back"></div>
+    <div class="flex-[0_0_50%] item-main-back md_none"></div>
   </div>
 </div>
-<div class="wrapper main-bg py-16">
-  <div class="container">
+<div class="wrapper main-bg py-custom">
+  <div class="container wide">
     <div class="flex justify-center">
       <mat-tab-group>
         <mat-tab>
@@ -206,10 +207,10 @@
     </div>
   </div>
 </div>
-<div class="wrapper py-16">
-  <div class="container flex">
+<div class="wrapper py-custom">
+  <div class="container wide flex col_md">
     <div class="wd_half">
-      <div class="text-4xl font-bold text-center mt-4">
+      <div class="textsmxl font-bold text-center mt-4">
         Какая цель у конкурса
       </div>
       <div class="main-text mt-8">
@@ -234,15 +235,15 @@
     </div>
   </div>
 </div>
-<div id="rules" class="wrapper main-bg pt-12 pb-12">
-  <div class="flex flex-col container">
-    <div class="text-4xl text-center mt-4">Правила участия в конкурсе</div>
+<div id="rules" class="wrapper main-bg py-custom">
+  <div class="flex flex-col container wide">
+    <div class="textsmxl text-center mt-4">Правила участия в конкурсе</div>
     <div class="main-text text-center mt-8">
       Правила довольно «условны» и призваны не для того, чтобы ограничить, но
-      для того, <br />
+      для того,
       чтобы «упорядочить» глубокий трансформирующий созидательный процесс
     </div>
-    <div class="flex pt-12">
+    <div class="flex col_md pd">
       <div class="md_hf relative">
         <img src="assets/Images/comb.png" alt="i" сlass="rules-img" />
       </div>
@@ -271,10 +272,10 @@
     </div>
   </div>
 </div>
-<div class="wrapper py-16">
-  <div class="container flex">
+<div class="wrapper py-custom bottm">
+  <div class="container wide flex">
     <div class="">
-      <div class="text-4xl font-bold text-center mt-4">
+      <div class="textsmxl font-bold text-center mt-4">
         Принять участие в конкурсе
       </div>
       <div class="main-text mt-8 text-center wd">

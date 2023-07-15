@@ -4,9 +4,6 @@
   grid-template-rows: repeat(13, 5vw);
   grid-gap: 15px;
 }
-.link {
-  color: #0716a1 !important;
-}
 .preview-t {
   margin: 0 !important;
   font-weight: bolder;
@@ -187,7 +184,7 @@
   text-transform: lowercase;
   padding: 0 50px;
 }
-.flex_d.sames:before {
+.bn_gr.wide.cons:before {
   content: "";
   position: absolute;
   background: url("../../../assets/Images/bh6.png");
@@ -195,9 +192,8 @@
   width: 80px;
   height: 130px;
   display: block;
-  margin-right: 8px;
+  margin-left: -170px;
   margin-top: -93px;
-  left: 24%;
 }
 .flex_d.sames {
   display: flex;
@@ -209,35 +205,6 @@
   max-width: 70%;
   margin-left: auto;
   margin-right: auto;
-}
-.md_hf {
-  width: 44%;
-}
-.md_hff {
-  width: 56%;
-}
-.wd_half {
-  width: 50%;
-  &.mg {
-    margin-left: 30px;
-    img {
-      object-fit: cover;
-    }
-  }
-}
-.width_wrap {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0 auto;
-  height: 100vh;
-}
-.item-main-back {
-  background: url("https://static.tildacdn.com/tild6632-3663-4362-b435-646664373337/___1.png")
-    no-repeat;
-  width: 50%;
-  background-size: cover;
-  margin-left: 20px;
 }
 .preview-container {
   position: fixed;
@@ -359,47 +326,8 @@
 .wq_wraper {
   display: flex;
 }
-.text-header-main {
-  color: #7b0d69;
-  font-size: 87px;
-  font-family: "Georgia", serif;
-  line-height: 1.05;
-  font-weight: 600;
-  background-position: center center;
-  border-color: transparent;
-  border-style: solid;
-}
-.text-header-second {
-  color: #0d187b;
-  font-size: 25px;
-  font-family: "Arial", Arial, sans-serif;
-  line-height: 1.4;
-  font-weight: 600;
-  background-position: center center;
-  border-color: transparent;
-  border-style: solid;
-}
 .main-bg {
   background-color: #edf0f8;
-}
-.text-item {
-  color: #242424;
-  font-size: 22px;
-  font-family: "Open Sans", Arial, sans-serif;
-  line-height: 40px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  background-position: center center;
-  border-color: transparent;
-  border-style: solid;
-}
-.header-item-container {
-  max-width: 630px;
-  margin: 0 auto;
-}
-.link-img {
-  width: 46px;
-  height: 46px;
 }
 .mat-tab-span {
   color: #000000;
@@ -407,18 +335,84 @@
   padding-bottom: 14px;
   font-size: 24px;
 }
-.main-text {
-  font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 300;
-  color: #000000;
-  font-size: 23px;
-  line-height: 2;
-  padding: 0 20px;
-}
 b {
   font-weight: 700;
 }
 .rules-img {
   width: 240px;
   height: 240px;
+}
+.main-text.text-center.mt-8 {
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 1100px) {
+  .main-text.text-center.mt-8 {
+    max-width: initial;
+  }
+}
+
+@media (max-width: 744px) {
+  .bn_gr.wide.cons {
+    padding: 0 30px;
+  }
+  .bn_gr.wide.cons:before {
+    content: "";
+    position: absolute;
+    background: url("../../../assets/Images/bh6.png");
+    background-size: cover;
+    width: 59px;
+    height: 93px;
+    display: block;
+    margin-left: -98px;
+    margin-top: -93px;
+  }
+}
+
+@media (max-width: 660px) {
+  .bottm .main-text {
+    position: relative;
+    z-index: 11;
+  }
+  .bn_gr.wide {
+    height: 60px;
+    font-size: 16px;
+  }
+  .flex_d.sames {
+    margin: 3em auto 0 auto;
+  }
+}
+@media (max-width: 500px) {
+  .preview-t {
+    font-size: 13px;
+  }
+  .preview_text {
+    width: 90%;
+  }
+  .bn_gr.wide {
+    height: 55px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .bn_gr.wide.cons:before {
+    content: "";
+    position: absolute;
+    background: url("../../../assets/Images/bh6.png");
+    background-size: cover;
+    width: 59px;
+    height: 93px;
+    display: block;
+    margin-left: -56px;
+    margin-top: -120px;
+    transform: rotate3d(1, 1, 1, 45deg);
+  }
+}
+@media (max-width: 350px) {
+  .bn_gr.wide.cons {
+    padding: 0 15px;
+    height: 50px;
+    font-size: 12px;
+  }
 }
