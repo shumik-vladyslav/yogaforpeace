@@ -74,16 +74,16 @@
 <div class="wrapper main-bg py-custom">
   <div class="container wide">
     <div class="flex justify-center">
-      <mat-tab-group>
+      <mat-tab-group (selectedTabChange)="onTabChanged($event)">
         <mat-tab>
           <ng-template mat-tab-label>
             <span class="mat-tab-span">Картины, рисунки</span>
           </ng-template>
-          <div class="image-list">
+          <div id="portraits" class="image-list">
             <ng-container *ngFor="let img of portraits; let i = index">
               <figure
                 [ngClass]="'gallery__item--' + i + 'a'"
-                class="gallery__item"
+                class="gallery__item desctop"
               >
                 <img
                   class="gallery__img"
@@ -91,6 +91,22 @@
                   (click)="openPreview(i, 2)"
                 />
               </figure>
+              <div *ngIf="i % 2 == 0" class="row_items">
+                <div class="it fst" *ngIf="i + 1 < portraits.length">
+                  <img
+                    class="gallery__img"
+                    [src]="portraits[i + 1].url"
+                    (click)="openPreview(i + 1, 2)"
+                  />
+                </div>
+                <div class="it scd" *ngIf="i + 2 < portraits.length">
+                  <img
+                    class="gallery__img"
+                    [src]="portraits[i + 2].url"
+                    (click)="openPreview(i + 2, 2)"
+                  />
+                </div>
+              </div>
             </ng-container>
           </div>
           <div class="preview-container">
@@ -135,11 +151,11 @@
           <ng-template mat-tab-label>
             <span class="mat-tab-span">Фотографии</span>
           </ng-template>
-          <div class="image-list">
+          <div id="photo" class="image-list">
             <ng-container *ngFor="let img of photo; let i = index">
               <figure
                 [ngClass]="'gallery__item--' + i + 'a'"
-                class="gallery__item"
+                class="gallery__item desctop"
               >
                 <img
                   class="gallery__img"
@@ -147,6 +163,22 @@
                   (click)="openPreview(i, 0)"
                 />
               </figure>
+              <div *ngIf="i % 2 == 0" class="row_items">
+                <div class="it fst" *ngIf="i + 1 < photo.length">
+                  <img
+                    class="gallery__img"
+                    [src]="photo[i + 1].url"
+                    (click)="openPreview(i + 1, 0)"
+                  />
+                </div>
+                <div class="it scd" *ngIf="i + 2 < photo.length">
+                  <img
+                    class="gallery__img"
+                    [src]="photo[i + 2].url"
+                    (click)="openPreview(i + 2, 0)"
+                  />
+                </div>
+              </div>
             </ng-container>
           </div>
           <div class="preview-container">
@@ -166,11 +198,11 @@
           <ng-template mat-tab-label>
             <span class="mat-tab-span">Детское творчество</span>
           </ng-template>
-          <div class="image-list">
+          <div id="children" class="image-list">
             <ng-container *ngFor="let img of children; let i = index">
               <figure
                 [ngClass]="'gallery__item--' + i + 'a'"
-                class="gallery__item"
+                class="gallery__item desctop"
               >
                 <img
                   class="gallery__img"
@@ -178,6 +210,22 @@
                   (click)="openPreview(i, 1)"
                 />
               </figure>
+              <div *ngIf="i % 2 == 0" class="row_items">
+                <div class="it fst" *ngIf="i + 1 < children.length">
+                  <img
+                    class="gallery__img"
+                    [src]="children[i + 1].url"
+                    (click)="openPreview(i + 1, 1)"
+                  />
+                </div>
+                <div class="it scd" *ngIf="i + 2 < children.length">
+                  <img
+                    class="gallery__img"
+                    [src]="children[i + 2].url"
+                    (click)="openPreview(i + 2, 1)"
+                  />
+                </div>
+              </div>
             </ng-container>
           </div>
           <div class="preview-container">
@@ -240,8 +288,8 @@
     <div class="textsmxl text-center mt-4">Правила участия в конкурсе</div>
     <div class="main-text text-center mt-8">
       Правила довольно «условны» и призваны не для того, чтобы ограничить, но
-      для того,
-      чтобы «упорядочить» глубокий трансформирующий созидательный процесс
+      для того, чтобы «упорядочить» глубокий трансформирующий созидательный
+      процесс
     </div>
     <div class="flex col_md pd">
       <div class="md_hf relative">

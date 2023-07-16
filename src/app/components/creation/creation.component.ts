@@ -24,7 +24,35 @@ export class CreationComponent implements OnInit {
       this.photo = res[0].photo;
       this.children = res[0].children;
       this.portraits = res[0].portraits;
+      if (window.innerWidth <= 500) {
+        this.photo.unshift(this.photo[0]);
+        this.portraits.unshift(this.portraits[0]);
+        this.children.unshift(this.children[0]);
+      }
+      let pts = this.portraits.length + (Math.round(this.portraits.length / 9 * 4));
+      document.getElementById('portraits').style.gridTemplateRows = (pts > 9) ? `repeat(${pts}, 5vw)` : `repeat(13, 5vw)`;
     })
+  }
+
+  onTabChanged(e) {
+    if (window.innerWidth > 500) {
+      switch (e.index) {
+        case (0):
+          let pts = this.portraits.length + (Math.round(this.portraits.length / 9 * 4));
+          document.getElementById('portraits').style.gridTemplateRows = (pts > 9) ? `repeat(${pts}, 5vw)` : `repeat(13, 5vw)`;
+          break;
+        case (2):
+          let pht = this.photo.length + (Math.round(this.photo.length / 9 * 4));
+          document.getElementById('photo').style.gridTemplateRows = (pht > 9) ? `repeat(${pht}, 5vw)` : `repeat(13, 5vw)`;
+          break;
+        case (3):
+          let cdn = this.children.length + (Math.round(this.children.length / 9 * 4));
+          document.getElementById('children').style.gridTemplateRows = (cdn > 9) ? `repeat(${cdn}, 5vw)` : `repeat(13, 5vw)`;
+          break;
+        default:
+          break;
+      }
+    }
   }
 
   ngOnInit(): void { }

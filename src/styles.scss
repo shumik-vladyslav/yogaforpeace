@@ -3615,6 +3615,11 @@ ul.l_gen {
     }
   }
 }
+@media (max-width: 500px) {
+  .mat-tab-body-wrapper {
+    margin: 0 -10px;
+  }
+}
 @media (max-width: 480px) {
   .course .sp-form-control.input-form-gold.tel {
     padding-left: 45% !important;
