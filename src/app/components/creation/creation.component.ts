@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { DomSanitizer } from "@angular/platform-browser";
 import { DataService } from "src/app/services/data.service";
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 
 @Component({
   selector: 'app-creation',
@@ -10,6 +12,9 @@ export class CreationComponent implements OnInit {
   photo = [];
   children = [];
   portraits = [];
+  videos = [];
+  songs = [];
+  poetry = [];
   currentPhotoIndex = 0;
   currentChildrenIndex = 0;
   currentPortraitsIndex = 0;
@@ -18,12 +23,19 @@ export class CreationComponent implements OnInit {
   currentPortraitsText = '';
 
   constructor(
-    public dataService: DataService
+    public dataService: DataService,
+    public _sanitizer: DomSanitizer,
+    public ngxService: NgxUiLoaderService
   ) {
+    this.ngxService.startLoader('creation');
     this.dataService.getData().subscribe(res => {
       this.photo = res[0].photo;
       this.children = res[0].children;
       this.portraits = res[0].portraits;
+      this.videos = res[0].video;
+      this.songs = res[0].songs;
+      this.poetry = res[0].poetry;
+      this.poetry.unshift(this.poetry[0]);
       if (window.innerWidth <= 500) {
         this.photo.unshift(this.photo[0]);
         this.portraits.unshift(this.portraits[0]);
@@ -32,6 +44,10 @@ export class CreationComponent implements OnInit {
       let pts = this.portraits.length + (Math.round(this.portraits.length / 9 * 4));
       document.getElementById('portraits').style.gridTemplateRows = (pts > 9) ? `repeat(${pts}, 5vw)` : `repeat(13, 5vw)`;
     })
+  }
+
+  getSafeVideoUrl(url: string) {
+    return this._sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
   onTabChanged(e) {
@@ -49,10 +65,16 @@ export class CreationComponent implements OnInit {
           let cdn = this.children.length + (Math.round(this.children.length / 9 * 4));
           document.getElementById('children').style.gridTemplateRows = (cdn > 9) ? `repeat(${cdn}, 5vw)` : `repeat(13, 5vw)`;
           break;
+        case (5):
+          break;
         default:
           break;
       }
     }
+  }
+
+  checkImgLoad() {
+    this.ngxService.stopLoader('creation');
   }
 
   ngOnInit(): void { }
