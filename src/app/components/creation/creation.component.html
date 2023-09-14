@@ -5,7 +5,7 @@
 <div class="flex main-bg">
   <div class="width_wrap">
     <div class="flex-[0_0_50%] m-bc">
-      <div class="header-item-container">
+      <div id="target" class="header-item-container target">
         <div class="flex flex-col mymarg spec">
           <div class="flex flex-row">
             <span class="text-header-main"> МИР </span>
@@ -20,17 +20,17 @@
         </div>
         <div class="flex item-main-back ds_none"></div>
         <p class="text-item cr mb-4">
-          Творческий конкурс «Мир и Любовь» — это один из проектов движения
-          «Йоги за Мир», мы верим, что за идеями мира, отраженными в творчестве,
+          Творческий конкурс <span class="no-wrap">«Мир и Любовь»</span> — это один из проектов движения
+          <span class="no-wrap">«Йоги за Мир»</span>, мы верим, что за идеями мира, отраженными в творчестве,
           стоит большая трансформирующая сила!
         </p>
         <div class="text-item cr mb-4">
-          Эта страница посвящена онлайн выставке с конкурсными работами. В
-          конкурсе можно принять участие, отправив свою работу на почту. Про
-          условия участия
-          <p class="text-item cr mb-4 link" (click)="scrollTo('rules')">
+          Эта страница посвящена онлайн выставке с конкурсными работами. <span class="no-wrap">В
+            конкурсе</span> можно принять участие, отправив свою работу на почту. <span class="no-wrap">Про
+              условия</span> участия
+          <span class="text-item cr mb-4 link no-wrap" (click)="scrollTo('rules')">
             рассказываем ниже
-          </p>
+          </span>
         </div>
         <div class="flex flex-row spec">
           <div
@@ -72,7 +72,9 @@
         </div>
       </div>
     </div>
-    <div class="flex-[0_0_50%] item-main-back md_none"></div>
+    <div id="target1" class="item-main-back md_none target1">
+      <div class="fg_bg"></div>
+    </div>
   </div>
 </div>
 <div class="wrapper main-bg py-custom">
@@ -128,84 +130,6 @@
         </mat-tab>
         <mat-tab>
           <ng-template mat-tab-label>
-            <span class="mat-tab-span">Стихотворения</span>
-          </ng-template>
-          <ng-container *ngFor="let verse of poetry; let i = index">
-            <div *ngIf="i % 2 == 0" class="flex specc">
-              <div *ngIf="i + 1 < poetry.length" class="mai_wrp">
-                <div class="t257__icon">“</div>
-                <div class="t257__wrapper">
-                  <div class="t257__text t-text">
-                    <p [innerHTML]="poetry[i + 1].text" style="text-align: center"></p>
-                  </div>
-                  <div class="t257__author t-text" field="authorname">
-                    <strong>—</strong> <strong>{{ poetry[i + 1].author }}</strong>
-                  </div>
-                </div>
-              </div>
-              <div *ngIf="i + 2 < poetry.length" class="mai_wrp">
-                <div class="t257__icon">“</div>
-                <div class="t257__wrapper">
-                  <div class="t257__text t-text">
-                    <p [innerHTML]="poetry[i + 2].text" style="text-align: center"></p>
-                  </div>
-                  <div class="t257__author t-text" field="authorname">
-                    <strong>—</strong> <strong>{{ poetry[i + 2].author }}</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ng-container>
-        </mat-tab>
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <span class="mat-tab-span">Фотографии</span>
-          </ng-template>
-          <div id="photo" class="image-list">
-            <ng-container *ngFor="let img of photo; let i = index">
-              <figure
-                [ngClass]="'gallery__item--' + i + 'a'"
-                class="gallery__item desctop"
-              >
-                <img
-                  class="gallery__img"
-                  [src]="img.url"
-                  (click)="openPreview(i, 0)"
-                />
-              </figure>
-              <div *ngIf="i % 2 == 0" class="row_items">
-                <div class="it fst" *ngIf="i + 1 < photo.length">
-                  <img
-                    class="gallery__img"
-                    [src]="photo[i + 1].url"
-                    (click)="openPreview(i + 1, 0)"
-                  />
-                </div>
-                <div class="it scd" *ngIf="i + 2 < photo.length">
-                  <img
-                    class="gallery__img"
-                    [src]="photo[i + 2].url"
-                    (click)="openPreview(i + 2, 0)"
-                  />
-                </div>
-              </div>
-            </ng-container>
-          </div>
-          <div class="preview-container">
-            <div class="overlay"></div>
-            <div class="preview">
-              <img class="preview-image" src="" />
-            </div>
-            <div class="close-button" (click)="closePreview()">&times;</div>
-            <div class="prev-button" (click)="showPrevImage(0)">&lt;</div>
-            <div class="next-button" (click)="showNextImage(0)">&gt;</div>
-            <div class="preview_text">
-              <p class="preview-t">{{ currentPhotoText }}</p>
-            </div>
-          </div>
-        </mat-tab>
-        <mat-tab>
-          <ng-template mat-tab-label>
             <span class="mat-tab-span">Детское творчество</span>
           </ng-template>
           <div id="children" class="image-list">
@@ -253,6 +177,143 @@
         </mat-tab>
         <mat-tab>
           <ng-template mat-tab-label>
+            <span class="mat-tab-span">Видео</span>
+          </ng-template>
+          <div class="video_wrap vhw">
+            <ng-container *ngFor="let video of videos; let i = index">
+              <div *ngIf="i == 0" class="row_items vid fst">
+                <div class="its">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    [src]="getSafeVideoUrl(videos[0].url)"
+                    title="Review"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="desct">
+                  <p class="d_er frst">{{ videos[0].description }}</p>
+                </div>
+              </div>
+              <div *ngIf="i % 2 == 0" class="row_items vid">
+                <div class="_wrap" *ngIf="i + 1 < videos.length">
+                  <div class="its">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      [src]="getSafeVideoUrl(videos[i + 1].url)"
+                      title="Review"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="desct">
+                    <p class="d_er">{{ videos[i + 1].description }}</p>
+                  </div>
+                </div>
+                <div class="_wrap" *ngIf="i + 2 < videos.length">
+                  <div class="its">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      [src]="getSafeVideoUrl(videos[i + 2].url)"
+                      title="Review"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="desct">
+                    <p class="d_er">{{ videos[i + 2].description }}</p>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <span class="mat-tab-span">Стихи и рассказы</span>
+          </ng-template>
+          <ng-container *ngFor="let verse of poetry; let i = index">
+            <div *ngIf="i % 2 == 0" class="flex specc">
+              <div *ngIf="i + 1 < poetry.length" class="mai_wrp">
+                <div class="t257__icon">“</div>
+                <div class="t257__wrapper">
+                  <div class="t257__text t-text">
+                    <p [innerHTML]="poetry[i + 1].text" style="text-align: center"></p>
+                  </div>
+                  <div class="t257__author t-text" field="authorname">
+                    <strong>—</strong> <strong>{{ poetry[i + 1].author }}</strong>
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="i + 2 < poetry.length" class="mai_wrp">
+                <div class="t257__icon">“</div>
+                <div class="t257__wrapper">
+                  <div class="t257__text t-text">
+                    <p [innerHTML]="poetry[i + 2].text" style="text-align: center"></p>
+                  </div>
+                  <div class="t257__author t-text" field="authorname">
+                    <strong>—</strong> <strong>{{ poetry[i + 2].author }}</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </mat-tab>
+        <!-- <mat-tab>
+          <ng-template mat-tab-label>
+            <span class="mat-tab-span">Фотографии</span>
+          </ng-template>
+          <div id="photo" class="image-list">
+            <ng-container *ngFor="let img of photo; let i = index">
+              <figure
+                [ngClass]="'gallery__item--' + i + 'a'"
+                class="gallery__item desctop"
+              >
+                <img
+                  class="gallery__img"
+                  [src]="img.url"
+                  (click)="openPreview(i, 0)"
+                />
+              </figure>
+              <div *ngIf="i % 2 == 0" class="row_items">
+                <div class="it fst" *ngIf="i + 1 < photo.length">
+                  <img
+                    class="gallery__img"
+                    [src]="photo[i + 1].url"
+                    (click)="openPreview(i + 1, 0)"
+                  />
+                </div>
+                <div class="it scd" *ngIf="i + 2 < photo.length">
+                  <img
+                    class="gallery__img"
+                    [src]="photo[i + 2].url"
+                    (click)="openPreview(i + 2, 0)"
+                  />
+                </div>
+              </div>
+            </ng-container>
+          </div>
+          <div class="preview-container">
+            <div class="overlay"></div>
+            <div class="preview">
+              <img class="preview-image" src="" />
+            </div>
+            <div class="close-button" (click)="closePreview()">&times;</div>
+            <div class="prev-button" (click)="showPrevImage(0)">&lt;</div>
+            <div class="next-button" (click)="showNextImage(0)">&gt;</div>
+            <div class="preview_text">
+              <p class="preview-t">{{ currentPhotoText }}</p>
+            </div>
+          </div>
+        </mat-tab> -->
+        <mat-tab>
+          <ng-template mat-tab-label>
             <span class="mat-tab-span">Песни</span>
           </ng-template>
           <div class="audio">
@@ -272,7 +333,7 @@
                   </audio>
                 </div>
                 <div class="desct">
-                  <p class="d_er">{{ songs[0].description }}</p>
+                  <p class="d_er frst">{{ songs[0].description }}</p>
                 </div>
               </div>
               <div *ngIf="i % 2 == 0" class="row_items vid">
@@ -310,65 +371,6 @@
                   </div>
                   <div class="desct">
                     <p class="d_er">{{ songs[i + 2].description }}</p>
-                  </div>
-                </div>
-              </div>
-            </ng-container>
-          </div>
-        </mat-tab>
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <span class="mat-tab-span">Видео</span>
-          </ng-template>
-          <div class="video_wrap vhw">
-            <ng-container *ngFor="let video of videos; let i = index">
-              <div *ngIf="i == 0" class="row_items vid fst">
-                <div class="its">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    [src]="getSafeVideoUrl(videos[0].url)"
-                    title="Review"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="desct">
-                  <p class="d_er">{{ videos[0].description }}</p>
-                </div>
-              </div>
-              <div *ngIf="i % 2 == 0" class="row_items vid">
-                <div class="_wrap" *ngIf="i + 1 < videos.length">
-                  <div class="its">
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      [src]="getSafeVideoUrl(videos[i + 1].url)"
-                      title="Review"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                  <div class="desct">
-                    <p class="d_er">{{ videos[i + 1].description }}</p>
-                  </div>
-                </div>
-                <div class="_wrap" *ngIf="i + 2 < videos.length">
-                  <div class="its">
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      [src]="getSafeVideoUrl(videos[i + 2].url)"
-                      title="Review"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                  <div class="desct">
-                    <p class="d_er">{{ videos[i + 2].description }}</p>
                   </div>
                 </div>
               </div>

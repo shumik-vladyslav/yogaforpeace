@@ -855,11 +855,17 @@ div.abs_img {
   margin-top: 10px;
 }
 .item-main-back {
-  background: url("https://static.tildacdn.com/tild6632-3663-4362-b435-646664373337/___1.png")
-    no-repeat;
-  width: 50%;
-  background-size: cover;
-  margin-left: 20px;
+  width: 40%;
+  &.md_none {
+    padding: 5% 11% 3% 0;
+    .fg_bg {
+      background: url("https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/contest%2Fportraits%2F4.jpg?alt=media&token=e5417886-e9af-4965-a2d0-86829221c40e")
+        no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 .md_hf {
   width: 44%;
@@ -879,7 +885,7 @@ div.abs_img {
   justify-content: space-between;
   width: 100%;
   margin: 0 auto;
-  height: 100vh;
+  height: 80vh;
 }
 .m-bc {
   margin: auto;
@@ -2045,7 +2051,15 @@ ul.l_gen {
   max-height: initial;
   overflow: visible !important;
 }
+@media (max-width: 1800px) {
+  .item-main-back.md_none {
+    padding: 7% 11% 3% 0;
+  }
+}
 @media (max-width: 1620px) {
+  .item-main-back.md_none {
+    padding: 8% 7% 3% 0;
+  }
   .ide_a_wrap.rtx {
     margin: 60px auto 0 -35px;
     max-width: 85%;
@@ -2857,6 +2871,9 @@ ul.l_gen {
     display: none;
   }
   .item-main-back {
+    background: url("https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/contest%2Fportraits%2F4.jpg?alt=media&token=e5417886-e9af-4965-a2d0-86829221c40e")
+        no-repeat;
+    background-size: cover;
     width: 100%;
     height: 360px;
     margin: 3em 0;

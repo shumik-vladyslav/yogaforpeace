@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { AfterViewInit, Component, OnInit } from "@angular/core";
 import { DomSanitizer } from "@angular/platform-browser";
 import { DataService } from "src/app/services/data.service";
 import { NgxUiLoaderService } from 'ngx-ui-loader';
@@ -8,17 +8,17 @@ import { NgxUiLoaderService } from 'ngx-ui-loader';
   templateUrl: './creation.component.html',
   styleUrls: ['./creation.component.scss']
 })
-export class CreationComponent implements OnInit {
-  photo = [];
+export class CreationComponent implements OnInit, AfterViewInit {
+  // photo = [];
   children = [];
   portraits = [];
   videos = [];
   songs = [];
   poetry = [];
-  currentPhotoIndex = 0;
+  // currentPhotoIndex = 0;
   currentChildrenIndex = 0;
   currentPortraitsIndex = 0;
-  currentPhotoText = '';
+  // currentPhotoText = '';
   currentChildrenText = '';
   currentPortraitsText = '';
 
@@ -29,7 +29,7 @@ export class CreationComponent implements OnInit {
   ) {
     this.ngxService.startLoader('creation');
     this.dataService.getData().subscribe(res => {
-      this.photo = res[0].photo;
+      // this.photo = res[0].photo;
       this.children = res[0].children;
       this.portraits = res[0].portraits;
       this.videos = res[0].video;
@@ -37,7 +37,7 @@ export class CreationComponent implements OnInit {
       this.poetry = res[0].poetry;
       this.poetry.unshift(this.poetry[0]);
       if (window.innerWidth <= 500) {
-        this.photo.unshift(this.photo[0]);
+        // this.photo.unshift(this.photo[0]);
         this.portraits.unshift(this.portraits[0]);
         this.children.unshift(this.children[0]);
       }
@@ -50,6 +50,19 @@ export class CreationComponent implements OnInit {
     return this._sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
+  ngAfterViewInit(): void {
+    // let target = document.getElementById('target');
+    // let target1 = document.getElementById('target1');
+    // console.log(document.getElementsByClassName('.target1').style.width);
+    // document.getElementById('target1').style.width = document.getElementById('target').style.width;
+
+    // let img = document.querySelector('target');
+    let img1 = document.querySelector('target1');
+    (img1 as any).style.width = "20vw";
+    // target1.style.width = target.style.width;
+    // target1.style.height = target.style.height;
+  }
+
   onTabChanged(e) {
     if (window.innerWidth > 500) {
       switch (e.index) {
@@ -57,16 +70,13 @@ export class CreationComponent implements OnInit {
           let pts = this.portraits.length + (Math.round(this.portraits.length / 9 * 4));
           document.getElementById('portraits').style.gridTemplateRows = (pts > 9) ? `repeat(${pts}, 5vw)` : `repeat(13, 5vw)`;
           break;
-        case (2):
-          let pht = this.photo.length + (Math.round(this.photo.length / 9 * 4));
-          document.getElementById('photo').style.gridTemplateRows = (pht > 9) ? `repeat(${pht}, 5vw)` : `repeat(13, 5vw)`;
-          break;
-        case (3):
+        case (1):
           let cdn = this.children.length + (Math.round(this.children.length / 9 * 4));
           document.getElementById('children').style.gridTemplateRows = (cdn > 9) ? `repeat(${cdn}, 5vw)` : `repeat(13, 5vw)`;
           break;
-        case (5):
-          break;
+        //   let pht = this.photo.length + (Math.round(this.photo.length / 9 * 4));
+        //   document.getElementById('photo').style.gridTemplateRows = (pht > 9) ? `repeat(${pht}, 5vw)` : `repeat(13, 5vw)`;
+        //   break;
         default:
           break;
       }
@@ -77,7 +87,7 @@ export class CreationComponent implements OnInit {
     this.ngxService.stopLoader('creation');
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   scrollTo(id): void {
     const element = document.getElementById(id);
@@ -94,9 +104,9 @@ export class CreationComponent implements OnInit {
     var img = document.querySelector('.preview-image');
     switch (slider) {
       case 0:
-        (img as any).src = this.photo[index].url;
-        this.currentPhotoText = this.photo[index].description
-        this.currentPhotoIndex = index;
+        // (img as any).src = this.photo[index].url;
+        // this.currentPhotoText = this.photo[index].description
+        // this.currentPhotoIndex = index;
         break;
       case 1:
         (img as any).src = this.children[index].url;
@@ -121,7 +131,7 @@ export class CreationComponent implements OnInit {
   showNextImage(slider: number) {
     switch (slider) {
       case 0:
-        this.nextPhoto();
+        // this.nextPhoto();
         break;
       case 1:
         this.nextChildren();
@@ -134,24 +144,24 @@ export class CreationComponent implements OnInit {
     }
   }
 
-  nextPhoto() {
-    if (this.currentPhotoIndex == this.photo.length - 1) {
-      var previewContainer = document.querySelector('.preview-container');
-      this.currentPhotoIndex = 0;
-      previewContainer.classList.add('next-image-exit');
-      setTimeout(() => {
-        this.showImage(this.currentPhotoIndex, 0, 'next-image-enter');
-        previewContainer.classList.remove('next-image-exit');
-      }, 300);
-    } else {
-      var previewContainer = document.querySelector('.preview-container');
-      previewContainer.classList.add('next-image-exit');
-      setTimeout(() => {
-        this.showImage((this.currentPhotoIndex + 1) % this.photo.length, 0, 'next-image-enter');
-        previewContainer.classList.remove('next-image-exit');
-      }, 300);
-    }
-  }
+  // nextPhoto() {
+  //   if (this.currentPhotoIndex == this.photo.length - 1) {
+  //     var previewContainer = document.querySelector('.preview-container');
+  //     this.currentPhotoIndex = 0;
+  //     previewContainer.classList.add('next-image-exit');
+  //     setTimeout(() => {
+  //       this.showImage(this.currentPhotoIndex, 0, 'next-image-enter');
+  //       previewContainer.classList.remove('next-image-exit');
+  //     }, 300);
+  //   } else {
+  //     var previewContainer = document.querySelector('.preview-container');
+  //     previewContainer.classList.add('next-image-exit');
+  //     setTimeout(() => {
+  //       this.showImage((this.currentPhotoIndex + 1) % this.photo.length, 0, 'next-image-enter');
+  //       previewContainer.classList.remove('next-image-exit');
+  //     }, 300);
+  //   }
+  // }
 
   nextChildren() {
     if (this.currentChildrenIndex == this.children.length - 1) {
@@ -194,7 +204,7 @@ export class CreationComponent implements OnInit {
   showPrevImage(slider: number) {
     switch (slider) {
       case 0:
-        this.prevPhoto();
+        // this.prevPhoto();
         break;
       case 1:
         this.prevChildren();
@@ -207,23 +217,23 @@ export class CreationComponent implements OnInit {
     }
   }
 
-  prevPhoto() {
-    if (this.currentPhotoIndex == 0) {
-      var previewContainer = document.querySelector('.preview-container');
-      previewContainer.classList.add('prev-image-exit');
-      setTimeout(() => {
-        this.showImage(this.photo.length - 1, 0, 'prev-image-enter');
-        previewContainer.classList.remove('prev-image-exit');
-      }, 300);
-    } else {
-      var previewContainer = document.querySelector('.preview-container');
-      previewContainer.classList.add('prev-image-exit');
-      setTimeout(() => {
-        this.showImage(this.currentPhotoIndex - 1, 0, 'prev-image-enter');
-        previewContainer.classList.remove('prev-image-exit');
-      }, 300);
-    }
-  }
+  // prevPhoto() {
+  //   if (this.currentPhotoIndex == 0) {
+  //     var previewContainer = document.querySelector('.preview-container');
+  //     previewContainer.classList.add('prev-image-exit');
+  //     setTimeout(() => {
+  //       this.showImage(this.photo.length - 1, 0, 'prev-image-enter');
+  //       previewContainer.classList.remove('prev-image-exit');
+  //     }, 300);
+  //   } else {
+  //     var previewContainer = document.querySelector('.preview-container');
+  //     previewContainer.classList.add('prev-image-exit');
+  //     setTimeout(() => {
+  //       this.showImage(this.currentPhotoIndex - 1, 0, 'prev-image-enter');
+  //       previewContainer.classList.remove('prev-image-exit');
+  //     }, 300);
+  //   }
+  // }
 
   prevChildren() {
     if (this.currentChildrenIndex == 0) {
@@ -265,8 +275,8 @@ export class CreationComponent implements OnInit {
     var previewContainer = document.querySelector('.preview-container');
     switch (slider) {
       case 0:
-        this.currentPhotoIndex = index;
-        this.showImage(this.currentPhotoIndex, 0);
+        // this.currentPhotoIndex = index;
+        // this.showImage(this.currentPhotoIndex, 0);
         break;
       case 1:
         this.currentChildrenIndex = index;

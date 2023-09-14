@@ -12,6 +12,7 @@ export class ThanksAhimsaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.body.style.overflowY = "hidden";
     let language = window.localStorage.getItem("language");
     if (language) {
       this.setLanguage(language);
@@ -20,12 +21,12 @@ export class ThanksAhimsaComponent implements OnInit {
     }
   };
 
-  downloadPresentation(): void {
-    window.open(
-      this.presentationUrl,
-      '_blank'
-    );
-  }
+  // downloadPresentation(): void {
+  //   window.open(
+  //     this.presentationUrl,
+  //     '_blank'
+  //   );
+  // }
 
   setLanguage(language) {
     this.lan = language;
@@ -41,5 +42,13 @@ export class ThanksAhimsaComponent implements OnInit {
         this.presentationUrl = '../../../assets/presentations/ahimsa.pdf';
         break;
     }
+  }
+
+  goToURl(url) {
+    window.open(url);
+  }
+
+  telegramClick() {
+    this.goToURl('https://t.me/FORUM_AHIMSA')
   }
 }

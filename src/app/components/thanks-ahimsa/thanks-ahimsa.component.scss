@@ -1,158 +1,217 @@
+@import "../course/course.component";
 * {
-    font-family: "Roboto Slab", serif;
+  font-family: "Roboto Slab", serif;
 }
-
 h2 {
-    font-family: "Roboto Slab", serif !important;
-    font-weight: 400;
+  font-family: "Roboto Slab", serif !important;
+  font-weight: 400;
 }
-
 .content {
-    margin: auto;
-    height: 100vh;
-    padding-top: 20px;
-    max-width: 1300px;
-    display: flex;
-
-    font-size: 30px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    line-height: 1.2;
+  margin: auto;
+  height: 100vh;
+  padding-top: 20px;
+  max-width: 1000px;
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.2;
+  overflow: hidden;
 }
-
+.bny_p {
+  border-radius: 8px;
+  border: 2px solid #af8632;
+  padding: 11px 30px;
+  margin-bottom: 40px;
+}
 .container {
-    max-width: 800px;
-    display: flex;
-    justify-content: center;
-    margin: 0px auto;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
 }
-
 .wrapper {
-    min-height: 100vh;
-    background-image: -webkit-linear-gradient(top,
-            rgba(241, 239, 250, 1),
-            rgba(241, 239, 250, 1));
+  min-height: 100vh;
+  background-image: -webkit-linear-gradient(
+    top,
+    rgba(241, 239, 250, 1),
+    rgba(241, 239, 250, 1)
+  );
 }
-
 .text {
-    flex: 0 1 50%;
-    margin-right: 10px;
-
-    p {
-        padding-bottom: 20px;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0;
+  p {
+    padding-bottom: 20px;
+  }
 }
-
-#JXRG3Zbp {
-    width: 400px;
-}
-
 .bot_wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: -30px 0 0 0;
-
-    img {
-        height: 28px;
-    }
-
-    p {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -30px 0 20px 0;
+  img {
+    height: 28px;
+  }
+  p {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
-
+.mbb {
+  display: none;
+}
+.header-inner.header-inner-button.boreder.grad {
+  background: url(../../../assets/Images/course/rainbow.png);
+  background-size: contain;
+  &.rb {
+    background: url(../../../assets/Images/course/rainb.png);
+    background-size: contain;
+    margin: 25px 0;
+  }
+}
+.outer_wrap_cs.lss.relatives .header-inner.header-inner-button.boreder {
+  width: auto !important;
+  min-width: 400px;
+}
+.header-inner.header-inner-button.boreder button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px !important;
+}
+.outer_wrap_cs.lss.relatives {
+  img {
+    position: relative;
+    display: block;
+    margin: 0 15px;
+    top: unset;
+    left: unset;
+  }
+  .registration-button.rd {
+    span {
+      font-size: 18px;
+      color: #ffffff;
+      font-weight: 500;
+      font-family: "Roboto";
+      text-align: center;
+    }
+  }
+}
+.outer_wrap_cs.lss {
+  margin: 0;
+}
+.i_smp {
+  font-size: 1.5em;
+  color: #58585a;
+  font-weight: 400;
+  font-family: "Roboto";
+  text-align: center;
+}
+.sub_y {
+  font-size: 1em;
+  color: #af8632;
+  font-weight: 500;
+  font-family: "Roboto";
+  text-align: center;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.t_par {
+  font-size: 2em;
+  color: #af8632;
+  font-weight: 700;
+  font-family: "Playfair Display";
+}
+.imn_w {
+  width: 170px;
+  height: 200px;
+  margin-bottom: 30px !important;
+  img {
+    max-width: 100%;
+  }
+}
+.bnt_er {
+  width: auto;
+  height: 150px;
+  cursor: pointer;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
 .thanks {
-    background: url('../../../assets/Images/hands.png') center no-repeat;
-    background-size: cover;
+  background: url(../../../assets/Images/course/lgft.png) center no-repeat;
+  background-size: cover;
 }
-
-@media (max-width: 1000px) {
-    .thanks {
-        display: flex;
-        background: unset;
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.3;
-            z-index: -1;
-            background: url(../../../assets/Logo/yogis-for-peace-big-.svg) center no-repeat;
-        }
-
-        .bot_wrap {
-            align-items: unset;
-        }
+@media (max-width: 1200px) {
+  .outer_wrap_cs.lss.relatives .header-inner.header-inner-button.boreder {
+    min-width: 360px;
+  }
+  .outer_wrap_cs.lss.relatives {
+    .registration-button.rd {
+      span {
+        font-size: 16px;
+      }
     }
-
-    .content {
-        height: fit-content;
-        flex-direction: column;
-        padding: 10% 6% 0 6%;
-    }
-
-    .text {
-        font-size: 20px;
-    }
+  }
+  .header-inner.header-inner-button.boreder {
+    height: 64px;
+  }
+  .header-inner.header-inner-button.boreder button {
+    height: 60px;
+  }
+  .imn_w {
+    width: 135px;
+    height: 170px;
+    margin-bottom: 20px !important;
+  }
+  .t_par {
+    font-size: 1.6em;
+  }
+  .i_smp {
+    font-size: 1em;
+  }
+  .sub_y {
+    font-size: 0.8em;
+  }
+  .bnt_er {
+    height: 110px;
+  }
 }
-
+@media (max-width: 630px) {
+  .header-inner.header-inner-button.boreder.grad.rb {
+    margin: 0;
+  }
+  .outer_wrap_cs.lss.relatives .header-inner.header-inner-button.boreder {
+    white-space: nowrap;
+  }
+  .outer_wrap_cs.lss {
+    margin: 0 -100px;
+  }
+}
 @media (max-width: 550px) {
-    .thanks {
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.3;
-            z-index: -1;
-            background: url(../../../assets/Logo/yogis-for-peace-big-.svg) top no-repeat;
-        }
+  .bny_p {
+    display: none;
+    &.mbb {
+      display: flex;
     }
-
-    .bot_wrap {
-        margin: -10px 0 10px 0;
-
-        img {
-            height: 21px;
-        }
+    padding: 10px 20px;
+    margin: 10px 10px 30px 10px;
+  }
+  .t_par {
+    font-size: 1.3em;
+  }
+  .i_smp {
+    display: none;
+    &.mbb {
+      display: flex;
+      font-size: 0.8em;
+      margin: 0 15px;
     }
-
-    .text {
-        margin-bottom: -40px;
-
-        p {
-            padding-bottom: 0px;
-            font-size: 16px;
-            font-weight: 600;
-        }
-    }
-}
-
-@media (max-width: 450px) {
-    #JXRG3Zbp {
-        width: 320px;
-    }
-}
-
-.registration-button {
-    height: 70px;
-    padding: 0 50px;
-    border-radius: 999px;
-    background-color: rgb(178, 18, 67);
-    color: #fff;
-}
-.text-s {
-    font-size: 18px;
-}
-.mb-4 {
-    margin-bottom: 16px!important;
+  }
 }
