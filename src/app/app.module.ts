@@ -40,6 +40,9 @@ import { ThanksComponent } from './components/thanks/thanks.component';
 import { CreationComponent } from './components/creation/creation.component';
 import { LightgalleryModule } from 'lightgallery/angular/12';
 import {MatTabsModule} from '@angular/material/tabs';
+import { PaymentComponent } from './components/payment/payment.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { PaymentApplyComponent } from './components/payment-apply/payment-apply.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -67,6 +70,9 @@ export function createTranslateLoader(http: HttpClient) {
     VideoDialogComponent,
     ThanksComponent,
     CreationComponent,
+    PaymentComponent,
+    FooterComponent,
+    PaymentApplyComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,76 @@
+<div class="relative_wrap">
+  <div class="g_wrapp">
+    <form
+      hidden
+      method="post"
+      action="https://secure.wayforpay.com/pay"
+      accept-charset="utf-8"
+    >
+      <input name="merchantAccount" value="yogisforpeace_life" />
+      <input name="merchantAuthType" value="SimpleSignature" />
+      <input name="merchantDomainName" value="http://yogisforpeace.life" />
+      <input
+        name="merchantSignature"
+        value="e368231708153dfea88e1a92842db6d4"
+      />
+      <input name="orderReference" value="DH783023" />
+      <input name="orderDate" value="1415379863" />
+      <input name="amount" [value]="formAmount.get('amount').value" />
+      <input name="currency" [value]="formAmount.get('currency').value" />
+      <input name="orderTimeout" value="49000" />
+      <input name="productName[]" value="Процессор Intel Core i5-4670 3.4GHz" />
+      <input
+        name="productName[]"
+        value="Память Kingston DDR3-1600 4096MB PC3-12800"
+      />
+      <input name="productPrice[]" value="1000" />
+      <input name="productPrice[]" value="547.36" />
+      <input name="productCount[]" value="1" />
+      <input name="productCount[]" value="1" />
+      <input name="clientFirstName" value="Вася" />
+      <input name="clientLastName" value="Пупкин" />
+      <input name="clientAddress" value="пр. Гагарина, 12" />
+      <input name="clientCity" value="Днепропетровск" />
+      <input name="clientEmail" value="some@mail.com" />
+      <input name="defaultPaymentSystem" value="card" />
+      <button type="submit" (click)="sendGetRequest()">Оплатить</button>
+    </form>
+  </div>
+  <div [formGroup]="formAmount" class="forms_w">
+    <p class="title">Сделать пожертвование на сайт</p>
+    <div class="d_fl">
+      <div
+        class="form-registration-form flex justify-between"
+        id="registration-form"
+      >
+        <input
+          type="number"
+          min="1"
+          class="input-form-gold"
+          placeholder="Сумма"
+          formControlName="amount"
+        />
+      </div>
+      <div
+        class="form-registration-form flex justify-between"
+        id="registration-form"
+      >
+        <select class="input-form-gold" formControlName="currency">
+          <option value="" disabled>Выберите валюту</option>
+          <option value="UAH">UAH</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
+    </div>
+    <div class="header-inner header-inner-button boreder grad">
+      <button
+        [disabled]="formAmount.invalid"
+        class="registration-button"
+        (click)="submitForm()"
+      >
+        Пожертвовать
+      </button>
+    </div>
+  </div>
+</div>
