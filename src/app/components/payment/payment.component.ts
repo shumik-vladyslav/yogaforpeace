@@ -20,21 +20,23 @@ export class PaymentComponent implements OnInit {
 
   submitForm() {
     console.log(this.formAmount);
-
   }
 
-  sendGetRequest() {
+  getId(params) {
     const url = 'https://wiki.wayforpay.com/wiki/default/generate-hmac';
+    return this.http.get(url, { params });
+  }
+  
+  sendGetRequest() {
     const params = {
       key: 'b4444121b00943e695a963a69b8c7732869f7b6a',
       string: `yogisforpeace_life;http://yogisforpeace.life;DH783023;1415379863;${this.formAmount.get('amount').value};${this.formAmount.get('currency').value};Процессор Intel Core i5-4670 3.4GHz;Память Kingston DDR3-1600 4096MB PC3-12800;1;1;1000;547.36`
     };
-    this.http.get(url, { params }).subscribe(
+    this.getId(params).subscribe(
       (response) => {
         console.log('Response:', response);
-      },
-      (error) => {
-        console.error('Error:', error);
+      },(error) => {
+        console.log('Error:', error);
       }
     );
   }
