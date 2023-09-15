@@ -1,7 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { log } from 'console';
 declare var JHash;
+declare var Wayforpay;
+
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
@@ -23,6 +26,7 @@ export class PaymentComponent implements OnInit {
 
   submitForm() {
     console.log(this.formAmount);
+    this.sendGetRequest();
   }
 
   getId(params) {
@@ -31,29 +35,38 @@ export class PaymentComponent implements OnInit {
   }
   
   sendGetRequest() {
-    let string = `yogisforpeace_life;https://yogisforpeace.life/payment;DH783023;1415379863;${this.formAmount.get('amount').value};${this.formAmount.get('currency').value};Процессор Intel Core i5-4670 3.4GHz;Память Kingston DDR3-1600 4096MB PC3-12800;1;1;1000;547.36`
+    let order =  Math.random().toString(36).substring(2, 15) +
+    Math.random().toString(36).substring(2, 15);
+    let string = `yogisforpeace_life;https://yogisforpeace.life/payment;${order};14153798632;${this.formAmount.get('amount').value};${this.formAmount.get('currency').value};Намасте;1;1000`
 
     this.md5_hmac = JHash.hex_hmac_md5("b4444121b00943e695a963a69b8c7732869f7b6a", string);
+console.log(this.md5_hmac);
 
-    this.http.post("https://secure.wayforpay.com/pay", {
-      merchantAccount: "test_merch_n1",
-      merchantAuthType: "SimpleSignature",
-      merchantDomainName: "www.market.ua",
-      orderReference: "DH1694809093",
-      orderDate: 1415379863,
-      amount: 1547.36,
-      currency: "UAH",
-      orderTimeout: 49000,
-      productName: ["Процессор Intel Core i5-4670 3.4GHz"],
-      productPrice: [1000],
-      productCount: [1],
-      clientFirstName: "Вася",
-      clientLastName: "Пупкин",
-      clientAddress: "пр. Гагарина, 12",
-      clientCity: "Днепропетровск",
-      clientEmail: "some@mail.com",
-      defaultPaymentSystem: "card",
-      merchantSignature: "ea8d679cd326dfb0707167cdcb73635b"
-    }).subscribe((data:any) => {})
+    var wayforpay = new Wayforpay(); 
+  wayforpay.run({ 			
+    	merchantAccount : "yogisforpeace_life", 		
+      		merchantDomainName : "https://yogisforpeace.life/payment", 			
+          	authorizationType : "SimpleSignature", 			
+            	merchantSignature : this.md5_hmac, 				
+              orderReference : order, 			
+              	orderDate : "14153798632", 			
+                	amount : this.formAmount.get('amount').value, 				
+                  currency : this.formAmount.get('currency').value, 				
+                  productName : "Намасте", 	
+                  			productPrice : "1000", 			
+                        	productCount : "1", 			
+                          	// clientFirstName : "Вася", 		
+                            // 		clientLastName : "Васечкин", 			
+                            //     	clientEmail : "some@mail.com", 			
+                            //       	clientPhone: "380631234567", 			
+                            //         	language: "UA" 		
+                                    	}, 		
+	function (response) {// on approved				 	
+		}, 			function (response) {// on declined 
+    			}, 			function (response) {// on pending or in processing 	
+          		} 		); 
+
+ 
   }
 }
+
