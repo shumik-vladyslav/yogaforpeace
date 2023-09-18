@@ -1,4 +1,5 @@
 @import "../forum/forum.component.scss";
+@import "../ahimsa/ahimsa.component.scss";
 .input-form-gold {
   border: 3px solid #ba7d18;
 }
@@ -30,6 +31,7 @@
 .relative_wrap {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -47,7 +49,14 @@
   cursor: unset;
 }
 .text-about-forum {
-    text-align: center;
+  text-align: center;
+}
+.social-items {
+  position: absolute;
+  bottom: 25px;
+}
+.links {
+  text-align: center;
 }
 @media (max-width: 900px) {
   .d_fl {
