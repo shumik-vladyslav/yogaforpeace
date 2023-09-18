@@ -46,3 +46,38 @@
   opacity: 0.5;
   cursor: unset;
 }
+@media (max-width: 900px) {
+  .d_fl {
+    flex-direction: column;
+    .form-registration-form {
+      margin: 5px auto 35px auto;
+    }
+  }
+  .input-form-gold {
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 4vh;
+  }
+}
+@media (max-width: 500px) {
+  .d_fl {
+    width: 100%;
+  }
+  .forms_w {
+    padding: 0 20px;
+  }
+  .form-registration-form {
+    width: 100%;
+  }
+}
+@media (max-width: 370px) {
+  .title {
+    font-size: 3vh;
+  }
+  .header-inner.header-inner-button.boreder.grad {
+    width: 270px;
+  }
+}
