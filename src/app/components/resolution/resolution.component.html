@@ -1,20 +1,27 @@
 <div class="wrapper">
-    <div class="container ">
-        <div class="mob_h-wrap mt-5">
-            <div class="header-inner header-inner-icon">
-                <div class="logo__container-little">
-                    <img src="assets/Icons/logo-little.png" alt="logo" class="img img__logo-little" />
-                </div>
-            </div>
+  <div class="container">
+    <div class="mob_h-wrap mt-5">
+      <div class="header-inner header-inner-icon">
+        <div class="logo__container-little">
+          <img
+            src="assets/Icons/logo-little.png"
+            alt="logo"
+            class="img img__logo-little"
+          />
         </div>
+      </div>
     </div>
-    <div class="content-container ">
-        <div class="img-container mt-4">
-            <img src="../../../assets/Images/ПЕТИЦИЯ.jpg" alt="p">
-        </div>
+  </div>
+  <div class="content-container">
+    <div class="img-container mt-4">
+      <img src="../../../assets/Images/ПЕТИЦИЯ.jpg" alt="p" />
     </div>
-    <div class="content-container flex flex-col items-center">
-        <div class="reso-text mb-8">{{textToShow}}</div>
-        <button class="registration-button mb-8" (click)="signPetition()">{{'resolution.sign' | translate}}</button>
-    </div>
+  </div>
+  <div class="content-container flex flex-col items-center">
+    <div class="reso-text mb-8">{{ textToShow }}</div>
+    <button class="registration-button mb-8" (click)="signPetition()">
+      {{ "resolution.sign" | translate }}
+    </button>
+  </div>
 </div>
+<app-footer></app-footer>

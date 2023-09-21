@@ -9,11 +9,58 @@ import { PicturePreviewComponent } from '../picture-preview/picture-preview.comp
 })
 export class ArtContestComponent implements OnInit {
   index: number = 1;
+  video;
+  video1;
+  videoPlaying: boolean = false;
+  video1Playing: boolean = false;
   constructor(
     private dialog: MatDialog
-  ) { } 
+  ) {
+  }
 
   ngOnInit(): void {
+    this.video = document.getElementById("bgvideo");
+    this.video1 = document.getElementById("bgvideot");
+    const general = document.getElementById("general");
+    general.addEventListener('play', () => {
+      window.removeEventListener('touchstart', (event) => {
+        this.playVid();
+      });
+      window.removeEventListener('mouseover', (event) => {
+        this.playVid();
+      });
+    }, false);
+    window.addEventListener('touchstart', (event) => {
+      this.playVid();
+    }, false);
+    window.addEventListener('mouseover', (event) => {
+      this.playVid();
+    }, false);
+    this.video.onplaying = (event) => {
+      this.videoPlaying = true;
+      console.log("Video is no longer paused.");
+    };
+    this.video1.onplaying = (event) => {
+      this.video1Playing = true;
+      console.log("Video1 is no longer paused.");
+    };
+  }
+
+  playVid() {
+    if (!this.videoPlaying) {
+      this.video.muted = true;
+      this.video.load();
+      setTimeout(() => {
+        this.video.play();
+      }, 500);
+    }
+    if (!this.video1Playing) {
+      this.video1.muted = true;
+      this.video1.load();
+      setTimeout(() => {
+        this.video1.play();
+      }, 500);
+    }
   }
 
   goToURl(url) {

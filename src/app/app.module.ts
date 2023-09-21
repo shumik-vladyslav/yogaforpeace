@@ -33,6 +33,16 @@ import {MatSelectModule} from '@angular/material/select';
 import { ArtContestComponent } from './components/art-contest/art-contest.component';
 import { CourseComponent } from './components/course/course.component';
 import { PicturePreviewComponent } from './components/picture-preview/picture-preview.component';
+import { VideoDialogComponent } from './components/video-dialog/video-dialog.component';
+// import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { NgxUiLoaderModule } from 'ngx-ui-loader';
+import { ThanksComponent } from './components/thanks/thanks.component';
+import { CreationComponent } from './components/creation/creation.component';
+import { LightgalleryModule } from 'lightgallery/angular/12';
+import {MatTabsModule} from '@angular/material/tabs';
+import { PaymentComponent } from './components/payment/payment.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { PaymentApplyComponent } from './components/payment-apply/payment-apply.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -57,19 +67,29 @@ export function createTranslateLoader(http: HttpClient) {
     ArtContestComponent,
     CourseComponent,
     PicturePreviewComponent,
+    VideoDialogComponent,
+    ThanksComponent,
+    CreationComponent,
+    PaymentComponent,
+    FooterComponent,
+    PaymentApplyComponent,
   ],
   imports: [
     BrowserModule,
+    // NgxUsefulSwiperModule,
     AppRoutingModule,
+    NgxUiLoaderModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatDialogModule,
     MatSelectModule,
+    MatTabsModule,
     HttpClientModule,
     AngularFirestoreModule,
     AngularFireModule,
     NgxIntlTelInputModule,
+    LightgalleryModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

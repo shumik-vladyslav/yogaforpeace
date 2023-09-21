@@ -1,0 +1,40 @@
+<div class="relative_wrap">
+  <div class="g_wrapp"></div>
+  <div [formGroup]="formAmount" class="forms_w">
+    <p class="title">Сделать пожертвование на сайт</p>
+    <div class="d_fl">
+      <div
+        class="form-registration-form flex justify-between"
+        id="registration-form"
+      >
+        <input
+          type="number"
+          min="1"
+          class="input-form-gold"
+          placeholder="Сумма"
+          formControlName="amount"
+        />
+      </div>
+      <div
+        class="form-registration-form flex justify-between"
+        id="registration-form"
+      >
+        <select class="input-form-gold" formControlName="currency">
+          <option value="" disabled>Выберите валюту</option>
+          <option value="UAH">UAH</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
+    </div>
+    <div class="header-inner header-inner-button boreder grad">
+      <button
+        [disabled]="formAmount.invalid"
+        class="registration-button"
+        (click)="submitForm()"
+      >
+        Пожертвовать
+      </button>
+    </div>
+  </div>
+</div>

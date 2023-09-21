@@ -12,6 +12,10 @@ import { SecondForumComponent } from './components/second-forum/second-forum.com
 import { ThanksAhimsaComponent } from './components/thanks-ahimsa/thanks-ahimsa.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { CourseComponent } from './components/course/course.component';
+import { ThanksComponent } from './components/thanks/thanks.component';
+import { CreationComponent } from './components/creation/creation.component';
+import { PaymentComponent } from './components/payment/payment.component';
+import { PaymentApplyComponent } from './components/payment-apply/payment-apply.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -19,13 +23,17 @@ const routes: Routes = [
   { path: 'second-forum', component: SecondForumComponent },
   { path: 'live', component: LiveTranslationComponent },
   { path: 'ahimsa', component: AhimsaComponent },
+  { path: 'payment', component: PaymentComponent },
+  { path: 'payment-apply', component: PaymentApplyComponent },
   { path: 'art', component: ArtContestComponent },
   { path: 'course', component: CourseComponent },
   { path: 'thanks', component: ThankyouPageComponent },
+  { path: 'course-thanks', component: ThanksComponent },
   { path: 'message-from-users', component: UsersListComponent },
   { path: 'resolution', component: ResolutionComponent },
   { path: 'movement-resolution', component: MovementResolutionComponent },
   { path: 'thanks-ahimsa', component: ThanksAhimsaComponent},
+  { path: 'creation', component: CreationComponent },
   { path: ':type', component: MainPageComponent },
   { path: 'resolution/:type', component: ResolutionComponent },
   { path: 'second-forum/:type', component: SecondForumComponent },

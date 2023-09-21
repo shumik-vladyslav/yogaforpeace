@@ -1,0 +1,21 @@
+<div class="relative gh">
+  <p class="m-wrap_btn" (click)="dialogRef.close()">
+    x
+  </p>
+  <div *ngIf="!tube" class="video_wrap">
+    <video controls autoplay>
+      <source [src]="video" type="video/mp4" />
+    </video>
+  </div>
+  <div *ngIf="tube" class="video_wrap vhw">
+    <iframe *ngIf="video == '1'" width="100%" height="100%" src="https://www.youtube.com/embed/ESO9-ugB19E" title="Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe *ngIf="video == '2'" width="100%" height="100%" src="https://www.youtube.com/embed/fmAg6hwkqG0" title="Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe *ngIf="video == '3'" width="100%" height="100%" src="https://www.youtube.com/embed/xXtIQtCWt14" title="Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe *ngIf="video == '4'" width="100%" height="100%" src="https://www.youtube.com/embed/cHnaZcq9P_Q" title="Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe *ngIf="video == '5'" width="100%" height="100%" src="https://www.youtube.com/embed/zV0LVPduNwQ" title="Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe *ngIf="video == '6'" width="100%" height="100%" src="https://www.youtube.com/embed/bHmNeAeGpRc" title="Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe *ngIf="video == '7'" width="100%" height="100%" src="https://www.youtube.com/embed/YhSZdEYDk2I" title="Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe *ngIf="video == '8'" width="100%" height="100%" src="https://www.youtube.com/embed/tlziOuRab_k" title="Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe *ngIf="video == '9'" width="100%" height="100%" src="https://www.youtube.com/embed/P0VjbhG_JNg" title="Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</div>

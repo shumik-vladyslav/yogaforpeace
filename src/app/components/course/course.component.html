@@ -1,33 +1,88 @@
+<ngx-ui-loader
+  [loaderId]="'ahimsa'"
+  [fgsType]="'fading-circle'"
+></ngx-ui-loader>
 <div class="cs-gen_wrapper">
   <div class="cs_shadow">
     <div class="cs_blank">
       <div class="cs_container main">
         <div class="right_p_cont">
-          <div class="cs_head-wrap">
-            <div class="flex cs_dq">
+          <div [ngClass]="{ show: menu }" class="head_wrap_cor">
+            <div class="menu_wrap">
+              <p (click)="menu = false" *ngIf="menu" class="x">x</p>
+              <div class="header-inner header-inner-icon add">
+                <p class="cs_log">
+                  <img src="assets/Images/course/logo.png" alt="logo" />
+                </p>
+              </div>
+              <div
+                (click)="scrollTo('about')"
+                class="header-inner header-inner-text"
+              >
+                О НАС
+              </div>
+              <div
+                (click)="scrollTo('course')"
+                class="header-inner header-inner-text"
+              >
+                О КУРСЕ
+              </div>
+              <div
+                (click)="scrollTo('programm')"
+                class="header-inner header-inner-text"
+              >
+                ПРОГРАММА
+              </div>
+              <div
+                (click)="scrollTo('speakers')"
+                class="header-inner header-inner-text"
+              >
+                СПИКЕРЫ
+              </div>
+              <div
+                (click)="scrollTo('reviews')"
+                class="header-inner header-inner-text"
+              >
+                ОTЗЫВЫ
+              </div>
+              <div
+                (click)="scrollTo('register')"
+                class="header-inner header-inner-text"
+              >
+                РЕГИСТРАЦИЯ
+              </div>
+            </div>
+          </div>
+          <div [ngClass]="{ show: menu }" class="cs_head-wrap">
+            <div class="cs_dq">
               <p class="cs_log">
                 <img src="assets/Images/course/logo.png" alt="logo" />
               </p>
+              <p *ngIf="!menu" (click)="showMenu()" class="burg">
+                <img src="assets/Images/burgg.svg" alt="burger" />
+              </p>
               <div class="blue_block_cs menus">
-                <p class="head_th">О НАС</p>
-                <p class="head_th">ТЕМЫ ИЗУЧЕНИЯ</p>
-                <p class="head_th">ОTЗЫВЫ</p>
-                <p class="head_th">ФОТО</p>
-                <p class="head_th">КАНАЛ НА YOUTUBE</p>
+                <p (click)="scrollTo('about')" class="head_th">О НАС</p>
+                <p (click)="scrollTo('course')" class="head_th">О КУРСЕ</p>
+                <p (click)="scrollTo('programm')" class="head_th">ПРОГРАММА</p>
+                <p (click)="scrollTo('speakers')" class="head_th">СПИКЕРЫ</p>
+                <p (click)="scrollTo('reviews')" class="head_th">ОTЗЫВЫ</p>
+                <p (click)="scrollTo('register')" class="head_th">
+                  РЕГИСТРАЦИЯ
+                </p>
               </div>
             </div>
           </div>
           <div class="cs_top_cont-wrap">
             <div class="cs_left_cont relative">
               <div class="cs_right_cont absolute">
-                <div class="flex">
-                  <p class="cs_fr">
+                <div class="flex_d">
+                  <p class="cs_fr he_mb">
                     бесплатный месячный онлайн<br />курс-интенсив
                   </p>
-                  <div class="couse_st">
+                  <div class="couse_st hide_mb">
                     <p class="srt_tx">
-                      Старт курса<br />
-                      8 ИЮЛЯ
+                      Старт курса 22 ИЮЛЯ
                     </p>
                   </div>
                 </div>
@@ -38,17 +93,27 @@
                 <p class="cs_t_gn mg">
                   Будьте в гармонии с самим собой и целым миром!
                 </p>
-                <p class="cs_t_bl mg">
+                <p class="cs_fr he_ds">
+                  бесплатный месячный онлайн<br />курс-интенсив
+                </p>
+                <p class="cs_t_bl mg he_mb">
                   • <span>Надоело «насильственно» заставлять себя</span><br />
                   делать то или это?
                 </p>
-                <p class="cs_t_bl mg">
+                <p class="cs_t_bl mg he_mb">
                   •
                   <span
                     >Не справляетесь с постоянным<br />
                     раздражением </span
                   >даже к самым близким?
                 </p>
+                <div class="couse_st hide_dd">
+                  <p class="srt_tx">
+                    Старт<br />
+                    курса<br />
+                    22 ИЮЛЯ
+                  </p>
+                </div>
                 <div class="outer_wrap_cs relative lft">
                   <div class="butt_b_wrap">
                     <p class="buttfl">
@@ -60,19 +125,26 @@
                     <div
                       class="header-inner header-inner-button boreder grad xl"
                     >
-                      <button class="registration-button rd">
+                      <button
+                        (click)="scrollTo('register')"
+                        class="registration-button rd"
+                      >
                         Зарегистрироваться
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
-              <p class="abs_img">
+              <div class="abs_img">
                 <img src="assets/Images/course/man_happy.png" alt="happy" />
-              </p>
-              <p class="abs_img mdd">
-                <img src="assets/Images/course/happ_md.png" alt="happy" />
-              </p>
+                <p class="mdd">
+                  <img
+                    (load)="checkImgLoad()"
+                    src="assets/Images/course/hap_man.png"
+                    alt="happy"
+                  />
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -80,7 +152,7 @@
     </div>
     <div class="cs_blank trp">
       <div class="cs_container">
-        <div class="contais_wrapp flex">
+        <div class="contais_wrapp flex_d">
           <div class="contais-item_wrapp">
             <p class="contais-img">
               <img src="assets/Images/course/choice.png" alt="choice" />
@@ -89,7 +161,7 @@
               Как часто нам приходится
               <span>делать то, что мы не выбирали</span>, постоянно жить под
               флагом слов <span>«надо»</span> и <span>«вы должны»</span>, а
-              <span>не следовать зову сердца</span> - состоянию парения и игры.
+              <span>не следовать зову сердца</span> – состоянию парения и игры
             </p>
           </div>
           <div class="contais-item_wrapp">
@@ -100,7 +172,7 @@
               Мы каждый день <span>принуждаем себя</span> делать так-то и не
               делать так-то, <span>подчиняться</span> правилам общества, чужим
               давлеющим мнениям, <span>следовать</span>
-              чьим-то ожиданиям, забывая о своих мечтах.
+              чьим-то ожиданиям, забывая о своих мечтах
             </p>
           </div>
         </div>
@@ -116,27 +188,38 @@
         <p class="dk_center">Разве это не насилие к себе?</p>
       </div>
     </div>
-    <div class="cs_blank">
-      <img src="assets/Images/course/stat.png" alt="girl" />
+    <div class="cs_blank cn">
+      <img class="grrl" src="assets/Images/course/stat.png" alt="girl" />
+      <img class="grrl_md" src="assets/Images/course/statm.png" alt="girl" />
     </div>
     <div class="cs_blank stat relative">
-      <div class="cs_container">
+      <div id="about" class="cs_container">
         <p class="titl_lg sm">О КУРСЕ</p>
         <div class="blue_block_cs transp mg-12">
           <p class="cs_t_bl mg text-center">
             Мы – движение «Йоги за мир» практикуем ахимсу
             <span class="xdeb">«жизнь без насилия»</span>
             уже множество лет, опираясь на учения Йоги и Веданты, эффективность
-            которых проверена тысячелетиями.
+            которых проверена тысячелетиями
           </p>
           <p class="cs_t_bl mg text-center">
-            <span class="xdeb">Наш опыт - это жизнь в постоянной практике</span>
+            <span class="xdeb">Наш опыт – это жизнь в постоянной практике</span>
             <span class="xde"> и </span> <span class="xdeb">медитации</span>, и
             мы с удовольствием поделимся тем, как «быть в гармонии с собой и
-            целым миром».
+            целым миром»
           </p>
           <div class="video_wrapper">
-            <h1>Video</h1>
+            <div class="video">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/ItJXdczrgLE"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -148,16 +231,26 @@
           <img src="assets/Images/course/wei.png" alt="weight" />
         </p>
         <div class="cs_d_wra">
-          <p class="cs_tx_tw">
-            между постоянным<br />
-            насилием
-          </p>
-          <p class="cs_tx_tw blf">
-            и жизнью<br />
-            в свободе и радости
-          </p>
+          <div>
+            <div class="mn_ag_wrap">
+              <img src="assets/Images/course/sttop.png" alt="weight" />
+            </div>
+            <p class="cs_tx_tw">
+              между постоянным<br />
+              насилием
+            </p>
+          </div>
+          <div>
+            <div class="mn_ag_wrap">
+              <img src="assets/Images/course/stbott.png" alt="weight" />
+            </div>
+            <p class="cs_tx_tw blf">
+              и жизнью<br />
+              в свободе и радости
+            </p>
+          </div>
         </div>
-        <div class="craph_tb">
+        <div class="craph_tb hid">
           <div class="row_cs_wrap">
             <div class="cs_block bl_left first_">
               <div class="cs_block_top">
@@ -165,13 +258,13 @@
                   <img src="assets/Images/course/sad.png" alt="sad" />
                 </p>
                 <p class="cs_tx_tw gold no-centr">
-                  жизнь в постоянном насилии:
+                  Жизнь в постоянном насилии:
                 </p>
               </div>
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
                   • <span>Работать или учиться с утра до вечера,</span> потому
-                  что такой распорядок.
+                  что такой распорядок
                 </p>
               </div>
             </div>
@@ -184,7 +277,7 @@
               </div>
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
-                  • <span>Сам решаешь,</span> как распределять свое время.
+                  • <span>Сам решаешь,</span> как распределять свое время
                 </p>
               </div>
             </div>
@@ -194,7 +287,7 @@
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
                   • <span>Жить в семье из-за обязанностей,</span> чувства
-                  приличия или просто привычки.
+                  приличия или просто привычки
                 </p>
               </div>
             </div>
@@ -202,7 +295,7 @@
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
                   • <span>Спешить возвращаться домой,</span> потому что тебя
-                  любят, ценят и понимают.
+                  любят, ценят и понимают
                 </p>
               </div>
             </div>
@@ -212,7 +305,7 @@
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
                   • <span>Ты – самый большой агрессор</span> и критик для себя
-                  самомого.
+                  самого
                 </p>
               </div>
             </div>
@@ -229,14 +322,14 @@
             <div class="cs_block bl_left">
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
-                  • <span>Подавлять</span> творческий потенциал других.
+                  • <span>Подавлять</span> творческий потенциал других
                 </p>
               </div>
             </div>
             <div class="cs_block bl_right">
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
-                  • <span>Быть вдохновителем</span> и мотиватором людей.
+                  • <span>Быть вдохновителем</span> и мотиватором людей
                 </p>
               </div>
             </div>
@@ -245,7 +338,7 @@
             <div class="cs_block bl_left">
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
-                  • Есть то, что <span>транслируeт реклама.</span>
+                  • Есть то, что <span>транслируeт реклама</span>
                 </p>
               </div>
             </div>
@@ -253,7 +346,7 @@
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
                   • Можешь <span>управлять здоровьем</span> и не ходить по
-                  врачам.
+                  врачам
                 </p>
               </div>
             </div>
@@ -262,14 +355,14 @@
             <div class="cs_block bl_left">
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
-                  • Зарабатывать деньги <span>из под палки.</span>
+                  • Зарабатывать деньги <span>из-под палки</span>
                 </p>
               </div>
             </div>
             <div class="cs_block bl_right">
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
-                  • Работать и <span>творить с удовольствием.</span>
+                  • Работать и <span>творить с удовольствием</span>
                 </p>
               </div>
             </div>
@@ -286,7 +379,158 @@
             <div class="cs_block bl_right">
               <div class="ul_cs_wrap">
                 <p class="li_cs_item">
-                  • Быть <span>творцом своей судьбы…</span>
+                  • Быть <span>творцом своей судьбы</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="craph_tb vis">
+          <div class="row_cs_wrap">
+            <div class="cs_block bl_left first_">
+              <div class="cs_block_top">
+                <p class="sml_wr">
+                  <img src="assets/Images/course/sad.png" alt="sad" />
+                </p>
+                <p class="cs_tx_tw gold no-centr">
+                  жизнь в постоянном насилии:
+                </p>
+              </div>
+              <div class="ul_cs_wrap">
+                <p class="li_cs_item">
+                  • <span>Работать или учиться с утра до вечера,</span> потому
+                  что такой распорядок
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row_cs_wrap lit">
+            <div class="cs_block bl_left">
+              <div class="ul_cs_wrap">
+                <p class="li_cs_item">
+                  • <span>Жить в семье из-за обязанностей,</span> чувства
+                  приличия или просто привычки
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row_cs_wrap">
+            <div class="cs_block bl_left">
+              <div class="ul_cs_wrap">
+                <p class="li_cs_item">
+                  • <span>Ты – самый большой агрессор</span> и критик для себя
+                  самого
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row_cs_wrap lit">
+            <div class="cs_block bl_left">
+              <div class="ul_cs_wrap">
+                <p class="li_cs_item">
+                  • <span>Подавлять</span> творческий потенциал других
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row_cs_wrap">
+            <div class="cs_block bl_left">
+              <div class="ul_cs_wrap">
+                <p class="li_cs_item">
+                  • Есть то, что <span>транслируeт реклама</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row_cs_wrap lit">
+            <div class="cs_block bl_left">
+              <div class="ul_cs_wrap">
+                <p class="li_cs_item">
+                  • Зарабатывать деньги <span>из-под палки</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row_cs_wrap">
+            <div class="cs_block bl_left">
+              <div class="ul_cs_wrap">
+                <p class="li_cs_item">
+                  • <span>Злиться на всех и вся</span> – обвинять в своих
+                  неудачах правительство, людей, родителей, начальство и т.д.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="craph_tb vis">
+          <div class="row_cs_wrap">
+            <div class="cs_block bl_left first_">
+              <div class="cs_block_top">
+                <p class="sml_wr">
+                  <img src="assets/Images/course/happ.png" alt="happy" />
+                </p>
+                <p class="cs_tx_tw gold no-centr">Жизнь без насилия:</p>
+              </div>
+              <div class="ul_cs_wrap">
+                <p class="li_cs_item">
+                  • <span>Сам решаешь,</span> как распределять свое время
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row_cs_wrap lit">
+            <div class="cs_block bl_left">
+              <div class="ul_cs_wrap">
+                <p class="li_cs_item">
+                  • <span>Спешить возвращаться домой,</span> потому что тебя
+                  любят, ценят и понимают
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row_cs_wrap">
+            <div class="cs_block bl_left">
+              <div class="ul_cs_wrap">
+                <p class="li_cs_item">
+                  • <span>Сам себе – лучший друг.</span> Можешь быть счастливым
+                  в любом месте и ситуации, любом возрасте и т.д.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row_cs_wrap lit">
+            <div class="cs_block bl_left">
+              <div class="ul_cs_wrap">
+                <p class="li_cs_item">
+                  • <span>Быть вдохновителем</span> и мотиватором людей
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row_cs_wrap">
+            <div class="cs_block bl_left">
+              <div class="ul_cs_wrap">
+                <p class="li_cs_item">
+                  • Можешь <span>управлять здоровьем</span> и не ходить по
+                  врачам
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row_cs_wrap lit">
+            <div class="cs_block bl_left">
+              <div class="ul_cs_wrap">
+                <p class="li_cs_item">
+                  • Работать и <span>творить с удовольствием</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row_cs_wrap">
+            <div class="cs_block bl_left">
+              <div class="ul_cs_wrap">
+                <p class="li_cs_item">
+                  • Быть <span>творцом своей судьбы</span>
                 </p>
               </div>
             </div>
@@ -295,9 +539,9 @@
       </div>
     </div>
     <div class="cs_blank">
-      <div class="cs_container">
-        <p class="titl_lg smm">на курсе вы научитесь</p>
-        <div class="learn_wrapp">
+      <div id="course" class="cs_container">
+        <p class="titl_lg smm">На курсе вы научитесь</p>
+        <div class="learn_wrapp hdhd">
           <p class="le_img">
             <img src="assets/Images/course/dizz.png" alt="madd" />
           </p>
@@ -309,21 +553,44 @@
             <img src="assets/Images/course/arroo.png" alt="madd" />
           </p>
           <p class="dk_cs cap">
-            и придти к счастливой <br />
-            жизни, в мире и любви
+            и прийти к счастливой <br />
+            жизни в мире и любви
           </p>
+        </div>
+        <div class="learn_wrapp vsvs">
+          <div class="tp_wp fs">
+            <p class="le_img">
+              <img src="assets/Images/course/dizz.png" alt="madd" />
+            </p>
+            <p class="dk_cs cap">
+              Kак перестать жить<br />
+              во внутренних страхах
+            </p>
+          </div>
+          <p class="le_img cc">
+            <img src="assets/Images/course/armob.png" alt="madd" />
+          </p>
+          <div class="tp_wp ss">
+            <p class="dk_cs cap">
+              и прийти к счастливой <br />
+              жизни в мире и любви
+            </p>
+            <p class="le_img">
+              <img src="assets/Images/course/dzmob.png" alt="madd" />
+            </p>
+          </div>
         </div>
       </div>
       <div class="craph_tb">
         <div class="cr_wrap-top">
           <p class="tab_head">
-            Обучение на курсе:&nbsp;<span>8 июля - 8 августа</span>
+            Обучение на курсе:&nbsp;<span>22 июля – 22 августа</span>
           </p>
         </div>
         <div class="cr_wrap-cont">
           <div class="cr_wrap_wrapper blk">
             <p class="cr_wrap-tx">
-              На протяжении 4-х недель вам будут доступны:
+              <b>На протяжении 4-х недель вам будут доступны:</b>
             </p>
           </div>
           <div class="cr_wrap-content">
@@ -335,7 +602,7 @@
             </div>
             <div class="cr_wrap_wrapper">
               <p class="cr_wrap-tx bf">
-                небольшие&nbsp;<span>практические занятия на день,</span
+                небольшие&nbsp;<span>практические занятия на день</span
                 >&nbsp;для закрепления полученных знаний
               </p>
             </div>
@@ -353,52 +620,65 @@
           </div>
         </div>
       </div>
-      <p class="cs_fr centered">Вход на курс - свободный!</p>
+      <p class="cs_fr centered">Вход на курс – свободный!</p>
       <div class="outer_wrap_cs lss">
         <div class="butt_b_wrap">
-          <div class="header-inner header-inner-button boreder grad xl">
+          <div
+            (click)="scrollTo('register')"
+            class="header-inner header-inner-button boreder grad xl"
+          >
             <button class="registration-button rd">Регистриpуйся сейчас</button>
           </div>
         </div>
       </div>
     </div>
     <div class="cs_blank sps">
-      <div class="cs_container fxw">
+      <div id="speakers" class="cs_container fxw">
         <div class="sps_wrap">
-          <p class="titl_lg smm lt">наши спикеры</p>
-          <div class="my-slider">
+          <p class="titl_lg smm lt">программа курса</p>
+          <p class="titl_eht">
+            Наша жизнь очень многообразна – поэтому мы предлагаем системный,
+            целостный и многогранный подход к трансформации
+          </p>
+          <p class="yello"></p>
+          <p class="titl_lg smm lt ff">Лекционная часть</p>
+          <div [hidden]="less" class="my-slider">
             <div>
               <div class="inert">
-                <img src="assets/Images/course/mtg.png" alt="logo" />
+                <img src="assets/Images/course/ar.png" alt="logo" />
               </div>
-              <div>
-                <p class="sl_m_wrapp">
-                  <span>Matagi,</span><br />
-                  духовный учитель, Украина
-                </p>
-              </div>
-            </div>
-            <div>
-              <div class="inert">
-                <img src="assets/Images/course/ar.png" alt="happy" />
-              </div>
-              <div>
-                <p class="sl_m_wrapp">
-                  <span>Aravindini,</span><br />
-                  духовный учитель, Украина
-                </p>
-              </div>
-            </div>
-            <div>
-              <div class="inert">
-                <img src="assets/Images/course/gr.png" alt="logo" />
-              </div>
-              <div>
+              <div class="pr">
                 <p class="sl_m_wrapp">
                   <span
-                    >Махамандалешвар Шри Гуру Свами Вишнудевананда Гири,</span
+                    >Лекция<br />
+                    «Ахимса в Санатана Дхарме»</span
                   ><br />
-                  духовный учитель, Украина
+                  Санньяси Аравиндини Гири<br />
+                  Монахиня, инструктор йоги и медитации
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/adi.png" alt="happy" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Лекция «Ахимса и миссия души»</span><br />
+                  Санньяси Адимата Гири<br />
+                  Монахиня, инструктор йоги и медитации
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/10.png" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Лекция «Ахимсa и недвойственное видение»</span><br />
+                  Шри Гуру Свами Вишнудевананда Гири, Духовный учитель Пратьякша
+                  Адвайты
                 </p>
               </div>
             </div>
@@ -406,21 +686,11 @@
               <div class="inert">
                 <img src="assets/Images/course/ad.png" alt="happy" />
               </div>
-              <div>
+              <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span>Advaytavadini,</span><br />
-                  духовный учитель, Украина
-                </p>
-              </div>
-            </div>
-            <div>
-              <div class="inert">
-                <img src="assets/Images/course/mc.png" alt="logo" />
-              </div>
-              <div>
-                <p class="sl_m_wrapp">
-                  <span>Devanatha,</span><br />
-                  духовный учитель, Украина
+                  <span>Лекция «Ахимса и созерцание»</span><br />
+                  Махант Адвайтавадини Гири<br />
+                  Монахиня, инструктор йоги и медитации
                 </p>
               </div>
             </div>
@@ -428,209 +698,190 @@
               <div class="inert">
                 <img src="assets/Images/mahshv.png" alt="logo" />
               </div>
-              <div>
-                <p class="sl_m_wrapp">
-                  <span>Maheshvari,</span><br />
-                  духовный учитель, Украина
-                </p>
-              </div>
-            </div>
-            <div>
-              <div class="inert">
-                <img
-                  src="assets/Images/swami-vishnudevananda.jpg"
-                  alt="happy"
-                />
-              </div>
-              <div>
+              <div class="pr">
                 <p class="sl_m_wrapp">
                   <span
-                    >Махамандалешвар Шри Гуру Свами Вишнудевананда Гири,</span
+                    >Лекция<br />
+                    «Ахимса как миссия садху»</span
                   ><br />
-                  духовный учитель, Украина
+                  Санньяси Махешвари Гири<br />
+                  Монахиня, инструктор йоги и медитации
                 </p>
               </div>
             </div>
             <div>
               <div class="inert">
-                <img src="assets/Images/pilot-baba.jpg" alt="logo" />
+                <img src="assets/Images/course/eka.png" alt="happy" />
               </div>
-              <div>
+              <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span>Pilot Baba,</span><br />
-                  духовный учитель, Украина
+                  <span>Лекция «Ахимса в повседневной жизни»</span><br />
+                  Санньяси Экантини Гири<br />
+                  Монахиня, инструктор йоги и медитации
                 </p>
               </div>
             </div>
             <div>
               <div class="inert">
-                <img src="assets/Images/advayta.png" alt="happy" />
+                <img src="assets/Images/course/san.png" alt="logo" />
               </div>
-              <div>
+              <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span>Advaytevadini,</span><br />
-                  духовный учитель, Украина
+                  <span>Лекция «Ахимса в ведической мифологии»</span><br />
+                  Санньяси Санаткумара<br />
+                  Монах, инструктор йоги и медитации
                 </p>
               </div>
             </div>
             <div>
               <div class="inert">
-                <img src="assets/Images/vishvashaarananda1.jpg" alt="logo" />
+                <img src="assets/Images/second-forum/adya.jpg" alt="logo" />
               </div>
-              <div>
+              <div class="pr">
                 <p class="sl_m_wrapp">
-                  <span>Vishvashaarananda,</span><br />
-                  духовный учитель, Украина
+                  <span>Лекция «Ахимса и бизнес»</span><br />
+                  Карма-санньяси Адитьяпрабха<br />
+                  инструктор йоги и медитации
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/om_.png" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Лекция «Ахимса и самодисциплина садху»</span><br />
+                  Карма-санньяси Омкар<br />
+                  инструктор йоги и медитации
                 </p>
               </div>
             </div>
           </div>
-          <p class="cs_tx_tw lgold">Наши проекты</p>
-        </div>
-      </div>
-      <div class="lin_cs"></div>
-      <div class="fw_wdth">
-        <div class="proj_wrp">
-          <p class="imh_er">
-            <img src="assets/Images/course/lot.png" alt="logo" />
-          </p>
-          <p class="sl_m_wrapp">
-            1-й и 2-й Международный онлайн форум "Мир и гармония"
-          </p>
-        </div>
-        <div class="proj_wrp">
-          <p class="imh_er">
-            <img src="assets/Images/course/unf.png" alt="logo" />
-          </p>
-          <p class="sl_m_wrapp">
-            Междунарожный конгресс мира совместно с Юнифай
-          </p>
-        </div>
-        <div class="proj_wrp">
-          <p class="imh_er">
-            <img src="assets/Images/course/logo.png" alt="logo" />
-          </p>
-          <p class="sl_m_wrapp">
-            Петиция "21-й век - международный век ненасилия и состарадания"
-          </p>
+          <div [hidden]="!less" class="my-slider-mob">
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/adi.png" alt="happy" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Лекция «Ахимса и миссия души»</span><br />
+                  Санньяси Адимата Гири<br />
+                  Монахиня, инструктор йоги и медитации
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/10.png" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Лекция «Ахимсa и недвойственное видение»</span><br />
+                  Шри Гуру Свами Вишнудевананда Гири, Духовный учитель Пратьякша
+                  Адвайты
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/ad.png" alt="happy" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Лекция «Ахимса и созерцание»</span><br />
+                  Махант Адвайтавадини Гири<br />
+                  Монахиня, инструктор йоги и медитации
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/mahshv.png" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span
+                    >Лекция<br />
+                    «Ахимса как миссия садху»</span
+                  ><br />
+                  Санньяси Махешвари Гири<br />
+                  Монахиня, инструктор йоги и медитации
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/eka.png" alt="happy" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Лекция «Ахимса в повседневной жизни»</span><br />
+                  Санньяси Экантини Гири<br />
+                  Монахиня, инструктор йоги и медитации
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/san.png" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Лекция «Ахимса в ведической мифологии»</span><br />
+                  Санньяси Санаткумара<br />
+                  Монах, инструктор йоги и медитации
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/second-forum/adya.jpg" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Лекция «Ахимса и бизнес»</span><br />
+                  Карма-санньяси Адитьяпрабха<br />
+                  инструктор йоги и медитации
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/om_.png" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span>Лекция «Ахимса и самодисциплина садху»</span><br />
+                  Карма-санньяси Омкар<br />
+                  инструктор йоги и медитации
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img src="assets/Images/course/ar.png" alt="logo" />
+              </div>
+              <div class="pr">
+                <p class="sl_m_wrapp">
+                  <span
+                    >Лекция<br />
+                    «Ахимса в Санатана Дхарме»</span
+                  ><br />
+                  Санньяси Аравиндини Гири<br />
+                  Монахиня, инструктор йоги и медитации
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="yello b"></p>
         </div>
       </div>
     </div>
     <div class="cs_blank">
-      <div class="cs_container padd">
-        <p class="titl_lg smm">программа курса</p>
-        <p class="cs_t_bl mgg text-center">
-          Наша жизнь очень многообразна – поэтому мы предлагаем системный,
-          целостный и многогранный подход трансформации.
-        </p>
-        <p class="cs_fr centered m-0">Присоединяйтесь – будет интересно!</p>
+      <div id="programm" class="cs_container padd">
+        <p class="titl_lg smm">ПРАКТИЧЕСКАЯ ЧАСТЬ</p>
         <div class="topics_wrapper">
-          <div class="topic_cs_wrap">
-            <div class="topic_row">
-              <div (click)="expand(1)" class="topic_item">
-                <div class="wrap_dd left">
-                  <div class="topic_img">
-                    <img src="assets/Images/course/str.png" alt="health" />
-                  </div>
-                  <p class="topic_txt">старт <span> курса</span></p>
-                </div>
-                <div class="wrap_dd right">
-                  <div class="sep_rap">
-                    <p class="pipe_imgg">
-                      <img src="assets/Images/course/pip.png" />
-                    </p>
-                    <p class="dk_center sma">
-                      8<br />
-                      июля
-                    </p>
-                  </div>
-                  <p class="arr_imgg">
-                    <img
-                      [ngClass]="hasExpand[1] ? 'expand' : ''"
-                      src="assets/Images/course/arrr.png"
-                    />
-                  </p>
-                </div>
-              </div>
-              <div
-                [ngClass]="hasExpand[1] ? 'expanded' : ''"
-                class="more_info"
-              ></div>
-            </div>
-          </div>
-          <div class="yellw_pl"></div>
-          <div class="topic_cs_wrap">
-            <div class="topic_row">
-              <div (click)="expand(2)" class="topic_item">
-                <div class="wrap_dd left">
-                  <div class="topic_img">
-                    <img src="assets/Images/course/ast.png" alt="health" />
-                  </div>
-                  <p class="topic_txt">
-                    <span>Ахимса </span><span class="smal">и</span> астрология
-                  </p>
-                </div>
-                <div class="wrap_dd right">
-                  <div class="sep_rap">
-                    <p class="pipe_imgg">
-                      <img src="assets/Images/course/pip.png" />
-                    </p>
-                    <p class="dk_center sma">
-                      10-12<br />
-                      июля
-                    </p>
-                  </div>
-                  <p class="arr_imgg">
-                    <img
-                      [ngClass]="hasExpand[2] ? 'expand' : ''"
-                      src="assets/Images/course/arrr.png"
-                    />
-                  </p>
-                </div>
-              </div>
-              <div
-                [ngClass]="hasExpand[2] ? 'expanded' : ''"
-                class="more_info"
-              ></div>
-            </div>
-          </div>
-        </div>
-        <div class="yellw_pl transpr"></div>
-        <div class="topics_wrapper">
-          <div class="topic_cs_wrap">
-            <div class="topic_row">
-              <div (click)="expand(3)" class="topic_item">
-                <div class="wrap_dd left">
-                  <div class="topic_img">
-                    <img src="assets/Images/course/war.png" alt="health" />
-                  </div>
-                  <p class="topic_txt"><span> Ахимса</span> в военное время</p>
-                </div>
-                <div class="wrap_dd right">
-                  <div class="sep_rap">
-                    <p class="pipe_imgg">
-                      <img src="assets/Images/course/pip.png" />
-                    </p>
-                    <p class="dk_center sma">
-                      13-15<br />
-                      июля
-                    </p>
-                  </div>
-                  <p class="arr_imgg">
-                    <img
-                      [ngClass]="hasExpand[3] ? 'expand' : ''"
-                      src="assets/Images/course/arrr.png"
-                    />
-                  </p>
-                </div>
-              </div>
-              <div
-                [ngClass]="hasExpand[3] ? 'expanded' : ''"
-                class="more_info"
-              ></div>
-            </div>
-          </div>
-          <div class="yellw_pl"></div>
           <div class="topic_cs_wrap">
             <div class="topic_row">
               <div (click)="expand(4)" class="topic_item">
@@ -647,10 +898,7 @@
                     <p class="pipe_imgg">
                       <img src="assets/Images/course/pip.png" />
                     </p>
-                    <p class="dk_center sma">
-                      17-19<br />
-                      июля
-                    </p>
+                    <!-- <p class="dk_center sma">31 июля</p> -->
                   </div>
                   <p class="arr_imgg">
                     <img
@@ -666,7 +914,102 @@
               ></div>
             </div>
           </div>
-          <div class="yellw_pl"></div>
+          <div [ngClass]="hasExpand[4] ? 'expanded' : ''" class="pl_content">
+            <div class="plash">
+              <p class="socv">• Действительно ли вы здоровы, как считаете?</p>
+              <p class="socv">
+                • Тело, психика, ум — как они связаны, и что происходит при их
+                дисбалансе?
+              </p>
+              <p class="socv">
+                • Как эмоции напрямую влияют на работу внутренних органов?
+              </p>
+              <p class="socv">
+                • Здоровая психика — это как? Шесть пунктов для анализа своего
+                состояния.
+              </p>
+              <p class="socv">
+                • «Неудобные вопросы» — является ли вообще здоровье вашей
+                истинной ценностью?
+              </p>
+              <p class="socv">
+                • К чему приводят разрушающие состояния — гнев, жадность,
+                неприятие, страх? Как с ними правильно работать?
+              </p>
+              <p class="socv">
+                • Как ахимса (ненасилие) связано лично с моим здоровьем?
+              </p>
+              <!-- <p class="socv">
+                • Действенные методы очищения тела. Про бережную корректировку
+                питания.
+              </p>
+              <p class="socv">
+                • Как практика помогает очистить ум — подробнее про медитации,
+                дыхательные практики и энергетические.
+              </p> -->
+            </div>
+            <div class="plash tt">
+              <p class="img_ch_wrap">
+                <img src="assets/Images/course/aah.png" alt="ava" />
+              </p>
+              <p class="sub_ph_tx">
+                Карма-санньяси<br />Амаранатха и Ниранджана
+              </p>
+              <p class="sub_ph_tx">инструктора йоги и медитации</p>
+              <p class="sub_ph_tx">Тема «Ахимса и здоровье»</p>
+              <div class="strp"></div>
+            </div>
+          </div>
+          <!-- <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(1)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/str.png" alt="health" />
+                  </div>
+                  <p class="topic_txt">Старт курса</p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <p class="dk_center sma">22 июля</p>
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[1] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[1] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+          <div [ngClass]="hasExpand[1] ? 'expanded' : ''" class="pl_content">
+            <div class="plash">
+              <p class="socv">
+                • Как привить ребёнку высокие ценности и цели? Которые будут
+                поддерживать и направлять его на протяжении всей жизни
+              </p>
+              <p class="socv">
+                • Как и для чего помочь выработать здоровые привычки
+              </p>
+              <p class="socv">
+                • Как быть с ребёнком на одной волне, не взирая на возраст и
+                другие различия
+              </p>
+              <p class="socv">
+                • Как менять свою жизнь к лучшему и практиковать всей семье
+              </p>
+            </div>
+            <div class="plash tt">
+            </div>
+          </div> -->
           <div class="topic_cs_wrap">
             <div class="topic_row">
               <div (click)="expand(5)" class="topic_item">
@@ -683,10 +1026,7 @@
                     <p class="pipe_imgg">
                       <img src="assets/Images/course/pip.png" />
                     </p>
-                    <p class="dk_center sma">
-                      20-22<br />
-                      июля
-                    </p>
+                    <!-- <p class="dk_center sma">3 августа</p> -->
                   </div>
                   <p class="arr_imgg">
                     <img
@@ -702,9 +1042,44 @@
               ></div>
             </div>
           </div>
-        </div>
-        <div class="yellw_pl transpr"></div>
-        <div class="topics_wrapper">
+          <div [ngClass]="hasExpand[5] ? 'expanded' : ''" class="pl_content">
+            <div class="plash">
+              <p class="socv">
+                • «Скажи мне, что ты ешь, и я скажу, кто ты» - как на нас влияет
+                то, что мы едим?
+              </p>
+              <p class="socv">
+                • Мясоедение как распространение энергии насилия. Как ежегодные
+                массовые убийства животных, птиц и рыб влияют на судьбу
+                человечества?
+              </p>
+              <p class="socv">
+                • «Пиар-кампании мясных изделий» – кому выгодно, чтобы мы
+                думали, что это вкусно и полезно?
+              </p>
+              <p class="socv">
+                • Гуны (качества) материальной природы - как это древнее знание
+                поможет нам быть более осознанными в своем ежедневном выборе.
+              </p>
+              <p class="socv">
+                • Пища с энергией благости - какая она? Неужели мы так зависим
+                от пищи?
+              </p>
+              <p class="socv">
+                • Советы для решительных: вы определились со своим выбором
+                правильно питаться? Что дальше?
+              </p>
+            </div>
+            <div class="plash tt">
+              <p class="img_ch_wrap">
+                <img src="assets/Images/course/aap.png" alt="ava" />
+              </p>
+              <p class="sub_ph_tx">Карма-санньяси Даршани</p>
+              <p class="sub_ph_tx">инструктор йоги и медитации</p>
+              <p class="sub_ph_tx">Тема «Ахимса и питание»</p>
+              <div class="strp"></div>
+            </div>
+          </div>
           <div class="topic_cs_wrap">
             <div class="topic_row">
               <div (click)="expand(6)" class="topic_item">
@@ -719,10 +1094,7 @@
                     <p class="pipe_imgg">
                       <img src="assets/Images/course/pip.png" />
                     </p>
-                    <p class="dk_center sma">
-                      24-26<br />
-                      июля
-                    </p>
+                    <!-- <p class="dk_center sma">27 июля</p> -->
                   </div>
                   <p class="arr_imgg">
                     <img
@@ -738,128 +1110,52 @@
               ></div>
             </div>
           </div>
-          <div class="yellw_pl"></div>
-          <div class="topic_cs_wrap">
-            <div class="topic_row">
-              <div (click)="expand(7)" class="topic_item">
-                <div class="wrap_dd left">
-                  <div class="topic_img">
-                    <img src="assets/Images/course/pc.png" alt="health" />
-                  </div>
-                  <p class="topic_txt">
-                    <span>Ахимса </span>в воспитании<br />
-                    детей
-                  </p>
-                </div>
-                <div class="wrap_dd right">
-                  <div class="sep_rap">
-                    <p class="pipe_imgg">
-                      <img src="assets/Images/course/pip.png" />
-                    </p>
-                    <p class="dk_center sma">
-                      27-29<br />
-                      июля
-                    </p>
-                  </div>
-                  <p class="arr_imgg">
-                    <img
-                      [ngClass]="hasExpand[7] ? 'expand' : ''"
-                      src="assets/Images/course/arrr.png"
-                    />
-                  </p>
-                </div>
-              </div>
-              <div
-                [ngClass]="hasExpand[7] ? 'expanded' : ''"
-                class="more_info"
-              ></div>
+          <div [ngClass]="hasExpand[6] ? 'expanded' : ''" class="pl_content">
+            <div class="plash">
+              <p class="socv">
+                • Ненасилие в семье - наша карма? Почему каждый из нас получает
+                разные «уроки жизни» в семье?
+              </p>
+              <p class="socv">
+                • Эгоистичные желания и базовые потребности – как найти баланс
+                между эгоизмом и самодостаточностью?
+              </p>
+              <p class="socv">
+                • Манипуляция в отношениях с близкими. Устали от зависимости?
+                Рекомендации, как этого избежать.
+              </p>
+              <p class="socv">
+                • Наши дети как яркий «показатель» отношений в семье – получаем
+                то, что засеваем?
+              </p>
+              <p class="socv">• Важная роль - быть родителем.</p>
+              <p class="socv">
+                • Психология отношений: муж и жена – разница в подходах
+                построения ведических и тантрических семей.
+              </p>
+              <p class="socv">
+                • Свобода и творчество – счастье выбираю я сам. Как стать
+                автором и режиссёром своей жизни.
+              </p>
+            </div>
+            <div class="plash tt">
+              <p class="img_ch_wrap">
+                <img src="assets/Images/course/aaf.png" alt="ava" />
+              </p>
+              <p class="sub_ph_tx">Карма-санньяси Савитри</p>
+              <p class="sub_ph_tx">инструктор йоги и медитации</p>
+              <p class="sub_ph_tx">Тема «Ахимса в семье»</p>
+              <div class="strp"></div>
             </div>
           </div>
-          <div class="yellw_pl"></div>
-          <div class="topic_cs_wrap">
-            <div class="topic_row">
-              <div (click)="expand(8)" class="topic_item">
-                <div class="wrap_dd left">
-                  <div class="topic_img">
-                    <img src="assets/Images/course/chess.png" alt="health" />
-                  </div>
-                  <p class="topic_txt"><span>Ахимса и</span> лидерство</p>
-                </div>
-                <div class="wrap_dd right">
-                  <div class="sep_rap">
-                    <p class="pipe_imgg">
-                      <img src="assets/Images/course/pip.png" />
-                    </p>
-                    <p class="dk_center sma">
-                      31 июля-<br />
-                      2 августа
-                    </p>
-                  </div>
-                  <p class="arr_imgg">
-                    <img
-                      [ngClass]="hasExpand[8] ? 'expand' : ''"
-                      src="assets/Images/course/arrr.png"
-                    />
-                  </p>
-                </div>
-              </div>
-              <div
-                [ngClass]="hasExpand[8] ? 'expanded' : ''"
-                class="more_info"
-              ></div>
-            </div>
-          </div>
-        </div>
-        <div class="yellw_pl transpr"></div>
-        <div class="topics_wrapper">
-          <div class="topic_cs_wrap">
-            <div class="topic_row">
-              <div (click)="expand(9)" class="topic_item">
-                <div class="wrap_dd left">
-                  <div class="topic_img">
-                    <img src="assets/Images/course/natt.png" alt="health" />
-                  </div>
-                  <p class="topic_txt">
-                    <span>Ахимса </span> к себе<br />
-                    и другим
-                  </p>
-                </div>
-                <div class="wrap_dd right">
-                  <div class="sep_rap">
-                    <p class="pipe_imgg">
-                      <img src="assets/Images/course/pip.png" />
-                    </p>
-                    <p class="dk_center sma">
-                      3-5<br />
-                      августа
-                    </p>
-                  </div>
-                  <p class="arr_imgg">
-                    <img
-                      [ngClass]="hasExpand[9] ? 'expand' : ''"
-                      src="assets/Images/course/arrr.png"
-                    />
-                  </p>
-                </div>
-              </div>
-              <div
-                [ngClass]="hasExpand[9] ? 'expanded' : ''"
-                class="more_info"
-              ></div>
-            </div>
-          </div>
-          <div class="yellw_pl"></div>
-          <div class="topic_cs_wrap">
+          <!-- <div class="topic_cs_wrap">
             <div class="topic_row">
               <div (click)="expand(10)" class="topic_item">
                 <div class="wrap_dd left">
                   <div class="topic_img">
                     <img src="assets/Images/course/nat.png" alt="health" />
                   </div>
-                  <p class="topic_txt">
-                    <span>Ахимса - </span> путь к<br />
-                    счастью
-                  </p>
+                  <p class="topic_txt"><span>Ахимса – </span> путь к счастью</p>
                 </div>
                 <div class="wrap_dd right">
                   <div class="sep_rap">
@@ -867,8 +1163,7 @@
                       <img src="assets/Images/course/pip.png" />
                     </p>
                     <p class="dk_center sma">
-                      7<br />
-                      августа
+                      7 августа
                     </p>
                   </div>
                   <p class="arr_imgg">
@@ -885,15 +1180,381 @@
               ></div>
             </div>
           </div>
-          <div class="yellw_pl"></div>
+          <div [ngClass]="hasExpand[10] ? 'expanded' : ''" class="pl_content">
+            <div class="plash">
+              <p class="socv">
+                • Как привить ребёнку высокие ценности и цели? Которые будут
+                поддерживать и направлять его на протяжении всей жизни
+              </p>
+              <p class="socv">
+                • Как и для чего помочь выработать здоровые привычки
+              </p>
+              <p class="socv">
+                • Как быть с ребёнком на одной волне, не взирая на возраст и
+                другие различия
+              </p>
+              <p class="socv">
+                • Как менять свою жизнь к лучшему и практиковать всей семье
+              </p>
+            </div>
+            <div class="plash tt">
+              <p class="img_ch_wrap">
+                <img src="assets/Images/course/child.png" alt="ava" />
+              </p>
+              <p class="sub_ph_tx">Карма-санньяси Индубваха</p>
+              <p class="sub_ph_tx">инструктор йоги и медитации</p>
+              <p class="sub_ph_tx">Тема «Ахимса — путь к счастью»</p>
+              <div class="strp"></div>
+            </div>
+          </div> -->
           <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(7)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/pc.png" alt="health" />
+                  </div>
+                  <p class="topic_txt">
+                    <span>Ахимса </span>в воспитании детей
+                  </p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <!-- <p class="dk_center sma">7 августа</p> -->
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[7] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[7] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+          <div [ngClass]="hasExpand[7] ? 'expanded' : ''" class="pl_content">
+            <div class="plash">
+              <p class="socv">• Как привить ребёнку высокие ценности?</p>
+              <p class="socv">
+                • Как мотивировать ребенка достигать целей, которые будут
+                поддерживать и направлять его на протяжении всей жизни?
+              </p>
+              <p class="socv">
+                • Принципы для выработки здоровых привычек с самого детства.
+              </p>
+              <p class="socv">
+                • Как быть с ребёнком на одной волне, не взирая на возраст и
+                другие различия?
+              </p>
+              <p class="socv">
+                • Практика Ахимсы для всей семьи как способ гармонизации
+                отношений в семье и за ее пределами.
+              </p>
+            </div>
+            <div class="plash tt">
+              <p class="img_ch_wrap">
+                <img src="assets/Images/course/aac.png" alt="ava" />
+              </p>
+              <p class="sub_ph_tx">Карма-санньяси Сарада</p>
+              <p class="sub_ph_tx">инструктор йоги и медитации</p>
+              <p class="sub_ph_tx">
+                Тема «Ахимса в воспитании детей и образовании»
+              </p>
+              <div class="strp"></div>
+            </div>
+          </div>
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(8)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/chess.png" alt="health" />
+                  </div>
+                  <p class="topic_txt"><span>Ахимса и</span> лидерство</p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <!-- <p class="dk_center sma">10 августа</p> -->
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[8] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[8] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+          <div [ngClass]="hasExpand[8] ? 'expanded' : ''" class="pl_content">
+            <div class="plash">
+              <p class="socv">
+                • Как эффективно управлять людьми через раскрытие их потенциала,
+                отказавшись от мотивации "кнут и пряник".
+              </p>
+              <p class="socv">
+                • Как раскрыть личный потенциал лидера через потоковое состояние
+                и принятие себя.
+              </p>
+              <p class="socv">
+                • Как из состояния "жертва обстоятельств" войти в состояние "я
+                управляю своей судьбой". Как научиться легко брать
+                ответственность за себя и на себя.
+              </p>
+              <p class="socv">
+                • Как быстро находить оптимальные решения, доверяя ситуациям,
+                людям, себе. Закон сохранения энергии. Фильтры сознания.
+              </p>
+              <p class="socv">
+                • Как сохранять позицию наблюдателя для получения наилучшего
+                результата. Ассоциация и диссоциация.
+              </p>
+              <p class="socv">
+                • Как получить кратчайший путь к реализации целей?
+              </p>
+            </div>
+            <div class="plash tt">
+              <p class="img_ch_wrap">
+                <img src="assets/Images/course/aal.png" alt="ava" />
+              </p>
+              <p class="sub_ph_tx">Карма-санньяси Махалакшми</p>
+              <p class="sub_ph_tx">инструктор йоги и медитации</p>
+              <p class="sub_ph_tx">Тема «Ахимса и лидерство»</p>
+              <div class="strp"></div>
+            </div>
+          </div>
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(9)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/natt.png" alt="health" />
+                  </div>
+                  <p class="topic_txt"><span>Ахимса </span> к себе и другим</p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <!-- <p class="dk_center sma">14 авугста</p> -->
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[9] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[9] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+          <div [ngClass]="hasExpand[9] ? 'expanded' : ''" class="pl_content">
+            <div class="plash">
+              <p class="socv">• Почему Ахимса, зачем и кому это нужно?</p>
+              <p class="socv">
+                • Метафизика процессов: через понимание - к действию и изменению
+                судьбы.
+              </p>
+              <p class="socv">
+                • Полюбить себя, а вместе с тем ответить на вопрос: кто Я на
+                самом деле?
+              </p>
+              <p class="socv">• Почему важно полюбить Себя?</p>
+              <p class="socv">
+                • Как увидеть свою сущность божественной и полюбить внутреннее
+                божество?
+              </p>
+              <p class="socv">
+                • МИР – проекция ума, как мы можем применять это знание на
+                практике?
+              </p>
+              <p class="socv">• Я и другой – иллюзорная дуальность сознания.</p>
+              <p class="socv">
+                • Знание ИСТИНЫ – совершенная мудрость – совершенная жизнь.
+              </p>
+            </div>
+            <div class="plash tt">
+              <p class="img_ch_wrap">
+                <img src="assets/Images/course/aao.png" alt="ava" />
+              </p>
+              <p class="sub_ph_tx">Карма-санньяси Дэванатха</p>
+              <p class="sub_ph_tx">инструктор йоги и медитации</p>
+              <p class="sub_ph_tx">Тема «Ахимса к себе и другим»</p>
+              <div class="strp"></div>
+            </div>
+          </div>
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(2)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/ast.png" alt="health" />
+                  </div>
+                  <p class="topic_txt">
+                    <span>Ахимса </span><span class="smal">и</span> астрология
+                  </p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <!-- <p class="dk_center sma">24 июля</p> -->
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[2] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[2] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+          <div [ngClass]="hasExpand[2] ? 'expanded' : ''" class="pl_content">
+            <div class="plash">
+              <p class="socv">
+                • Древняя наука Джьотиш – почему она важна для нас?
+              </p>
+              <p class="socv">
+                • Гороскоп – астральная матрица и ахимса как ее важнейший
+                принцип.
+              </p>
+              <p class="socv">
+                • Великие космические силы – грахи, как научиться преодолевать
+                их и, более того, делать их своей «силой».
+              </p>
+              <p class="socv">• Ахимса и граха Сурья (Солнце) – Сила Духа</p>
+              <p class="socv">
+                • Ахимса и граха Чандра (Луна) – Сила Восприятия
+              </p>
+              <p class="socv">
+                • Ахимса и граха Гуру (Юпитер) – Сила Пространства
+              </p>
+              <p class="socv">
+                • Ахимса и граха Шани (Сатурн) – Сила Ограничения и др.
+              </p>
+              <!-- <p class="socv">
+                • Ахимса и граха Мангала (Марс) – Сила Действия
+              </p>
+              <p class="socv">
+                • Ахимса и граха Шукра (Венера) – Сила Телесности
+              </p>
+              <p class="socv">
+                • Ахимса и граха Буддха (Меркурий) – Сила Объективности
+              </p> -->
+              <p class="socv">
+                • Искусные упаи (методы практики) для устранения препятствий в
+                жизни.
+              </p>
+            </div>
+            <div class="plash tt">
+              <p class="img_ch_wrap">
+                <img src="assets/Images/course/aas.png" alt="ava" />
+              </p>
+              <p class="sub_ph_tx">Карма-санньяси Видьягаури</p>
+              <p class="sub_ph_tx">инструктор йоги и медитации</p>
+              <p class="sub_ph_tx">Тема «Ахимса и астрология»</p>
+              <div class="strp"></div>
+            </div>
+          </div>
+          <div class="topic_cs_wrap">
+            <div class="topic_row">
+              <div (click)="expand(3)" class="topic_item">
+                <div class="wrap_dd left">
+                  <div class="topic_img">
+                    <img src="assets/Images/course/war.png" alt="health" />
+                  </div>
+                  <p class="topic_txt"><span> Ахимса</span> в военное время</p>
+                </div>
+                <div class="wrap_dd right">
+                  <div class="sep_rap">
+                    <p class="pipe_imgg">
+                      <img src="assets/Images/course/pip.png" />
+                    </p>
+                    <!-- <p class="dk_center sma">17 августа</p> -->
+                  </div>
+                  <p class="arr_imgg">
+                    <img
+                      [ngClass]="hasExpand[3] ? 'expand' : ''"
+                      src="assets/Images/course/arrr.png"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div
+                [ngClass]="hasExpand[3] ? 'expanded' : ''"
+                class="more_info"
+              ></div>
+            </div>
+          </div>
+          <div [ngClass]="hasExpand[3] ? 'expanded' : ''" class="pl_content">
+            <div class="plash">
+              <p class="socv">
+                • Ахимса во времена Кали Юги – когда завершится 5000-летняя
+                война?
+              </p>
+              <p class="socv">• Что мы можем сделать, чтобы ее завершить?</p>
+              <p class="socv">
+                • Ахимса (ненасилие) и Сатья (истина) – неразделимые понятия:
+                хочешь жить в мире без насилия – познай истину.
+              </p>
+              <p class="socv">
+                • Как перестать причинять химсу (зло, насилие, вред)? «Причинять
+                добро» и «жить ахимсой» - как уловить тонкую грань?
+              </p>
+              <p class="socv">
+                • Как мир и покой внутри (реализованная Ахимса) по отношению к
+                себе открывает путь к гармонии по отношению к Миру.
+              </p>
+              <p class="socv">
+                • 3 уровня Ахимсы. Как перейти от философии к практике.
+              </p>
+              <p class="socv">
+                • Плоды Ахимсы – краткосрочная и долгосрочная перспектива.
+              </p>
+            </div>
+            <div class="plash tt">
+              <p class="img_ch_wrap">
+                <img src="assets/Images/course/wae.png" alt="ava" />
+              </p>
+              <p class="sub_ph_tx">Пурна-санньясини Сатья Гири</p>
+              <p class="sub_ph_tx">инструктор йоги и медитации</p>
+              <p class="sub_ph_tx">Тема «Ахимса в военное время»</p>
+              <div class="strp"></div>
+            </div>
+          </div>
+          <!-- <div class="topic_cs_wrap">
             <div class="topic_row">
               <div (click)="expand(11)" class="topic_item">
                 <div class="wrap_dd left">
                   <div class="topic_img">
-                    <img src="assets/Images/course/dove.png" alt="health" />
+                    <img src="assets/Images/course/nat.png" alt="health" />
                   </div>
-                  <p class="topic_txt"><span>Завершение</span> курса</p>
+                  <p class="topic_txt">Завершение курса</p>
                 </div>
                 <div class="wrap_dd right">
                   <div class="sep_rap">
@@ -901,7 +1562,7 @@
                       <img src="assets/Images/course/pip.png" />
                     </p>
                     <p class="dk_center sma">
-                      8<br />
+                      21-22<br />
                       августа
                     </p>
                   </div>
@@ -919,13 +1580,573 @@
               ></div>
             </div>
           </div>
+          <div [ngClass]="hasExpand[11] ? 'expanded' : ''" class="pl_content">
+            <div class="plash">
+              <p class="socv">
+                • Как привить ребёнку высокие ценности и цели? Которые будут
+                поддерживать и направлять его на протяжении всей жизни
+              </p>
+              <p class="socv">
+                • Как и для чего помочь выработать здоровые привычки
+              </p>
+              <p class="socv">
+                • Как быть с ребёнком на одной волне, не взирая на возраст и
+                другие различия
+              </p>
+              <p class="socv">
+                • Как менять свою жизнь к лучшему и практиковать всей семье
+              </p>
+            </div>
+            <div class="plash tt">
+            </div>
+          </div> -->
         </div>
       </div>
     </div>
+    <!-- <div class="swipe_program">
+      <swiper [config]="config">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="topic_cs_wrap">
+              <div class="topic_row">
+                <div (click)="expand(4)" class="topic_item">
+                  <div class="wrap_dd left">
+                    <div class="topic_img">
+                      <img src="assets/Images/course/hlt.png" alt="health" />
+                    </div>
+                    <div class="flex_flex-column">
+                      <p class="topic_txt">
+                        <span>Ахимса </span><span class="smal">и</span> здоровье
+                      </p>
+                    </div>
+                  </div>
+                  <div class="wrap_dd right">
+                    <p class="arr_imgg">
+                      <img
+                        [ngClass]="mobExpanded ? 'expand' : ''"
+                        src="assets/Images/course/arrr.png"
+                      />
+                    </p>
+                  </div>
+                </div>
+                <div
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
+                  class="more_info"
+                ></div>
+              </div>
+            </div>
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
+              <div class="plash">
+                <p class="socv">• Действительно ли вы здоровы, как считаете?</p>
+                <p class="socv">
+                  • Тело, психика, ум — как они связаны, и что происходит при их
+                  дисбалансе?
+                </p>
+                <p class="socv">
+                  • Как эмоции напрямую влияют на работу внутренних органов?
+                </p>
+                <p class="socv">
+                  • Здоровая психика — это как? Шесть пунктов для анализа своего
+                  состояния.
+                </p>
+                <p class="socv">
+                  • «Неудобные вопросы» — является ли вообще здоровье вашей
+                  истинной ценностью?
+                </p>
+                <p class="socv">
+                  • К чему приводят разрушающие состояния — гнев, жадность,
+                  неприятие, страх? Как с ними правильно работать?
+                </p>
+                <p class="socv">
+                  • Как ахимса (ненасилие) связано лично с моим здоровьем?
+                </p>
+              </div>
+              <div class="plash tt">
+                <p class="img_ch_wrap">
+                  <img src="assets/Images/course/aah.png" alt="ava" />
+                </p>
+                <p class="sub_ph_tx">
+                  Карма-санньяси<br />Амаранатха и Ниранджана
+                </p>
+                <p class="sub_ph_tx">инструктора йоги и медитации</p>
+                <p class="sub_ph_tx">Тема «Ахимса и здоровье»</p>
+                <div class="strp"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="topic_cs_wrap">
+              <div class="topic_row">
+                <div (click)="expand(5)" class="topic_item">
+                  <div class="wrap_dd left">
+                    <div class="topic_img">
+                      <img src="assets/Images/course/pit.png" alt="health" />
+                    </div>
+                    <div class="flex_flex-column">
+                      <p class="topic_txt">
+                        <span>Ахимса </span><span class="smal">и</span> питание
+                      </p>
+                    </div>
+                  </div>
+                  <div class="wrap_dd right">
+                    <p class="arr_imgg">
+                      <img
+                        [ngClass]="mobExpanded ? 'expand' : ''"
+                        src="assets/Images/course/arrr.png"
+                      />
+                    </p>
+                  </div>
+                </div>
+                <div
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
+                  class="more_info"
+                ></div>
+              </div>
+            </div>
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
+              <div class="plash">
+                <p class="socv">
+                  • «Скажи мне, что ты ешь, и я скажу, кто ты» - как на нас
+                  влияет то, что мы едим?
+                </p>
+                <p class="socv">
+                  • Мясоедение как распространение энергии насилия. Как
+                  ежегодные массовые убийства животных, птиц и рыб влияют на
+                  судьбу человечества?
+                </p>
+                <p class="socv">
+                  • «Пиар-кампании мясных изделий» – кому выгодно, чтобы мы
+                  думали, что это вкусно и полезно?
+                </p>
+                <p class="socv">
+                  • Гуны (качества) материальной природы - как это древнее
+                  знание поможет нам быть более осознанными в своем ежедневном
+                  выборе.
+                </p>
+                <p class="socv">
+                  • Пища с энергией благости - какая она? Неужели мы так зависим
+                  от пищи?
+                </p>
+                <p class="socv">
+                  • Советы для решительных: вы определились со своим выбором
+                  правильно питаться? Что дальше?
+                </p>
+              </div>
+              <div class="plash tt">
+                <p class="img_ch_wrap">
+                  <img src="assets/Images/course/aap.png" alt="ava" />
+                </p>
+                <p class="sub_ph_tx">Карма-санньяси Даршани</p>
+                <p class="sub_ph_tx">инструктор йоги и медитации</p>
+                <p class="sub_ph_tx">Тема «Ахимса и питание»</p>
+                <div class="strp"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="topic_cs_wrap">
+              <div class="topic_row">
+                <div (click)="expand(6)" class="topic_item">
+                  <div class="wrap_dd left">
+                    <div class="topic_img">
+                      <img src="assets/Images/course/fam.png" alt="health" />
+                    </div>
+                    <div class="flex_flex-column">
+                      <p class="topic_txt"><span>Ахимса </span>в семье</p>
+                    </div>
+                  </div>
+                  <div class="wrap_dd right">
+                    <p class="arr_imgg">
+                      <img
+                        [ngClass]="mobExpanded ? 'expand' : ''"
+                        src="assets/Images/course/arrr.png"
+                      />
+                    </p>
+                  </div>
+                </div>
+                <div
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
+                  class="more_info"
+                ></div>
+              </div>
+            </div>
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
+              <div class="plash">
+                <p class="socv">
+                  • Ненасилие в семье - наша карма? Почему каждый из нас
+                  получает разные «уроки жизни» в семье?
+                </p>
+                <p class="socv">
+                  • Эгоистичные желания и базовые потребности – как найти баланс
+                  между эгоизмом и самодостаточностью?
+                </p>
+                <p class="socv">
+                  • Манипуляция в отношениях с близкими. Устали от зависимости?
+                  Рекомендации, как этого избежать.
+                </p>
+                <p class="socv">
+                  • Наши дети как яркий «показатель» отношений в семье –
+                  получаем то, что засеваем?
+                </p>
+                <p class="socv">• Важная роль - быть родителем.</p>
+                <p class="socv">
+                  • Психология отношений: муж и жена – разница в подходах
+                  построения ведических и тантрических семей.
+                </p>
+                <p class="socv">
+                  • Свобода и творчество – счастье выбираю я сам. Как стать
+                  автором и режиссёром своей жизни.
+                </p>
+              </div>
+              <div class="plash tt">
+                <p class="img_ch_wrap">
+                  <img src="assets/Images/course/aaf.png" alt="ava" />
+                </p>
+                <p class="sub_ph_tx">Карма-санньяси Савитри</p>
+                <p class="sub_ph_tx">инструктор йоги и медитации</p>
+                <p class="sub_ph_tx">Тема «Ахимса в семье»</p>
+                <div class="strp"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="topic_cs_wrap">
+              <div class="topic_row">
+                <div (click)="expand(7)" class="topic_item">
+                  <div class="wrap_dd left">
+                    <div class="topic_img">
+                      <img src="assets/Images/course/pc.png" alt="health" />
+                    </div>
+                    <div class="flex_flex-column">
+                      <p class="topic_txt">
+                        <span>Ахимса </span>в воспитании детей
+                      </p>
+                    </div>
+                  </div>
+                  <div class="wrap_dd right">
+                    <p class="arr_imgg">
+                      <img
+                        [ngClass]="mobExpanded ? 'expand' : ''"
+                        src="assets/Images/course/arrr.png"
+                      />
+                    </p>
+                  </div>
+                </div>
+                <div
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
+                  class="more_info"
+                ></div>
+              </div>
+            </div>
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
+              <div class="plash">
+                <p class="socv">• Как привить ребёнку высокие ценности?</p>
+                <p class="socv">
+                  • Как мотивировать ребенка достигать целей, которые будут
+                  поддерживать и направлять его на протяжении всей жизни?
+                </p>
+                <p class="socv">
+                  • Принципы для выработки здоровых привычек с самого детства.
+                </p>
+                <p class="socv">
+                  • Как быть с ребёнком на одной волне, не взирая на возраст и
+                  другие различия?
+                </p>
+                <p class="socv">
+                  • Практика Ахимсы для всей семьи как способ гармонизации
+                  отношений в семье и за ее пределами.
+                </p>
+              </div>
+              <div class="plash tt">
+                <p class="img_ch_wrap">
+                  <img src="assets/Images/course/aac.png" alt="ava" />
+                </p>
+                <p class="sub_ph_tx">Карма-санньяси Сарада</p>
+                <p class="sub_ph_tx">инструктор йоги и медитации</p>
+                <p class="sub_ph_tx">
+                  Тема «Ахимса в воспитании детей и образовании»
+                </p>
+                <div class="strp"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="topic_cs_wrap">
+              <div class="topic_row">
+                <div (click)="expand(8)" class="topic_item">
+                  <div class="wrap_dd left">
+                    <div class="topic_img">
+                      <img src="assets/Images/course/chess.png" alt="health" />
+                    </div>
+                    <div class="flex_flex-column">
+                      <p class="topic_txt"><span>Ахимса и </span>лидерство</p>
+                    </div>
+                  </div>
+                  <div class="wrap_dd right">
+                    <p class="arr_imgg">
+                      <img
+                        [ngClass]="mobExpanded ? 'expand' : ''"
+                        src="assets/Images/course/arrr.png"
+                      />
+                    </p>
+                  </div>
+                </div>
+                <div
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
+                  class="more_info"
+                ></div>
+              </div>
+            </div>
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
+              <div class="plash">
+                <p class="socv">
+                  • Как эффективно управлять людьми через раскрытие их
+                  потенциала, отказавшись от мотивации "кнут и пряник".
+                </p>
+                <p class="socv">
+                  • Как раскрыть личный потенциал лидера через потоковое
+                  состояние и принятие себя.
+                </p>
+                <p class="socv">
+                  • Как из состояния "жертва обстоятельств" войти в состояние "я
+                  управляю своей судьбой". Как научиться легко брать
+                  ответственность за себя и на себя.
+                </p>
+                <p class="socv">
+                  • Как быстро находить оптимальные решения, доверяя ситуациям,
+                  людям, себе. Закон сохранения энергии. Фильтры сознания.
+                </p>
+                <p class="socv">
+                  • Как сохранять позицию наблюдателя для получения наилучшего
+                  результата. Ассоциация и диссоциация.
+                </p>
+                <p class="socv">
+                  • Как получить кратчайший путь к реализации целей?
+                </p>
+              </div>
+              <div class="plash tt">
+                <p class="img_ch_wrap">
+                  <img src="assets/Images/course/aal.png" alt="ava" />
+                </p>
+                <p class="sub_ph_tx">Карма-санньяси Махалакшми</p>
+                <p class="sub_ph_tx">инструктор йоги и медитации</p>
+                <p class="sub_ph_tx">Тема «Ахимса и лидерство»</p>
+                <div class="strp"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="topic_cs_wrap">
+              <div class="topic_row">
+                <div (click)="expand(9)" class="topic_item">
+                  <div class="wrap_dd left">
+                    <div class="topic_img">
+                      <img src="assets/Images/course/natt.png" alt="health" />
+                    </div>
+                    <div class="flex_flex-column">
+                      <p class="topic_txt">
+                        <span>Ахимса </span> к себе и другим
+                      </p>
+                    </div>
+                  </div>
+                  <div class="wrap_dd right">
+                    <p class="arr_imgg">
+                      <img
+                        [ngClass]="mobExpanded ? 'expand' : ''"
+                        src="assets/Images/course/arrr.png"
+                      />
+                    </p>
+                  </div>
+                </div>
+                <div
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
+                  class="more_info"
+                ></div>
+              </div>
+            </div>
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
+              <div class="plash">
+                <p class="socv">• Почему Ахимса, зачем и кому это нужно?</p>
+                <p class="socv">
+                  • Метафизика процессов: через понимание - к действию и
+                  изменению судьбы.
+                </p>
+                <p class="socv">
+                  • Полюбить себя, а вместе с тем ответить на вопрос: кто Я на
+                  самом деле?
+                </p>
+                <p class="socv">• Почему важно полюбить Себя?</p>
+                <p class="socv">
+                  • Как увидеть свою сущность божественной и полюбить внутреннее
+                  божество?
+                </p>
+                <p class="socv">
+                  • МИР – проекция ума, как мы можем применять это знание на
+                  практике?
+                </p>
+                <p class="socv">
+                  • Я и другой – иллюзорная дуальность сознания.
+                </p>
+                <p class="socv">
+                  • Знание ИСТИНЫ – совершенная мудрость – совершенная жизнь.
+                </p>
+              </div>
+              <div class="plash tt">
+                <p class="img_ch_wrap">
+                  <img src="assets/Images/course/aao.png" alt="ava" />
+                </p>
+                <p class="sub_ph_tx">Карма-санньяси Дэванатха</p>
+                <p class="sub_ph_tx">инструктор йоги и медитации</p>
+                <p class="sub_ph_tx">Тема «Ахимса к себе и другим»</p>
+                <div class="strp"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="topic_cs_wrap">
+              <div class="topic_row">
+                <div (click)="expand(2)" class="topic_item">
+                  <div class="wrap_dd left">
+                    <div class="topic_img">
+                      <img src="assets/Images/course/ast.png" alt="health" />
+                    </div>
+                    <div class="flex_flex-column">
+                      <p class="topic_txt">
+                        <span>Ахимса </span
+                        ><span class="smal">и</span> астрология
+                      </p>
+                    </div>
+                  </div>
+                  <div class="wrap_dd right">
+                    <p class="arr_imgg">
+                      <img
+                        [ngClass]="mobExpanded ? 'expand' : ''"
+                        src="assets/Images/course/arrr.png"
+                      />
+                    </p>
+                  </div>
+                </div>
+                <div
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
+                  class="more_info"
+                ></div>
+              </div>
+            </div>
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
+              <div class="plash">
+                <p class="socv">
+                  • Древняя наука Джьотиш – почему она важна для нас?
+                </p>
+                <p class="socv">
+                  • Гороскоп – астральная матрица и ахимса как ее важнейший
+                  принцип.
+                </p>
+                <p class="socv">
+                  • Великие космические силы – грахи, как научиться преодолевать
+                  их и, более того, делать их своей «силой».
+                </p>
+                <p class="socv">• Ахимса и граха Сурья (Солнце) – Сила Духа</p>
+                <p class="socv">
+                  • Ахимса и граха Чандра (Луна) – Сила Восприятия
+                </p>
+                <p class="socv">
+                  • Ахимса и граха Гуру (Юпитер) – Сила Пространства
+                </p>
+                <p class="socv">
+                  • Ахимса и граха Шани (Сатурн) – Сила Ограничения и др.
+                </p>
+                <p class="socv">
+                  • Искусные упаи (методы практики) для устранения препятствий в
+                  жизни.
+                </p>
+              </div>
+              <div class="plash tt">
+                <p class="img_ch_wrap">
+                  <img src="assets/Images/course/aas.png" alt="ava" />
+                </p>
+                <p class="sub_ph_tx">Карма-санньяси Видьягаури</p>
+                <p class="sub_ph_tx">инструктор йоги и медитации</p>
+                <p class="sub_ph_tx">Тема «Ахимса и астрология»</p>
+                <div class="strp"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="topic_cs_wrap">
+              <div class="topic_row">
+                <div (click)="expand(3)" class="topic_item">
+                  <div class="wrap_dd left">
+                    <div class="topic_img">
+                      <img src="assets/Images/course/war.png" alt="health" />
+                    </div>
+                    <div class="flex_flex-column">
+                      <p class="topic_txt">
+                        <span>Ахимса</span> в военное время
+                      </p>
+                    </div>
+                  </div>
+                  <div class="wrap_dd right">
+                    <p class="arr_imgg">
+                      <img
+                        [ngClass]="mobExpanded ? 'expand' : ''"
+                        src="assets/Images/course/arrr.png"
+                      />
+                    </p>
+                  </div>
+                </div>
+                <div
+                  [ngClass]="mobExpanded ? 'expanded' : ''"
+                  class="more_info"
+                ></div>
+              </div>
+            </div>
+            <div [ngClass]="mobExpanded ? 'expanded' : ''" class="pl_content">
+              <div class="plash">
+                <p class="socv">
+                  • Ахимса во времена Кали Юги – когда завершится 5000-летняя
+                  война?
+                </p>
+                <p class="socv">• Что мы можем сделать, чтобы ее завершить?</p>
+                <p class="socv">
+                  • Ахимса (ненасилие) и Сатья (истина) – неразделимые понятия:
+                  хочешь жить в мире без насилия – познай истину.
+                </p>
+                <p class="socv">
+                  • Как перестать причинять химсу (зло, насилие, вред)?
+                  «Причинять добро» и «жить ахимсой» - как уловить тонкую грань?
+                </p>
+                <p class="socv">
+                  • Как мир и покой внутри (реализованная Ахимса) по отношению к
+                  себе открывает путь к гармонии по отношению к Миру.
+                </p>
+                <p class="socv">
+                  • 3 уровня Ахимсы. Как перейти от философии к практике.
+                </p>
+                <p class="socv">
+                  • Плоды Ахимсы – краткосрочная и долгосрочная перспектива.
+                </p>
+              </div>
+              <div class="plash tt">
+                <p class="img_ch_wrap">
+                  <img src="assets/Images/course/wae.png" alt="ava" />
+                </p>
+                <p class="sub_ph_tx">Пурна-санньясини Сатья Гири</p>
+                <p class="sub_ph_tx">инструктор йоги и медитации</p>
+                <p class="sub_ph_tx">Тема «Ахимса в военное время»</p>
+                <div class="strp"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </swiper>
+    </div> -->
     <div class="cs_blank">
       <div class="cs_container sots">
         <p class="titl_lg sm">Этот курс для тех</p>
-        <div class="main_sot-cont flex">
+        <div class="main_sot-cont flex_d">
           <div class="sots_col-wrp">
             <div class="sott">
               <div class="ims_wr">
@@ -1006,7 +2227,10 @@
         </div>
         <div class="outer_wrap_cs lss">
           <div class="butt_b_wrap">
-            <div class="header-inner header-inner-button boreder grad xl">
+            <div
+              (click)="scrollTo('register')"
+              class="header-inner header-inner-button boreder grad xl"
+            >
               <button class="registration-button rd">Присоединиться</button>
             </div>
           </div>
@@ -1014,15 +2238,1328 @@
       </div>
     </div>
     <div class="cs_blank rews">
-      <div class="cs_container eres">
+      <div id="reviews" class="cs_container eres rewss">
         <p class="titl_lg smm lt">отзывы</p>
         <p class="titl_eht">
-          Движение «Йоги за мир» существует уже больше года и за это время у нас
-          накопилось более <span>150 отзывов</span> о нашей деятельности, вот
-          некоторые из них:
+          Движение «Йоги за мир» существует уже больше года, и за это время у
+          нас накопилось более <span>150 отзывов</span> о нашей деятельности,
+          вот некоторые из них:
         </p>
         <div class="res_s">
-          <img src="assets/Images/course/res.png" alt="rewiews" />
+          <button
+            (click)="toggleNextRewiews()"
+            class="rew-button-next"
+          ></button>
+          <button
+            (click)="togglePrevRewiews()"
+            class="rew-button-prev"
+          ></button>
+          <div [hidden]="!mobile" class="my-slider-mob-rewiews">
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/sl1.png" alt="logo" />
+              </div>
+              <div
+                (click)="
+                  showVideo(
+                    'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F3.mp4?alt=media&token=b0723716-3eb0-41c1-934f-9d0927fdcbd3'
+                  )
+                "
+                class="add_info"
+              >
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/555.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('on')"
+                (mouseleave)="mouseLeave('on')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/88.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('tw')"
+                (mouseleave)="mouseLeave('tw')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/1010.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('thr')"
+                (mouseleave)="mouseLeave('thr')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/sl2.png" alt="logo" />
+              </div>
+              <div
+                (click)="
+                  showVideo(
+                    'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F4.mp4?alt=media&token=06539234-9197-4207-b697-f569a8f3e0e8'
+                  )
+                "
+                class="add_info"
+              >
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/sl4.png" alt="logo" />
+              </div>
+              <div
+                (click)="
+                  showVideo(
+                    'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F1.mp4?alt=media&token=a95144ff-f544-4453-91a0-be391e649458'
+                  )
+                "
+                class="add_info"
+              >
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/sl5.png" alt="logo" />
+              </div>
+              <div (click)="showVideo('assets/video/sl5.MOV')" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/99.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('sx')"
+                (mouseleave)="mouseLeave('sx')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/sl3.png" alt="logo" />
+              </div>
+              <div
+                (click)="
+                  showVideo(
+                    'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F5.mp4?alt=media&token=d093987b-d1a1-40b7-b1eb-ed48cdd17296'
+                  )
+                "
+                class="add_info"
+              >
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/77.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('fv')"
+                (mouseleave)="mouseLeave('fv')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/sev.png" alt="logo" />
+              </div>
+              <div (click)="showVideo('1', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/11.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('sev')"
+                (mouseleave)="mouseLeave('sev')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/55.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('eigt')"
+                (mouseleave)="mouseLeave('eigt')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/22.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('nine')"
+                (mouseleave)="mouseLeave('nine')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/nnmj.png" alt="logo" />
+              </div>
+              <div (click)="showVideo('2', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/sll5.png" alt="logo" />
+              </div>
+              <div (click)="showVideo('3', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/4h.png" alt="logo" />
+              </div>
+              <div (click)="showVideo('4', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/33.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('ten')"
+                (mouseleave)="mouseLeave('ten')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/5j.png" alt="logo" />
+              </div>
+              <div (click)="showVideo('5', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/44.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('ellv')"
+                (mouseleave)="mouseLeave('ellv')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s38.png" alt="logo" />
+              </div>
+              <div (click)="showVideo('6', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s31.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('twf')"
+                (mouseleave)="mouseLeave('twf')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s34.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('thte')"
+                (mouseleave)="mouseLeave('thte')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s36.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('fhte')"
+                (mouseleave)="mouseLeave('fhte')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s39.png" alt="logo" />
+              </div>
+              <div (click)="showVideo('7', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s310.png" alt="logo" />
+              </div>
+              <div (click)="showVideo('8', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s35.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('fity')"
+                (mouseleave)="mouseLeave('fity')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s32.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('sity')"
+                (mouseleave)="mouseLeave('sity')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s37.png" alt="logo" />
+              </div>
+              <div (click)="showVideo('9', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="inert">
+                <img
+                  class="shine"
+                  src="assets/Images/course/shine.png"
+                  alt="shine"
+                />
+                <img src="assets/Images/course/s33.png" alt="logo" />
+              </div>
+              <div
+                (mouseenter)="mouseEnter('sety')"
+                (mouseleave)="mouseLeave('sety')"
+                class="add_info mdg"
+              >
+                <p class="tre">
+                  Читать<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            [ngClass]="{ visible: visible === 1 }"
+            class="res_s_cont left hide_sev"
+          >
+            <div class="res_s-wrap on">
+              <img src="assets/Images/course/sl1.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div
+                (click)="
+                  showVideo(
+                    'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F3.mp4?alt=media&token=b0723716-3eb0-41c1-934f-9d0927fdcbd3'
+                  )
+                "
+                class="add_info"
+              >
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div
+              (mouseenter)="mouseEnter('on')"
+              (mouseleave)="mouseLeave('on')"
+              class="res_s-wrap tw"
+            >
+              <img src="assets/Images/course/555.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div
+              (mouseenter)="mouseEnter('tw')"
+              (mouseleave)="mouseLeave('tw')"
+              class="res_s-wrap thr"
+            >
+              <img src="assets/Images/course/88.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div
+              (mouseenter)="mouseEnter('thr')"
+              (mouseleave)="mouseLeave('thr')"
+              class="res_s-wrap fou"
+            >
+              <img src="assets/Images/course/1010.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div class="res_s-wrap fiv">
+              <img src="assets/Images/course/sl2.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div
+                (click)="
+                  showVideo(
+                    'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F4.mp4?alt=media&token=06539234-9197-4207-b697-f569a8f3e0e8'
+                  )
+                "
+                class="add_info"
+              >
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            [ngClass]="{ visible: visible === 2 }"
+            class="res_s_cont left hide_sev"
+          >
+            <div
+              (mouseenter)="mouseEnter('sev')"
+              (mouseleave)="mouseLeave('sev')"
+              class="res_s-wrap tw"
+            >
+              <img src="assets/Images/course/11.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div class="res_s-wrap on">
+              <img src="assets/Images/course/sev.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div (click)="showVideo('1', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div
+              (mouseenter)="mouseEnter('eigt')"
+              (mouseleave)="mouseLeave('eigt')"
+              class="res_s-wrap thr"
+            >
+              <img src="assets/Images/course/55.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div
+              (mouseenter)="mouseEnter('nine')"
+              (mouseleave)="mouseLeave('nine')"
+              class="res_s-wrap fou"
+            >
+              <img src="assets/Images/course/22.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div class="res_s-wrap fiv">
+              <img src="assets/Images/course/nnmj.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div (click)="showVideo('2', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            [ngClass]="{ visible: visible === 3 }"
+            class="res_s_cont left hide_sev"
+          >
+            <div class="res_s-wrap on">
+              <img src="assets/Images/course/s38.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div (click)="showVideo('6', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div
+              (mouseenter)="mouseEnter('twf')"
+              (mouseleave)="mouseLeave('twf')"
+              class="res_s-wrap tw"
+            >
+              <img src="assets/Images/course/s31.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div
+              (mouseenter)="mouseEnter('thte')"
+              (mouseleave)="mouseLeave('thte')"
+              class="res_s-wrap thr"
+            >
+              <img src="assets/Images/course/s34.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div
+              (mouseenter)="mouseEnter('fhte')"
+              (mouseleave)="mouseLeave('fhte')"
+              class="res_s-wrap fou"
+            >
+              <img src="assets/Images/course/s36.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div class="res_s-wrap fiv">
+              <img src="assets/Images/course/s39.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div (click)="showVideo('7', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="rewiew-wrpon" class="rewiew_wrp">
+            <p class="rew_text">
+              Я ощутил, что где-то глубоко внутри есть гораздо более глубокое,
+              чистое и совершенное мироощущение бытия, и я могу с ним
+              сонастраиваться и идти к нему. Что эта самая ахимса, она совсем не
+              про других, а она только про меня.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Атри</p>
+          </div>
+          <div id="rewiew-wrptw" class="rewiew_wrp">
+            <p class="rew_text">
+              Ахимса, это моя возможность смотреть на мир как на божественное
+              творение, где каждое существо прекрасно и безупречно. Ахимса для
+              меня, это врата к бесконечному расширению и благоговению... Какое
+              счастье быть причастным к форме жизни без насилия телом, речью и
+              умом.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Рамана</p>
+          </div>
+          <div id="rewiew-wrpthr" class="rewiew_wrp">
+            <p class="rew_text">
+              Практика ахимсы разбудила моего внутреннего наблюдателя. Теперь
+              чаще останавливаю дисгармоничные эмоции, мысли, выводы. Это
+              экономит много сил и я чувствую себя гармоничнее. Стала более
+              внимательной, спокойной, доброй по отношению к себе и другим.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Ольга</p>
+          </div>
+          <div id="rewiew-wrpfv" class="rewiew_wrp">
+            <p class="rew_text">
+              Прощение, легкость, сострадание, любовь, радость, спокойствие —
+              всё это плоды практики ахимсы.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Клим</p>
+          </div>
+          <div id="rewiew-wrpsx" class="rewiew_wrp">
+            <p class="rew_text">
+              Практикуя ахимсу мы становимся на путь своей трансформации, а Боги
+              и Святые начинают помогать нам в этом. А когда внутри спокойно,
+              взаимодействовать с другими людьми гораздо приятнее и эффективнее.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Таирова Юлия</p>
+          </div>
+          <div id="rewiew-wrpsev" class="rewiew_wrp">
+            <p class="rew_text">
+              Ахимса — это выражение активной гражданской позиции по отношению к
+              происходящему в мире. Я своими руками строю тот мир в который я
+              верю.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Санатсуджата</p>
+          </div>
+          <div id="rewiew-wrpeigt" class="rewiew_wrp">
+            <p class="rew_text">
+              Я заметил, что за других молиться получается лучше, чем за себя –
+              больше внимания, эмоций и желания. И это, чувствую, меня как-то
+              потихоньку меняет к лучшему.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Адрей Золотой</p>
+          </div>
+          <div id="rewiew-wrpnine" class="rewiew_wrp">
+            <p class="rew_text">
+              Практика ахимсы способна помочь миру стать СЧАСТЛИВЕЕ. Её передают
+              нам Духовные Просветленные Мастера. Я свято верю в то, что любая
+              молитва идущая из Сердца, способна творить чудеса.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Налами</p>
+          </div>
+          <div id="rewiew-wrpten" class="rewiew_wrp">
+            <p class="rew_text">
+              Практика ненасилия, ахимса становится естественным намерением и
+              путём, если ты что-то понял в своей практике. Это фундаментальная
+              вещь, которой ты будешь следовать в любом случае, потому что ты
+              пребываешь со всеми живыми существами в единстве, в тончайшей
+              телепатический связи.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Яджнешвари</p>
+          </div>
+          <div id="rewiew-wrpellv" class="rewiew_wrp">
+            <p class="rew_text">
+              Когда я стала практиковать ахимсу, появилось больше внимательности
+              к мыслям, речи и действиям. Почувствовалось как трансформации
+              внутри в тот же момент поменяли события и пространство снаружи.
+              Так же заметила больше силы воли в практике и в соблюдении
+              ненасилия мысленного, которое привело к усилению осознанности.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Юлия</p>
+          </div>
+          <div id="rewiew-wrptwf" class="rewiew_wrp">
+            <p class="rew_text">
+              После того как я начала практиковать ахимсу, я все чаще чувствую
+              как действую более осознанно, контролирую свои эмоции, наблюдаю,
+              чаще вспоминаю о сострадании, даже не то что вспоминаю, а оно
+              словно проникает в меня на более глубоком уровне.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Даршани</p>
+          </div>
+          <div id="rewiew-wrpthte" class="rewiew_wrp">
+            <p class="rew_text">
+              Ахимсу как мировоззрение принял уже очень давно, с недавнего
+              времени каждый месяц возобновляю, расскаиваюсь за те моменты, где
+              отступаю... Наблюдал интересные факты в своем внутреннем мире.
+              Появился некий свидетель – совесть. Ахимса это глубокое понятие,
+              мировоззрение – это действие вне силы.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Садьоджата</p>
+          </div>
+          <div id="rewiew-wrpfhte" class="rewiew_wrp">
+            <p class="rew_text">
+              Ахимса — это продолжение накопления саттвы персонажем, в котором
+              по непонятной пока для меня причине оказалось сознание. Священные
+              писания учат совершать больше поступков, несущих благо не только
+              себе, но и другим, и во избежание вселенского хаоса я воспитываю
+              этого персонажа жить, как велит Гуру. Потому что на ум надежды
+              нет.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Ананда</p>
+          </div>
+          <div id="rewiew-wrpfity" class="rewiew_wrp">
+            <p class="rew_text">
+              Когда я практикую Шанти-карму бывает по разному. Иногда участвую
+              всеми своими телами и умом и воображением и происходит глубокий
+              опыт и осознание чего-то очень важного и тайного. Такое было не
+              редко, что поток Шанти-кармы просто смывал все наносное. И силы
+              быстро восстанавливались. А для ума важно быть сопричастным к
+              Великому, Доброму, Вечному.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Лалита</p>
+          </div>
+          <div id="rewiew-wrpsity" class="rewiew_wrp">
+            <p class="rew_text">
+              Практика ахимсы, это скорее толчек к более глубокому и чистому.
+              Ненасилие — это основа, принцип, опора. Естественно выбор
+              ненасилия это выбор который не навяжешь, но выбрав который не
+              возможно больше так страдать. За счёт него мы подымаемся выше,
+              отбрасываем старого себя и создаём нового. Более гибкого, чистого,
+              принимающего и сильного.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Мария</p>
+          </div>
+          <div id="rewiew-wrpsety" class="rewiew_wrp">
+            <p class="rew_text">
+              Когда я только начала практиковать ахимсу, были сомнения, смогу ли
+              я ее правильно выполнять. Но после прояснений с более опытными
+              практиками, поняла, что я уже не одна, меня поддерживает поле
+              практики. Даже если что-то не получилось, ты это осознаешь и
+              исправляешься.
+            </p>
+            <p class="lnln">
+              <img src="assets/Images/course/lnnm.png" alt="line" />
+            </p>
+            <p class="rew_text nm">Ирина</p>
+          </div>
+          <img
+            class="hideee hide_sev"
+            src="assets/Images/course/res.png"
+            alt="rewiews"
+          />
+          <div
+            [ngClass]="{ visible: visible === 1 }"
+            class="res_s_cont right hide_sev"
+          >
+            <div class="res_s-wrap sx">
+              <img src="assets/Images/course/sl4.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div
+                (click)="
+                  showVideo(
+                    'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F1.mp4?alt=media&token=a95144ff-f544-4453-91a0-be391e649458'
+                  )
+                "
+                class="add_info"
+              >
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div class="res_s-wrap sv">
+              <img src="assets/Images/course/sl5.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div (click)="showVideo('assets/video/sl5.MOV')" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div
+              (mouseenter)="mouseEnter('sx')"
+              (mouseleave)="mouseLeave('sx')"
+              class="res_s-wrap eit"
+            >
+              <img src="assets/Images/course/99.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div class="res_s-wrap ni">
+              <img src="assets/Images/course/sl3.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div
+                (click)="
+                  showVideo(
+                    'https://firebasestorage.googleapis.com/v0/b/yogisforpeace-84027.appspot.com/o/videos%2F5.mp4?alt=media&token=d093987b-d1a1-40b7-b1eb-ed48cdd17296'
+                  )
+                "
+                class="add_info"
+              >
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div
+              (mouseenter)="mouseEnter('fv')"
+              (mouseleave)="mouseLeave('fv')"
+              class="res_s-wrap tb"
+            >
+              <img src="assets/Images/course/77.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+          </div>
+          <div
+            [ngClass]="{ visible: visible === 2 }"
+            class="res_s_cont right hide_sev"
+          >
+            <div class="res_s-wrap sx">
+              <img src="assets/Images/course/sll5.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div (click)="showVideo('3', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div class="res_s-wrap sv">
+              <img src="assets/Images/course/4h.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div (click)="showVideo('4', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div
+              (mouseenter)="mouseEnter('ten')"
+              (mouseleave)="mouseLeave('ten')"
+              class="res_s-wrap eit"
+            >
+              <img src="assets/Images/course/33.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div class="res_s-wrap ni">
+              <img src="assets/Images/course/5j.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div (click)="showVideo('5', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div
+              (mouseenter)="mouseEnter('ellv')"
+              (mouseleave)="mouseLeave('ellv')"
+              class="res_s-wrap tb"
+            >
+              <img src="assets/Images/course/44.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+          </div>
+          <div
+            [ngClass]="{ visible: visible === 3 }"
+            class="res_s_cont right hide_sev"
+          >
+            <div class="res_s-wrap sx">
+              <img src="assets/Images/course/s310.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div (click)="showVideo('8', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div
+              (mouseenter)="mouseEnter('fity')"
+              (mouseleave)="mouseLeave('fity')"
+              class="res_s-wrap sv"
+            >
+              <img src="assets/Images/course/s35.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div
+              (mouseenter)="mouseEnter('sity')"
+              (mouseleave)="mouseLeave('sity')"
+              class="res_s-wrap eit"
+            >
+              <img src="assets/Images/course/s32.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+            <div class="res_s-wrap ni">
+              <img src="assets/Images/course/s37.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+              <div (click)="showVideo('9', true)" class="add_info">
+                <p class="ply">
+                  <img src="assets/Images/course/ply.png" alt="shine" />
+                </p>
+                <p class="tre">
+                  Смотреть<br />
+                  отзыв
+                </p>
+              </div>
+            </div>
+            <div
+              (mouseenter)="mouseEnter('sety')"
+              (mouseleave)="mouseLeave('sety')"
+              class="res_s-wrap tb"
+            >
+              <img src="assets/Images/course/s33.png" alt="review" />
+              <img
+                class="shine"
+                src="assets/Images/course/shine.png"
+                alt="shine"
+              />
+            </div>
+          </div>
         </div>
         <p class="titl_eht">
           Также за год мы провели <span>больше 100000 практик</span> и медитаций
@@ -1031,7 +3568,7 @@
       </div>
     </div>
     <div class="cs_blank rewsss">
-      <div class="cs_container eres">
+      <div id="register" class="cs_container eres">
         <p class="titl_lg sm">регистрация</p>
         <p class="cs_t_bl mgg text-center">
           Вы можете зарегистрироваться через Телеграм-бот<br />
@@ -1041,63 +3578,265 @@
           <img src="assets/Images/tel.png" alt="talegramm" />
           <div class="butt_b_wrap">
             <div class="header-inner header-inner-button boreder grad xl">
-              <button class="registration-button rd">Регистрация</button>
+              <button
+                (click)="telegramRegister()"
+                class="registration-button rd"
+              >
+                Регистрация
+              </button>
             </div>
           </div>
         </div>
-        <div
-          class="form-registration-form flex justify-between course"
-          [formGroup]="form"
+        <style>
+          .sp-force-hide {
+            display: none;
+          }
+          .sp-form[sp-id="225114"] {
+            display: block;
+            background: #ced7db;
+            padding: 15px;
+            width: 380px;
+            max-width: 100%;
+            border-radius: 4px;
+            border-color: #dddddd;
+            border-style: solid;
+            border-width: 1px;
+            font-family: Arial, "Helvetica Neue", sans-serif;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto;
+          }
+          .sp-form[sp-id="225114"] input[type="checkbox"] {
+            display: inline-block;
+            opacity: 1;
+            visibility: visible;
+          }
+          .sp-form[sp-id="225114"] .sp-form-fields-wrapper {
+            margin: 0 auto;
+            width: 350px;
+          }
+          .sp-form[sp-id="225114"] .sp-form-control {
+            background: #ffffff;
+            border-color: #ba7d18;
+            border-style: solid;
+            border-width: 2px;
+            font-size: 15px;
+            padding-left: 8.75px;
+            padding-right: 8.75px;
+            border-radius: 10px;
+            height: 35px;
+            width: 100%;
+          }
+          .sp-form[sp-id="225114"] .sp-field label {
+            color: #444444;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: bold;
+          }
+          .sp-form[sp-id="225114"] .sp-button-messengers {
+            border-radius: 10px;
+          }
+          .sp-form[sp-id="225114"] .sp-button {
+            border-radius: 20px;
+            background-color: #ebd385;
+            color: #4f4a4a;
+            width: 100%;
+            font-weight: 700;
+            font-style: normal;
+            font-family: Arial, "Helvetica Neue", sans-serif;
+            box-shadow: inset 0 -2px 0 0 #e2c050;
+            border-width: 1px;
+            border-color: #b7832b;
+            border-style: solid;
+          }
+          .sp-form[sp-id="225114"] .sp-button-container {
+            text-align: center;
+            width: auto;
+          }
+        </style>
+        <!-- <div class="sp-form-outer sp-force-hide">
+          <div
+            id="sp-form-225114"
+            sp-id="225114"
+            sp-hash="5a021b81ce135f80e6332d5cdb470194d1377e5d7bdc31a2330840532f819428"
+            sp-lang="ru"
+            class="sp-form sp-form-regular sp-form-embed"
+            sp-show-options="%7B%22satellite%22%3Afalse%2C%22maDomain%22%3A%22login.sendpulse.com%22%2C%22formsDomain%22%3A%22forms.sendpulse.com%22%2C%22condition%22%3A%22onButtonClick%22%2C%22scrollTo%22%3A25%2C%22delay%22%3A10%2C%22repeat%22%3A1%2C%22background%22%3A%22rgba(0%2C%200%2C%200%2C%200.5)%22%2C%22position%22%3A%22bottom-right%22%2C%22animation%22%3A%22%22%2C%22hideOnMobile%22%3Afalse%2C%22submitRedirectUrl%22%3A%22https%3A%2F%2Fyogisforpeace.life%2Fcourse-thanks%22%2C%22urlFilter%22%3Afalse%2C%22urlFilterConditions%22%3A%5B%7B%22force%22%3A%22hide%22%2C%22clause%22%3A%22contains%22%2C%22token%22%3A%22%22%7D%5D%2C%22analytics%22%3A%7B%22ga%22%3A%7B%22eventLabel%22%3A%22%D0%A4%D0%BE%D1%80%D0%BC%D0%B0_%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B8_%D0%98%D0%BD%D1%82%D0%B5%D0%BD%D1%81%D0%B8%D0%B2_%D0%90%D1%85%D0%B8%D0%BC%D1%81%D0%B0_%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C_%D0%B1%D0%B5%D0%B7_%D0%BD%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D1%8F%22%2C%22send%22%3Atrue%7D%2C%22ym%22%3A%7B%22counterId%22%3Anull%2C%22eventLabel%22%3Anull%2C%22targetId%22%3Anull%2C%22send%22%3Afalse%7D%7D%2C%22utmEnable%22%3Atrue%7D"
+          >
+            <div class="sp-form-fields-wrapper">
+              <div class="sp-message"><div></div></div>
+              <form
+                novalidate=""
+                class="sp-element-container sp-field-horizontal"
+              >
+                <div
+                  class="sp-field"
+                  sp-id="sp-98966f43-ba1a-4ad7-95f6-b0e51893a102"
+                >
+                  <label class="sp-control-label"
+                    ><span>Email</span><strong>*</strong></label
+                  ><input
+                    type="email"
+                    sp-type="email"
+                    name="sform[email]"
+                    class="sp-form-control"
+                    placeholder="username@gmail.com"
+                    sp-tips="%7B%22required%22%3A%22%D0%9E%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%BE%D0%BB%D0%B5%22%2C%22wrong%22%3A%22%D0%9D%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B9%20email-%D0%B0%D0%B4%D1%80%D0%B5%D1%81%22%7D"
+                    autocomplete="on"
+                    required="required"
+                  />
+                </div>
+                <div
+                  class="sp-field"
+                  sp-id="sp-55272bb4-05fd-48bc-9fd4-b653e5e14cbd"
+                >
+                  <label class="sp-control-label"
+                    ><span>Имя</span><strong>*</strong></label
+                  ><input
+                    type="text"
+                    sp-type="name"
+                    name="sform[0JjQvNGP]"
+                    class="sp-form-control"
+                    placeholder="Фамилия, имя"
+                    sp-tips="%7B%22required%22%3A%22%D0%9E%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%BE%D0%BB%D0%B5%22%7D"
+                    autocomplete="on"
+                    required="required"
+                  />
+                </div>
+                <div
+                  class="sp-field"
+                  sp-id="sp-2bc964a7-876d-4353-974d-daca653030e5"
+                >
+                  <label class="sp-control-label"
+                    ><span>Телефон</span><strong>*</strong></label
+                  ><input
+                    type="tel"
+                    sp-type="phone"
+                    name="sform[phone]"
+                    class="sp-form-control"
+                    placeholder="1234567890"
+                    sp-tips="%7B%22wrong%22%3A%22%D0%9D%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B9%20%D0%BD%D0%BE%D0%BC%D0%B5%D1%80%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0%22%2C%22required%22%3A%22%D0%9E%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%BE%D0%BB%D0%B5%22%7D"
+                    autocomplete="on"
+                    required="required"
+                  />
+                </div>
+                <div
+                  class="sp-field sp-button-container sp-lg"
+                  sp-id="sp-9e290cd5-87a3-48ba-b132-d590c001ab17"
+                >
+                  <button
+                    id="sp-9e290cd5-87a3-48ba-b132-d590c001ab17"
+                    class="sp-button"
+                  >
+                    Отправить
+                  </button>
+                </div>
+              </form>
+              <div class="sp-link-wrapper sp-brandname__left"></div>
+            </div>
+          </div>
+        </div> -->
+        <script
+          type="text/javascript"
+          async="async"
+          src="//web.webformscr.com/apps/fc3/build/default-handler.js?1680250029423"
+        ></script>
+        <!-- /Subscription Form -->
+        <!-- <div
+          class="form-registration-form flex_d justify-between course"
           id="registration-form"
         >
-          <div class="flex formss">
-            <input
-              type="text"
-              class="input-form-gold"
-              placeholder="{{ 'main.name' | translate }}"
-              formControlName="name"
-            />
-            <input
-              type="email"
-              class="input-form-gold"
-              placeholder="e-mail"
-              formControlName="email"
-            />
-          </div>
-          <ngx-intl-tel-input
-            [cssClass]="'custom'"
-            [preferredCountries]="preferredCountries"
-            [enableAutoCountrySelect]="true"
-            [enablePlaceholder]="true"
-            [searchCountryFlag]="true"
-            [searchCountryField]="[
-              SearchCountryField.Iso2,
-              SearchCountryField.Name
-            ]"
-            [selectFirstCountry]="false"
-            [selectedCountryISO]="selectedCountry"
-            [maxLength]="15"
-            [phoneValidation]="true"
-            [separateDialCode]="true"
-            [numberFormat]="PhoneNumberFormat.National"
-            name="phone"
-            formControlName="phone"
+          <div
+            id="sp-form-225114"
+            sp-id="225114"
+            sp-hash="5a021b81ce135f80e6332d5cdb470194d1377e5d7bdc31a2330840532f819428"
+            sp-lang="ru"
+            class="sp-form sp-form-regular sp-form-popup"
+            sp-show-options="%7B%22satellite%22%3Afalse%2C%22maDomain%22%3A%22login.sendpulse.com%22%2C%22formsDomain%22%3A%22forms.sendpulse.com%22%2C%22condition%22%3A%22onButtonClick%22%2C%22scrollTo%22%3A25%2C%22delay%22%3A10%2C%22repeat%22%3A1%2C%22background%22%3A%22rgba(0%2C%200%2C%200%2C%200.5)%22%2C%22position%22%3A%22bottom-right%22%2C%22animation%22%3A%22%22%2C%22hideOnMobile%22%3Afalse%2C%22submitRedirectUrl%22%3A%22%22%2C%22urlFilter%22%3Afalse%2C%22urlFilterConditions%22%3A%5B%7B%22force%22%3A%22hide%22%2C%22clause%22%3A%22contains%22%2C%22token%22%3A%22%22%7D%5D%2C%22analytics%22%3A%7B%22ga%22%3A%7B%22eventLabel%22%3A%22%D0%A4%D0%BE%D1%80%D0%BC%D0%B0_%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B8_%D0%98%D0%BD%D1%82%D0%B5%D0%BD%D1%81%D0%B8%D0%B2_%D0%90%D1%85%D0%B8%D0%BC%D1%81%D0%B0_%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C_%D0%B1%D0%B5%D0%B7_%D0%BD%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D1%8F%22%2C%22send%22%3Afalse%7D%2C%22ym%22%3A%7B%22counterId%22%3Anull%2C%22eventLabel%22%3Anull%2C%22targetId%22%3Anull%2C%22send%22%3Afalse%7D%7D%2C%22utmEnable%22%3Afalse%7D"
           >
-          </ngx-intl-tel-input>
-        </div>
-        <div class="outer_wrap_cs lss">
-          <div class="butt_b_wrap">
-            <div class="header-inner header-inner-button boreder grad xl">
-              <button class="registration-button rd">Зарегистрироваться</button>
+            <div class="sp-form-fields-wrapper">
+              <div class="sp-message"><div></div></div>
+              <form
+                novalidate=""
+                class="sp-element-container sp-field-horizontal"
+              >
+                <div class="flex_d formss">
+                  <div
+                    class="sp-field"
+                    sp-id="sp-98966f43-ba1a-4ad7-95f6-b0e51893a102"
+                  >
+                    <input
+                      type="email"
+                      sp-type="email"
+                      name="sform[email]"
+                      class="sp-form-control input-form-gold"
+                      placeholder="username@gmail.com"
+                      sp-tips="%7B%22required%22%3A%22%D0%9E%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%BE%D0%BB%D0%B5%22%2C%22wrong%22%3A%22%D0%9D%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B9%20email-%D0%B0%D0%B4%D1%80%D0%B5%D1%81%22%7D"
+                      autocomplete="on"
+                      required="required"
+                    />
+                  </div>
+                  <div
+                    class="sp-field"
+                    sp-id="sp-55272bb4-05fd-48bc-9fd4-b653e5e14cbd"
+                  >
+                    <input
+                      type="text"
+                      sp-type="name"
+                      name="sform[0JjQvNGP]"
+                      class="sp-form-control input-form-gold"
+                      placeholder="Фамилия, имя"
+                      sp-tips="%7B%22required%22%3A%22%D0%9E%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%BE%D0%BB%D0%B5%22%7D"
+                      autocomplete="on"
+                      required="required"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="sp-field"
+                  sp-id="sp-2bc964a7-876d-4353-974d-daca653030e5"
+                >
+                  <input
+                    type="tel"
+                    sp-type="phone"
+                    name="sform[phone]"
+                    class="sp-form-control input-form-gold tel"
+                    placeholder="1234567890"
+                    sp-tips="%7B%22wrong%22%3A%22%D0%9D%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B9%20%D0%BD%D0%BE%D0%BC%D0%B5%D1%80%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0%22%2C%22required%22%3A%22%D0%9E%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%BE%D0%BB%D0%B5%22%7D"
+                    autocomplete="on"
+                    required="required"
+                  />
+                </div>
+                <div
+                  class="sp-field sp-button-container sp-lg"
+                  sp-id="sp-9e290cd5-87a3-48ba-b132-d590c001ab17"
+                >
+                  <div class="outer_wrap_cs lss">
+                    <div class="butt_b_wrap">
+                      <div
+                        class="header-inner header-inner-button boreder grad xl"
+                      >
+                        <button
+                          id="sp-9e290cd5-87a3-48ba-b132-d590c001ab17"
+                          class="registration-button rd sp-button"
+                        >
+                          Зарегистрироваться
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="sp-link-wrapper sp-brandname__left"></div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="cs_blank">
       <div class="cs_container sots bottom">
         <p class="titl_lg sm">В результате мы получим:</p>
-        <div class="main_sot-cont flex">
+        <div class="main_sot-cont flex_d">
           <div class="sots_col-wrp">
             <div class="sott">
               <div class="ims_wr">
@@ -1152,7 +3891,7 @@
                 />
               </div>
               <p class="cs_t_bl">
-                новые жизнеобеспечивающие <span>изобретения,</span> развитие
+                новые <span>изобретения</span> для обеспечения жизни, развитие
                 <span> квантовых технологий</span>
               </p>
             </div>
@@ -1186,15 +3925,109 @@
           </div>
         </div>
         <div class="lin_cs"></div>
-        <div class="blue_block_cs transp">
+        <div class="blue_block_cs transp ch">
           <p class="cs_dt center">
             <span>Ведь с ненасилия все только начинается!</span><br />
             именно здесь мы обретаем внутреннюю <span>СИЛУ</span>, способную
             изменить мир к лучшему!
           </p>
         </div>
-        <div class="lin_cs"></div>
+        <div class="lin_cs bn"></div>
       </div>
     </div>
+    <footer class="bottom_">
+      <div class="foot_rel">
+        <p class="cs_tx_tw lgold mar rrr">Наши проекты</p>
+        <div class="fw_wdth">
+          <div class="proj_wrp">
+            <p class="imh_er">
+              <img src="assets/Images/course/lot.png" alt="logo" />
+            </p>
+            <p class="sl_m_wrapp">
+              1-й и 2-й Международный онлайн форум "Мир и гармония"
+            </p>
+          </div>
+          <div class="proj_wrp">
+            <p class="imh_er">
+              <img src="assets/Images/course/unf.png" alt="logo" />
+            </p>
+            <p class="sl_m_wrapp">
+              Международный конгресс мира совместно с Юнифай
+            </p>
+          </div>
+          <div class="proj_wrp">
+            <p class="imh_er">
+              <img src="assets/Images/course/logosm.png" alt="logo" />
+            </p>
+            <p class="sl_m_wrapp">
+              Петиция "21-й век – международный век ненасилия и состарадания"
+            </p>
+          </div>
+        </div>
+        <div class="content-container flex-1-4 center column">
+          <div class="sps_wrapp">
+            <p class="cs_tx_tw lgold rrr">Об организаторах курса</p>
+          </div>
+          <div class="not_re">
+            <div class="flex-1-4 h-260 ds">
+              <div class="b1-4_wrap">
+                <div class="flex_t">
+                  <div
+                    class="flex links"
+                    (click)="
+                      goToURl('https://www.instagram.com/yogisforpeace/')
+                    "
+                  >
+                    <img
+                      src="assets/Images/course/in.png"
+                      alt=""
+                      class="social-img big"
+                    />
+                    <b>{{ "main.follow-life" | translate }}</b>
+                  </div>
+                </div>
+                <div class="flex_t">
+                  <div
+                    class="flex links"
+                    (click)="goToURl('https://t.me/yogisforpeace')"
+                  >
+                    <img
+                      src="assets/Images/course/ttr.png"
+                      alt="telegram"
+                      class="social-img big"
+                    />
+                    <b>{{ "main.read-hews" | translate }}</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex_cc">
+              <div class="sps_wrapp">
+                <p class="cs_tx_tw lgold rrr">Связаться с нами</p>
+              </div>
+              <div>
+                <div class="flex_t">
+                  <div
+                    class="flex links"
+                    (click)="goToURl('mailto:yogisforpeace1008@gmail.com')"
+                  >
+                    <img
+                      src="assets/Images/course/qtw.png"
+                      alt="mail"
+                      class="social-img big"
+                    />
+                    <b>yogisforpeace1008@gmail.com</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sps_wrapp">
+            <p class="cs_tx_l">Ом Шанти Шанти Шанти</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </div>
+<app-footer></app-footer>

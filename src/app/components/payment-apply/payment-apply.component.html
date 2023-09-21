@@ -1,0 +1,53 @@
+<div class="relative_wrap">
+  <div class="g_wrapp"></div>
+  <div [formGroup]="formAmount" class="forms_w">
+    <p class="text-about-forum">Мы Всемирная Община Санатана Дхармы....</p>
+    <p class="title">Сделать пожертвование на сайт</p>
+    <div class="d_fl">
+      <div
+        class="form-registration-form flex justify-between"
+        id="registration-form"
+      >
+        <input
+          type="number"
+          min="1"
+          class="input-form-gold"
+          placeholder="Сумма"
+          formControlName="amount"
+        />
+      </div>
+      <div
+        class="form-registration-form flex justify-between"
+        id="registration-form"
+      >
+        <select class="input-form-gold" formControlName="currency">
+          <option value="" disabled>Выберите валюту</option>
+          <option value="UAH">UAH</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
+    </div>
+    <div class="header-inner header-inner-button boreder grad">
+      <button
+        [disabled]="formAmount.invalid"
+        class="registration-button"
+        (click)="submitForm()"
+      >
+        Пожертвовать
+      </button>
+    </div>
+  </div>
+  <div class="social-items mt-6">
+    <p
+      class="links"
+      (click)="
+        goToUrl(
+          'https://docs.google.com/document/d/16TABAaWvOogSNOSlNRU-vAEnf0PvMzwd/edit#heading=h.pj4vxw57p2j3'
+        )
+      "
+    >
+      Договор Публичной Оферты
+    </p>
+  </div>
+</div>

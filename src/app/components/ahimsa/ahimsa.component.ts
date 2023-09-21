@@ -1,13 +1,9 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AfterViewInit, Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Languages } from 'src/app/app.component';
 import { AdiitionalInfoComponent } from '../adiitional-info/adiitional-info.component';
-import { DownloadAhimsaComponent } from '../download-ahimsa/download-ahimsa.component';
-import { FormMessage } from '../main-page/main-page.component';
 import { CountryISO, PhoneNumberFormat, SearchCountryField } from 'ngx-intl-tel-input';
 import { TranslateService } from '@ngx-translate/core';
 import { Subject } from 'rxjs';
@@ -24,7 +20,6 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
       header.classList.add('bg_for_header')
     } else header.classList.remove('bg_for_header')
   }
-  form: FormGroup;
   url = "https://vosd.bitrix24.eu/rest/4/idujiuxkvouf7pb9/";
   routeParams;
   lan: string = 'ru';
@@ -108,7 +103,6 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
   ]
 
   constructor(
-    private http: HttpClient,
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private angularFirestore: AngularFirestore,
@@ -122,11 +116,6 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
       this.setLanguage(this.lan);
     }
     this.setSlides();
-    this.form = new FormGroup({
-      name: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      phone: new FormControl('', [Validators.required]),
-    });
   }
   ngOnDestroy(): void {
     this.unsubscribeAll$.next();
@@ -247,13 +236,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.addScriptsToHead()
-
-    this.http.get("https://api.ipregistry.co/?key=tryout", {}).subscribe((resp: any) => {
-      const findMe = Object.keys(CountryISO)[Object.values(CountryISO as any).indexOf(resp.location.country.code.toLowerCase())];
-      console.log(findMe);
-      this.selectedCountry = CountryISO[findMe];
-    });
+    this.addScriptsToHead();
     this.activatedRoute.queryParams.subscribe((params) => {
       console.log(params);
       this.routeParams = params;
@@ -262,8 +245,6 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
     });
     window.scroll(0, 0);
   }
-
-
 
   showMenu() {
     this.menu = true;
@@ -373,167 +354,10 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-  sendRegistration() {
-    const contactForm = this.form.value;
-    const email = contactForm.email;
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-
-
-    const message: FormMessage = {
-      name: contactForm.name,
-      replyTo: 'yogisforpeace1008@gmail.com',
-      message: contactForm.description ?? null,
-      phone: contactForm.phone.e164Number,
-      emailAddress: email,
-      from: 'Ahimsa',
-      date: +new Date(),
-      isChecked: false
-    };
-    this.angularFirestore.collection('users').add(message).then(
-      res => {
-        console.log("this.angularFirestore.collection('users').add(message)  ", res);
-        this.isSendRegistrationMessage = true;
-        const dialogRef = this.dialog.open(DownloadAhimsaComponent, {
-          width: '60vw',
-          maxHeight: "800px",
-          minHeight: "400px",
-        });
-      }
-    )
-    this.http
-      .post(
-        'https://formspree.io/f/mnqrjklr',
-        message,
-        { headers: headers }
-      )
-      .subscribe((response) => {
-        console.log(response);
-      });
-    this.form.reset();
+  telegramRegister() {
+    window.open(`https://tg.pulse.is/yogiesforpeas_bot?start=64ccacceed365df05b0745d7|UTM_Source=${this.routeParams?.utm_source}|UTM_medium=${this.routeParams?.utm_medium}|UTM_campaign=${this.routeParams?.utm_campaign}`)
   }
 
-  sendRegistrationData() {
-    const form = this.form.value;
-    const email = form.email;
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-
-
-    const message: FormMessage = {
-      name: form.name,
-      replyTo: 'yogisforpeace1008@gmail.com',
-      message: form.description ?? null,
-      phone: form.phone,
-      emailAddress: email,
-      from: 'Ahimsa',
-      date: +new Date(),
-      isChecked: false
-    };
-    this.angularFirestore.collection('users').add(message).then(
-      res => {
-  
-        this.isSendRegistrationMessage = true;
-      })
-
-    this.http
-      .post(
-        this.url + 'crm.deal.list',
-        {}
-      )
-      .subscribe((dealListResponse: any) => {
-        let dealListTotal = dealListResponse.total;
-        this.http
-          .post(
-            this.url + 'crm.contact.list',
-            {
-              filter: { "EMAIL": form.email },
-              select: ["ID", "NAME", "LAST_NAME"]
-            },
-          )
-          .subscribe((contactListResponse: any) => {
-            console.log('contactListResponse ', contactListResponse);
-            if (contactListResponse.result.length) {
-              this.useContact(contactListResponse.result[0], dealListTotal);
-            } else {
-              this.addContact(dealListTotal);
-            }
-          });
-      });
-  }
-
-  useContact(contact, dealListTotal) {
-    this.addDeal(contact.ID, dealListTotal);
-  }
-
-  addContact(dealListTotal) {
-    const form = this.form.value;
-    this.http
-      .post(
-        this.url + 'crm.contact.add',
-        {
-          fields: {
-            "NAME": form.name,
-            "FROM": this.lan == 'ru' ? "forum_ru" : "forum_en",
-            PHONE: [{ VALUE: form.phone, VALUE_TYPE: "WORK" }],
-            EMAIL: [{ VALUE: form.email, VALUE_TYPE: "HOME" }],
-            UTM_CAMPAIGN: this.routeParams?.utm_campaign,
-            UTM_MEDIUM: this.routeParams?.utm_medium,
-            UTM_SOURCE: this.routeParams?.utm_source,
-            UTM_TERM: this.routeParams?.utm_term,
-          },
-        }
-      )
-      .subscribe((contact: any) => {
-        console.log(contact);
-        this.addDeal(contact.result, dealListTotal);
-      });
-  }
-
-  addDeal(contactId, dealListTotal) {
-    this.http
-      .post(
-        this.url + 'crm.deal.list',
-        {
-          filter: { "CONTACT_ID": contactId, "SOURCE_DESCRIPTION": this.lan == 'ru' ? "YFP_Ritual_Ahimsa_Ru" : "YFP_Ritual_Ahimsa_En" },
-          select: ["ID", "TITLE", "SOURCE"]
-        },
-      )
-      .subscribe((dealListResponse: any) => {
-        console.log('dealListResponse ', dealListResponse);
-        if (dealListResponse.result.length) {
-          alert(this.lan == 'ru' ? "Вы уже зарегестрировались" : "You are already registered")
-        } else {
-          this.http
-            .post(
-              this.url + 'crm.deal.add',
-              {
-                fields: {
-                  TITLE: `Заявка номер ${dealListTotal + 1}`,
-                  CONTACT_ID: contactId,
-                  STATUS: 'NEW',
-                  OPENED: 'Y',
-                  HAS_PHONE: 'Y',
-                  HAS_EMAIL: 'Y',
-                  STATUS_ID: 'NEW',
-                  STATUS_DESCRIPTION: 'Новый',
-                  SOURCE_ID: 'CALL',
-                  SOURCE_DESCRIPTION: this.lan == 'ru' ? "YFP_Ritual_Ahimsa_Ru" : "YFP_Ritual_Ahimsa_En",
-                  SOURCE: this.lan == 'ru' ? "YFP_Ritual_Ahimsa_Ru" : "YFP_Ritual_Ahimsa_En",
-                  UTM_CAMPAIGN: this.routeParams?.utm_campaign,
-                  UTM_MEDIUM: this.routeParams?.utm_medium,
-                  UTM_SOURCE: this.routeParams?.utm_source,
-                  UTM_TERM: this.routeParams?.utm_term,
-
-                },
-              }
-            )
-            .subscribe((res) => {
-              console.log(res);
-              // this.router.navigate['/','thanks'];
-              this.router.navigateByUrl('/thanks-ahimsa');
-            });
-        }
-      });
-  }
   setRevieverRu() {
     this.slidesIm = [
       {
@@ -587,6 +411,7 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
       }
     ]
   }
+
   setRevieverEn() {
     this.slidesIm = [
       {
@@ -641,45 +466,26 @@ export class AhimsaComponent implements OnInit, AfterViewInit, OnDestroy {
     ]
   }
 
-
   addScriptsToHead() {
-
-
     const head1 = document.getElementsByTagName('head')[0];
-
-
     const script1 = document.createElement('noscript');
-    script1.innerHTML = `<img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=626453055020322&ev=PageView&noscript=1"
-/>`;
-
+    script1.innerHTML = `<img height="1" width="1" style="display:none"src="https://www.facebook.com/tr?id=626453055020322&ev=PageView&noscript=1"/>`;
     head1.insertBefore(script1, head1.firstChild);
-
     const head = document.getElementsByTagName('head')[0];
-
-
     const script = document.createElement('script');
     script.innerHTML = `  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '626453055020322');
-  fbq('track', 'PageView');`;
-
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefor(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '626453055020322');fbq('track', 'PageView');`;
     head.insertBefore(script, head.firstChild);
   }
+
   telegramClick() {
     if (this.lan === 'ru') {
       this.goToLink('https://t.me/yogiesforpeas_bot?start=ZGw6MTI2NTI1')
     } else {
       this.goToLink('https://t.me/yogiesforpeas_bot?start=ZGw6MTI2NTI4')
-
     }
   }
+
   goToLink(url: string) {
     window.open(url, "_blank");
   }
