@@ -1,5 +1,6 @@
+import { DOCUMENT } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Inject, OnInit, Renderer2 } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 declare var JHash;
 declare var Wayforpay;
@@ -9,16 +10,37 @@ declare var Wayforpay;
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.scss']
 })
-export class PaymentComponent implements OnInit {
+export class PaymentComponent implements OnInit, AfterViewInit {
   formAmount: FormGroup;
   md5_hmac;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+    private _renderer2: Renderer2, 
+        @Inject(DOCUMENT) private _document: Document,
+        private elementRef:ElementRef) { }
 
   ngOnInit(): void {
     this.formAmount = new FormGroup({
       amount: new FormControl(1, Validators.required),
       currency: new FormControl("USD", Validators.required)
     });
+
+    
+    this.http.get("https://auth.robokassa.ru/Merchant/PaymentForm/FormFLS.js?MerchantLogin=yogisforpeace&InvoiceID=0&Culture=ru&Encoding=utf-8&Description=&DefaultSum=0&shp_interface=field&SignatureValue=38979d36f6cd95a7bff7dfeb11f399ac").subscribe((data) => {
+      console.log(data);
+      
+    })
+  }
+
+  ngAfterViewInit() {
+    console.log(23);
+    
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.src = "https://auth.robokassa.ru/Merchant/PaymentForm/FormFLS.js?MerchantLogin=yogisforpeace&InvoiceID=0&Culture=ru&Encoding=utf-8&Description=&DefaultSum=0&shp_interface=field&SignatureValue=38979d36f6cd95a7bff7dfeb11f399ac";
+    this.elementRef.nativeElement.appendChild(s);
+
+
+
   }
 
   submitForm() {
@@ -62,6 +84,18 @@ export class PaymentComponent implements OnInit {
       }, function (response) {// on declined 
       }, function (response) {// on pending or in processing 	
       })
+  }
+
+  addScriptsToHead() {
+    const head1 = document.getElementsByTagName('head')[0];
+    const script1 = document.createElement('noscript');
+    script1.innerHTML = `<img height="1" width="1" style="display:none"src="https://www.facebook.com/tr?id=626453055020322&ev=PageView&noscript=1"/>`;
+    head1.insertBefore(script1, head1.firstChild);
+    const head = document.getElementsByTagName('head')[0];
+    const script = document.createElement('script');
+    script.innerHTML = `  !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefor(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '626453055020322');fbq('track', 'PageView');`;
+    head.insertBefore(script, head.firstChild);
   }
 }
 
