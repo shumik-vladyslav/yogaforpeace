@@ -16,6 +16,8 @@ import { ThanksComponent } from './components/thanks/thanks.component';
 import { CreationComponent } from './components/creation/creation.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { PaymentApplyComponent } from './components/payment-apply/payment-apply.component';
+import { SamayaComponent } from './components/samaya/samaya.component';
+import { SubscriptionComponent } from './components/subscription/subscription.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -33,6 +35,8 @@ const routes: Routes = [
   { path: 'resolution', component: ResolutionComponent },
   { path: 'movement-resolution', component: MovementResolutionComponent },
   { path: 'thanks-ahimsa', component: ThanksAhimsaComponent},
+  { path: 'samaya', component: SamayaComponent},
+  { path: 'subscription', component: SubscriptionComponent},
   { path: 'creation', component: CreationComponent },
   { path: ':type', component: MainPageComponent },
   { path: 'resolution/:type', component: ResolutionComponent },

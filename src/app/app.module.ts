@@ -43,6 +43,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { PaymentComponent } from './components/payment/payment.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PaymentApplyComponent } from './components/payment-apply/payment-apply.component';
+import { SamayaComponent } from './components/samaya/samaya.component';
+import { SubscriptionComponent } from './components/subscription/subscription.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -73,6 +75,8 @@ export function createTranslateLoader(http: HttpClient) {
     PaymentComponent,
     FooterComponent,
     PaymentApplyComponent,
+    SamayaComponent,
+    SubscriptionComponent,
   ],
   imports: [
     BrowserModule,
